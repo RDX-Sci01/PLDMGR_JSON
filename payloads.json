@@ -2,6 +2,13 @@
   "name": "RDX Custom Payloads",
   "payloads": [
     {
+      "name": "Webkit Autoloader Installer",
+      "filename": "webkit-autoloader-installer_v0.3.0.elf",
+      "url": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.3.0/webkit-autoloader-installer_v0.3.0.elf",
+      "version": "v0.3.0",
+      "description": "What's New in v0.3.0"
+    },
+    {
       "name": "Web File Mgr",
       "filename": "web-file-mgr-v1.4.elf",
       "url": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.4/web-file-mgr-v1.4.elf",
