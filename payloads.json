@@ -2,9 +2,9 @@
   "name": "RDX Custom Payloads",
   "payloads": [
     {
-      "name": "Releases",
-      "filename": "releases",
-      "url": "https://github.com/ItsBlurf/BFpilot/releases/"
+      "name": "Bfpilot",
+      "filename": "BFpilot",
+      "url": "github:ItsBlurf/BFpilot"
     }
   ]
 }
