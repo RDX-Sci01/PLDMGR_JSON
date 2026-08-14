@@ -8,6 +8,7 @@
 #
 # Lines starting with # are ignored.
 
+github:itsPLK/ps5-webkit-autoloader
 github:owendswang/ps5-web-file-manager
 github:ItsBlurf/BFpilot
 github:Michele-M-Media/PIZZA-HEN
