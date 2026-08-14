@@ -25,3 +25,49 @@ github:itsPLK/pldmgr
 github:BestPig/BackPork
 github:earthonion/garlic-savemgr
 github:etaHEN/etaHEN
+
+# PS5 Payload Manager - Source List
+# Formats:
+#   github:<user>/<repo>        — auto-resolves latest release, updates automatically
+#   mirror:<user>/<repo>@<tag>  — bulk-imports all .elf/.bin/.lua from a release tag
+#   https://...                 — pinned direct URL, will NOT auto-update
+
+# --- Mirror (bulk import from itsPLK's mirror) ---
+mirror:itsPLK/ps5-payloads-mirror@payloads-mirror
+
+# --- Individual GitHub repos (track upstream directly) ---
+# Note: these duplicate mirror entries intentionally — mirror = stable hosted copy,
+# github: = live upstream tracking. Remove github: lines to avoid duplicates.
+
+# Loaders
+github:itsPLK/ps5-webkit-autoloader
+github:ps5-payload-dev/elfldr
+github:ps5-linux/ps5-linux-loader
+
+# System & Jailbreak
+github:EchoStretch/kstuff
+github:EchoStretch/kstuff-lite
+github:EchoStretch/kstuff-toggle
+github:etaHEN/etaHEN
+github:itsPLK/PS5-Lapy-JB-Daemon
+
+# Networking & Servers
+github:ps5-payload-dev/websrv
+github:ps5-payload-dev/shsrv
+github:ps5-payload-dev/ftpsrv
+github:ps5-payload-dev/klogsrv
+github:drakmor/ftpsrv
+github:drakmor/nanoDNS
+github:seregonwar/zftpd
+github:phantomptr/ps5upload
+
+# Utilities & Tools
+github:ItsBlurf/BFpilot
+github:owendswang/ps5-web-file-manager
+github:EchoStretch/ps5-app-dumper
+github:earthonion/garlic-savemgr
+github:drakmor/ShadowMountPlus
+github:OpenSourcereR-dev/ps5debug-NG
+github:BestPig/BackPork
+github:notmaj0r/CheatRunner
+github:itsPLK/pldmgr
