@@ -11,6 +11,39 @@
     "category": "System & Jailbreak"
   },
   {
+    "name": "EVOPlayer",
+    "filename": "EVOPlayer-v0.7.0-InstallTile.elf",
+    "url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-InstallTile.elf",
+    "source": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases",
+    "source_direct": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-InstallTile.elf",
+    "description": "Emby password authentication, native HTTPS/TLS streaming, master-detail hierarchical changelog viewer, direct memory buffer streaming, and native PS5 IME keyboard.",
+    "last_update": "2026-08-14",
+    "version": "v0.7.0",
+    "category": "System & Jailbreak"
+  },
+  {
+    "name": "EVOPlayer",
+    "filename": "EVOPlayer-v0.7.0-player-only.elf",
+    "url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-player-only.elf",
+    "source": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases",
+    "source_direct": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-player-only.elf",
+    "description": "Emby password authentication, native HTTPS/TLS streaming, master-detail hierarchical changelog viewer, direct memory buffer streaming, and native PS5 IME keyboard.",
+    "last_update": "2026-08-14",
+    "version": "v0.7.0",
+    "category": "System & Jailbreak"
+  },
+  {
+    "name": "EVOPlayer",
+    "filename": "EVOPlayer-v0.7.0-UninstallTile.elf",
+    "url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-UninstallTile.elf",
+    "source": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases",
+    "source_direct": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-UninstallTile.elf",
+    "description": "Emby password authentication, native HTTPS/TLS streaming, master-detail hierarchical changelog viewer, direct memory buffer streaming, and native PS5 IME keyboard.",
+    "last_update": "2026-08-14",
+    "version": "v0.7.0",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "kstuff",
     "filename": "kstuff.elf",
     "url": "https://github.com/EchoStretch/kstuff-lite/releases/download/v1.10/kstuff.elf",
@@ -41,6 +74,17 @@
     "description": "lapyjbdaemon payload",
     "last_update": "2026-06-01",
     "version": "v1.2",
+    "category": "System & Jailbreak"
+  },
+  {
+    "name": "PIZZA-HEN",
+    "filename": "PIZZA-HEN-v0.1.elf",
+    "url": "https://github.com/Michele-M-Media/PIZZA-HEN/releases/download/v0.1/PIZZA-HEN-v0.1.elf",
+    "source": "https://github.com/Michele-M-Media/PIZZA-HEN/releases",
+    "source_direct": "https://github.com/Michele-M-Media/PIZZA-HEN/releases/download/v0.1/PIZZA-HEN-v0.1.elf",
+    "description": "🍕 PIZZA HEN v0.1",
+    "last_update": "2026-08-10",
+    "version": "v0.1",
     "category": "System & Jailbreak"
   },
   {
@@ -319,6 +363,28 @@
     "category": "Utilities & Tools"
   },
   {
+    "name": "MemDBG",
+    "filename": "MemDBG-ps4.elf",
+    "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260814-gc58927e/MemDBG-ps4.elf",
+    "source": "https://github.com/seregonwar/MemDBG/releases",
+    "source_direct": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260814-gc58927e/MemDBG-ps4.elf",
+    "description": "Automated historical nightly built from the latest main branch.",
+    "last_update": "2026-08-14",
+    "version": "nightly-20260814-gc58927e",
+    "category": "Utilities & Tools"
+  },
+  {
+    "name": "MemDBG",
+    "filename": "MemDBG-ps5.elf",
+    "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260814-gc58927e/MemDBG-ps5.elf",
+    "source": "https://github.com/seregonwar/MemDBG/releases",
+    "source_direct": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260814-gc58927e/MemDBG-ps5.elf",
+    "description": "Automated historical nightly built from the latest main branch.",
+    "last_update": "2026-08-14",
+    "version": "nightly-20260814-gc58927e",
+    "category": "Utilities & Tools"
+  },
+  {
     "name": "pldmgr",
     "filename": "pldmgr_v0.5.1.elf",
     "url": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.5.1/pldmgr_v0.5.1.elf",
@@ -360,6 +426,17 @@
     "description": "v1.2.x was about getting FW 8.x-13.x working. v1.3.0 is the big feature release: dramatically faster memory scanning (Turbo Scan), new register access (FS/GS base + full...",
     "last_update": "2026-06-21",
     "version": "1.3.0",
+    "category": "Utilities & Tools"
+  },
+  {
+    "name": "PSPlay",
+    "filename": "PSPlay-2.1.elf",
+    "url": "https://github.com/MounirHero/PS-Play/releases/download/2.1/PSPlay-2.1.elf",
+    "source": "https://github.com/MounirHero/PS-Play/releases",
+    "source_direct": "https://github.com/MounirHero/PS-Play/releases/download/2.1/PSPlay-2.1.elf",
+    "description": "New in 2.1 UPDATE",
+    "last_update": "2026-08-14",
+    "version": "2.1",
     "category": "Utilities & Tools"
   },
   {
