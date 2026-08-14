@@ -6,6 +6,12 @@
 #
 # Lines starting with # are ignored.
 
+# --- Manual
+github:seregonwar/MemDBG # MANUAL
+github:sainsaji/EVO-PLAYER-PS5 # MANUAL
+github:MounirHero/PS-Play # MANUAL
+github:Michele-M-Media/PIZZA-HEN # MANUAL
+
 # --- Mirror (bulk import from itsPLK's mirror) ---
 mirror:itsPLK/ps5-payloads-mirror@payloads-mirror
 
