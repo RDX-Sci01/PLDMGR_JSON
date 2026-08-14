@@ -7,7 +7,8 @@
 #    https://example.com/payloads/tool.elf
 #
 # Lines starting with # are ignored.
-
+github:sainsaji/EVO-PLAYER-PS5
+github:MounirHero/PS-Play
 github:itsPLK/ps5-webkit-autoloader
 github:owendswang/ps5-web-file-manager
 github:ItsBlurf/BFpilot
