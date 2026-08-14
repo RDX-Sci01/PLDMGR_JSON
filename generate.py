@@ -728,16 +728,7 @@ def resolve_direct(url):
 
 
 # ── Input handling ───────────────────────────────────────────────────────────
-
 def parse_links(path):
-    """
-    Parse links.txt.
-
-    Skips:
-      - blank lines
-      - comments
-      - duplicate entries
-    """
     lines = []
     seen = set()
 
@@ -764,19 +755,6 @@ def parse_links(path):
 
                 seen.add(key)
                 lines.append(line)
-
-    except FileNotFoundError:
-        print(f"ERROR: {path} not found")
-        sys.exit(1)
-
-    except OSError as exc:
-        print(
-            f"ERROR: Unable to read {path}: {exc}"
-        )
-        sys.exit(1)
-
-    return lines
-
 
 # ── Entry deduplication ──────────────────────────────────────────────────────
 def deduplicate_entries(entries):
