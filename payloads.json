@@ -1,5 +1,16 @@
 [
   {
+    "name": "MemDBG",
+    "filename": "MemDBG-ps4.elf",
+    "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260814-gc58927e/MemDBG-ps4.elf",
+    "source": "https://github.com/seregonwar/MemDBG/releases",
+    "source_direct": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260814-gc58927e/MemDBG-ps4.elf",
+    "description": "Automated historical nightly built from the latest `main` branch.",
+    "last_update": "2026-08-14",
+    "version": "nightly-20260814-gc58927e",
+    "category": "Utilities & Tools"
+  },
+  {
     "name": "EVO-PLAYER-PS5",
     "filename": "EVOPlayer-v0.7.0-InstallTile.elf",
     "url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-InstallTile.elf",
