@@ -211,91 +211,56 @@ def fetch_text(url):
 # ─────────────────────────────────────────────────────────────────────────────
 # README handling
 # ─────────────────────────────────────────────────────────────────────────────
-
 def get_readme_content():
-    """
-    Fetch the upstream README.
-
-    GitHub's Contents API provides a download_url for the README.
-    We intentionally use that URL instead of decoding the API's
-    Base64 'content' field.
-
-    This avoids failures caused by whitespace/newline formatting
-    in Base64 API responses.
-    """
-    api_url = (
-        f"{GITHUB_API}/repos/"
-        f"{README_REPO}/readme"
+    """Fetch and decode the upstream README."""
+    url = (
+        f"{GITHUB_API}/repos/{README_REPO}/readme"
     )
 
-    data = fetch_json(api_url)
+    data = fetch_json(url)
 
     if not isinstance(data, dict):
         raise RuntimeError(
             "GitHub API returned an unexpected README response"
         )
 
-    download_url = data.get("download_url")
+    encoded_content = data.get("content")
 
-    if download_url:
-        download_url = str(
-            download_url
-        ).strip()
-
-        if not (
-            download_url.startswith("https://")
-            or download_url.startswith("http://")
-        ):
-            raise RuntimeError(
-                "GitHub returned an invalid README download URL"
-            )
-
-        return fetch_text(download_url)
-
-    # Defensive fallback.
-    #
-    # Normally download_url is present. If GitHub ever omits it,
-    # use the API content while tolerating normal Base64 whitespace.
-    content = data.get("content")
-
-    if not content:
+    if not encoded_content:
         raise RuntimeError(
-            "README response does not contain "
-            "download_url or content"
+            "README response does not contain content"
         )
 
-    encoding = str(
-        data.get("encoding") or ""
-    ).strip().lower()
-
-    if encoding != "base64":
-        return str(content)
+    # GitHub may wrap Base64 content across multiple lines.
+    # Remove all whitespace before strict validation/decoding.
+    encoded_content = re.sub(
+        r"\s+",
+        "",
+        str(encoded_content),
+    )
 
     try:
-        import base64
-
-        normalized = re.sub(
-            r"\s+",
-            "",
-            str(content),
-        )
-
         decoded = base64.b64decode(
-            normalized,
-            validate=False,
+            encoded_content,
+            validate=True,
         )
 
+    except (binascii.Error, ValueError) as exc:
+        raise RuntimeError(
+            f"invalid base64 README content: {exc}"
+        ) from exc
+
+    try:
         return decoded.decode(
             "utf-8",
             errors="replace",
         )
 
-    except Exception as exc:
+    except UnicodeDecodeError as exc:
         raise RuntimeError(
-            f"could not decode README fallback: {exc}"
+            f"README is not valid UTF-8: {exc}"
         ) from exc
-
-
+        
 # ─────────────────────────────────────────────────────────────────────────────
 # Repository handling
 # ─────────────────────────────────────────────────────────────────────────────
