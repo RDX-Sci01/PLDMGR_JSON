@@ -1,67 +1,22 @@
-name: Generate payloads.json
+- name: Generate payload catalog
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  run: |
+    set -euo pipefail
+    python3 generate.py
 
-on:
-  schedule:
-    - cron: "0 */2 * * *" # every 2 hours
+- name: Commit payload catalog
+  run: |
+    set -euo pipefail
 
-  push:
-    paths:
-      - "links.txt"
+    if git diff --quiet -- payloads.json; then
+      echo "payloads.json unchanged"
+      exit 0
+    fi
 
-  workflow_dispatch:
+    git config user.name "github-actions[bot]"
+    git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-# Required for the workflow to commit generated files.
-permissions:
-  contents: write
-
-# Prevent two generator runs from modifying/pushing the repository
-# simultaneously.
-concurrency:
-  group: generate-payloads
-  cancel-in-progress: false
-
-jobs:
-  generate:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Sync links.txt from itsPLK README
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          python3 sync_links.py
-
-      - name: Generate payloads.json
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          python3 generate.py
-
-      - name: Commit generated changes
-        run: |
-          set -euo pipefail
-
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git add -A links.txt payloads.json
-
-          if git diff --cached --quiet; then
-            echo "Nothing to commit."
-            exit 0
-          fi
-
-          git commit -m "chore: auto-refresh links + payloads [skip ci]"
-          git push
+    git add payloads.json
+    git commit -m "Update payload catalog"
+    git push

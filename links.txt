@@ -1,19 +1,9 @@
-# PS5 Payload Manager - Source List
-#
-# Formats:
-#   github:<user>/<repo>  - auto-resolves latest release
-#   https://...           - pinned direct payload URL
-#
-# GitHub repositories discovered from the itsPLK README are
-# automatically added and removed as the upstream list changes.
-#
-# Add # MANUAL to a GitHub repository to protect it from removal:
-#   github:myuser/myrepo # MANUAL
-#
-# Direct URLs are always preserved.
-
-# --- GitHub repos (auto-synced from itsPLK README) ---
-# Last synced: 2026-08-14 21:22 UTC
+# PS5 Payload Manager - Payload Sources
+# --- GitHub repositories ---
+github:Michele-M-Media/PIZZA-HEN
+github:MounirHero/PS-Play
+github:sainsaji/EVO-PLAYER-PS5
+github:seregonwar/MemDBG
 github:BestPig/BackPork
 github:drakmor/ftpsrv
 github:drakmor/nanoDNS
