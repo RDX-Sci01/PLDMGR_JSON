@@ -1,7 +1,7 @@
 # PLDMGR_JSON
 
 Custom payload repository for [PS5 Payload Manager](https://github.com/ps5-payload-dev/ps5-payload-manager).  
-Payloads are **automatically kept up to date** — the list refreshes daily via GitHub Actions.
+Payloads are **automatically kept up to date** — the list refreshes every 2 hours via GitHub Actions.
 
 ## Adding this source
 
@@ -45,9 +45,11 @@ Commit and push. The Action regenerates `payloads.json` automatically.
 ### Auto-update schedule
 
 `payloads.json` is regenerated:
+- **Every 2 hours** — picks up new upstream releases without any manual action
 - On every push that changes `links.txt`
-- **Daily at 06:00 UTC** — picks up new upstream releases without any manual action
 - On demand via the **Actions** tab → **Run workflow**
+
+Each run also **validates every download URL** with a live HTTP check before writing. Any payload whose URL returns an error is skipped and logged — the rest are still written. The file is only updated if something actually changed, keeping the commit history clean.
 
 ### Running locally
 
@@ -55,7 +57,7 @@ Commit and push. The Action regenerates `payloads.json` automatically.
 python3 generate.py
 ```
 
-Requires internet access to hit the GitHub API for `github:` entries.  
+Requires internet access to hit the GitHub API for `github:` entries and to validate URLs.  
 Set `REPO_DISPLAY_NAME` to override the catalog title:
 
 ```bash
@@ -67,8 +69,20 @@ REPO_DISPLAY_NAME="My Repo" python3 generate.py
 ```
 links.txt
   │
-  ├─ github:<user>/<repo>  →  GitHub API (latest release)  →  resolves URL + version + description
-  └─ https://...           →  used as-is (pinned)
+  ├─ github:<user>/<repo>  →  GitHub API (latest release)
+  │                               └─ resolves filename, URL, version, description
   │
-  └──▶  payloads.json  (committed back by GitHub Actions)
+  └─ https://...           →  used as-is (pinned URL)
+  │
+  ├─ HEAD request to each URL  →  skip if unreachable (404, offline, etc.)
+  │
+  └──▶  payloads.json  (committed back by GitHub Actions only if changed)
 ```
+
+### Exit codes
+
+| Code | Meaning |
+|------|---------|
+| `0` | Success — `payloads.json` written |
+| `1` | `links.txt` is empty |
+| `2` | All entries failed to resolve or validate |
