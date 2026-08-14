@@ -733,41 +733,44 @@ def parse_links(path):
     seen = set()
 
     try:
-        with open(
-            path,
-            "r",
-            encoding="utf-8",
-        ) as file:
+        with open(path, "r", encoding="utf-8") as file:
             for raw_line in file:
                 line = raw_line.strip()
 
                 if not line or line.startswith("#"):
                     continue
 
+                # Strip inline comments like # MANUAL
+                line = re.sub(r"\s+#.*$", "", line).strip()
+
+                if not line:
+                    continue
+
                 key = line.casefold()
 
                 if key in seen:
-                    print(
-                        f"  [SKIP] Duplicate entry "
-                        f"in links.txt: {line}"
-                    )
+                    print(f"  [SKIP] Duplicate entry in links.txt: {line}")
                     continue
 
                 seen.add(key)
                 lines.append(line)
 
-# ── Entry deduplication ──────────────────────────────────────────────────────
+    except FileNotFoundError:
+        print(f"ERROR: {path} not found")
+        sys.exit(1)
+
+    except OSError as exc:
+        raise RuntimeError(f"could not read {path}: {exc}") from exc
+
+    return lines
+
 def deduplicate_entries(entries):
     """
-    Deduplicate entries by normalized download URL first,
-    then by name — catches mirror + github: overlap where
-    the same payload appears under different URLs.
-
-    When two entries share a name, the one from a direct
-    github: resolve is preferred over a mirror import
-    (direct = more up-to-date version/URL).
+    Deduplicate by URL first, then by name.
+    When two entries share a name, prefer the direct github: source
+    over the mirror copy.
     """
-    # Pass 1: deduplicate by URL
+    # Pass 1: URL dedup
     url_seen = set()
     url_deduped = []
     for entry in entries:
@@ -780,9 +783,13 @@ def deduplicate_entries(entries):
         url_seen.add(key)
         url_deduped.append(entry)
 
-    # Pass 2: deduplicate by name, prefer direct github: entries
-    # (identified by source_direct == url, not a mirror domain)
-    name_seen = {}  # lower_name -> index in result
+    # Pass 2: name dedup — keep direct github: over mirror
+    def is_direct(entry):
+        return (
+            "itsPLK/ps5-payloads-mirror" not in entry.get("url", "")
+        )
+
+    name_index = {}  # lower_name -> position in result
     result = []
     for entry in url_deduped:
         name_key = entry.get("name", "").strip().lower()
@@ -790,30 +797,19 @@ def deduplicate_entries(entries):
             result.append(entry)
             continue
 
-        is_direct = (
-            "github.com" in entry.get("source", "")
-            and entry.get("url") == entry.get("source_direct")
-        )
-
-        if name_key not in name_seen:
-            name_seen[name_key] = len(result)
+        if name_key not in name_index:
+            name_index[name_key] = len(result)
             result.append(entry)
         else:
-            existing_idx = name_seen[name_key]
-            existing = result[existing_idx]
-            existing_is_direct = (
-                "github.com" in existing.get("source", "")
-                and existing.get("url") == existing.get("source_direct")
-            )
-            if is_direct and not existing_is_direct:
-                # Replace mirror entry with direct entry
-                print(f"  [DEDUP] Preferring direct source for: {entry['name']}")
-                result[existing_idx] = entry
+            idx = name_index[name_key]
+            existing = result[idx]
+            if is_direct(entry) and not is_direct(existing):
+                print(f"  [DEDUP] Prefer direct over mirror: {entry['name']}")
+                result[idx] = entry
             else:
                 print(f"  [SKIP] Duplicate name: {entry['name']}")
 
-    return result
-
+    return result    
 
 def sort_entries(entries):
     """Return entries in deterministic order."""
