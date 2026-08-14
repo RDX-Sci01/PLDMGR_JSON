@@ -7,6 +7,13 @@
       "url": "https://github.com/ItsBlurf/BFpilot/releases/download/v0.4.4/bfpilot.elf",
       "version": "v0.4.4",
       "description": "v0.4.4 brings the installer, Media tile, archive support and file manager together in one `bfpilot.elf`."
+    },
+    {
+      "name": "Pizza Hen",
+      "filename": "PIZZA-HEN-v0.1.elf",
+      "url": "https://github.com/Michele-M-Media/PIZZA-HEN/releases/download/v0.1/PIZZA-HEN-v0.1.elf",
+      "version": "v0.1",
+      "description": "\ud83c\udf55 PIZZA HEN v0.1"
     }
   ]
 }
