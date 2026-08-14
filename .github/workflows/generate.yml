@@ -1,22 +1,52 @@
-- name: Generate payload catalog
-  env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  run: |
-    set -euo pipefail
-    python3 generate.py
+name: Generate Payload Catalog
 
-- name: Commit payload catalog
-  run: |
-    set -euo pipefail
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "links.txt"
+      - "generate.py"
+      - ".github/workflows/generate.yml"
+  schedule:
+    - cron: "0 6 * * *"
 
-    if git diff --quiet -- payloads.json; then
-      echo "payloads.json unchanged"
-      exit 0
-    fi
+permissions:
+  contents: write
 
-    git config user.name "github-actions[bot]"
-    git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+jobs:
+  generate:
+    runs-on: ubuntu-latest
 
-    git add payloads.json
-    git commit -m "Update payload catalog"
-    git push
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate payload catalog
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          python3 generate.py
+
+      - name: Commit payload catalog
+        run: |
+          set -euo pipefail
+
+          if git diff --quiet -- payloads.json; then
+            echo "payloads.json unchanged"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add payloads.json
+          git commit -m "Update payload catalog"
+          git push
