@@ -11,7 +11,6 @@ Custom payload repository for PS5 Payload Manager. Payloads are automatically ke
    https://raw.githubusercontent.com/RDX-Sci01/PLDMGR_JSON/main/payloads.json
    
    https://rdx-sci01.github.io/PLDMGR_JSON/payloads.json
-   
    ```
 4. Press **Add** — the repository will appear in your catalog
 
