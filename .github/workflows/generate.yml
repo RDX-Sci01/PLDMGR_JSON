@@ -4,6 +4,9 @@ on:
   push:
     paths:
       - "links.txt"
+  schedule:
+    # Runs daily at 06:00 UTC to pick up new upstream releases automatically
+    - cron: "0 6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -19,6 +22,7 @@ jobs:
       - name: Generate payloads.json
         env:
           REPO_DISPLAY_NAME: "RDX Custom Payloads"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 generate.py
 
       - name: Commit and push payloads.json
@@ -26,5 +30,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add payloads.json
-          git diff --cached --quiet || git commit -m "chore: regenerate payloads.json from links.txt"
+          git diff --cached --quiet || git commit -m "chore: update payloads.json [$(date -u +%Y-%m-%d)]"
           git push

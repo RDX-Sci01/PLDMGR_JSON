@@ -1,6 +1,7 @@
 # PLDMGR_JSON
 
-Custom payload repository for [PS5 Payload Manager](https://github.com/ps5-payload-dev/ps5-payload-manager).
+Custom payload repository for [PS5 Payload Manager](https://github.com/ps5-payload-dev/ps5-payload-manager).  
+Payloads are **automatically kept up to date** — the list refreshes daily via GitHub Actions.
 
 ## Adding this source
 
@@ -14,21 +15,39 @@ Custom payload repository for [PS5 Payload Manager](https://github.com/ps5-paylo
 
 ---
 
-## For contributors / maintainers
+## Payloads
 
-### Adding or removing payloads
+| Name | Version | Description |
+|------|---------|-------------|
+| BFpilot | latest | Lightweight PS5 browser-based file manager (port 5905) |
 
-Edit [`links.txt`](./links.txt) — one direct download URL per line:
+---
 
+## For maintainers
+
+### Adding a payload
+
+Edit [`links.txt`](./links.txt). Two formats are supported:
+
+**GitHub repo** (recommended — auto-resolves the latest release asset):
 ```
-# Comments start with #
-https://github.com/user/repo/releases/download/v1.0/payload.elf
-https://example.com/payloads/tool.bin
+github:ItsBlurf/BFpilot
+github:someuser/somerepo
 ```
 
-Supported extensions: `.elf`, `.bin`, `.lua`
+**Direct URL** (pinned — will not auto-update):
+```
+https://example.com/payloads/tool.elf
+```
 
-Commit and push. GitHub Actions will automatically regenerate `payloads.json` within seconds — no manual step needed.
+Commit and push. The Action regenerates `payloads.json` automatically.
+
+### Auto-update schedule
+
+`payloads.json` is regenerated:
+- On every push that changes `links.txt`
+- **Daily at 06:00 UTC** — picks up new upstream releases without any manual action
+- On demand via the **Actions** tab → **Run workflow**
 
 ### Running locally
 
@@ -36,40 +55,20 @@ Commit and push. GitHub Actions will automatically regenerate `payloads.json` wi
 python3 generate.py
 ```
 
-This reads `links.txt` and writes `payloads.json` in the same directory.
-
-To set a custom display name for the repository:
+Requires internet access to hit the GitHub API for `github:` entries.  
+Set `REPO_DISPLAY_NAME` to override the catalog title:
 
 ```bash
-REPO_DISPLAY_NAME="My Repo Name" python3 generate.py
+REPO_DISPLAY_NAME="My Repo" python3 generate.py
 ```
 
-### URL format for GitHub releases
+### How it works
 
 ```
-https://github.com/<user>/<repo>/releases/download/<tag>/<filename>
+links.txt
+  │
+  ├─ github:<user>/<repo>  →  GitHub API (latest release)  →  resolves URL + version + description
+  └─ https://...           →  used as-is (pinned)
+  │
+  └──▶  payloads.json  (committed back by GitHub Actions)
 ```
-
-Example:
-```
-https://github.com/ItsBlurf/BFpilot/releases/download/v0.2.0/bfpilot.elf
-```
-
----
-
-## Payloads
-
-| Name | Version | Description |
-|------|---------|-------------|
-| BFpilot | v0.2.0 | Lightweight PS5 browser-based file manager (port 5905) |
-
----
-
-## How it works
-
-```
-links.txt  →  generate.py  →  payloads.json
-               (GitHub Actions runs this automatically on every push)
-```
-
-`payloads.json` is served as a static file via GitHub's raw content CDN and consumed directly by Payload Manager.
