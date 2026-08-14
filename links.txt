@@ -6,7 +6,7 @@
 #
 # Lines starting with # are ignored.
 
-# --- Manual
+# --- Manual ---
 github:seregonwar/MemDBG # MANUAL
 github:sainsaji/EVO-PLAYER-PS5 # MANUAL
 github:MounirHero/PS-Play # MANUAL
