@@ -5,18 +5,19 @@
 #   mirror:<user>/<repo>@<tag>  - bulk-imports from a release tag
 #   https://...                 - pinned direct URL
 #
-# Add # MANUAL to any GitHub or direct URL entry to protect it
-# from automatic synchronization.
+# GitHub repositories discovered from the itsPLK README are
+# automatically added and removed as the upstream list changes.
 #
-# Examples:
+# Add # MANUAL to a GitHub repository to protect it from removal:
 #   github:myuser/myrepo # MANUAL
-#   https://example.com/payload.elf # MANUAL
+#
+# Direct URLs are always treated as pinned/manual entries
+# and are preserved automatically.
 
 # --- Mirror ---
 mirror:itsPLK/ps5-payloads-mirror@payloads-mirror
 
 # --- GitHub repos (auto-synced from itsPLK README) ---
-# Last synced: 2026-08-14 20:35 UTC
 github:BestPig/BackPork
 github:drakmor/ftpsrv
 github:drakmor/nanoDNS
@@ -47,3 +48,10 @@ github:Michele-M-Media/PIZZA-HEN # MANUAL
 github:MounirHero/PS-Play # MANUAL
 github:sainsaji/EVO-PLAYER-PS5 # MANUAL
 github:seregonwar/MemDBG # MANUAL
+
+# --- Pinned direct URLs ---
+# Add direct .elf/.bin/.lua payload URLs here.
+# These entries are preserved automatically by sync_links.py.
+#
+# Example:
+# https://example.com/payload.elf
