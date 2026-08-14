@@ -1,1 +1,11 @@
-https://github.com/ItsBlurf/BFpilot/releases/
+# One entry per line. Two formats supported:
+#
+# 1. GitHub repo (auto-resolves latest release .elf/.bin/.lua asset):
+#    github:<user>/<repo>
+#
+# 2. Direct URL (pinned, no auto-update):
+#    https://example.com/payloads/tool.elf
+#
+# Lines starting with # are ignored.
+
+github:ItsBlurf/BFpilot
