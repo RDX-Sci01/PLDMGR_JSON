@@ -8,6 +8,7 @@
 #
 # Lines starting with # are ignored.
 
+github:owendswang/ps5-web-file-manager
 github:ItsBlurf/BFpilot
 github:Michele-M-Media/PIZZA-HEN
 github:EchoStretch/kstuff-lite
