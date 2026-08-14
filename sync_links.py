@@ -13,14 +13,15 @@ Rules:
     marked "# MANUAL".
   - Output is deterministic.
   - links.txt is only rewritten when its contents change.
+  - README content is downloaded directly rather than Base64-decoded.
+  - GitHub API authentication is supported through GITHUB_TOKEN.
+  - HTTP/API failures produce clear errors.
 
 Exit codes:
   0 — success
   1 — failed to fetch/parse/write links.txt
 """
 
-import base64
-import binascii
 import json
 import os
 import re
@@ -30,6 +31,10 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Configuration
+# ─────────────────────────────────────────────────────────────────────────────
 
 GITHUB_API = "https://api.github.com"
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -41,7 +46,7 @@ MIRROR_LINE = (
     "mirror:itsPLK/ps5-payloads-mirror@payloads-mirror"
 )
 
-USER_AGENT = "pldmgr-links-sync/1.0"
+USER_AGENT = "pldmgr-links-sync/1.1"
 REQUEST_TIMEOUT = 15
 
 
@@ -73,12 +78,18 @@ GITHUB_REPO_URL_RE = re.compile(
 )
 
 
-# ── HTTP helpers ──────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+# HTTP helpers
+# ─────────────────────────────────────────────────────────────────────────────
 
-def gh_headers():
-    """Return HTTP headers used for GitHub API requests."""
+def gh_headers(
+    accept="application/vnd.github+json",
+):
+    """
+    Return HTTP headers used for GitHub requests.
+    """
     headers = {
-        "Accept": "application/vnd.github+json",
+        "Accept": accept,
         "X-GitHub-Api-Version": "2022-11-28",
         "User-Agent": USER_AGENT,
     }
@@ -92,7 +103,9 @@ def gh_headers():
 
 
 def fetch_json(url):
-    """Fetch and decode a GitHub API JSON response."""
+    """
+    Fetch and decode a GitHub API JSON response.
+    """
     request = urllib.request.Request(
         url,
         headers=gh_headers(),
@@ -104,7 +117,75 @@ def fetch_json(url):
             request,
             timeout=REQUEST_TIMEOUT,
         ) as response:
-            raw = response.read().decode("utf-8")
+            raw = response.read().decode(
+                "utf-8",
+                errors="replace",
+            )
+
+    except urllib.error.HTTPError as exc:
+        if exc.code == 403:
+            raise RuntimeError(
+                "GitHub API returned HTTP 403 "
+                "(rate limit or permission denied)"
+            ) from exc
+
+        if exc.code == 404:
+            raise RuntimeError(
+                "GitHub API returned HTTP 404 "
+                "(repository or README not found)"
+            ) from exc
+
+        raise RuntimeError(
+            f"GitHub API returned HTTP "
+            f"{exc.code} {exc.reason}"
+        ) from exc
+
+    except urllib.error.URLError as exc:
+        raise RuntimeError(
+            f"connection error: {exc.reason}"
+        ) from exc
+
+    except TimeoutError as exc:
+        raise RuntimeError(
+            "request timed out"
+        ) from exc
+
+    except OSError as exc:
+        raise RuntimeError(
+            f"network error: {exc}"
+        ) from exc
+
+    try:
+        return json.loads(raw)
+
+    except json.JSONDecodeError as exc:
+        raise RuntimeError(
+            f"invalid JSON response: {exc}"
+        ) from exc
+
+
+def fetch_text(url):
+    """
+    Fetch plain text from a URL.
+    """
+    request = urllib.request.Request(
+        url,
+        headers={
+            "Accept": "text/plain",
+            "User-Agent": USER_AGENT,
+        },
+        method="GET",
+    )
+
+    try:
+        with urllib.request.urlopen(
+            request,
+            timeout=REQUEST_TIMEOUT,
+        ) as response:
+            return response.read().decode(
+                "utf-8",
+                errors="replace",
+            )
 
     except urllib.error.HTTPError as exc:
         raise RuntimeError(
@@ -121,62 +202,112 @@ def fetch_json(url):
             "request timed out"
         ) from exc
 
-    try:
-        return json.loads(raw)
-
-    except json.JSONDecodeError as exc:
+    except OSError as exc:
         raise RuntimeError(
-            f"invalid JSON response: {exc}"
+            f"network error: {exc}"
         ) from exc
 
 
-# ── README handling ───────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+# README handling
+# ─────────────────────────────────────────────────────────────────────────────
 
 def get_readme_content():
-    """Fetch and decode the upstream README."""
-    url = (
-        f"{GITHUB_API}/repos/{README_REPO}/readme"
+    """
+    Fetch the upstream README.
+
+    GitHub's Contents API provides a download_url for the README.
+    We intentionally use that URL instead of decoding the API's
+    Base64 'content' field.
+
+    This avoids failures caused by whitespace/newline formatting
+    in Base64 API responses.
+    """
+    api_url = (
+        f"{GITHUB_API}/repos/"
+        f"{README_REPO}/readme"
     )
 
-    data = fetch_json(url)
+    data = fetch_json(api_url)
 
     if not isinstance(data, dict):
         raise RuntimeError(
             "GitHub API returned an unexpected README response"
         )
 
-    encoded_content = data.get("content")
+    download_url = data.get("download_url")
 
-    if not encoded_content:
+    if download_url:
+        download_url = str(
+            download_url
+        ).strip()
+
+        if not (
+            download_url.startswith("https://")
+            or download_url.startswith("http://")
+        ):
+            raise RuntimeError(
+                "GitHub returned an invalid README download URL"
+            )
+
+        return fetch_text(download_url)
+
+    # Defensive fallback.
+    #
+    # Normally download_url is present. If GitHub ever omits it,
+    # use the API content while tolerating normal Base64 whitespace.
+    content = data.get("content")
+
+    if not content:
         raise RuntimeError(
-            "README response does not contain content"
+            "README response does not contain "
+            "download_url or content"
         )
+
+    encoding = str(
+        data.get("encoding") or ""
+    ).strip().lower()
+
+    if encoding != "base64":
+        return str(content)
 
     try:
-        decoded = base64.b64decode(
-            encoded_content,
-            validate=True,
+        import base64
+
+        normalized = re.sub(
+            r"\s+",
+            "",
+            str(content),
         )
 
-    except (binascii.Error, ValueError) as exc:
+        decoded = base64.b64decode(
+            normalized,
+            validate=False,
+        )
+
+        return decoded.decode(
+            "utf-8",
+            errors="replace",
+        )
+
+    except Exception as exc:
         raise RuntimeError(
-            f"invalid base64 README content: {exc}"
+            f"could not decode README fallback: {exc}"
         ) from exc
 
-    return decoded.decode(
-        "utf-8",
-        errors="replace",
-    )
 
-
-# ── Repository handling ──────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+# Repository handling
+# ─────────────────────────────────────────────────────────────────────────────
 
 def normalize_repo(repo):
-    """Validate and normalize a GitHub repository identifier."""
+    """
+    Validate and normalize a GitHub repository identifier.
+    """
     if not isinstance(repo, str):
         return None
 
-    repo = repo.strip()
+    repo = repo.strip().strip("/")
 
     if not REPO_RE.fullmatch(repo):
         return None
@@ -186,12 +317,24 @@ def normalize_repo(repo):
     return f"{owner}/{name}"
 
 
+def repo_key(repo):
+    """
+    Return a case-insensitive repository key.
+    """
+    return repo.casefold()
+
+
 def is_excluded_repo(repo):
-    """Return True when the repository is explicitly excluded."""
-    repo_key = repo.casefold()
+    """
+    Return True when the repository is explicitly excluded.
+    """
+    if not repo:
+        return False
+
+    key = repo_key(repo)
 
     return any(
-        repo_key == excluded.casefold()
+        key == repo_key(excluded)
         for excluded in EXCLUDE_REPOS
     )
 
@@ -209,12 +352,14 @@ def extract_github_repos(text):
     repos = []
 
     for match in GITHUB_REPO_URL_RE.finditer(text):
-        repo = normalize_repo(match.group(1))
+        repo = normalize_repo(
+            match.group(1)
+        )
 
         if not repo:
             continue
 
-        key = repo.casefold()
+        key = repo_key(repo)
 
         if key in seen:
             continue
@@ -225,22 +370,27 @@ def extract_github_repos(text):
         seen.add(key)
         repos.append(repo)
 
-    # Always produce deterministic ordering.
-    repos.sort(key=str.casefold)
+    repos.sort(
+        key=str.casefold
+    )
 
     return repos
 
 
-# ── Existing links parsing ────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+# Existing links parsing
+# ─────────────────────────────────────────────────────────────────────────────
 
 def strip_inline_comment(value):
     """
     Remove a trailing inline comment.
 
     Example:
+
         github:user/repo # MANUAL
 
     becomes:
+
         github:user/repo
     """
     return re.sub(
@@ -251,7 +401,9 @@ def strip_inline_comment(value):
 
 
 def has_manual_marker(line):
-    """Return True when a line explicitly contains # MANUAL."""
+    """
+    Return True when a line explicitly contains # MANUAL.
+    """
     return bool(
         re.search(
             r"\s+#\s*MANUAL\b",
@@ -266,6 +418,7 @@ def parse_existing_links(path):
     Parse the existing links.txt.
 
     Returns:
+
         mirror,
         automatic GitHub repositories,
         manual GitHub repositories,
@@ -300,19 +453,24 @@ def parse_existing_links(path):
             continue
 
         is_manual = has_manual_marker(line)
-        value = strip_inline_comment(line)
+
+        value = strip_inline_comment(
+            line
+        )
 
         if not value:
             continue
 
-        # ── Mirror ────────────────────────────────────────────────
+        # ── Mirror ─────────────────────────────────────────────────────
+
         if value.startswith("mirror:"):
             if mirror is None:
                 mirror = value
 
             continue
 
-        # ── GitHub repository ─────────────────────────────────────
+        # ── GitHub repository ─────────────────────────────────────────
+
         if value.startswith("github:"):
             repo = normalize_repo(
                 value[len("github:"):].strip()
@@ -320,27 +478,33 @@ def parse_existing_links(path):
 
             if not repo:
                 print(
-                    f"[WARN] Ignoring invalid GitHub entry: "
+                    "[WARN] Ignoring invalid GitHub entry: "
                     f"{value}"
                 )
                 continue
 
-            key = repo.casefold()
+            key = repo_key(repo)
 
             if is_manual:
-                if key not in manual_repos:
-                    manual_repos[key] = repo
-            else:
-                if key not in auto_repos:
-                    auto_repos[key] = repo
+                manual_repos[key] = repo
+
+                # A manual entry takes precedence over an automatic
+                # entry for the same repository.
+                auto_repos.pop(
+                    key,
+                    None,
+                )
+
+            elif key not in manual_repos:
+                auto_repos[key] = repo
 
             continue
 
-        # ── Direct URL ────────────────────────────────────────────
+        # ── Direct URL ─────────────────────────────────────────────────
+
         #
-        # IMPORTANT:
         # Direct URLs are ALWAYS treated as pinned/manual entries.
-        # They do not require # MANUAL.
+        #
         if (
             value.startswith("http://")
             or value.startswith("https://")
@@ -353,7 +517,7 @@ def parse_existing_links(path):
             continue
 
         print(
-            f"[WARN] Ignoring unknown links.txt entry: "
+            "[WARN] Ignoring unknown links.txt entry: "
             f"{value}"
         )
 
@@ -365,7 +529,9 @@ def parse_existing_links(path):
     )
 
 
-# ── links.txt generation ──────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+# links.txt generation
+# ─────────────────────────────────────────────────────────────────────────────
 
 def build_links_content(
     mirror,
@@ -373,8 +539,15 @@ def build_links_content(
     manual_repos,
     manual_urls,
 ):
-    """Build deterministic links.txt content."""
+    """
+    Build deterministic links.txt content.
 
+    NOTE:
+    The sync timestamp is intentionally NOT included.
+
+    This is important because otherwise links.txt would be rewritten
+    on every GitHub Actions run even when nothing actually changed.
+    """
     lines = [
         "# PS5 Payload Manager - Source List",
         "#",
@@ -399,10 +572,6 @@ def build_links_content(
         mirror or MIRROR_LINE,
         "",
         "# --- GitHub repos (auto-synced from itsPLK README) ---",
-        "# Last synced: "
-        + datetime.now(timezone.utc).strftime(
-            "%Y-%m-%d %H:%M UTC"
-        ),
     ]
 
     # Automatic GitHub repositories.
@@ -449,10 +618,14 @@ def build_links_content(
     return "\n".join(lines) + "\n"
 
 
-# ── File handling ─────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+# File handling
+# ─────────────────────────────────────────────────────────────────────────────
 
 def read_existing_file(path):
-    """Read an existing file or return None if it doesn't exist."""
+    """
+    Read an existing file or return None if it doesn't exist.
+    """
     try:
         with open(
             path,
@@ -529,14 +702,17 @@ def atomic_write(path, content):
                 pass
 
 
-# ── Main ─────────────────────────────────────────────────────────────────────
+# ─────────────────────────────────────────────────────────────────────────────
+# Main
+# ─────────────────────────────────────────────────────────────────────────────
 
 def main():
     print(
         f"Fetching README from {README_REPO}..."
     )
 
-    # Fetch upstream README.
+    # ── Fetch upstream README ───────────────────────────────────────────
+
     try:
         readme = get_readme_content()
 
@@ -546,30 +722,44 @@ def main():
         )
         sys.exit(1)
 
-    # Discover repositories.
-    discovered = extract_github_repos(readme)
+    if not readme.strip():
+        print(
+            "ERROR: README is empty"
+        )
+        sys.exit(1)
+
+    # ── Discover repositories ───────────────────────────────────────────
+
+    discovered = extract_github_repos(
+        readme
+    )
 
     print(
         f"Discovered {len(discovered)} repositories "
         f"from README"
     )
 
-    # Parse existing links.txt.
+    # ── Parse existing links.txt ────────────────────────────────────────
+
     try:
         (
             existing_mirror,
             old_auto,
             manual_repos,
             manual_urls,
-        ) = parse_existing_links(LINKS_FILE)
+        ) = parse_existing_links(
+            LINKS_FILE
+        )
 
     except Exception as exc:
         print(
-            f"ERROR: Could not parse {LINKS_FILE}: {exc}"
+            f"ERROR: Could not parse "
+            f"{LINKS_FILE}: {exc}"
         )
         sys.exit(1)
 
-    # Report preserved manual GitHub repositories.
+    # ── Report preserved manual repositories ────────────────────────────
+
     if manual_repos:
         print(
             f"Preserving {len(manual_repos)} "
@@ -584,7 +774,8 @@ def main():
                 f"  github:{repo} # MANUAL"
             )
 
-    # Report preserved direct URLs.
+    # ── Report preserved direct URLs ────────────────────────────────────
+
     if manual_urls:
         print(
             f"Preserving {len(manual_urls)} "
@@ -599,18 +790,25 @@ def main():
                 f"  {url}"
             )
 
-    # Build automatic repository dictionary.
-    new_auto = {
-        repo.casefold(): repo
-        for repo in discovered
-    }
+    # ── Build automatic repository dictionary ───────────────────────────
 
-    # Defensive exclusion.
-    for key in list(new_auto):
-        if is_excluded_repo(new_auto[key]):
-            del new_auto[key]
+    new_auto = {}
 
-    # Generate complete links.txt content.
+    for repo in discovered:
+        key = repo_key(repo)
+
+        # Never automatically add an excluded repository.
+        if is_excluded_repo(repo):
+            continue
+
+        # A MANUAL entry wins over an automatic entry.
+        if key in manual_repos:
+            continue
+
+        new_auto[key] = repo
+
+    # ── Generate complete links.txt ─────────────────────────────────────
+
     content = build_links_content(
         existing_mirror or MIRROR_LINE,
         new_auto,
@@ -622,7 +820,8 @@ def main():
         LINKS_FILE
     )
 
-    # No changes.
+    # ── No changes ──────────────────────────────────────────────────────
+
     if old_content == content:
         print(
             "links.txt unchanged"
@@ -645,7 +844,8 @@ def main():
 
         sys.exit(0)
 
-    # Write atomically.
+    # ── Write atomically ────────────────────────────────────────────────
+
     try:
         atomic_write(
             LINKS_FILE,
@@ -659,12 +859,20 @@ def main():
         )
         sys.exit(1)
 
-    # Calculate changes.
-    old_auto_keys = set(old_auto)
-    new_auto_keys = set(new_auto)
+    # ── Calculate changes ───────────────────────────────────────────────
+
+    old_auto_keys = set(
+        old_auto
+    )
+
+    new_auto_keys = set(
+        new_auto
+    )
 
     added = sorted(
-        new_auto_keys - old_auto_keys
+        new_auto_keys - new_auto_keys.intersection(
+            old_auto_keys
+        )
     )
 
     removed = sorted(
@@ -699,6 +907,8 @@ def main():
         print(
             "Changes were formatting/content related only."
         )
+
+    # ── Summary ─────────────────────────────────────────────────────────
 
     print(
         f"Automatic repositories: "
