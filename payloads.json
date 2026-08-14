@@ -1,0 +1,10 @@
+{
+  "name": "RDX Custom Payloads",
+  "payloads": [
+    {
+      "name": "Bfpilot",
+      "filename": "bfpilot.elf",
+      "url": "https://github.com/ItsBlurf/BFpilot/releases/download/v0.2.0/bfpilot.elf"
+    }
+  ]
+}
