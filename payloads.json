@@ -1,5 +1,27 @@
 [
   {
+    "name": "EVO-PLAYER-PS5",
+    "filename": "EVOPlayer-v0.7.0-InstallTile.elf",
+    "url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-InstallTile.elf",
+    "source": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases",
+    "source_direct": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-InstallTile.elf",
+    "description": "![](https://img.shields.io/badge/Release-v0.7.0-blueviolet?style=for-the-badge) ![](https://img.shields.io/badge/PS5%20H",
+    "last_update": "2026-08-14",
+    "version": "v0.7.0",
+    "category": "Networking & Servers"
+  },
+  {
+    "name": "PS-Play",
+    "filename": "PSPlay-2.1.elf",
+    "url": "https://github.com/MounirHero/PS-Play/releases/download/2.1/PSPlay-2.1.elf",
+    "source": "https://github.com/MounirHero/PS-Play/releases",
+    "source_direct": "https://github.com/MounirHero/PS-Play/releases/download/2.1/PSPlay-2.1.elf",
+    "description": "## New in 2.1 UPDATE",
+    "last_update": "2026-08-14",
+    "version": "2.1",
+    "category": "Utilities & Tools"
+  },
+  {
     "name": "ps5-webkit-autoloader",
     "filename": "webkit-autoloader-installer_v0.3.0.elf",
     "url": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.3.0/webkit-autoloader-installer_v0.3.0.elf",
