@@ -419,17 +419,6 @@
   },
   {
     "name": "garlic-savemgr",
-    "filename": "garlic-savemgr.elf",
-    "url": "https://github.com/earthonion/garlic-savemgr/releases/download/v1.7/garlic-savemgr.elf",
-    "source": "https://github.com/earthonion/garlic-savemgr/releases",
-    "source_direct": "https://github.com/earthonion/garlic-savemgr/releases/download/v1.7/garlic-savemgr.elf",
-    "description": "What's New",
-    "last_update": "2026-03-16",
-    "version": "v1.7",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "garlic-savemgr",
     "filename": "garlic-savemgr_v1.12.elf",
     "url": "https://github.com/itsPLK/ps5-payloads-mirror/releases/download/payloads-mirror/garlic-savemgr_v1.12.elf",
     "source": "https://git.etawen.dev/earthonion/garlic-savemgr/releases",

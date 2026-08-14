@@ -1,44 +1,49 @@
 # PS5 Payload Manager - Source List
-# Formats:
-#   github:<user>/<repo>        — auto-resolves latest release, updates automatically
-#   mirror:<user>/<repo>@<tag>  — bulk-imports all .elf/.bin/.lua from a release tag
-#   https://...                 — pinned direct URL, will NOT auto-update
 #
-# Lines starting with # are ignored.
+# Formats:
+#   github:<user>/<repo>        - auto-resolves latest release
+#   mirror:<user>/<repo>@<tag>  - bulk-imports from a release tag
+#   https://...                 - pinned direct URL
+#
+# Add # MANUAL to any GitHub or direct URL entry to protect it
+# from automatic synchronization.
+#
+# Examples:
+#   github:myuser/myrepo # MANUAL
+#   https://example.com/payload.elf # MANUAL
 
-# --- Manual ---
-github:seregonwar/MemDBG # MANUAL
-github:sainsaji/EVO-PLAYER-PS5 # MANUAL
-github:MounirHero/PS-Play # MANUAL
-github:Michele-M-Media/PIZZA-HEN # MANUAL
-
-# --- Mirror (bulk import from itsPLK's mirror) ---
+# --- Mirror ---
 mirror:itsPLK/ps5-payloads-mirror@payloads-mirror
 
 # --- GitHub repos (auto-synced from itsPLK README) ---
-# Last synced: 2026-08-14 20:19 UTC
-github:itsPLK/ps5-webkit-autoloader
-github:EchoStretch/kstuff-lite
-github:phantomptr/ps5upload
-github:owendswang/ps5-web-file-manager
-github:ItsBlurf/BFpilot
-github:drakmor/nanoDNS
-github:ps5-payload-dev/websrv
-github:ps5-payload-dev/shsrv
-github:ps5-payload-dev/ftpsrv
-github:ps5-payload-dev/klogsrv
-github:ps5-payload-dev/elfldr
-github:notmaj0r/CheatRunner
-github:EchoStretch/ps5-app-dumper
-github:ps5-linux/ps5-linux-loader
-github:drakmor/ShadowMountPlus
-github:OpenSourcereR-dev/ps5debug-NG
-github:seregonwar/zftpd
-github:itsPLK/PS5-Lapy-JB-Daemon
-github:EchoStretch/kstuff-toggle
+# Last synced: 2026-08-14 20:35 UTC
 github:BestPig/BackPork
 github:drakmor/ftpsrv
+github:drakmor/nanoDNS
+github:drakmor/ShadowMountPlus
 github:EchoStretch/kstuff
+github:EchoStretch/kstuff-lite
+github:EchoStretch/kstuff-toggle
+github:EchoStretch/ps5-app-dumper
 github:etaHEN/etaHEN
-github:earthonion/garlic-savemgr
+github:ItsBlurf/BFpilot
 github:itsPLK/pldmgr
+github:itsPLK/PS5-Lapy-JB-Daemon
+github:itsPLK/ps5-webkit-autoloader
+github:notmaj0r/CheatRunner
+github:OpenSourcereR-dev/ps5debug-NG
+github:owendswang/ps5-web-file-manager
+github:phantomptr/ps5upload
+github:ps5-linux/ps5-linux-loader
+github:ps5-payload-dev/elfldr
+github:ps5-payload-dev/ftpsrv
+github:ps5-payload-dev/klogsrv
+github:ps5-payload-dev/shsrv
+github:ps5-payload-dev/websrv
+github:seregonwar/zftpd
+
+# --- Manually added GitHub repos ---
+github:Michele-M-Media/PIZZA-HEN # MANUAL
+github:MounirHero/PS-Play # MANUAL
+github:sainsaji/EVO-PLAYER-PS5 # MANUAL
+github:seregonwar/MemDBG # MANUAL
