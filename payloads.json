@@ -2,6 +2,13 @@
   "name": "RDX Custom Payloads",
   "payloads": [
     {
+      "name": "Web File Mgr",
+      "filename": "web-file-mgr-v1.4.elf",
+      "url": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.4/web-file-mgr-v1.4.elf",
+      "version": "v1.4",
+      "description": "Change log:"
+    },
+    {
       "name": "Bfpilot",
       "filename": "bfpilot.elf",
       "url": "https://github.com/ItsBlurf/BFpilot/releases/download/v0.4.4/bfpilot.elf",
