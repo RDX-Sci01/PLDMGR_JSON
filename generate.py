@@ -42,6 +42,47 @@ def gh_api(path):
         return json.loads(resp.read())
 
 
+def resolve_mirror(mirror_spec):
+    """
+    Fetch ALL .elf/.bin/.lua assets from a pinned release tag.
+    Format: mirror:<user>/<repo>@<tag>
+    Returns a list of payload dicts (one per asset).
+    """
+    try:
+        repo_path, tag = mirror_spec.rsplit("@", 1)
+    except ValueError:
+        print(f"  [mirror] WARNING: Invalid format '{mirror_spec}' — expected mirror:<user>/<repo>@<tag>", file=sys.stderr)
+        return []
+
+    print(f"  [mirror:{repo_path}@{tag}] Fetching release assets ...")
+    try:
+        data = gh_api(f"/repos/{repo_path}/releases/tags/{tag}")
+    except urllib.error.URLError as e:
+        print(f"  [mirror:{repo_path}@{tag}] WARNING: GitHub API unreachable: {e}", file=sys.stderr)
+        return []
+
+    assets = data.get("assets", [])
+    payload_assets = [a for a in assets if a["name"].lower().endswith(PAYLOAD_EXTENSIONS)]
+
+    if not payload_assets:
+        print(f"  [mirror:{repo_path}@{tag}] WARNING: No .elf/.bin/.lua assets found.", file=sys.stderr)
+        return []
+
+    entries = []
+    for asset in payload_assets:
+        filename = asset["name"]
+        url = asset["browser_download_url"]
+        name = infer_name(filename)
+        version = infer_version(filename)
+        entry = {"name": name, "filename": filename, "url": url}
+        if version:
+            entry["version"] = version
+        entries.append(entry)
+
+    print(f"  [mirror:{repo_path}@{tag}] Found {len(entries)} payload(s).")
+    return entries
+
+
 def resolve_github(repo_path):
     """Return a payload dict from the latest release of <user>/<repo>, or None on failure."""
     print(f"  [{repo_path}] Fetching latest release ...")
@@ -151,7 +192,26 @@ def main():
         sys.exit(EXIT_NO_PAYLOADS)
 
     for line in lines:
-        if line.lower().startswith("github:"):
+        if line.lower().startswith("mirror:"):
+            # Bulk-import all payload assets from a pinned release tag
+            mirror_spec = line[len("mirror:"):]
+            entries = resolve_mirror(mirror_spec)
+            if not entries:
+                skipped += 1
+                continue
+            for entry in entries:
+                url = entry["url"]
+                print(f"  [{entry['name']}] Validating {url} ...")
+                ok, reason = validate_url(url)
+                if ok:
+                    print(f"  [{entry['name']}] OK ({reason})")
+                    payloads.append(entry)
+                else:
+                    print(f"  [{entry['name']}] SKIPPED — URL unreachable: {reason}", file=sys.stderr)
+                    skipped += 1
+            continue
+
+        elif line.lower().startswith("github:"):
             repo_path = line[len("github:"):]
             entry = resolve_github(repo_path)
             if not entry:

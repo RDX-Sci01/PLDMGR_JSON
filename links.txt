@@ -10,3 +10,16 @@
 
 github:ItsBlurf/BFpilot
 github:Michele-M-Media/PIZZA-HEN
+github:EchoStretch/kstuff-lite
+github:EchoStretch/kstuff-toggle
+github:EchoStretch/kstuff
+github:ps5-payload-dev/websrv
+github:ps5-payload-dev/ftpsrv
+github:ps5-payload-dev/klogsrv
+github:ps5-payload-dev/shsrv
+github:ps5-payload-dev/elfldr
+github:drakmor/ShadowMountPlus
+github:itsPLK/pldmgr
+github:BestPig/BackPork
+github:earthonion/garlic-savemgr
+github:etaHEN/etaHEN

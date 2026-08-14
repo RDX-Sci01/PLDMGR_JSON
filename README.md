@@ -27,20 +27,26 @@ Payloads are **automatically kept up to date** — the list refreshes every 2 ho
 
 ### Adding a payload
 
-Edit [`links.txt`](./links.txt). Two formats are supported:
+Edit [`links.txt`](./links.txt). Three formats are supported:
 
-**GitHub repo** (recommended — auto-resolves the latest release asset):
+**GitHub repo** — auto-resolves the latest release asset, updates automatically:
 ```
 github:ItsBlurf/BFpilot
-github:someuser/somerepo
 ```
 
-**Direct URL** (pinned — will not auto-update):
+**Mirror** — bulk-imports every `.elf`/`.bin`/`.lua` asset from a specific release tag at once:
+```
+mirror:itsPLK/ps5-payloads-mirror@payloads-mirror
+```
+
+**Direct URL** — pinned, will not auto-update:
 ```
 https://example.com/payloads/tool.elf
 ```
 
 Commit and push. The Action regenerates `payloads.json` automatically.
+
+> **Note on duplicates:** `links.txt` currently includes both the `mirror:` entry and the individual `github:` entries for the same payloads. This is intentional — the mirror provides a stable hosted copy, while the `github:` entries track upstream directly. If you want to avoid duplicates in `payloads.json`, remove the `github:` entries for anything already covered by the mirror.
 
 ### Auto-update schedule
 
