@@ -779,31 +779,60 @@ def parse_links(path):
 
 
 # ── Entry deduplication ──────────────────────────────────────────────────────
-
 def deduplicate_entries(entries):
     """
-    Deduplicate entries by normalized download URL.
+    Deduplicate entries by normalized download URL first,
+    then by name — catches mirror + github: overlap where
+    the same payload appears under different URLs.
 
-    Keeps distinct payloads that happen to share the same display name.
+    When two entries share a name, the one from a direct
+    github: resolve is preferred over a mirror import
+    (direct = more up-to-date version/URL).
     """
-    result = []
-    seen_urls = set()
-
+    # Pass 1: deduplicate by URL
+    url_seen = set()
+    url_deduped = []
     for entry in entries:
-        url = entry.get("url", "")
-        key = normalize_url(url)
-
+        key = normalize_url(entry.get("url", ""))
         if not key:
             continue
+        if key in url_seen:
+            print(f"  [SKIP] Duplicate URL: {entry.get('url')}")
+            continue
+        url_seen.add(key)
+        url_deduped.append(entry)
 
-        if key in seen_urls:
-            print(
-                f"  [SKIP] Duplicate URL: {url}"
-            )
+    # Pass 2: deduplicate by name, prefer direct github: entries
+    # (identified by source_direct == url, not a mirror domain)
+    name_seen = {}  # lower_name -> index in result
+    result = []
+    for entry in url_deduped:
+        name_key = entry.get("name", "").strip().lower()
+        if not name_key:
+            result.append(entry)
             continue
 
-        seen_urls.add(key)
-        result.append(entry)
+        is_direct = (
+            "github.com" in entry.get("source", "")
+            and entry.get("url") == entry.get("source_direct")
+        )
+
+        if name_key not in name_seen:
+            name_seen[name_key] = len(result)
+            result.append(entry)
+        else:
+            existing_idx = name_seen[name_key]
+            existing = result[existing_idx]
+            existing_is_direct = (
+                "github.com" in existing.get("source", "")
+                and existing.get("url") == existing.get("source_direct")
+            )
+            if is_direct and not existing_is_direct:
+                # Replace mirror entry with direct entry
+                print(f"  [DEDUP] Preferring direct source for: {entry['name']}")
+                result[existing_idx] = entry
+            else:
+                print(f"  [SKIP] Duplicate name: {entry['name']}")
 
     return result
 
