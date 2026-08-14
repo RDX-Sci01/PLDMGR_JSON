@@ -135,45 +135,21 @@ def fetch_json(url):
 
 
 # ── GitHub README handling ───────────────────────────────────────────────────
-
 def get_readme_content():
-    """
-    Fetch and decode the repository README through the GitHub API.
-    """
-    url = (
-        f"{GITHUB_API}/repos/{README_REPO}/readme"
-    )
-
+    url = f"{GITHUB_API}/repos/{README_REPO}/readme"
     data = fetch_json(url)
 
     if not isinstance(data, dict):
-        raise RuntimeError(
-            "GitHub API returned an unexpected README response"
-        )
+        raise RuntimeError("GitHub API returned an unexpected README response")
 
     encoded_content = data.get("content")
 
     if not encoded_content:
-        raise RuntimeError(
-            "README response does not contain content"
-        )
+        raise RuntimeError("README response does not contain content")
 
-    try:
-        decoded = base64.b64decode(
-            encoded_content,
-            validate=True,
-        )
+    decoded = base64.b64decode(encoded_content.replace("\n", ""))
 
-    except (binascii.Error, ValueError) as exc:
-        raise RuntimeError(
-            f"invalid base64 README content: {exc}"
-        ) from exc
-
-    return decoded.decode(
-        "utf-8",
-        errors="replace",
-    )
-
+    return decoded.decode("utf-8", errors="replace")
 
 # ── Repository extraction ────────────────────────────────────────────────────
 
