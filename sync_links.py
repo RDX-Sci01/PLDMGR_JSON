@@ -4,16 +4,19 @@ sync_links.py - auto-discovers payload repositories from itsPLK README
 and updates links.txt.
 
 Rules:
-  - The configured mirror line is always preserved at the top.
-  - GitHub repos discovered from the upstream README are automatic.
-  - Entries marked with "# MANUAL" are never removed or overwritten.
-  - Manual direct URLs must also be marked "# MANUAL".
-  - Repos removed from the upstream README are removed unless marked MANUAL.
-  - Output is deterministic and only rewritten when content changes.
+  - The configured mirror line is always preserved.
+  - GitHub repositories discovered from the upstream README are automatic.
+  - GitHub entries marked with "# MANUAL" are never removed.
+  - Direct http/https URLs are always treated as pinned/manual entries
+    and are never removed.
+  - Repositories removed from the upstream README are removed unless
+    marked "# MANUAL".
+  - Output is deterministic.
+  - links.txt is only rewritten when its contents change.
 
 Exit codes:
   0 — success
-  1 — failed to fetch/parse the upstream README
+  1 — failed to fetch/parse/write links.txt
 """
 
 import base64
@@ -24,7 +27,6 @@ import re
 import sys
 import tempfile
 import urllib.error
-import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 
@@ -40,35 +42,29 @@ MIRROR_LINE = (
 )
 
 USER_AGENT = "pldmgr-links-sync/1.0"
-
 REQUEST_TIMEOUT = 15
 
 
-# Repositories that must never be imported from the upstream README.
+# Repositories that should never be imported from the upstream README.
 EXCLUDE_REPOS = {
     "itsPLK/ps5-payloads-mirror",
 }
 
 
-# GitHub repository syntax:
-#
+# Valid GitHub repository format:
 #   owner/repository
-#
-# GitHub allows letters, numbers, -, _, and .
 REPO_RE = re.compile(
     r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$"
 )
 
 
-# Matches ordinary GitHub repository URLs.
+# Extract repository portion from GitHub URLs.
 #
 # Examples:
 #   https://github.com/user/repo
 #   https://github.com/user/repo/
 #   https://github.com/user/repo/releases
 #   https://github.com/user/repo/tree/main
-#
-# Only the owner/repository portion is retained.
 GITHUB_REPO_URL_RE = re.compile(
     r"https?://github\.com/"
     r"([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)"
@@ -96,7 +92,7 @@ def gh_headers():
 
 
 def fetch_json(url):
-    """Fetch a GitHub API JSON response."""
+    """Fetch and decode a GitHub API JSON response."""
     request = urllib.request.Request(
         url,
         headers=gh_headers(),
@@ -134,27 +130,49 @@ def fetch_json(url):
         ) from exc
 
 
-# ── GitHub README handling ───────────────────────────────────────────────────
+# ── README handling ───────────────────────────────────────────────────────────
+
 def get_readme_content():
-    url = f"{GITHUB_API}/repos/{README_REPO}/readme"
+    """Fetch and decode the upstream README."""
+    url = (
+        f"{GITHUB_API}/repos/{README_REPO}/readme"
+    )
+
     data = fetch_json(url)
 
     if not isinstance(data, dict):
-        raise RuntimeError("GitHub API returned an unexpected README response")
+        raise RuntimeError(
+            "GitHub API returned an unexpected README response"
+        )
 
     encoded_content = data.get("content")
 
     if not encoded_content:
-        raise RuntimeError("README response does not contain content")
+        raise RuntimeError(
+            "README response does not contain content"
+        )
 
-    decoded = base64.b64decode(encoded_content.replace("\n", ""))
+    try:
+        decoded = base64.b64decode(
+            encoded_content,
+            validate=True,
+        )
 
-    return decoded.decode("utf-8", errors="replace")
+    except (binascii.Error, ValueError) as exc:
+        raise RuntimeError(
+            f"invalid base64 README content: {exc}"
+        ) from exc
 
-# ── Repository extraction ────────────────────────────────────────────────────
+    return decoded.decode(
+        "utf-8",
+        errors="replace",
+    )
+
+
+# ── Repository handling ──────────────────────────────────────────────────────
 
 def normalize_repo(repo):
-    """Normalize a GitHub repository identifier."""
+    """Validate and normalize a GitHub repository identifier."""
     if not isinstance(repo, str):
         return None
 
@@ -169,7 +187,7 @@ def normalize_repo(repo):
 
 
 def is_excluded_repo(repo):
-    """Return True if a repository is explicitly excluded."""
+    """Return True when the repository is explicitly excluded."""
     repo_key = repo.casefold()
 
     return any(
@@ -180,16 +198,9 @@ def is_excluded_repo(repo):
 
 def extract_github_repos(text):
     """
-    Extract unique GitHub repositories from README links.
+    Extract unique GitHub repositories from the upstream README.
 
-    Only the owner/repository portion is retained, so links such as:
-
-        https://github.com/user/repo/releases
-        https://github.com/user/repo/tree/main
-
-    resolve to:
-
-        user/repo
+    Only the owner/repository portion is retained.
     """
     if not isinstance(text, str):
         return []
@@ -214,7 +225,7 @@ def extract_github_repos(text):
         seen.add(key)
         repos.append(repo)
 
-    # Deterministic ordering.
+    # Always produce deterministic ordering.
     repos.sort(key=str.casefold)
 
     return repos
@@ -224,7 +235,13 @@ def extract_github_repos(text):
 
 def strip_inline_comment(value):
     """
-    Remove a trailing '#' comment while preserving the actual value.
+    Remove a trailing inline comment.
+
+    Example:
+        github:user/repo # MANUAL
+
+    becomes:
+        github:user/repo
     """
     return re.sub(
         r"\s+#.*$",
@@ -234,12 +251,7 @@ def strip_inline_comment(value):
 
 
 def has_manual_marker(line):
-    """
-    Detect the explicit MANUAL protection marker.
-
-    The marker must appear as a comment token, rather than matching
-    arbitrary text containing the word MANUAL.
-    """
+    """Return True when a line explicitly contains # MANUAL."""
     return bool(
         re.search(
             r"\s+#\s*MANUAL\b",
@@ -255,9 +267,9 @@ def parse_existing_links(path):
 
     Returns:
         mirror,
-        automatic repositories,
-        manual repositories,
-        manual direct URLs
+        automatic GitHub repositories,
+        manual GitHub repositories,
+        pinned direct URLs
     """
     mirror = None
     auto_repos = {}
@@ -283,6 +295,7 @@ def parse_existing_links(path):
     for raw_line in lines:
         line = raw_line.strip()
 
+        # Ignore blank lines and full-line comments.
         if not line or line.startswith("#"):
             continue
 
@@ -292,14 +305,14 @@ def parse_existing_links(path):
         if not value:
             continue
 
-        # Mirror
+        # ── Mirror ────────────────────────────────────────────────
         if value.startswith("mirror:"):
             if mirror is None:
                 mirror = value
 
             continue
 
-        # GitHub repository
+        # ── GitHub repository ─────────────────────────────────────
         if value.startswith("github:"):
             repo = normalize_repo(
                 value[len("github:"):].strip()
@@ -323,18 +336,15 @@ def parse_existing_links(path):
 
             continue
 
-        # Direct URL
+        # ── Direct URL ────────────────────────────────────────────
+        #
+        # IMPORTANT:
+        # Direct URLs are ALWAYS treated as pinned/manual entries.
+        # They do not require # MANUAL.
         if (
             value.startswith("http://")
             or value.startswith("https://")
         ):
-            if not is_manual:
-                print(
-                    f"[WARN] Ignoring unprotected direct URL "
-                    f"from existing links.txt: {value}"
-                )
-                continue
-
             key = value.casefold()
 
             if key not in manual_urls:
@@ -355,7 +365,7 @@ def parse_existing_links(path):
     )
 
 
-# ── Output generation ────────────────────────────────────────────────────────
+# ── links.txt generation ──────────────────────────────────────────────────────
 
 def build_links_content(
     mirror,
@@ -363,9 +373,8 @@ def build_links_content(
     manual_repos,
     manual_urls,
 ):
-    """
-    Build deterministic links.txt content.
-    """
+    """Build deterministic links.txt content."""
+
     lines = [
         "# PS5 Payload Manager - Source List",
         "#",
@@ -374,12 +383,17 @@ def build_links_content(
         "#   mirror:<user>/<repo>@<tag>  - bulk-imports from a release tag",
         "#   https://...                 - pinned direct URL",
         "#",
-        "# Add # MANUAL to any GitHub or direct URL entry to protect it",
-        "# from automatic synchronization.",
+        "# GitHub repositories discovered from the upstream README are",
+        "# automatically added and removed as the README changes.",
         "#",
-        "# Examples:",
+        "# Add # MANUAL to a GitHub repository to protect it from removal:",
         "#   github:myuser/myrepo # MANUAL",
-        "#   https://example.com/payload.elf # MANUAL",
+        "#",
+        "# Direct URLs are always treated as pinned/manual entries and",
+        "# are preserved automatically.",
+        "#",
+        "# Example:",
+        "#   https://example.com/payload.elf",
         "",
         "# --- Mirror ---",
         mirror or MIRROR_LINE,
@@ -391,6 +405,7 @@ def build_links_content(
         ),
     ]
 
+    # Automatic GitHub repositories.
     for repo in sorted(
         auto_repos.values(),
         key=str.casefold,
@@ -399,6 +414,7 @@ def build_links_content(
             f"github:{repo}"
         )
 
+    # Protected/manual GitHub repositories.
     if manual_repos:
         lines.extend(
             [
@@ -415,6 +431,7 @@ def build_links_content(
                 f"github:{repo} # MANUAL"
             )
 
+    # Pinned direct URLs.
     if manual_urls:
         lines.extend(
             [
@@ -427,15 +444,15 @@ def build_links_content(
             manual_urls.values(),
             key=str.casefold,
         ):
-            lines.append(
-                f"{url} # MANUAL"
-            )
+            lines.append(url)
 
     return "\n".join(lines) + "\n"
 
 
+# ── File handling ─────────────────────────────────────────────────────────────
+
 def read_existing_file(path):
-    """Read a file if it exists."""
+    """Read an existing file or return None if it doesn't exist."""
     try:
         with open(
             path,
@@ -457,8 +474,8 @@ def atomic_write(path, content):
     """
     Atomically replace a file.
 
-    The temporary file is created in the same directory so that
-    os.replace() remains atomic on the same filesystem.
+    The temporary file is created in the same directory so
+    os.replace() remains atomic.
     """
     directory = os.path.dirname(
         os.path.abspath(path)
@@ -519,6 +536,7 @@ def main():
         f"Fetching README from {README_REPO}..."
     )
 
+    # Fetch upstream README.
     try:
         readme = get_readme_content()
 
@@ -528,6 +546,7 @@ def main():
         )
         sys.exit(1)
 
+    # Discover repositories.
     discovered = extract_github_repos(readme)
 
     print(
@@ -535,6 +554,7 @@ def main():
         f"from README"
     )
 
+    # Parse existing links.txt.
     try:
         (
             existing_mirror,
@@ -549,10 +569,11 @@ def main():
         )
         sys.exit(1)
 
+    # Report preserved manual GitHub repositories.
     if manual_repos:
         print(
             f"Preserving {len(manual_repos)} "
-            f"MANUAL GitHub entries:"
+            f"MANUAL GitHub repositories:"
         )
 
         for repo in sorted(
@@ -563,10 +584,11 @@ def main():
                 f"  github:{repo} # MANUAL"
             )
 
+    # Report preserved direct URLs.
     if manual_urls:
         print(
             f"Preserving {len(manual_urls)} "
-            f"MANUAL direct URLs:"
+            f"pinned direct URLs:"
         )
 
         for url in sorted(
@@ -574,23 +596,21 @@ def main():
             key=str.casefold,
         ):
             print(
-                f"  {url} # MANUAL"
+                f"  {url}"
             )
 
-    # Build automatic repository set.
+    # Build automatic repository dictionary.
     new_auto = {
         repo.casefold(): repo
         for repo in discovered
     }
 
-    # Never allow excluded repositories through, even if the exclusion
-    # configuration changes case.
-    for repo_key in list(new_auto):
-        repo = new_auto[repo_key]
+    # Defensive exclusion.
+    for key in list(new_auto):
+        if is_excluded_repo(new_auto[key]):
+            del new_auto[key]
 
-        if is_excluded_repo(repo):
-            del new_auto[repo_key]
-
+    # Generate complete links.txt content.
     content = build_links_content(
         existing_mirror or MIRROR_LINE,
         new_auto,
@@ -602,6 +622,7 @@ def main():
         LINKS_FILE
     )
 
+    # No changes.
     if old_content == content:
         print(
             "links.txt unchanged"
@@ -611,17 +632,20 @@ def main():
             f"Automatic repositories: "
             f"{len(new_auto)}"
         )
+
         print(
             f"Manual repositories: "
             f"{len(manual_repos)}"
         )
+
         print(
-            f"Manual URLs: "
+            f"Pinned direct URLs: "
             f"{len(manual_urls)}"
         )
 
         sys.exit(0)
 
+    # Write atomically.
     try:
         atomic_write(
             LINKS_FILE,
@@ -635,6 +659,7 @@ def main():
         )
         sys.exit(1)
 
+    # Calculate changes.
     old_auto_keys = set(old_auto)
     new_auto_keys = set(new_auto)
 
@@ -655,9 +680,9 @@ def main():
             "Added:"
         )
 
-        for repo in added:
+        for key in added:
             print(
-                f"  {new_auto[repo]}"
+                f"  {new_auto[key]}"
             )
 
     if removed:
@@ -665,27 +690,28 @@ def main():
             "Removed:"
         )
 
-        for repo in removed:
+        for key in removed:
             print(
-                f"  {old_auto[repo]}"
+                f"  {old_auto[key]}"
             )
 
     if not added and not removed:
         print(
-            "Changes were formatting/content related "
-            "only."
+            "Changes were formatting/content related only."
         )
 
     print(
         f"Automatic repositories: "
         f"{len(new_auto)}"
     )
+
     print(
         f"Manual repositories: "
         f"{len(manual_repos)}"
     )
+
     print(
-        f"Manual URLs: "
+        f"Pinned direct URLs: "
         f"{len(manual_urls)}"
     )
 
