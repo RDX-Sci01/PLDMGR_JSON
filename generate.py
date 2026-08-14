@@ -33,6 +33,7 @@ def gh_api(path):
         req.add_header("Authorization", f"Bearer {GITHUB_TOKEN}")
     with urllib.request.urlopen(req, timeout=15) as resp:
         return json.loads(resp.read())
+    # Note: callers catch urllib.error.URLError (parent of HTTPError) for all network failures
 
 
 def resolve_github(repo_path):
@@ -40,8 +41,9 @@ def resolve_github(repo_path):
     print(f"  Fetching latest release for {repo_path} ...")
     try:
         data = gh_api(f"/repos/{repo_path}/releases/latest")
-    except urllib.error.HTTPError as e:
-        print(f"  WARNING: GitHub API error for {repo_path}: {e}", file=sys.stderr)
+    except urllib.error.URLError as e:
+        # Catches HTTPError (4xx/5xx) and URLError (network down, DNS failure, timeout)
+        print(f"  WARNING: Could not reach GitHub API for {repo_path}: {e}", file=sys.stderr)
         return None
 
     tag = data.get("tag_name", "")
@@ -79,7 +81,8 @@ def resolve_github(repo_path):
 
 
 def parse_filename(url):
-    return url.rstrip("/").split("/")[-1].split("?")[0]
+    # Strip query string and fragment before extracting filename
+    return url.rstrip("/").split("/")[-1].split("?")[0].split("#")[0]
 
 
 def infer_name(filename):
@@ -90,7 +93,9 @@ def infer_name(filename):
 
 
 def infer_version(filename):
-    match = re.search(r"[_\-v](\d[\d.]+\w*)", filename, re.IGNORECASE)
+    # Strip extension first so "v0.19.elf" doesn't bleed ".elf" into the version
+    stem = re.sub(r"\.[^.]+$", "", filename)
+    match = re.search(r"[_\-v](\d[\d.]*\w*)", stem, re.IGNORECASE)
     if match:
         return "v" + match.group(1).lstrip("vV")
     return None
@@ -105,7 +110,7 @@ def main():
             if not line or line.startswith("#"):
                 continue
 
-            if line.startswith("github:"):
+            if line.lower().startswith("github:"):
                 repo_path = line[len("github:"):]
                 entry = resolve_github(repo_path)
                 if entry:
@@ -119,6 +124,10 @@ def main():
                 if version:
                     entry["version"] = version
                 payloads.append(entry)
+
+    if not payloads:
+        print("ERROR: No payloads resolved — payloads.json not written.", file=sys.stderr)
+        sys.exit(1)
 
     output = {"name": REPO_DISPLAY_NAME, "payloads": payloads}
     with open(OUTPUT_FILE, "w") as f:
