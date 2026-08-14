@@ -1,25 +1,17 @@
 #!/usr/bin/env python3
 """
-generate.py — builds payloads.json from links.txt
+generate.py — builds payloads.json from links.txt.
 
-Production features:
+Features:
   - Resolves GitHub repositories to their latest published release
   - Supports # MANUAL GitHub entries
   - Supports pinned direct URLs
-  - Supports mirror:<user>/<repo>@<tag>
-  - Supports the itsPLK consolidated mirror payloads.json
-  - Uses mirrors as per-payload fallbacks, not duplicate sources
-  - Removes duplicate upstream/mirror payloads
-  - Falls back to mirrors when an upstream asset fails validation
-  - Handles GitHub releases containing multiple payload assets
-  - Cleans Markdown/HTML from descriptions
-  - Validates URLs with HEAD, then GET/Range fallback
-  - Validates mirror entries before they can be used
-  - Keeps source/source_direct metadata consistent
+  - Supports multiple payload assets per GitHub release
+  - Cleans Markdown/HTML descriptions
+  - Validates payload URLs
   - Produces deterministic JSON
-  - Does not use the current date for pinned entries
-  - Writes payloads.json atomically
-  - Only rewrites payloads.json when content actually changes
+  - Only rewrites payloads.json when content changes
+  - Never publishes an empty catalog
 
 Exit codes:
   0 — success
@@ -45,179 +37,164 @@ from urllib.parse import unquote, urlparse
 
 GITHUB_API = "https://api.github.com"
 
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+GITHUB_TOKEN = os.environ.get(
+    "GITHUB_TOKEN",
+    "",
+)
 
 LINKS_FILE = "links.txt"
 OUTPUT_FILE = "payloads.json"
 
-ASSET_EXTENSIONS = (".elf", ".bin", ".lua")
+ASSET_EXTENSIONS = (
+    ".elf",
+    ".bin",
+    ".lua",
+)
 
-HTTP_TIMEOUT = 15
+HTTP_TIMEOUT = 20
 
 DESCRIPTION_MAX_LENGTH = 180
 
 DEFAULT_CATEGORY = "Utilities & Tools"
 
-USER_AGENT = "PLDMGR-JSON-Generator/1.0"
-
-UNKNOWN_DATE = "unknown"
-
 
 # ─────────────────────────────────────────────────────────────────────────────
-# HTTP / GitHub helpers
+# GitHub API
 # ─────────────────────────────────────────────────────────────────────────────
 
-def gh_headers() -> Dict[str, str]:
+def github_headers() -> Dict[str, str]:
     """Return standard GitHub API headers."""
     headers = {
         "Accept": "application/vnd.github+json",
         "X-GitHub-Api-Version": "2022-11-28",
-        "User-Agent": USER_AGENT,
+        "User-Agent": "PLDMGR-JSON-Generator/2.0",
     }
 
     if GITHUB_TOKEN:
-        headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
+        headers["Authorization"] = (
+            f"Bearer {GITHUB_TOKEN}"
+        )
 
     return headers
 
 
-def fetch_json(url: str, github: bool = False) -> object:
-    """Fetch and decode JSON from a URL."""
-    headers = gh_headers() if github else {
-        "Accept": "application/json",
-        "User-Agent": USER_AGENT,
-    }
-
+def fetch_json(url: str) -> object:
+    """Fetch and decode JSON."""
     request = urllib.request.Request(
         url,
-        headers=headers,
+        headers=github_headers(),
         method="GET",
     )
 
-    with urllib.request.urlopen(
-        request,
-        timeout=HTTP_TIMEOUT,
-    ) as response:
-        data = response.read()
+    try:
+        with urllib.request.urlopen(
+            request,
+            timeout=HTTP_TIMEOUT,
+        ) as response:
+            data = response.read()
 
-    return json.loads(data.decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        body = exc.read().decode(
+            "utf-8",
+            errors="replace",
+        )
 
+        try:
+            parsed = json.loads(body)
+            message = parsed.get(
+                "message",
+                exc.reason,
+            )
+        except Exception:
+            message = exc.reason
+
+        raise RuntimeError(
+            f"HTTP {exc.code}: {message}"
+        ) from exc
+
+    except urllib.error.URLError as exc:
+        raise RuntimeError(
+            f"connection error: {exc.reason}"
+        ) from exc
+
+    except TimeoutError as exc:
+        raise RuntimeError(
+            "request timed out"
+        ) from exc
+
+    try:
+        return json.loads(
+            data.decode("utf-8")
+        )
+
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise RuntimeError(
+            f"invalid JSON response: {exc}"
+        ) from exc
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# HTTP validation
+# ─────────────────────────────────────────────────────────────────────────────
 
 def http_ok(url: str) -> bool:
     """
-    Validate a download URL.
+    Validate a payload URL.
 
-    Strategy:
-      1. HEAD
-      2. GET with Range: bytes=0-0
-      3. Normal GET fallback for servers that ignore Range
-
-    urllib follows redirects automatically.
+    Uses a small GET request rather than HEAD because GitHub release
+    assets/CDNs do not consistently support HEAD.
     """
+
     if not url:
         return False
 
-    parsed = urlparse(url)
-
-    if parsed.scheme not in ("http", "https"):
-        return False
-
-    if not parsed.netloc:
-        return False
-
-    headers = {
-        "User-Agent": USER_AGENT,
-    }
-
-    # ── HEAD ────────────────────────────────────────────────────────────
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": "PLDMGR-JSON-Generator/2.0",
+            "Range": "bytes=0-0",
+        },
+        method="GET",
+    )
 
     try:
-        request = urllib.request.Request(
-            url,
-            headers=headers,
-            method="HEAD",
-        )
-
         with urllib.request.urlopen(
             request,
             timeout=HTTP_TIMEOUT,
         ) as response:
             return 200 <= response.status < 400
 
-    except Exception:
-        pass
-
-    # ── GET with Range ─────────────────────────────────────────────────
-
-    try:
-        request = urllib.request.Request(
-            url,
-            headers={
-                **headers,
-                "Range": "bytes=0-0",
-            },
-            method="GET",
-        )
-
-        with urllib.request.urlopen(
-            request,
-            timeout=HTTP_TIMEOUT,
-        ) as response:
-            return 200 <= response.status < 400
-
-    except Exception:
-        pass
-
-    # ── Normal GET fallback ─────────────────────────────────────────────
-    #
-    # Some hosts ignore Range and some unusual CDNs reject both HEAD
-    # and Range requests.
-
-    try:
-        request = urllib.request.Request(
-            url,
-            headers=headers,
-            method="GET",
-        )
-
-        with urllib.request.urlopen(
-            request,
-            timeout=HTTP_TIMEOUT,
-        ) as response:
-            return 200 <= response.status < 400
+    except urllib.error.HTTPError as exc:
+        # Some servers ignore Range and return a normal successful
+        # response. urllib may surface it as an HTTPError in unusual
+        # redirect/server configurations, so accept successful codes.
+        return 200 <= exc.code < 400
 
     except Exception:
         return False
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Text / metadata helpers
+# Text helpers
 # ─────────────────────────────────────────────────────────────────────────────
 
 def clean_description(
     text: str,
     fallback: str = "",
 ) -> str:
-    """
-    Convert GitHub Markdown/HTML into short plain text suitable for the UI.
-    """
+    """Convert Markdown/HTML into short plain text."""
+
     if not text:
         text = fallback
 
     if not text:
         return ""
 
-    text = html.unescape(str(text))
-
-    # Remove HTML comments.
-    text = re.sub(
-        r"<!--.*?-->",
-        " ",
-        text,
-        flags=re.DOTALL,
+    text = html.unescape(
+        str(text)
     )
 
-    # Remove HTML tags.
+    # HTML.
     text = re.sub(
         r"<[^>]+>",
         " ",
@@ -231,24 +208,10 @@ def clean_description(
         text,
     )
 
-    # Markdown links — retain visible text.
+    # Markdown links.
     text = re.sub(
         r"\[([^\]]+)\]\([^)]*\)",
         r"\1",
-        text,
-    )
-
-    # Reference-style links.
-    text = re.sub(
-        r"\[([^\]]+)\]\[[^\]]*\]",
-        r"\1",
-        text,
-    )
-
-    # URLs.
-    text = re.sub(
-        r"https?://\S+",
-        " ",
         text,
     )
 
@@ -259,14 +222,14 @@ def clean_description(
         text,
     )
 
-    # Markdown emphasis / strike-through.
+    # Markdown formatting.
     text = re.sub(
         r"[*_~]+",
         "",
         text,
     )
 
-    # Markdown headings / blockquotes / list markers.
+    # Quotes/headings.
     text = re.sub(
         r"^\s*[>#]+\s*",
         "",
@@ -275,14 +238,7 @@ def clean_description(
     )
 
     text = re.sub(
-        r"^\s*[-+*]\s+",
-        "",
-        text,
-        flags=re.MULTILINE,
-    )
-
-    text = re.sub(
-        r"^\s*\d+\.\s+",
+        r"^\s*#+\s*",
         "",
         text,
         flags=re.MULTILINE,
@@ -295,22 +251,28 @@ def clean_description(
         text,
     ).strip()
 
-    if not text:
-        return ""
-
     if len(text) > DESCRIPTION_MAX_LENGTH:
-        text = text[:DESCRIPTION_MAX_LENGTH].rstrip()
+        text = (
+            text[:DESCRIPTION_MAX_LENGTH]
+            .rstrip()
+        )
 
         if " " in text:
-            text = text.rsplit(" ", 1)[0]
+            text = text.rsplit(
+                " ",
+                1,
+            )[0]
 
         text += "..."
 
     return text
 
 
-def first_release_description(release: dict) -> str:
-    """Extract the first useful line from release notes."""
+def first_release_description(
+    release: dict,
+) -> str:
+    """Return the first useful release-note line."""
+
     body = release.get("body") or ""
 
     for line in body.splitlines():
@@ -322,112 +284,40 @@ def first_release_description(release: dict) -> str:
     return ""
 
 
-def parse_version(tag: str) -> str:
-    """Return a normalized release tag."""
-    tag = str(tag or "").strip()
+def date_from_iso(
+    value: Optional[str],
+) -> str:
+    """Convert an ISO timestamp to YYYY-MM-DD."""
 
-    return tag or "unknown"
-
-
-def date_from_iso(value: Optional[str]) -> str:
-    """
-    Convert an ISO timestamp to YYYY-MM-DD.
-
-    Unlike the previous implementation, missing dates do not use the
-    current date because doing so would make output non-deterministic.
-    """
-    if not value:
-        return UNKNOWN_DATE
-
-    match = re.match(
-        r"^(\d{4}-\d{2}-\d{2})",
-        str(value),
-    )
-
-    if match:
-        return match.group(1)
-
-    try:
-        parsed = datetime.fromisoformat(
-            str(value).replace("Z", "+00:00")
+    if value:
+        match = re.match(
+            r"^(\d{4}-\d{2}-\d{2})",
+            value,
         )
 
-        return parsed.astimezone(
-            timezone.utc
-        ).strftime("%Y-%m-%d")
+        if match:
+            return match.group(1)
 
-    except Exception:
-        return UNKNOWN_DATE
+    return datetime.now(
+        timezone.utc
+    ).strftime("%Y-%m-%d")
 
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Payload metadata
+# ─────────────────────────────────────────────────────────────────────────────
 
 def asset_is_payload(name: str) -> bool:
-    """Return True for supported payload asset extensions."""
-    if not name:
-        return False
-
-    return str(name).lower().endswith(
+    """Return True for supported payload extensions."""
+    return bool(name) and name.lower().endswith(
         ASSET_EXTENSIONS
-    )
-
-
-def repo_key(repo: str) -> str:
-    """Normalize a GitHub repository identifier."""
-    return (
-        str(repo)
-        .strip()
-        .strip("/")
-        .lower()
-    )
-
-
-def github_repo_from_source(
-    source: str,
-) -> Optional[str]:
-    """
-    Extract owner/repo from a GitHub URL.
-    """
-    if not source:
-        return None
-
-    match = re.search(
-        r"github\.com/([^/]+/[^/#?]+)",
-        str(source),
-        flags=re.IGNORECASE,
-    )
-
-    if not match:
-        return None
-
-    repo = match.group(1)
-
-    # Remove URL path suffixes if present.
-    repo = repo.split("/releases", 1)[0]
-    repo = repo.split("/tags", 1)[0]
-    repo = repo.split("/download", 1)[0]
-
-    return repo_key(repo)
-
-
-def github_release_identity(
-    source: str,
-    version: str,
-) -> Optional[Tuple[str, str]]:
-    """Return normalized repository + release identity."""
-    repo = github_repo_from_source(source)
-
-    if not repo:
-        return None
-
-    return (
-        repo,
-        str(version or "").strip().lower(),
     )
 
 
 def filename_without_extension(
     filename: str,
 ) -> str:
-    """Return filename without its final extension."""
+    """Return filename without its extension."""
     return os.path.splitext(
         os.path.basename(filename)
     )[0]
@@ -436,20 +326,22 @@ def filename_without_extension(
 def normalize_payload_name(
     filename: str,
 ) -> str:
-    """
-    Produce a reasonable catalog name from an asset filename.
-    """
-    name = filename_without_extension(filename)
+    """Create a clean catalog name from a filename."""
 
-    # Remove common version suffixes.
+    name = filename_without_extension(
+        filename
+    )
+
+    # Remove version suffixes.
     name = re.sub(
-        r"([_\-\s]+)v?\d+(?:\.\d+)*(?:[-_a-zA-Z0-9]*)?$",
+        r"([_\-\s]+)v?\d+(?:\.\d+)*"
+        r"(?:[-_a-zA-Z0-9]*)?$",
         "",
         name,
         flags=re.IGNORECASE,
     )
 
-    # Remove PS4 / PS5 suffix.
+    # Remove PS4/PS5 suffix.
     name = re.sub(
         r"[-_](?:ps4|ps5)$",
         "",
@@ -465,34 +357,35 @@ def normalize_payload_name(
         flags=re.IGNORECASE,
     )
 
-    name = name.strip("_- ")
-
-    return name or filename_without_extension(
-        filename
+    name = name.strip(
+        "_- "
     )
 
+    return (
+        name
+        or filename_without_extension(filename)
+    )
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Categories
+# ─────────────────────────────────────────────────────────────────────────────
 
 def guess_category(
     name: str,
     description: str = "",
 ) -> str:
-    """
-    Guess a user-friendly catalog category.
+    """Assign a user-friendly category."""
 
-    Loader rules run before networking rules so names such as
-    webkit-autoloader remain in Loaders.
-    """
     text = (
         f"{name} {description}"
     ).lower()
-
-    # ── System / Jailbreak ─────────────────────────────────────────────
 
     system_keywords = (
         "jailbreak",
         "kstuff",
         "etahen",
-        "eta hen",
+        "hen",
         "exploit",
         "lapy",
         "daemon",
@@ -503,8 +396,6 @@ def guess_category(
         for keyword in system_keywords
     ):
         return "System & Jailbreak"
-
-    # ── Loaders ────────────────────────────────────────────────────────
 
     loader_keywords = (
         "loader",
@@ -519,8 +410,6 @@ def guess_category(
         for keyword in loader_keywords
     ):
         return "Loaders"
-
-    # ── Networking ─────────────────────────────────────────────────────
 
     networking_keywords = (
         "ftp",
@@ -558,13 +447,17 @@ def parse_links(
     """
     Parse links.txt.
 
+    Returns:
+        [(value, is_manual), ...]
+
     Supported:
-      github:owner/repo
-      github:owner/repo # MANUAL
-      mirror:owner/repo@tag
-      https://...
+        github:user/repo
+        github:user/repo # MANUAL
+        https://...
+        http://...
     """
-    entries: List[Tuple[str, bool]] = []
+
+    entries = []
     seen = set()
 
     try:
@@ -575,7 +468,16 @@ def parse_links(
             lines = file.readlines()
 
     except FileNotFoundError:
-        print(f"ERROR: {path} not found")
+        print(
+            f"ERROR: {path} not found"
+        )
+        sys.exit(1)
+
+    except OSError as exc:
+        print(
+            f"ERROR: Could not read "
+            f"{path}: {exc}"
+        )
         sys.exit(1)
 
     for raw_line in lines:
@@ -592,7 +494,6 @@ def parse_links(
             )
         )
 
-        # Remove inline comments only when preceded by whitespace.
         value = re.sub(
             r"\s+#.*$",
             "",
@@ -602,46 +503,74 @@ def parse_links(
         if not value:
             continue
 
-        key = value.lower()
+        key = value.casefold()
 
         if key in seen:
             print(
-                f"  [SKIP] Duplicate links.txt entry: "
+                f"  [SKIP] Duplicate entry: "
                 f"{value}"
             )
             continue
 
         seen.add(key)
-        entries.append(
-            (value, is_manual)
-        )
+
+        if value.startswith(
+            "github:"
+        ):
+            entries.append(
+                (
+                    value,
+                    is_manual,
+                )
+            )
+
+        elif value.startswith(
+            ("http://", "https://")
+        ):
+            entries.append(
+                (
+                    value,
+                    True,
+                )
+            )
+
+        else:
+            print(
+                f"  [WARN] Unknown format, "
+                f"skipping: {value}"
+            )
 
     return entries
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# GitHub resolver
+# GitHub repository resolver
 # ─────────────────────────────────────────────────────────────────────────────
+
+def github_repo_from_entry(
+    value: str,
+) -> Optional[str]:
+    """Extract owner/repo from github: entry."""
+
+    repo = value[
+        len("github:"):
+    ].strip()
+
+    if not re.fullmatch(
+        r"[A-Za-z0-9_.-]+/"
+        r"[A-Za-z0-9_.-]+",
+        repo,
+    ):
+        return None
+
+    return repo
+
 
 def resolve_github(
     repo: str,
     manual: bool = False,
 ) -> List[dict]:
-    """
-    Resolve a GitHub repository to all supported payload assets from
-    its latest published release.
-    """
-    repo = repo.strip()
-
-    if not re.fullmatch(
-        r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+",
-        repo,
-    ):
-        print(
-            f"  [WARN] github:{repo} — "
-            "invalid repository format"
-        )
-        return []
+    """Resolve a repository to payload assets."""
 
     url = (
         f"{GITHUB_API}/repos/"
@@ -649,32 +578,16 @@ def resolve_github(
     )
 
     try:
-        release = fetch_json(
-            url,
-            github=True,
-        )
+        release = fetch_json(url)
 
-    except urllib.error.HTTPError as exc:
-        if exc.code == 404:
-            label = "MANUAL " if manual else ""
+    except RuntimeError as exc:
+        label = "MANUAL " if manual else ""
 
-            print(
-                f"  [WARN] {label}github:{repo} — "
-                "no published latest release"
-            )
-        else:
-            print(
-                f"  [WARN] github:{repo} — "
-                f"HTTP {exc.code}"
-            )
-
-        return []
-
-    except Exception as exc:
         print(
-            f"  [WARN] github:{repo} — "
-            f"API error: {exc}"
+            f"  [WARN] {label}"
+            f"github:{repo} — {exc}"
         )
+
         return []
 
     if not isinstance(
@@ -687,45 +600,43 @@ def resolve_github(
         )
         return []
 
-    assets = release.get("assets") or []
+    assets = release.get(
+        "assets"
+    ) or []
 
-    payload_assets = []
-
-    for asset in assets:
-        if not isinstance(asset, dict):
-            continue
-
-        filename = str(
-            asset.get("name") or ""
-        ).strip()
-
-        direct_url = str(
-            asset.get("browser_download_url")
-            or ""
-        ).strip()
-
+    payload_assets = [
+        asset
+        for asset in assets
         if (
-            asset_is_payload(filename)
-            and direct_url
-        ):
-            payload_assets.append(
-                (filename, direct_url)
+            isinstance(asset, dict)
+            and asset_is_payload(
+                asset.get("name", "")
             )
+            and asset.get(
+                "browser_download_url"
+            )
+        )
+    ]
 
     if not payload_assets:
         print(
             f"  [WARN] github:{repo} — "
-            "latest release contains no "
+            "latest release has no "
             "supported payload assets"
         )
         return []
 
-    tag = parse_version(
-        release.get("tag_name", "")
-    )
+    version = str(
+        release.get(
+            "tag_name"
+        )
+        or "unknown"
+    ).strip()
 
-    release_description = (
-        first_release_description(release)
+    description = (
+        first_release_description(
+            release
+        )
     )
 
     source = (
@@ -733,20 +644,25 @@ def resolve_github(
         f"{repo}/releases"
     )
 
-    last_update = date_from_iso(
-        release.get("published_at")
-        or release.get("created_at")
-    )
+    entries = []
 
-    entries: List[dict] = []
+    for asset in payload_assets:
+        filename = str(
+            asset["name"]
+        ).strip()
 
-    for filename, direct_url in payload_assets:
+        direct_url = str(
+            asset[
+                "browser_download_url"
+            ]
+        ).strip()
+
         name = normalize_payload_name(
             filename
         )
 
-        description = clean_description(
-            release_description,
+        clean_desc = clean_description(
+            description,
             fallback=f"{name} payload",
         )
 
@@ -758,16 +674,23 @@ def resolve_github(
                 "source": source,
                 "source_direct": direct_url,
                 "description": (
-                    description
+                    clean_desc
                     or f"{name} payload"
                 ),
-                "last_update": last_update,
-                "version": tag,
+                "last_update": date_from_iso(
+                    release.get(
+                        "published_at"
+                    )
+                    or release.get(
+                        "created_at"
+                    )
+                ),
+                "version": version,
                 "category": guess_category(
                     name,
-                    description,
+                    clean_desc,
                 ),
-                "_repo": repo_key(repo),
+                "_repo": repo.casefold(),
                 "_origin": "github",
                 "_manual": bool(manual),
             }
@@ -776,364 +699,7 @@ def resolve_github(
     print(
         f"  [OK] github:{repo} — "
         f"{len(entries)} payload asset(s), "
-        f"{tag}"
-    )
-
-    return entries
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Mirror resolver
-# ─────────────────────────────────────────────────────────────────────────────
-
-ITSPLK_MIRROR_JSON = (
-    "https://itsplk.github.io/"
-    "ps5-payloads-mirror/payloads.json"
-)
-
-
-def load_itsplk_mirror_json() -> List[dict]:
-    """Load the hosted itsPLK mirror catalog."""
-    try:
-        data = fetch_json(
-            ITSPLK_MIRROR_JSON
-        )
-
-    except Exception as exc:
-        print(
-            f"  [WARN] mirror — "
-            f"could not fetch hosted payloads.json: "
-            f"{exc}"
-        )
-        return []
-
-    if not isinstance(
-        data,
-        list,
-    ):
-        print(
-            "  [WARN] mirror — hosted "
-            "payloads.json is not a list"
-        )
-        return []
-
-    print(
-        f"  [OK] mirror — loaded "
-        f"{len(data)} hosted entries"
-    )
-
-    return data
-
-
-def normalize_mirror_entry(
-    raw: dict,
-) -> Optional[dict]:
-    """
-    Normalize and sanity-check a mirror catalog entry.
-
-    Important:
-      The mirror URL is the actual download URL.
-      source_direct is metadata pointing to the original upstream
-      release whenever available.
-    """
-    if not isinstance(
-        raw,
-        dict,
-    ):
-        return None
-
-    url = str(
-        raw.get("url") or ""
-    ).strip()
-
-    if not url:
-        return None
-
-    parsed = urlparse(url)
-
-    if parsed.scheme not in (
-        "http",
-        "https",
-    ):
-        return None
-
-    if not parsed.netloc:
-        return None
-
-    filename = str(
-        raw.get("filename")
-        or unquote(
-            os.path.basename(
-                parsed.path
-            )
-        )
-        or ""
-    ).strip()
-
-    if not asset_is_payload(
-        filename
-    ):
-        return None
-
-    source = str(
-        raw.get("source") or ""
-    ).strip()
-
-    source_direct = str(
-        raw.get("source_direct") or ""
-    ).strip()
-
-    # If source_direct is absent, use source when available.
-    if not source_direct:
-        source_direct = source
-
-    # The actual mirror URL must always remain the catalog URL.
-    # Do not replace it with source_direct.
-    name = str(
-        raw.get("name")
-        or normalize_payload_name(
-            filename
-        )
-    ).strip()
-
-    version = parse_version(
-        raw.get("version")
-    )
-
-    description = clean_description(
-        str(
-            raw.get("description") or ""
-        ),
-        fallback=f"{name} payload",
-    )
-
-    repo = (
-        github_repo_from_source(
-            source_direct
-        )
-        or github_repo_from_source(
-            source
-        )
-    )
-
-    category = str(
-        raw.get("category")
-        or guess_category(
-            name,
-            description,
-        )
-    ).strip()
-
-    # Never allow an empty category.
-    if not category:
-        category = guess_category(
-            name,
-            description,
-        )
-
-    last_update = date_from_iso(
-        raw.get("last_update")
-    )
-
-    return {
-        "name": name,
-        "filename": filename,
-        "url": url,
-        "source": source or url,
-        "source_direct": (
-            source_direct or url
-        ),
-        "description": (
-            description
-            or f"{name} payload"
-        ),
-        "last_update": last_update,
-        "version": version,
-        "category": category,
-        "_repo": repo,
-        "_origin": "mirror",
-        "_manual": False,
-    }
-
-
-def resolve_mirror(
-    spec: str,
-) -> List[dict]:
-    """
-    Resolve a mirror source.
-
-    Special case:
-      mirror:itsPLK/ps5-payloads-mirror@...
-      loads the consolidated hosted payloads.json.
-
-    Generic:
-      mirror:user/repo@tag
-      resolves that exact GitHub release.
-    """
-    spec = spec.strip()
-
-    if spec.lower().startswith(
-        "itsplk/ps5-payloads-mirror@"
-    ):
-        raw_entries = (
-            load_itsplk_mirror_json()
-        )
-
-        entries: List[dict] = []
-
-        for raw in raw_entries:
-            entry = normalize_mirror_entry(
-                raw
-            )
-
-            if entry:
-                entries.append(entry)
-
-        print(
-            f"  [OK] mirror:{spec} — "
-            f"{len(entries)} usable entries"
-        )
-
-        return entries
-
-    match = re.fullmatch(
-        r"([^@]+)@(.+)",
-        spec,
-    )
-
-    if not match:
-        print(
-            f"  [WARN] mirror:{spec} — "
-            "expected user/repo@tag"
-        )
-        return []
-
-    repo = match.group(1).strip()
-    tag = match.group(2).strip()
-
-    if not re.fullmatch(
-        r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+",
-        repo,
-    ):
-        print(
-            f"  [WARN] mirror:{spec} — "
-            "invalid repository"
-        )
-        return []
-
-    api_url = (
-        f"{GITHUB_API}/repos/"
-        f"{repo}/releases/tags/"
-        f"{tag}"
-    )
-
-    try:
-        release = fetch_json(
-            api_url,
-            github=True,
-        )
-
-    except Exception as exc:
-        print(
-            f"  [WARN] mirror:{spec} — "
-            f"API error: {exc}"
-        )
-        return []
-
-    if not isinstance(
-        release,
-        dict,
-    ):
-        return []
-
-    entries: List[dict] = []
-
-    release_tag = parse_version(
-        release.get(
-            "tag_name",
-            tag,
-        )
-    )
-
-    source = (
-        f"https://github.com/"
-        f"{repo}/releases"
-    )
-
-    last_update = date_from_iso(
-        release.get("published_at")
-        or release.get("created_at")
-    )
-
-    release_description = (
-        first_release_description(
-            release
-        )
-    )
-
-    for asset in (
-        release.get("assets") or []
-    ):
-        if not isinstance(
-            asset,
-            dict,
-        ):
-            continue
-
-        filename = str(
-            asset.get("name") or ""
-        ).strip()
-
-        direct_url = str(
-            asset.get(
-                "browser_download_url"
-            )
-            or ""
-        ).strip()
-
-        if (
-            not asset_is_payload(
-                filename
-            )
-            or not direct_url
-        ):
-            continue
-
-        name = normalize_payload_name(
-            filename
-        )
-
-        description = clean_description(
-            release_description,
-            fallback=f"{name} payload",
-        )
-
-        entries.append(
-            {
-                "name": name,
-                "filename": filename,
-                "url": direct_url,
-                "source": source,
-                "source_direct": direct_url,
-                "description": (
-                    description
-                    or f"{name} payload"
-                ),
-                "last_update": last_update,
-                "version": release_tag,
-                "category": guess_category(
-                    name,
-                    description,
-                ),
-                "_repo": repo_key(repo),
-                "_origin": "mirror",
-                "_manual": False,
-            }
-        )
-
-    print(
-        f"  [OK] mirror:{spec} — "
-        f"{len(entries)} payload asset(s)"
+        f"{version}"
     )
 
     return entries
@@ -1145,20 +711,10 @@ def resolve_mirror(
 
 def resolve_direct(
     url: str,
-    manual: bool = True,
 ) -> List[dict]:
-    """Resolve a pinned direct payload URL."""
-    parsed = urlparse(url)
+    """Create a payload entry from a direct URL."""
 
-    if parsed.scheme not in (
-        "http",
-        "https",
-    ) or not parsed.netloc:
-        print(
-            f"  [WARN] invalid direct URL: "
-            f"{url}"
-        )
-        return []
+    parsed = urlparse(url)
 
     filename = unquote(
         os.path.basename(
@@ -1168,7 +724,7 @@ def resolve_direct(
 
     if not filename:
         print(
-            f"  [WARN] direct URL has no "
+            f"  [WARN] Direct URL has no "
             f"filename: {url}"
         )
         return []
@@ -1177,7 +733,7 @@ def resolve_direct(
         filename
     ):
         print(
-            f"  [WARN] unsupported direct "
+            f"  [WARN] Unsupported direct "
             f"payload type: {filename}"
         )
         return []
@@ -1196,125 +752,84 @@ def resolve_direct(
             "description": (
                 f"{name} payload (pinned)"
             ),
-            "last_update": UNKNOWN_DATE,
+            "last_update": datetime.now(
+                timezone.utc
+            ).strftime("%Y-%m-%d"),
             "version": "pinned",
             "category": guess_category(
                 name
             ),
             "_repo": None,
             "_origin": "direct",
-            "_manual": bool(manual),
+            "_manual": True,
         }
     ]
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Candidate identity / deduplication
+# Deduplication
 # ─────────────────────────────────────────────────────────────────────────────
 
-def release_family(
-    entry: dict,
-) -> Optional[Tuple[str, str]]:
-    """
-    Return repository + version identity.
-
-    For mirror entries, _repo is derived from source_direct/source.
-    """
-    repo = entry.get("_repo")
-
-    if not repo:
-        repo = (
-            github_repo_from_source(
-                str(
-                    entry.get(
-                        "source_direct"
-                    )
-                    or ""
-                )
-            )
-            or github_repo_from_source(
-                str(
-                    entry.get(
-                        "source"
-                    )
-                    or ""
-                )
-            )
-        )
-
-    if not repo:
-        return None
-
-    version = str(
-        entry.get("version")
-        or ""
-    ).strip().lower()
-
-    if not version:
-        return None
-
-    return (
-        repo_key(repo),
-        version,
-    )
-
-
-def payload_asset_key(
+def payload_identity(
     entry: dict,
 ) -> Tuple:
-    """
-    Stable identity for one payload asset.
+    """Build a stable identity."""
 
-    Repository + release + filename is preferred.
-    Direct/pinned URLs use their URL.
-    """
-    family = release_family(entry)
+    repo = entry.get(
+        "_repo"
+    )
 
     filename = str(
-        entry.get("filename")
+        entry.get(
+            "filename"
+        )
         or ""
-    ).strip().lower()
+    ).casefold()
 
-    if family:
+    version = str(
+        entry.get(
+            "version"
+        )
+        or ""
+    ).casefold()
+
+    if repo:
         return (
-            "asset",
-            family[0],
-            family[1],
+            "github",
+            repo,
+            version,
             filename,
         )
 
     return (
         "url",
         str(
-            entry.get("url")
+            entry.get(
+                "url"
+            )
             or ""
-        ).strip().lower(),
+        ).casefold(),
     )
 
 
-def same_payload_family(
-    a: dict,
-    b: dict,
-) -> bool:
-    """Return True if two entries are the same repo/release."""
-    family_a = release_family(a)
-    family_b = release_family(b)
+def deduplicate(
+    entries: List[dict],
+) -> List[dict]:
+    """Remove duplicate payloads deterministically."""
 
-    return (
-        family_a is not None
-        and family_a == family_b
+    unique = {}
+
+    for entry in entries:
+        identity = payload_identity(
+            entry
+        )
+
+        if identity not in unique:
+            unique[identity] = entry
+
+    return list(
+        unique.values()
     )
-
-
-def clean_internal_fields(
-    entry: dict,
-) -> dict:
-    """Remove generator-only metadata."""
-    return {
-        key: value
-        for key, value in entry.items()
-        if not key.startswith("_")
-    }
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -1323,30 +838,22 @@ def clean_internal_fields(
 
 def validate_entries(
     entries: List[dict],
-    label: str,
 ) -> List[dict]:
-    """
-    Validate payload URLs.
+    """Validate payload URLs."""
 
-    Validation occurs BEFORE upstream/mirror merging so that a broken
-    upstream asset cannot suppress a valid mirror fallback.
-    """
-    valid: List[dict] = []
+    valid = []
 
-    if not entries:
-        return valid
-
+    print()
     print(
-        f"\nValidating {len(entries)} "
-        f"{label} payload URL(s)..."
+        f"Validating {len(entries)} "
+        f"payload URL(s)..."
     )
 
-    seen_urls = set()
-
     for entry in entries:
-        url = str(
-            entry.get("url") or ""
-        ).strip()
+        url = entry.get(
+            "url",
+            "",
+        )
 
         name = entry.get(
             "name",
@@ -1358,20 +865,6 @@ def validate_entries(
             "",
         )
 
-        if not url:
-            print(
-                f"  [SKIP] {name} — "
-                "missing URL"
-            )
-            continue
-
-        url_key = url.lower()
-
-        if url_key in seen_urls:
-            continue
-
-        seen_urls.add(url_key)
-
         if http_ok(url):
             valid.append(entry)
 
@@ -1381,106 +874,15 @@ def validate_entries(
             )
         else:
             print(
-                f"  [SKIP] {name} — "
-                f"URL unreachable: {url}"
+                f"  [SKIP] URL unreachable: "
+                f"{url}"
             )
 
     return valid
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# Upstream / mirror merge
-# ─────────────────────────────────────────────────────────────────────────────
-
-def merge_entries(
-    github_entries: List[dict],
-    mirror_entries: List[dict],
-    direct_entries: List[dict],
-) -> List[dict]:
-    """
-    Merge already-validated entries.
-
-    Priority:
-      1. Direct pinned URLs
-      2. Valid GitHub upstream assets
-      3. Valid mirror assets
-
-    Mirror fallback is decided PER ASSET, not per repository.
-
-    Therefore:
-      - If 3 upstream assets exist and 1 is broken, the mirror can
-        supply that one missing asset.
-      - A valid upstream asset suppresses only its corresponding
-        mirror asset.
-      - Different assets from the same release are retained.
-    """
-    result: List[dict] = []
-
-    # Direct URLs are independent.
-    result.extend(direct_entries)
-
-    # Keep valid upstream assets.
-    result.extend(github_entries)
-
-    # Track every valid upstream asset.
-    upstream_keys = set()
-
-    for entry in github_entries:
-        upstream_keys.add(
-            payload_asset_key(entry)
-        )
-
-    # Add only mirror assets that do not have a valid upstream
-    # equivalent.
-    for mirror in mirror_entries:
-        key = payload_asset_key(
-            mirror
-        )
-
-        if key in upstream_keys:
-            continue
-
-        result.append(mirror)
-
-    # Final exact identity deduplication.
-    unique: Dict[Tuple, dict] = {}
-
-    for entry in result:
-        key = payload_asset_key(entry)
-
-        existing = unique.get(key)
-
-        if existing is None:
-            unique[key] = entry
-            continue
-
-        # Explicitly prefer direct > github > mirror.
-        priority = {
-            "direct": 3,
-            "github": 2,
-            "mirror": 1,
-        }
-
-        current_priority = priority.get(
-            entry.get("_origin"),
-            0,
-        )
-
-        existing_priority = priority.get(
-            existing.get("_origin"),
-            0,
-        )
-
-        if current_priority > existing_priority:
-            unique[key] = entry
-
-    return list(
-        unique.values()
-    )
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# Deterministic ordering
+# Sorting
 # ─────────────────────────────────────────────────────────────────────────────
 
 CATEGORY_ORDER = {
@@ -1494,7 +896,8 @@ CATEGORY_ORDER = {
 def sort_entries(
     entries: List[dict],
 ) -> List[dict]:
-    """Sort payloads deterministically."""
+    """Sort entries deterministically."""
+
     return sorted(
         entries,
         key=lambda entry: (
@@ -1510,47 +913,56 @@ def sort_entries(
                     "name",
                     "",
                 )
-            ).lower(),
+            ).casefold(),
             str(
                 entry.get(
                     "version",
                     "",
                 )
-            ).lower(),
+            ).casefold(),
             str(
                 entry.get(
                     "filename",
                     "",
                 )
-            ).lower(),
+            ).casefold(),
             str(
                 entry.get(
                     "url",
                     "",
                 )
-            ).lower(),
+            ).casefold(),
         ),
     )
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# JSON writing
+# JSON output
 # ─────────────────────────────────────────────────────────────────────────────
 
-def write_output(
-    entries: List[dict],
-) -> bool:
-    """
-    Write payloads.json only when content changed.
+def clean_internal_fields(
+    entry: dict,
+) -> dict:
+    """Remove private generator metadata."""
 
-    Uses an atomic temporary file replacement.
-    """
+    return {
+        key: value
+        for key, value in entry.items()
+        if not key.startswith("_")
+    }
+
+
+def build_json(
+    entries: List[dict],
+) -> str:
+    """Build deterministic JSON."""
+
     public_entries = [
         clean_internal_fields(entry)
         for entry in sort_entries(entries)
     ]
 
-    new_json = (
+    return (
         json.dumps(
             public_entries,
             indent=2,
@@ -1559,9 +971,30 @@ def write_output(
         + "\n"
     )
 
+
+def write_output(
+    entries: List[dict],
+) -> bool:
+    """
+    Write payloads.json only when changed.
+
+    Refuses to create an empty catalog.
+    """
+
+    if not entries:
+        raise RuntimeError(
+            "refusing to write an empty "
+            "payloads.json"
+        )
+
+    new_json = build_json(
+        entries
+    )
+
     try:
         with open(
             OUTPUT_FILE,
+            "r",
             encoding="utf-8",
         ) as file:
             old_json = file.read()
@@ -1572,35 +1005,37 @@ def write_output(
     except FileNotFoundError:
         pass
 
-    temporary_file = (
+    temporary = (
         OUTPUT_FILE + ".tmp"
     )
 
     try:
         with open(
-            temporary_file,
+            temporary,
             "w",
             encoding="utf-8",
         ) as file:
             file.write(new_json)
+            file.flush()
+            os.fsync(
+                file.fileno()
+            )
 
         os.replace(
-            temporary_file,
+            temporary,
             OUTPUT_FILE,
         )
 
-    except Exception:
-        try:
-            if os.path.exists(
-                temporary_file
-            ):
-                os.remove(
-                    temporary_file
+    finally:
+        if os.path.exists(
+            temporary
+        ):
+            try:
+                os.unlink(
+                    temporary
                 )
-        except OSError:
-            pass
-
-        raise
+            except OSError:
+                pass
 
     return True
 
@@ -1609,10 +1044,8 @@ def write_output(
 # Main
 # ─────────────────────────────────────────────────────────────────────────────
 
-def main() -> None:
-    print(
-        "PLDMGR payload generator"
-    )
+def main():
+    print("PLDMGR payload generator")
     print("=" * 72)
 
     parsed_links = parse_links(
@@ -1621,21 +1054,21 @@ def main() -> None:
 
     if not parsed_links:
         print(
-            f"ERROR: {LINKS_FILE} is empty"
+            f"ERROR: {LINKS_FILE} contains "
+            "no usable entries"
         )
         sys.exit(1)
 
-    github_entries: List[dict] = []
-    mirror_entries: List[dict] = []
-    direct_entries: List[dict] = []
+    github_entries = []
+    direct_entries = []
 
-    github_repos_seen = set()
-    mirror_specs_seen = set()
-    direct_urls_seen = set()
+    github_seen = set()
+    direct_seen = set()
 
-    # ── Resolve sources ────────────────────────────────────────────────
+    print()
+    print("Resolving sources...")
 
-    for value, is_manual in parsed_links:
+    for value, manual in parsed_links:
         print(
             f"\nProcessing: {value}"
         )
@@ -1643,227 +1076,153 @@ def main() -> None:
         if value.startswith(
             "github:"
         ):
-            repo = value[7:].strip()
-            key = repo_key(repo)
+            repo = github_repo_from_entry(
+                value
+            )
 
-            if key in github_repos_seen:
+            if not repo:
                 print(
-                    f"  [SKIP] Duplicate "
-                    f"GitHub repository: {repo}"
+                    f"  [WARN] Invalid "
+                    f"GitHub repository: "
+                    f"{value}"
                 )
                 continue
 
-            github_repos_seen.add(key)
+            key = repo.casefold()
 
-            if is_manual:
+            if key in github_seen:
+                print(
+                    f"  [SKIP] Duplicate "
+                    f"GitHub repository: "
+                    f"{repo}"
+                )
+                continue
+
+            github_seen.add(key)
+
+            if manual:
                 print(
                     "  [INFO] Protected "
-                    "manual repository"
+                    "MANUAL repository"
                 )
 
             github_entries.extend(
                 resolve_github(
                     repo,
-                    manual=is_manual,
+                    manual=manual,
                 )
             )
 
         elif value.startswith(
-            "mirror:"
+            ("http://", "https://")
         ):
-            spec = value[7:].strip()
-            key = spec.lower()
+            key = value.casefold()
 
-            if key in mirror_specs_seen:
+            if key in direct_seen:
                 print(
                     f"  [SKIP] Duplicate "
-                    f"mirror: {spec}"
+                    f"direct URL"
                 )
                 continue
 
-            mirror_specs_seen.add(key)
-
-            mirror_entries.extend(
-                resolve_mirror(
-                    spec
-                )
-            )
-
-        elif (
-            value.startswith(
-                "http://"
-            )
-            or value.startswith(
-                "https://"
-            )
-        ):
-            key = value.lower()
-
-            if key in direct_urls_seen:
-                print(
-                    f"  [SKIP] Duplicate "
-                    f"direct URL: {value}"
-                )
-                continue
-
-            direct_urls_seen.add(key)
+            direct_seen.add(key)
 
             direct_entries.extend(
                 resolve_direct(
-                    value,
-                    manual=is_manual,
+                    value
                 )
             )
 
-        else:
-            print(
-                f"  [WARN] Unknown format, "
-                f"skipping: {value}"
-            )
-
-    print(
-        "\n" + "=" * 72
-    )
-    print(
-        "Resolution summary"
-    )
+    print()
+    print("=" * 72)
+    print("Resolution summary")
     print("=" * 72)
 
     print(
-        f"GitHub upstream entries : "
+        f"GitHub payload entries : "
         f"{len(github_entries)}"
     )
 
     print(
-        f"Mirror entries           : "
-        f"{len(mirror_entries)}"
-    )
-
-    print(
-        f"Direct URL entries       : "
+        f"Direct URL entries     : "
         f"{len(direct_entries)}"
     )
 
-    # ── Validate BEFORE merging ────────────────────────────────────────
-    #
-    # This is critical.
-    #
-    # Previously, a broken upstream URL could suppress its mirror
-    # equivalent because merging happened before validation.
-
-    valid_github = validate_entries(
-        github_entries,
-        "GitHub",
-    )
-
-    valid_mirror = validate_entries(
-        mirror_entries,
-        "mirror",
-    )
-
-    valid_direct = validate_entries(
-        direct_entries,
-        "direct",
+    merged = deduplicate(
+        github_entries
+        + direct_entries
     )
 
     print(
-        "\n" + "=" * 72
-    )
-    print(
-        "Validation summary"
-    )
-    print("=" * 72)
-
-    print(
-        f"Valid GitHub entries : "
-        f"{len(valid_github)}"
+        f"Unique entries         : "
+        f"{len(merged)}"
     )
 
-    print(
-        f"Valid mirror entries : "
-        f"{len(valid_mirror)}"
-    )
-
-    print(
-        f"Valid direct entries : "
-        f"{len(valid_direct)}"
-    )
-
-    # ── Merge ──────────────────────────────────────────────────────────
-
-    merged_entries = merge_entries(
-        github_entries=valid_github,
-        mirror_entries=valid_mirror,
-        direct_entries=valid_direct,
-    )
-
-    print(
-        f"Merged unique entries : "
-        f"{len(merged_entries)}"
-    )
-
-    if not merged_entries:
+    if not merged:
         print(
-            "\nERROR: No usable payloads "
-            "could be generated"
+            "\nERROR: No payloads could "
+            "be resolved."
+        )
+        print(
+            "payloads.json was not modified."
         )
         sys.exit(2)
 
-    # ── Final URL deduplication ───────────────────────────────────────
+    valid = validate_entries(
+        merged
+    )
 
-    final_entries: List[dict] = []
-    seen_urls = set()
+    print()
+    print(
+        f"Valid payloads: "
+        f"{len(valid)} / {len(merged)}"
+    )
 
-    for entry in sort_entries(
-        merged_entries
-    ):
-        url = str(
-            entry.get("url") or ""
-        ).strip()
-
-        if not url:
-            continue
-
-        url_key = url.lower()
-
-        if url_key in seen_urls:
-            continue
-
-        seen_urls.add(url_key)
-
-        final_entries.append(
-            entry
-        )
-
-    if not final_entries:
+    if not valid:
         print(
-            "\nERROR: No payloads remain "
-            "after final filtering"
+            "\nERROR: No payload URLs "
+            "passed validation."
+        )
+        print(
+            "payloads.json was not modified."
         )
         sys.exit(2)
 
-    # ── Write ──────────────────────────────────────────────────────────
+    # Final duplicate protection.
+    valid = deduplicate(
+        valid
+    )
+
+    # Never allow an empty output.
+    if not valid:
+        print(
+            "\nERROR: Final payload list "
+            "is empty."
+        )
+        print(
+            "payloads.json was not modified."
+        )
+        sys.exit(2)
 
     try:
         changed = write_output(
-            final_entries
+            valid
         )
 
-    except OSError as exc:
+    except Exception as exc:
         print(
             f"\nERROR: Could not write "
             f"{OUTPUT_FILE}: {exc}"
         )
         sys.exit(2)
 
-    print(
-        "\n" + "=" * 72
-    )
+    print()
+    print("=" * 72)
 
     if changed:
         print(
-            f"Wrote {len(final_entries)} "
-            f"payloads to {OUTPUT_FILE}"
+            f"Wrote {len(valid)} payloads "
+            f"to {OUTPUT_FILE}"
         )
     else:
         print(
@@ -1871,14 +1230,13 @@ def main() -> None:
             f"{OUTPUT_FILE} not updated"
         )
 
-    # ── Category summary ───────────────────────────────────────────────
-
+    # Category summary.
     category_counts: Dict[
         str,
         int,
     ] = {}
 
-    for entry in final_entries:
+    for entry in valid:
         category = entry.get(
             "category",
             DEFAULT_CATEGORY,
@@ -1894,9 +1252,8 @@ def main() -> None:
             + 1
         )
 
-    print(
-        "\nCatalog summary:"
-    )
+    print()
+    print("Catalog summary:")
 
     for category in sorted(
         category_counts,
@@ -1905,7 +1262,7 @@ def main() -> None:
                 value,
                 99,
             ),
-            value.lower(),
+            value.casefold(),
         ),
     ):
         print(

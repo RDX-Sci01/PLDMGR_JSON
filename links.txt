@@ -1,23 +1,21 @@
-# PS5 Payload Manager - Source List
+# PS5 Payload Manager - Payload Sources
 #
-# Formats:
-#   github:<user>/<repo>        - auto-resolves latest release
-#   mirror:<user>/<repo>@<tag>  - bulk-imports from a release tag
-#   https://...                 - pinned direct URL
+# GitHub repositories:
+#   github:<user>/<repo>
 #
-# GitHub repositories discovered from the itsPLK README are
-# automatically added and removed as the upstream list changes.
+# Direct payload URLs:
+#   https://example.com/payload.elf
 #
-# Add # MANUAL to a GitHub repository to protect it from removal:
-#   github:myuser/myrepo # MANUAL
-#
-# Direct URLs are always treated as pinned/manual entries
-# and are preserved automatically.
+# Add # MANUAL for clarity; all entries in this file are treated
+# as manually maintained and will never be removed automatically.
 
+<<<<<<< HEAD
+# --- GitHub repositories ---
+=======
 # --- Mirror ---
 # mirror:itsPLK/ps5-payloads-mirror@payloads-mirror
+>>>>>>> bc68e51c66c4480916bc69b92c171bdf7dc40f1a
 
-# --- GitHub repos (auto-synced from itsPLK README) ---
 github:BestPig/BackPork
 github:drakmor/ftpsrv
 github:drakmor/nanoDNS
@@ -43,15 +41,18 @@ github:ps5-payload-dev/shsrv
 github:ps5-payload-dev/websrv
 github:seregonwar/zftpd
 
-# --- Manually added GitHub repos ---
-github:Michele-M-Media/PIZZA-HEN # MANUAL
-github:MounirHero/PS-Play # MANUAL
-github:sainsaji/EVO-PLAYER-PS5 # MANUAL
-github:seregonwar/MemDBG # MANUAL
+# --- Additional repositories ---
 
-# --- Pinned direct URLs ---
-# Add direct .elf/.bin/.lua payload URLs here.
-# These entries are preserved automatically by sync_links.py.
+github:Michele-M-Media/PIZZA-HEN
+github:MounirHero/PS-Play
+github:sainsaji/EVO-PLAYER-PS5
+github:seregonwar/MemDBG
+
+# --- Direct payload URLs ---
 #
-# Example:
 # https://example.com/payload.elf
+<<<<<<< HEAD
+# https://example.com/payload.bin
+# https://example.com/payload.lua
+=======
+
