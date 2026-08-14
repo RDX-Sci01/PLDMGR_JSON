@@ -14,6 +14,90 @@
       "url": "https://github.com/Michele-M-Media/PIZZA-HEN/releases/download/v0.1/PIZZA-HEN-v0.1.elf",
       "version": "v0.1",
       "description": "\ud83c\udf55 PIZZA HEN v0.1"
+    },
+    {
+      "name": "Kstuff",
+      "filename": "kstuff.elf",
+      "url": "https://github.com/EchoStretch/kstuff-lite/releases/download/v1.10/kstuff.elf",
+      "version": "v1.10",
+      "description": "Kstuff Lite 1.10 Beta Supports Firmware 3.00-12.70"
+    },
+    {
+      "name": "Kstuff",
+      "filename": "kstuff.elf",
+      "url": "https://github.com/EchoStretch/kstuff/releases/download/v1.6.7/kstuff.elf",
+      "version": "v1.6.7",
+      "description": "Kstuff 3.00-10.01"
+    },
+    {
+      "name": "Websrv Ps5",
+      "filename": "websrv-ps5.elf",
+      "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/websrv-ps5.elf",
+      "version": "v0.34",
+      "description": "- rebuild with latest sdk"
+    },
+    {
+      "name": "Ftpsrv Ps4",
+      "filename": "ftpsrv-ps4.elf",
+      "url": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21/ftpsrv-ps4.elf",
+      "version": "v0.21",
+      "description": "rebuild with latest sdk"
+    },
+    {
+      "name": "Klogsrv Ps4",
+      "filename": "klogsrv-ps4.elf",
+      "url": "https://github.com/ps5-payload-dev/klogsrv/releases/download/v0.9/klogsrv-ps4.elf",
+      "version": "v0.9",
+      "description": "rebuild with latest sdk"
+    },
+    {
+      "name": "Shsrv Ps5",
+      "filename": "shsrv-ps5.elf",
+      "url": "https://github.com/ps5-payload-dev/shsrv/releases/download/v0.20/shsrv-ps5.elf",
+      "version": "v0.20",
+      "description": "rebuild with latest sdk"
+    },
+    {
+      "name": "Elfldr Ps5",
+      "filename": "elfldr-ps5.elf",
+      "url": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.24/elfldr-ps5.elf",
+      "version": "v0.24",
+      "description": "rebuild with latest sdk"
+    },
+    {
+      "name": "Shadowmountplus",
+      "filename": "shadowmountplus.elf",
+      "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.6beta16/shadowmountplus.elf",
+      "version": "1.6beta16",
+      "description": "ShadowMountPlus 1.6beta16"
+    },
+    {
+      "name": "Pldmgr",
+      "filename": "pldmgr_v0.5.1.elf",
+      "url": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.5.1/pldmgr_v0.5.1.elf",
+      "version": "v0.5.1",
+      "description": "v0.5.1"
+    },
+    {
+      "name": "Ps5 Backpork",
+      "filename": "ps5-backpork.elf",
+      "url": "https://github.com/BestPig/BackPork/releases/download/0.1/ps5-backpork.elf",
+      "version": "0.1",
+      "description": "Initial oink release \ud83d\udc3d"
+    },
+    {
+      "name": "Garlic Savemgr",
+      "filename": "garlic-savemgr.elf",
+      "url": "https://github.com/earthonion/garlic-savemgr/releases/download/v1.7/garlic-savemgr.elf",
+      "version": "v1.7",
+      "description": "What's New"
+    },
+    {
+      "name": "Etahen",
+      "filename": "etaHEN-2.5B.bin",
+      "url": "https://github.com/etaHEN/etaHEN/releases/download/2.5B/etaHEN-2.5B.bin",
+      "version": "2.5B",
+      "description": "etaHEN 2.5B Change log"
     }
   ]
 }
