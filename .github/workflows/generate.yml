@@ -1,13 +1,12 @@
 name: Generate payloads.json
 
 on:
+  schedule:
+    - cron: "0 */2 * * *"   # every 2 hours
   push:
     paths:
-      - "links.txt"
-  schedule:
-    # Every 2 hours — picks up new upstream releases automatically
-    - cron: "0 */2 * * *"
-  workflow_dispatch:
+      - "links.txt"          # also runs on every links.txt change
+  workflow_dispatch:         # on-demand via Actions tab → Run workflow
 
 permissions:
   contents: write
@@ -15,22 +14,29 @@ permissions:
 jobs:
   generate:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Generate and validate payloads.json
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run generate.py
         env:
-          REPO_DISPLAY_NAME: "RDX Custom Payloads"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: python3 generate.py
 
-      - name: Commit and push if changed
+      - name: Commit payloads.json if changed
         run: |
-          git config user.name "github-actions[bot]"
+          git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add payloads.json
-          git diff --cached --quiet && echo "No changes — skipping commit." || (
-            git commit -m "chore: update payloads.json [$(date -u +%Y-%m-%dT%H:%M)Z]"
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+          else
+            git commit -m "chore: refresh payloads.json [skip ci]"
             git push
-          )
+          fi
