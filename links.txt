@@ -6,6 +6,23 @@
 # 2. Direct URL (pinned, no auto-update):
 #    https://example.com/payloads/tool.elf
 #
+# PS5 Payload Manager - Source List
+# Formats:
+#   github:<user>/<repo>        — auto-resolves latest release, updates automatically
+#   mirror:<user>/<repo>@<tag>  — bulk-imports all .elf/.bin/.lua from a release tag
+#   https://...                 — pinned direct URL, will NOT auto-update
+ 
+# --- Mirror (bulk import from itsPLK's mirror) ---
+mirror:itsPLK/ps5-payloads-mirror@payloads-mirror
+ 
+# --- GitHub repos (auto-synced from itsPLK README) ---
+# This section is managed automatically by sync_links.py — do not edit manually.
+# To add your own repos, use the pinned section below.
+ 
+# --- Pinned direct URLs (manual, will NOT auto-update) ---
+# Add your own entries here — they are preserved across auto-syncs:
+# https://example.com/payloads/tool.elf
+
 # Lines starting with # are ignored.
 github:seregonwar/MemDBG
 github:sainsaji/EVO-PLAYER-PS5
