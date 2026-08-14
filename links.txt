@@ -15,7 +15,7 @@
 # and are preserved automatically.
 
 # --- Mirror ---
-mirror:itsPLK/ps5-payloads-mirror@payloads-mirror
+# mirror:itsPLK/ps5-payloads-mirror@payloads-mirror
 
 # --- GitHub repos (auto-synced from itsPLK README) ---
 github:BestPig/BackPork
