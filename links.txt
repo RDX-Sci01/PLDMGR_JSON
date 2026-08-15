@@ -1,5 +1,6 @@
 # PS5 Payload Manager - Payload Sources
 # --- GitHub repositories ---
+github:ItsBlurf/PoorDS4
 github:Michele-M-Media/PIZZA-HEN
 github:MounirHero/PS-Play
 github:sainsaji/EVO-PLAYER-PS5
