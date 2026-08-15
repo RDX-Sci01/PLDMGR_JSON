@@ -363,6 +363,17 @@
     "category": "Utilities & Tools"
   },
   {
+    "name": "Ghostcontrol",
+    "filename": "Ghostcontrol.elf",
+    "url": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases/download/1.0.5/Ghostcontrol.elf",
+    "source": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases",
+    "source_direct": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases/download/1.0.5/Ghostcontrol.elf",
+    "description": "What's new",
+    "last_update": "2026-07-06",
+    "version": "1.0.5",
+    "category": "Utilities & Tools"
+  },
+  {
     "name": "MemDBG",
     "filename": "MemDBG-ps4.elf",
     "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260814-gc58927e/MemDBG-ps4.elf",
