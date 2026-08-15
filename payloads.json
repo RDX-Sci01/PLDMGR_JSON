@@ -396,6 +396,39 @@
     "category": "Utilities & Tools"
   },
   {
+    "name": "PoorDS4-status",
+    "filename": "PoorDS4-status.elf",
+    "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.1.0-rc38/PoorDS4-status.elf",
+    "source": "https://github.com/ItsBlurf/PoorDS4/releases",
+    "source_direct": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.1.0-rc38/PoorDS4-status.elf",
+    "description": "PoorDS4 RC38 fixes controller routing in games that preallocate more than one disconnected pad slot and adds an exact firmware 8.60 compatibility manifest.",
+    "last_update": "2026-08-08",
+    "version": "v0.1.0-rc38",
+    "category": "Utilities & Tools"
+  },
+  {
+    "name": "PoorDS4-stop",
+    "filename": "PoorDS4-stop.elf",
+    "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.1.0-rc38/PoorDS4-stop.elf",
+    "source": "https://github.com/ItsBlurf/PoorDS4/releases",
+    "source_direct": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.1.0-rc38/PoorDS4-stop.elf",
+    "description": "PoorDS4 RC38 fixes controller routing in games that preallocate more than one disconnected pad slot and adds an exact firmware 8.60 compatibility manifest.",
+    "last_update": "2026-08-08",
+    "version": "v0.1.0-rc38",
+    "category": "Utilities & Tools"
+  },
+  {
+    "name": "PoorDS4rc38",
+    "filename": "PoorDS4rc38.elf",
+    "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.1.0-rc38/PoorDS4rc38.elf",
+    "source": "https://github.com/ItsBlurf/PoorDS4/releases",
+    "source_direct": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.1.0-rc38/PoorDS4rc38.elf",
+    "description": "PoorDS4 RC38 fixes controller routing in games that preallocate more than one disconnected pad slot and adds an exact firmware 8.60 compatibility manifest.",
+    "last_update": "2026-08-08",
+    "version": "v0.1.0-rc38",
+    "category": "Utilities & Tools"
+  },
+  {
     "name": "ps5-app-dumper",
     "filename": "ps5-app-dumper.elf",
     "url": "https://github.com/EchoStretch/ps5-app-dumper/releases/download/v1.11/ps5-app-dumper.elf",
