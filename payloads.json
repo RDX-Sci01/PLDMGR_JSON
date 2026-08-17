@@ -496,13 +496,13 @@
   },
   {
     "name": "web-file-mgr",
-    "filename": "web-file-mgr-v1.4.elf",
-    "url": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.4/web-file-mgr-v1.4.elf",
+    "filename": "web-file-mgr-v1.5.elf",
+    "url": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.5/web-file-mgr-v1.5.elf",
     "source": "https://github.com/owendswang/ps5-web-file-manager/releases",
-    "source_direct": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.4/web-file-mgr-v1.4.elf",
+    "source_direct": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.5/web-file-mgr-v1.5.elf",
     "description": "Change log:",
-    "last_update": "2026-08-11",
-    "version": "v1.4",
+    "last_update": "2026-08-17",
+    "version": "v1.5",
     "category": "Utilities & Tools"
   }
 ]
