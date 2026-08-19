@@ -221,13 +221,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.2.1.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.2.1/ps5upload-5.2.1.elf",
+    "filename": "ps5upload-5.3.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.3.0/ps5upload-5.3.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.2.1/ps5upload-5.2.1.elf",
-    "description": "Fixes for things that could freeze or mislead you.",
-    "last_update": "2026-08-12",
-    "version": "v5.2.1",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.3.0/ps5upload-5.3.0.elf",
+    "description": "Two ways the console could crash, fixed — and RAR uploads that don't fill up your PC.",
+    "last_update": "2026-08-19",
+    "version": "v5.3.0",
     "category": "Networking & Servers"
   },
   {
