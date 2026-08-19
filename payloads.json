@@ -221,13 +221,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.3.2.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.3.2/ps5upload-5.3.2.elf",
+    "filename": "ps5upload-5.3.3.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.3.3/ps5upload-5.3.3.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.3.2/ps5upload-5.3.2.elf",
-    "description": ".rar uploads now show the game's real name — and a memory-safety bug in multi-part handling is fixed.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.3.3/ps5upload-5.3.3.elf",
+    "description": "Fixes the Docker images, which 5.3.2 broke.",
     "last_update": "2026-08-19",
-    "version": "v5.3.2",
+    "version": "v5.3.3",
     "category": "Networking & Servers"
   },
   {
