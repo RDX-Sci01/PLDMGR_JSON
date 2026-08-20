@@ -221,13 +221,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.4.3.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.3/ps5upload-5.4.3.elf",
+    "filename": "ps5upload-5.4.4.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.4/ps5upload-5.4.4.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.3/ps5upload-5.4.3.elf",
-    "description": "Game Metadata works again, and finding cheats is much easier.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.4/ps5upload-5.4.4.elf",
+    "description": "Fixes the console never reporting which game is running.",
     "last_update": "2026-08-20",
-    "version": "v5.4.3",
+    "version": "v5.4.4",
     "category": "Networking & Servers"
   },
   {
