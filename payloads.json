@@ -77,6 +77,17 @@
     "category": "System & Jailbreak"
   },
   {
+    "name": "pegasus_dl",
+    "filename": "pegasus_dl.elf",
+    "url": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.7.0/pegasus_dl.elf",
+    "source": "https://github.com/pegasus-ps5/pegasus-dl/releases",
+    "source_direct": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.7.0/pegasus_dl.elf",
+    "description": "- Added TorBox support with local token storage, supported-host detection, service selection when multiple debrid providers match, multi-file selection, and queueing through the...",
+    "last_update": "2026-06-24",
+    "version": "v1.7.0",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "PIZZA-HEN",
     "filename": "PIZZA-HEN-v1.0.elf",
     "url": "https://github.com/Michele-M-Media/PIZZA-HEN/releases/download/v1.0/PIZZA-HEN-v1.0.elf",
