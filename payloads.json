@@ -396,6 +396,17 @@
     "category": "Utilities & Tools"
   },
   {
+    "name": "game-compressor",
+    "filename": "game-compressor.elf",
+    "url": "https://github.com/juma-sayeh/PS5-Game-Compressor/releases/download/v1.0.4/game-compressor.elf",
+    "source": "https://github.com/juma-sayeh/PS5-Game-Compressor/releases",
+    "source_direct": "https://github.com/juma-sayeh/PS5-Game-Compressor/releases/download/v1.0.4/game-compressor.elf",
+    "description": "Game Compressor 1.0.4",
+    "last_update": "2026-08-21",
+    "version": "v1.0.4",
+    "category": "Utilities & Tools"
+  },
+  {
     "name": "Ghostcontrol",
     "filename": "Ghostcontrol.elf",
     "url": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases/download/1.0.5/Ghostcontrol.elf",
