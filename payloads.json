@@ -363,6 +363,17 @@
     "category": "Networking & Servers"
   },
   {
+    "name": "apr_emu_updater",
+    "filename": "apr_emu_updater.elf",
+    "url": "https://github.com/tsuramatsu1/apr-emu-updater/releases/download/v1.4/apr_emu_updater.elf",
+    "source": "https://github.com/tsuramatsu1/apr-emu-updater/releases",
+    "source_direct": "https://github.com/tsuramatsu1/apr-emu-updater/releases/download/v1.4/apr_emu_updater.elf",
+    "description": "Changelog:",
+    "last_update": "2026-08-21",
+    "version": "v1.4",
+    "category": "Utilities & Tools"
+  },
+  {
     "name": "bfpilot",
     "filename": "bfpilot.elf",
     "url": "https://github.com/ItsBlurf/BFpilot/releases/download/v0.4.4/bfpilot.elf",
