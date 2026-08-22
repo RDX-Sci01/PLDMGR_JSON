@@ -1,5 +1,7 @@
 # PS5 Payload Manager - Payload Sources
 # --- GitHub repositories ---
+github:n0llptr/Playstation-5-Save-Mounter
+github:aydencharles/onionHEN
 github:pegasus-ps5/pegasus-dl
 github:ItsBlurf/PoorDS4
 github:StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher
