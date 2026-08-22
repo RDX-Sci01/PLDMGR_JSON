@@ -112,12 +112,12 @@
   {
     "name": "elfldr",
     "filename": "elfldr-ps5.elf",
-    "url": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.24/elfldr-ps5.elf",
+    "url": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.25/elfldr-ps5.elf",
     "source": "https://github.com/ps5-payload-dev/elfldr/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.24/elfldr-ps5.elf",
-    "description": "rebuild with latest sdk",
-    "last_update": "2026-08-02",
-    "version": "v0.24",
+    "source_direct": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.25/elfldr-ps5.elf",
+    "description": "elfldr payload",
+    "last_update": "2026-08-22",
+    "version": "v0.25",
     "category": "Loaders"
   },
   {
