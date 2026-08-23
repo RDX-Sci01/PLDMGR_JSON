@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.4.14.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.14/ps5upload-5.4.14.elf",
+    "filename": "ps5upload-5.4.15.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.15/ps5upload-5.4.15.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.14/ps5upload-5.4.14.elf",
-    "description": "Large .zip uploads no longer die while your PC is still decompressing.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.15/ps5upload-5.4.15.elf",
+    "description": "Multi-part archives, and updates that match how you installed.",
     "last_update": "2026-08-23",
-    "version": "v5.4.14",
+    "version": "v5.4.15",
     "category": "Networking & Servers"
   },
   {
