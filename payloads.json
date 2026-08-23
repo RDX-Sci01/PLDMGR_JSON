@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.4.15.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.15/ps5upload-5.4.15.elf",
+    "filename": "ps5upload-5.4.16.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.16/ps5upload-5.4.16.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.15/ps5upload-5.4.15.elf",
-    "description": "Multi-part archives, and updates that match how you installed.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.16/ps5upload-5.4.16.elf",
+    "description": "A .rar upload no longer fails just because the archive lists its files",
     "last_update": "2026-08-23",
-    "version": "v5.4.15",
+    "version": "v5.4.16",
     "category": "Networking & Servers"
   },
   {
