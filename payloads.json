@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.4.9.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.9/ps5upload-5.4.9.elf",
+    "filename": "ps5upload-5.4.10.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.10/ps5upload-5.4.10.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.9/ps5upload-5.4.9.elf",
-    "description": "Typing an address works properly, stalled uploads recover, and every",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.10/ps5upload-5.4.10.elf",
+    "description": "Folder uploads in the browser no longer look stuck on \"Starting…\".",
     "last_update": "2026-08-23",
-    "version": "v5.4.9",
+    "version": "v5.4.10",
     "category": "Networking & Servers"
   },
   {
