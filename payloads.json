@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.4.13.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.13/ps5upload-5.4.13.elf",
+    "filename": "ps5upload-5.4.14.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.14/ps5upload-5.4.14.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.13/ps5upload-5.4.13.elf",
-    "description": "Big uploads no longer get killed by the app's own reconnect.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.14/ps5upload-5.4.14.elf",
+    "description": "Large .zip uploads no longer die while your PC is still decompressing.",
     "last_update": "2026-08-23",
-    "version": "v5.4.13",
+    "version": "v5.4.14",
     "category": "Networking & Servers"
   },
   {
