@@ -110,6 +110,17 @@
     "category": "System & Jailbreak"
   },
   {
+    "name": "ps5upload",
+    "filename": "ps5upload-5.4.12.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.12/ps5upload-5.4.12.elf",
+    "source": "https://github.com/phantomptr/ps5upload/releases",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.12/ps5upload-5.4.12.elf",
+    "description": "When the console refuses an uninstall, the app now says so.",
+    "last_update": "2026-08-23",
+    "version": "v5.4.12",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "elfldr",
     "filename": "elfldr-ps5.elf",
     "url": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.25/elfldr-ps5.elf",
@@ -239,17 +250,6 @@
     "description": "- IPv6 support",
     "last_update": "2026-08-04",
     "version": "0.4",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "ps5upload",
-    "filename": "ps5upload-5.4.11.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.11/ps5upload-5.4.11.elf",
-    "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.4.11/ps5upload-5.4.11.elf",
-    "description": "Changing a console's IP address sticks.",
-    "last_update": "2026-08-23",
-    "version": "v5.4.11",
     "category": "Networking & Servers"
   },
   {
