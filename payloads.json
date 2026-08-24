@@ -77,17 +77,6 @@
     "category": "System & Jailbreak"
   },
   {
-    "name": "OnionHEN",
-    "filename": "OnionHEN.elf",
-    "url": "https://github.com/aydencharles/onionHEN/releases/download/v0.0.10/OnionHEN.elf",
-    "source": "https://github.com/aydencharles/onionHEN/releases",
-    "source_direct": "https://github.com/aydencharles/onionHEN/releases/download/v0.0.10/OnionHEN.elf",
-    "description": "OnionHEN is a homebrew enabler and Toolbox for jailbroken PS5 consoles, built on etaHEN. It prepares the system, injects a Toolbox into the home screen, and adds cheats, in-game...",
-    "last_update": "2026-08-17",
-    "version": "v0.0.10",
-    "category": "System & Jailbreak"
-  },
-  {
     "name": "pegasus_dl",
     "filename": "pegasus_dl.elf",
     "url": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.7.0/pegasus_dl.elf",
