@@ -354,12 +354,12 @@
   {
     "name": "apr_emu_updater",
     "filename": "apr_emu_updater.elf",
-    "url": "https://github.com/tsuramatsu1/apr-emu-updater/releases/download/v1.5.0/apr_emu_updater.elf",
+    "url": "https://github.com/tsuramatsu1/apr-emu-updater/releases/download/v1.5.1/apr_emu_updater.elf",
     "source": "https://github.com/tsuramatsu1/apr-emu-updater/releases",
-    "source_direct": "https://github.com/tsuramatsu1/apr-emu-updater/releases/download/v1.5.0/apr_emu_updater.elf",
+    "source_direct": "https://github.com/tsuramatsu1/apr-emu-updater/releases/download/v1.5.1/apr_emu_updater.elf",
     "description": "Changes",
     "last_update": "2026-08-24",
-    "version": "v1.5.0",
+    "version": "v1.5.1",
     "category": "Utilities & Tools"
   },
   {
