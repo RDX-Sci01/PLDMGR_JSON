@@ -517,6 +517,17 @@
     "category": "Utilities & Tools"
   },
   {
+    "name": "shadowmountplus",
+    "filename": "shadowmountplus.elf",
+    "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.6beta16/shadowmountplus.elf",
+    "source": "https://github.com/drakmor/ShadowMountPlus/releases",
+    "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.6beta16/shadowmountplus.elf",
+    "description": "ShadowMountPlus 1.6beta16",
+    "last_update": "2026-06-28",
+    "version": "1.6beta16",
+    "category": "Utilities & Tools"
+  },
+  {
     "name": "web-file-mgr",
     "filename": "web-file-mgr-v1.6.elf",
     "url": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.6/web-file-mgr-v1.6.elf",
