@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.6.1.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.6.1/ps5upload-5.6.1.elf",
+    "filename": "ps5upload-5.7.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.7.0/ps5upload-5.7.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.6.1/ps5upload-5.6.1.elf",
-    "description": "Fixes \"Edit files…\" for any game image that isn't on internal storage.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.7.0/ps5upload-5.7.0.elf",
+    "description": "Pasting and adding files now merges instead of failing, Play and Close",
     "last_update": "2026-08-26",
-    "version": "v5.6.1",
+    "version": "v5.7.0",
     "category": "Networking & Servers"
   },
   {
