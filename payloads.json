@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.7.1.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.7.1/ps5upload-5.7.1.elf",
+    "filename": "ps5upload-5.8.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.8.0/ps5upload-5.8.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.7.1/ps5upload-5.7.1.elf",
-    "description": "Mount and Edit files stopped opening the same window, and a failed",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.8.0/ps5upload-5.8.0.elf",
+    "description": "Scrolling on Linux is smooth again, and a game that starts behind the",
     "last_update": "2026-08-26",
-    "version": "v5.7.1",
+    "version": "v5.8.0",
     "category": "Networking & Servers"
   },
   {
