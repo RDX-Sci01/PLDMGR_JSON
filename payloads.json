@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.13.0.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.13.0/ps5upload-5.13.0.elf",
+    "filename": "ps5upload-5.13.1.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.13.1/ps5upload-5.13.1.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.13.0/ps5upload-5.13.0.elf",
-    "description": "Sets your PS5's clock from internet time.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.13.1/ps5upload-5.13.1.elf",
+    "description": "Fixes the Fan threshold card appearing over and over on the Console tab.",
     "last_update": "2026-08-29",
-    "version": "v5.13.0",
+    "version": "v5.13.1",
     "category": "Networking & Servers"
   },
   {
