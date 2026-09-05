@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.16.0.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.16.0/ps5upload-5.16.0.elf",
+    "filename": "ps5upload-5.17.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.0/ps5upload-5.17.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.16.0/ps5upload-5.16.0.elf",
-    "description": "Game updates and DLC install from the self-hosted web UI.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.0/ps5upload-5.17.0.elf",
+    "description": "The self-hosted web UI catches up with the desktop app.",
     "last_update": "2026-09-05",
-    "version": "v5.16.0",
+    "version": "v5.17.0",
     "category": "Networking & Servers"
   },
   {
