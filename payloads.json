@@ -123,12 +123,12 @@
   {
     "name": "ps5-linux-loader",
     "filename": "ps5-linux-loader.elf",
-    "url": "https://github.com/ps5-linux/ps5-linux-loader/releases/download/v2.4/ps5-linux-loader.elf",
+    "url": "https://github.com/ps5-linux/ps5-linux-loader/releases/download/v2.5/ps5-linux-loader.elf",
     "source": "https://github.com/ps5-linux/ps5-linux-loader/releases",
-    "source_direct": "https://github.com/ps5-linux/ps5-linux-loader/releases/download/v2.4/ps5-linux-loader.elf",
-    "description": "Added 7.40 support",
-    "last_update": "2026-07-06",
-    "version": "v2.4",
+    "source_direct": "https://github.com/ps5-linux/ps5-linux-loader/releases/download/v2.5/ps5-linux-loader.elf",
+    "description": "Added 7.0x support",
+    "last_update": "2026-09-05",
+    "version": "v2.5",
     "category": "Loaders"
   },
   {
