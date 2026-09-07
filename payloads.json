@@ -110,6 +110,17 @@
     "category": "System & Jailbreak"
   },
   {
+    "name": "ps5upload",
+    "filename": "ps5upload-5.17.1.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.1/ps5upload-5.17.1.elf",
+    "source": "https://github.com/phantomptr/ps5upload/releases",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.1/ps5upload-5.17.1.elf",
+    "description": "Uploads to internal storage are no longer refused when there is plenty of room.",
+    "last_update": "2026-09-07",
+    "version": "v5.17.1",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "elfldr",
     "filename": "elfldr-ps5.elf",
     "url": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.26/elfldr-ps5.elf",
@@ -239,17 +250,6 @@
     "description": "- IPv6 support",
     "last_update": "2026-08-04",
     "version": "0.4",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "ps5upload",
-    "filename": "ps5upload-5.17.0.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.0/ps5upload-5.17.0.elf",
-    "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.0/ps5upload-5.17.0.elf",
-    "description": "The self-hosted web UI catches up with the desktop app.",
-    "last_update": "2026-09-05",
-    "version": "v5.17.0",
     "category": "Networking & Servers"
   },
   {
