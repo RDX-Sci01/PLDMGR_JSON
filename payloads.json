@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.17.2.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.2/ps5upload-5.17.2.elf",
+    "filename": "ps5upload-5.17.3.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.3/ps5upload-5.17.3.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.2/ps5upload-5.17.2.elf",
-    "description": "Logs say what they mean, and a bug report now carries what we actually need.",
-    "last_update": "2026-09-07",
-    "version": "v5.17.2",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.3/ps5upload-5.17.3.elf",
+    "description": "A repeat upload no longer deletes the file it already delivered — and failure messages now speak your language.",
+    "last_update": "2026-09-08",
+    "version": "v5.17.3",
     "category": "Networking & Servers"
   },
   {
