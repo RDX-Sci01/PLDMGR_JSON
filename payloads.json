@@ -374,6 +374,17 @@
     "category": "Utilities & Tools"
   },
   {
+    "name": "bfpilot",
+    "filename": "bfpilot.elf",
+    "url": "https://github.com/ItsBlurf/BFpilot/releases/download/v0.4.4/bfpilot.elf",
+    "source": "https://github.com/ItsBlurf/BFpilot/releases",
+    "source_direct": "https://github.com/ItsBlurf/BFpilot/releases/download/v0.4.4/bfpilot.elf",
+    "description": "v0.4.4 brings the installer, Media tile, archive support and file manager together in one bfpilot.elf.",
+    "last_update": "2026-08-11",
+    "version": "v0.4.4",
+    "category": "Utilities & Tools"
+  },
+  {
     "name": "CheatRunner",
     "filename": "CheatRunner.elf",
     "url": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.17/CheatRunner.elf",
