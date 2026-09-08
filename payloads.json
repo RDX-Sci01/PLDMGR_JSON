@@ -110,6 +110,17 @@
     "category": "System & Jailbreak"
   },
   {
+    "name": "wfm-7zip-helper",
+    "filename": "wfm-7zip-helper-v26.03-0.elf",
+    "url": "https://github.com/owendswang/wfm-7zip-helper/releases/download/v26.03-0/wfm-7zip-helper-v26.03-0.elf",
+    "source": "https://github.com/owendswang/wfm-7zip-helper/releases",
+    "source_direct": "https://github.com/owendswang/wfm-7zip-helper/releases/download/v26.03-0/wfm-7zip-helper-v26.03-0.elf",
+    "description": "As a separate helper daemon for PS5 web file manager.",
+    "last_update": "2026-09-08",
+    "version": "v26.03-0",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "elfldr",
     "filename": "elfldr-ps5.elf",
     "url": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.26/elfldr-ps5.elf",
