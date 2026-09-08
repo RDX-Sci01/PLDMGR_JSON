@@ -29,6 +29,7 @@ github:itsPLK/ps5-webkit-autoloader
 github:notmaj0r/CheatRunner
 github:OpenSourcereR-dev/ps5debug-NG
 github:owendswang/ps5-web-file-manager
+github:owendswang/wfm-7zip-helper
 github:phantomptr/ps5upload
 github:ps5-linux/ps5-linux-loader
 github:ps5-payload-dev/elfldr
