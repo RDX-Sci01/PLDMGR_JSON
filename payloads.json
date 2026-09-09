@@ -88,17 +88,6 @@
     "category": "System & Jailbreak"
   },
   {
-    "name": "pegasus_dl",
-    "filename": "pegasus_dl.elf",
-    "url": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.7.0/pegasus_dl.elf",
-    "source": "https://github.com/pegasus-ps5/pegasus-dl/releases",
-    "source_direct": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.7.0/pegasus_dl.elf",
-    "description": "- Added TorBox support with local token storage, supported-host detection, service selection when multiple debrid providers match, multi-file selection, and queueing through the...",
-    "last_update": "2026-06-24",
-    "version": "v1.7.0",
-    "category": "System & Jailbreak"
-  },
-  {
     "name": "PIZZA-HEN",
     "filename": "PIZZA-HEN-v2.00.elf",
     "url": "https://github.com/Michele-M-Media/PIZZA-HEN/releases/download/v2.00/PIZZA-HEN-v2.00.elf",
@@ -437,6 +426,17 @@
     "description": "Automated historical nightly built from the latest main branch.",
     "last_update": "2026-09-04",
     "version": "nightly-20260904-g29a46df",
+    "category": "Utilities & Tools"
+  },
+  {
+    "name": "pegasus_dl",
+    "filename": "pegasus_dl.elf",
+    "url": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.8.0/pegasus_dl.elf",
+    "source": "https://github.com/pegasus-ps5/pegasus-dl/releases",
+    "source_direct": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.8.0/pegasus_dl.elf",
+    "description": "- Direct and resolved .pkg links can now be handed to the native PS5",
+    "last_update": "2026-09-09",
+    "version": "v1.8.0",
     "category": "Utilities & Tools"
   },
   {
