@@ -79,12 +79,12 @@
   {
     "name": "OnionHEN",
     "filename": "OnionHEN.elf",
-    "url": "https://github.com/aydencharles/onionHEN/releases/download/v0.0.12/OnionHEN.elf",
+    "url": "https://github.com/aydencharles/onionHEN/releases/download/v0.0.13/OnionHEN.elf",
     "source": "https://github.com/aydencharles/onionHEN/releases",
-    "source_direct": "https://github.com/aydencharles/onionHEN/releases/download/v0.0.12/OnionHEN.elf",
-    "description": "OnionHEN v0.0.12",
-    "last_update": "2026-08-31",
-    "version": "v0.0.12",
+    "source_direct": "https://github.com/aydencharles/onionHEN/releases/download/v0.0.13/OnionHEN.elf",
+    "description": "OnionHEN v0.0.13",
+    "last_update": "2026-09-11",
+    "version": "v0.0.13",
     "category": "System & Jailbreak"
   },
   {
