@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.17.9.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.9/ps5upload-5.17.9.elf",
+    "filename": "ps5upload-5.17.10.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.10/ps5upload-5.17.10.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.9/ps5upload-5.17.9.elf",
-    "description": "Backporting works again: the library scan finds your games, it now collects",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.17.10/ps5upload-5.17.10.elf",
+    "description": "Backporting can now find a working library set on its own, and scanning a",
     "last_update": "2026-09-11",
-    "version": "v5.17.9",
+    "version": "v5.17.10",
     "category": "Networking & Servers"
   },
   {
