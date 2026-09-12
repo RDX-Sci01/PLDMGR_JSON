@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.20.0.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.20.0/ps5upload-5.20.0.elf",
+    "filename": "ps5upload-5.21.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.21.0/ps5upload-5.21.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.20.0/ps5upload-5.20.0.elf",
-    "description": "Wake your PS5 from standby — and wake it straight into your user.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.21.0/ps5upload-5.21.0.elf",
+    "description": "Cheats show up for every game, patch installs are honest, and interrupted work",
     "last_update": "2026-09-12",
-    "version": "v5.20.0",
+    "version": "v5.21.0",
     "category": "Networking & Servers"
   },
   {
