@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.18.1.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.18.1/ps5upload-5.18.1.elf",
+    "filename": "ps5upload-5.18.2.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.18.2/ps5upload-5.18.2.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.18.1/ps5upload-5.18.1.elf",
-    "description": "The new backport-pack screens now speak every language ps5upload supports.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.18.2/ps5upload-5.18.2.elf",
+    "description": "- Backport is no longer greyed out for the wrong reason. A library-overlay",
     "last_update": "2026-09-11",
-    "version": "v5.18.1",
+    "version": "v5.18.2",
     "category": "Networking & Servers"
   },
   {
