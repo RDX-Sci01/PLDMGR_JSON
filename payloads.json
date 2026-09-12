@@ -99,6 +99,17 @@
     "category": "System & Jailbreak"
   },
   {
+    "name": "ps5upload",
+    "filename": "ps5upload-5.19.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.19.0/ps5upload-5.19.0.elf",
+    "source": "https://github.com/phantomptr/ps5upload/releases",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.19.0/ps5upload-5.19.0.elf",
+    "description": "Cheats tell you what they are and when they fire, and the power controls are",
+    "last_update": "2026-09-12",
+    "version": "v5.19.0",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "wfm-7zip-helper",
     "filename": "wfm-7zip-helper-v26.03-0.elf",
     "url": "https://github.com/owendswang/wfm-7zip-helper/releases/download/v26.03-0/wfm-7zip-helper-v26.03-0.elf",
@@ -239,17 +250,6 @@
     "description": "- IPv6 support",
     "last_update": "2026-08-04",
     "version": "0.4",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "ps5upload",
-    "filename": "ps5upload-5.18.2.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.18.2/ps5upload-5.18.2.elf",
-    "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.18.2/ps5upload-5.18.2.elf",
-    "description": "- Backport is no longer greyed out for the wrong reason. A library-overlay",
-    "last_update": "2026-09-11",
-    "version": "v5.18.2",
     "category": "Networking & Servers"
   },
   {
