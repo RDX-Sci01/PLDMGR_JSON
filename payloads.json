@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.24.0.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.24.0/ps5upload-5.24.0.elf",
+    "filename": "ps5upload-5.25.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.25.0/ps5upload-5.25.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.24.0/ps5upload-5.24.0.elf",
-    "description": "Choose whether you get early releases or only verified ones.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.25.0/ps5upload-5.25.0.elf",
+    "description": "Fixes the console disconnects and \"ps5upload isn't responding\".",
     "last_update": "2026-09-13",
-    "version": "v5.24.0",
+    "version": "v5.25.0",
     "category": "Networking & Servers"
   },
   {
