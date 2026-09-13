@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.22.0.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.22.0/ps5upload-5.22.0.elf",
+    "filename": "ps5upload-5.23.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.23.0/ps5upload-5.23.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.22.0/ps5upload-5.22.0.elf",
-    "description": "Wake and sign-in set themselves up, and installs stop reporting success as",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.23.0/ps5upload-5.23.0.elf",
+    "description": "Waking your PS5 now signs you in on PS5 firmware 9.60.",
     "last_update": "2026-09-12",
-    "version": "v5.22.0",
+    "version": "v5.23.0",
     "category": "Networking & Servers"
   },
   {
