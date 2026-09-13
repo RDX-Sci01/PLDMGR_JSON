@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.25.0.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.25.0/ps5upload-5.25.0.elf",
+    "filename": "ps5upload-5.26.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.26.0/ps5upload-5.26.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.25.0/ps5upload-5.25.0.elf",
-    "description": "Fixes the console disconnects and \"ps5upload isn't responding\".",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.26.0/ps5upload-5.26.0.elf",
+    "description": "Your account ID, a readable fan curve, and consoles in the order you want them.",
     "last_update": "2026-09-13",
-    "version": "v5.25.0",
+    "version": "v5.26.0",
     "category": "Networking & Servers"
   },
   {
