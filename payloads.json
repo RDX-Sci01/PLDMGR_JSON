@@ -88,6 +88,17 @@
     "category": "System & Jailbreak"
   },
   {
+    "name": "PIZZA-HEN",
+    "filename": "PIZZA-HEN-v2.00.elf",
+    "url": "https://github.com/Michele-M-Media/PIZZA-HEN/releases/download/v2.00/PIZZA-HEN-v2.00.elf",
+    "source": "https://github.com/Michele-M-Media/PIZZA-HEN/releases",
+    "source_direct": "https://github.com/Michele-M-Media/PIZZA-HEN/releases/download/v2.00/PIZZA-HEN-v2.00.elf",
+    "description": "PIZZA HEN v2.00 — Release Notes",
+    "last_update": "2026-08-24",
+    "version": "v2.00",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "wfm-7zip-helper",
     "filename": "wfm-7zip-helper-v26.03-0.elf",
     "url": "https://github.com/owendswang/wfm-7zip-helper/releases/download/v26.03-0/wfm-7zip-helper-v26.03-0.elf",
