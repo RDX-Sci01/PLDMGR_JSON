@@ -243,13 +243,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.27.1.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.27.1/ps5upload-5.27.1.elf",
+    "filename": "ps5upload-5.28.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.28.0/ps5upload-5.28.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.27.1/ps5upload-5.27.1.elf",
-    "description": "The Android build compiles again. Nothing else changed.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.28.0/ps5upload-5.28.0.elf",
+    "description": "Screens wait for a console instead of pretending, and every on/off setting",
     "last_update": "2026-09-15",
-    "version": "v5.27.1",
+    "version": "v5.28.0",
     "category": "Networking & Servers"
   },
   {
