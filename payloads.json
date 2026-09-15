@@ -420,12 +420,12 @@
   {
     "name": "pegasus_dl",
     "filename": "pegasus_dl.elf",
-    "url": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.8.0/pegasus_dl.elf",
+    "url": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.9.0/pegasus_dl.elf",
     "source": "https://github.com/pegasus-ps5/pegasus-dl/releases",
-    "source_direct": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.8.0/pegasus_dl.elf",
-    "description": "- Direct and resolved .pkg links can now be handed to the native PS5",
-    "last_update": "2026-09-09",
-    "version": "v1.8.0",
+    "source_direct": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.9.0/pegasus_dl.elf",
+    "description": "- Added Included sources backed by the remotely maintained catalog manifest, so",
+    "last_update": "2026-09-15",
+    "version": "v1.9.0",
     "category": "Utilities & Tools"
   },
   {
