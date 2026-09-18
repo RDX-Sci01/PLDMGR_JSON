@@ -232,13 +232,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.28.0.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.28.0/ps5upload-5.28.0.elf",
+    "filename": "ps5upload-5.30.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.30.0/ps5upload-5.30.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.28.0/ps5upload-5.28.0.elf",
-    "description": "Screens wait for a console instead of pretending, and every on/off setting",
-    "last_update": "2026-09-15",
-    "version": "v5.28.0",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.30.0/ps5upload-5.30.0.elf",
+    "description": "Install a game straight from a link, at your line speed — and a fix for",
+    "last_update": "2026-09-18",
+    "version": "v5.30.0",
     "category": "Networking & Servers"
   },
   {
