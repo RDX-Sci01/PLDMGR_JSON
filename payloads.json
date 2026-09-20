@@ -134,23 +134,23 @@
   {
     "name": "ftpsrv",
     "filename": "ftpsrv-ps4.elf",
-    "url": "https://github.com/drakmor/ftpsrv/releases/download/1.15-ng-stable/ftpsrv-ps4.elf",
+    "url": "https://github.com/drakmor/ftpsrv/releases/download/1.16-ng-stable/ftpsrv-ps4.elf",
     "source": "https://github.com/drakmor/ftpsrv/releases",
-    "source_direct": "https://github.com/drakmor/ftpsrv/releases/download/1.15-ng-stable/ftpsrv-ps4.elf",
-    "description": "- Background copy, move, and recursive delete operations are now performed server-wide.",
-    "last_update": "2026-04-08",
-    "version": "1.15-ng-stable",
+    "source_direct": "https://github.com/drakmor/ftpsrv/releases/download/1.16-ng-stable/ftpsrv-ps4.elf",
+    "description": "- Added LOWER and UPPER commands to recursively change the case of file, directory, and symlink names. The server checks for name collisions before renaming; STOP can cancel the...",
+    "last_update": "2026-09-20",
+    "version": "1.16-ng-stable",
     "category": "Networking & Servers"
   },
   {
     "name": "ftpsrv",
     "filename": "ftpsrv-ps5.elf",
-    "url": "https://github.com/drakmor/ftpsrv/releases/download/1.15-ng-stable/ftpsrv-ps5.elf",
+    "url": "https://github.com/drakmor/ftpsrv/releases/download/1.16-ng-stable/ftpsrv-ps5.elf",
     "source": "https://github.com/drakmor/ftpsrv/releases",
-    "source_direct": "https://github.com/drakmor/ftpsrv/releases/download/1.15-ng-stable/ftpsrv-ps5.elf",
-    "description": "- Background copy, move, and recursive delete operations are now performed server-wide.",
-    "last_update": "2026-04-08",
-    "version": "1.15-ng-stable",
+    "source_direct": "https://github.com/drakmor/ftpsrv/releases/download/1.16-ng-stable/ftpsrv-ps5.elf",
+    "description": "- Added LOWER and UPPER commands to recursively change the case of file, directory, and symlink names. The server checks for name collisions before renaming; STOP can cancel the...",
+    "last_update": "2026-09-20",
+    "version": "1.16-ng-stable",
     "category": "Networking & Servers"
   },
   {
