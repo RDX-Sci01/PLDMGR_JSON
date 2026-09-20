@@ -46,12 +46,12 @@
   {
     "name": "kstuff",
     "filename": "kstuff.elf",
-    "url": "https://github.com/EchoStretch/kstuff-lite/releases/download/v1.10/kstuff.elf",
+    "url": "https://github.com/EchoStretch/kstuff-lite/releases/download/v1.11/kstuff.elf",
     "source": "https://github.com/EchoStretch/kstuff-lite/releases",
-    "source_direct": "https://github.com/EchoStretch/kstuff-lite/releases/download/v1.10/kstuff.elf",
-    "description": "Kstuff Lite 1.10 Beta Supports Firmware 3.00-12.70",
-    "last_update": "2026-08-12",
-    "version": "v1.10",
+    "source_direct": "https://github.com/EchoStretch/kstuff-lite/releases/download/v1.11/kstuff.elf",
+    "description": "Kstuff Lite 1.11 Beta Supports Firmware 1.00-13.60",
+    "last_update": "2026-09-20",
+    "version": "v1.11",
     "category": "System & Jailbreak"
   },
   {
@@ -514,17 +514,6 @@
     "description": "New in 2.1 UPDATE",
     "last_update": "2026-08-14",
     "version": "2.1",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "shadowmountplus",
-    "filename": "shadowmountplus.elf",
-    "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.6beta16/shadowmountplus.elf",
-    "source": "https://github.com/drakmor/ShadowMountPlus/releases",
-    "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.6beta16/shadowmountplus.elf",
-    "description": "ShadowMountPlus 1.6beta16",
-    "last_update": "2026-06-28",
-    "version": "1.6beta16",
     "category": "Utilities & Tools"
   },
   {
