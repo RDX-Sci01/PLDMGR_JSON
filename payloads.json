@@ -297,17 +297,6 @@
     "category": "Networking & Servers"
   },
   {
-    "name": "zftpd",
-    "filename": "zftpd-ps5-v1.5.0.elf",
-    "url": "https://github.com/seregonwar/zftpd/releases/download/v1.5.0/zftpd-ps5-v1.5.0.elf",
-    "source": "https://github.com/seregonwar/zftpd/releases",
-    "source_direct": "https://github.com/seregonwar/zftpd/releases/download/v1.5.0/zftpd-ps5-v1.5.0.elf",
-    "description": "zftpd v1.5.0 is a major release focused on a completely redesigned Web UI, production-ready Linux support, improved PS4/PS5 integration, faster transfers, safer FTP/HTTP...",
-    "last_update": "2026-06-14",
-    "version": "v1.5.0",
-    "category": "Networking & Servers"
-  },
-  {
     "name": "zftpd-ps4-zhttp",
     "filename": "zftpd-ps4-zhttp-v1.5.0.bin",
     "url": "https://github.com/seregonwar/zftpd/releases/download/v1.5.0/zftpd-ps4-zhttp-v1.5.0.bin",
@@ -335,17 +324,6 @@
     "url": "https://github.com/seregonwar/zftpd/releases/download/v1.5.0/zftpd-ps5-zhttp-v1.5.0.bin",
     "source": "https://github.com/seregonwar/zftpd/releases",
     "source_direct": "https://github.com/seregonwar/zftpd/releases/download/v1.5.0/zftpd-ps5-zhttp-v1.5.0.bin",
-    "description": "zftpd v1.5.0 is a major release focused on a completely redesigned Web UI, production-ready Linux support, improved PS4/PS5 integration, faster transfers, safer FTP/HTTP...",
-    "last_update": "2026-06-14",
-    "version": "v1.5.0",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "zftpd-ps5-zhttp",
-    "filename": "zftpd-ps5-zhttp-v1.5.0.elf",
-    "url": "https://github.com/seregonwar/zftpd/releases/download/v1.5.0/zftpd-ps5-zhttp-v1.5.0.elf",
-    "source": "https://github.com/seregonwar/zftpd/releases",
-    "source_direct": "https://github.com/seregonwar/zftpd/releases/download/v1.5.0/zftpd-ps5-zhttp-v1.5.0.elf",
     "description": "zftpd v1.5.0 is a major release focused on a completely redesigned Web UI, production-ready Linux support, improved PS4/PS5 integration, faster transfers, safer FTP/HTTP...",
     "last_update": "2026-06-14",
     "version": "v1.5.0",
@@ -401,17 +379,6 @@
     "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260904-g29a46df/MemDBG-ps4.elf",
     "source": "https://github.com/seregonwar/MemDBG/releases",
     "source_direct": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260904-g29a46df/MemDBG-ps4.elf",
-    "description": "Automated historical nightly built from the latest main branch.",
-    "last_update": "2026-09-04",
-    "version": "nightly-20260904-g29a46df",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "MemDBG",
-    "filename": "MemDBG-ps5.elf",
-    "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260904-g29a46df/MemDBG-ps5.elf",
-    "source": "https://github.com/seregonwar/MemDBG/releases",
-    "source_direct": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260904-g29a46df/MemDBG-ps5.elf",
     "description": "Automated historical nightly built from the latest main branch.",
     "last_update": "2026-09-04",
     "version": "nightly-20260904-g29a46df",
