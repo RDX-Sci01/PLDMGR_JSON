@@ -99,6 +99,17 @@
     "category": "System & Jailbreak"
   },
   {
+    "name": "ps5upload",
+    "filename": "ps5upload-5.31.4.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.31.4/ps5upload-5.31.4.elf",
+    "source": "https://github.com/phantomptr/ps5upload/releases",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.31.4/ps5upload-5.31.4.elf",
+    "description": "Faster installs from a link when the file host is throttling, honest",
+    "last_update": "2026-09-21",
+    "version": "v5.31.4",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "elfldr",
     "filename": "elfldr-ps5.elf",
     "url": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.26/elfldr-ps5.elf",
@@ -228,17 +239,6 @@
     "description": "- IPv6 support",
     "last_update": "2026-08-04",
     "version": "0.4",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "ps5upload",
-    "filename": "ps5upload-5.31.3.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.31.3/ps5upload-5.31.3.elf",
-    "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.31.3/ps5upload-5.31.3.elf",
-    "description": "Installing from a link was many times slower than it should have been.",
-    "last_update": "2026-09-20",
-    "version": "v5.31.3",
     "category": "Networking & Servers"
   },
   {
