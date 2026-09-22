@@ -11,39 +11,6 @@
     "category": "System & Jailbreak"
   },
   {
-    "name": "EVOPlayer",
-    "filename": "EVOPlayer-v0.7.0-InstallTile.elf",
-    "url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-InstallTile.elf",
-    "source": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases",
-    "source_direct": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-InstallTile.elf",
-    "description": "Emby password authentication, native HTTPS/TLS streaming, master-detail hierarchical changelog viewer, direct memory buffer streaming, and native PS5 IME keyboard.",
-    "last_update": "2026-08-14",
-    "version": "v0.7.0",
-    "category": "System & Jailbreak"
-  },
-  {
-    "name": "EVOPlayer",
-    "filename": "EVOPlayer-v0.7.0-player-only.elf",
-    "url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-player-only.elf",
-    "source": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases",
-    "source_direct": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-player-only.elf",
-    "description": "Emby password authentication, native HTTPS/TLS streaming, master-detail hierarchical changelog viewer, direct memory buffer streaming, and native PS5 IME keyboard.",
-    "last_update": "2026-08-14",
-    "version": "v0.7.0",
-    "category": "System & Jailbreak"
-  },
-  {
-    "name": "EVOPlayer",
-    "filename": "EVOPlayer-v0.7.0-UninstallTile.elf",
-    "url": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-UninstallTile.elf",
-    "source": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases",
-    "source_direct": "https://github.com/sainsaji/EVO-PLAYER-PS5/releases/download/v0.7.0/EVOPlayer-v0.7.0-UninstallTile.elf",
-    "description": "Emby password authentication, native HTTPS/TLS streaming, master-detail hierarchical changelog viewer, direct memory buffer streaming, and native PS5 IME keyboard.",
-    "last_update": "2026-08-14",
-    "version": "v0.7.0",
-    "category": "System & Jailbreak"
-  },
-  {
     "name": "kstuff",
     "filename": "kstuff.elf",
     "url": "https://github.com/EchoStretch/kstuff-lite/releases/download/v1.11/kstuff.elf",
