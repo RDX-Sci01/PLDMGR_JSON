@@ -365,23 +365,23 @@
   {
     "name": "MemDBG",
     "filename": "MemDBG-ps4.elf",
-    "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260904-g29a46df/MemDBG-ps4.elf",
+    "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260922-g6e493c9/MemDBG-ps4.elf",
     "source": "https://github.com/seregonwar/MemDBG/releases",
-    "source_direct": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260904-g29a46df/MemDBG-ps4.elf",
+    "source_direct": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260922-g6e493c9/MemDBG-ps4.elf",
     "description": "Automated historical nightly built from the latest main branch.",
-    "last_update": "2026-09-04",
-    "version": "nightly-20260904-g29a46df",
+    "last_update": "2026-09-22",
+    "version": "nightly-20260922-g6e493c9",
     "category": "Utilities & Tools"
   },
   {
     "name": "MemDBG",
     "filename": "MemDBG-ps5.elf",
-    "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260904-g29a46df/MemDBG-ps5.elf",
+    "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260922-g6e493c9/MemDBG-ps5.elf",
     "source": "https://github.com/seregonwar/MemDBG/releases",
-    "source_direct": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260904-g29a46df/MemDBG-ps5.elf",
+    "source_direct": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260922-g6e493c9/MemDBG-ps5.elf",
     "description": "Automated historical nightly built from the latest main branch.",
-    "last_update": "2026-09-04",
-    "version": "nightly-20260904-g29a46df",
+    "last_update": "2026-09-22",
+    "version": "nightly-20260922-g6e493c9",
     "category": "Utilities & Tools"
   },
   {
