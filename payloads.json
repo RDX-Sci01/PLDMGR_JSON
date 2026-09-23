@@ -199,13 +199,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.33.1.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.33.1/ps5upload-5.33.1.elf",
+    "filename": "ps5upload-5.33.2.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.33.2/ps5upload-5.33.2.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.33.1/ps5upload-5.33.1.elf",
-    "description": "Installing from a link is much faster, there is now a third way to do it,",
-    "last_update": "2026-09-22",
-    "version": "v5.33.1",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.33.2/ps5upload-5.33.2.elf",
+    "description": "The helper no longer drops the connection a few seconds after you start it,",
+    "last_update": "2026-09-23",
+    "version": "v5.33.2",
     "category": "Networking & Servers"
   },
   {
