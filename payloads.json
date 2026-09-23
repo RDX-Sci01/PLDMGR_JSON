@@ -463,13 +463,13 @@
   },
   {
     "name": "ps5debug-NG",
-    "filename": "ps5debug-NG_v1.3.0.elf",
-    "url": "https://github.com/Pharaoh2k/ps5debug-NG/releases/download/1.3.0/ps5debug-NG_v1.3.0.elf",
+    "filename": "ps5debug-NG_v1.3.2.elf",
+    "url": "https://github.com/Pharaoh2k/ps5debug-NG/releases/download/1.3.2/ps5debug-NG_v1.3.2.elf",
     "source": "https://github.com/OpenSourcereR-dev/ps5debug-NG/releases",
-    "source_direct": "https://github.com/Pharaoh2k/ps5debug-NG/releases/download/1.3.0/ps5debug-NG_v1.3.0.elf",
-    "description": "v1.2.x was about getting FW 8.x-13.x working. v1.3.0 is the big feature release: dramatically faster memory scanning (Turbo Scan), new register access (FS/GS base + full...",
-    "last_update": "2026-06-21",
-    "version": "1.3.0",
+    "source_direct": "https://github.com/Pharaoh2k/ps5debug-NG/releases/download/1.3.2/ps5debug-NG_v1.3.2.elf",
+    "description": "ps5debug-NG v1.3.2",
+    "last_update": "2026-09-23",
+    "version": "1.3.2",
     "category": "Utilities & Tools"
   },
   {
