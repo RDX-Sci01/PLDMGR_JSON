@@ -154,28 +154,6 @@
     "category": "Networking & Servers"
   },
   {
-    "name": "klogsrv",
-    "filename": "klogsrv-ps4.elf",
-    "url": "https://github.com/ps5-payload-dev/klogsrv/releases/download/v0.9/klogsrv-ps4.elf",
-    "source": "https://github.com/ps5-payload-dev/klogsrv/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/klogsrv/releases/download/v0.9/klogsrv-ps4.elf",
-    "description": "rebuild with latest sdk",
-    "last_update": "2026-08-02",
-    "version": "v0.9",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "klogsrv",
-    "filename": "klogsrv-ps5.elf",
-    "url": "https://github.com/ps5-payload-dev/klogsrv/releases/download/v0.9/klogsrv-ps5.elf",
-    "source": "https://github.com/ps5-payload-dev/klogsrv/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/klogsrv/releases/download/v0.9/klogsrv-ps5.elf",
-    "description": "rebuild with latest sdk",
-    "last_update": "2026-08-02",
-    "version": "v0.9",
-    "category": "Networking & Servers"
-  },
-  {
     "name": "nanodns",
     "filename": "nanodns-ps4.elf",
     "url": "https://github.com/drakmor/nanoDNS/releases/download/0.4/nanodns-ps4.elf",
