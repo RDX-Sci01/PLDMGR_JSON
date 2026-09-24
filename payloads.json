@@ -484,6 +484,17 @@
     "category": "Utilities & Tools"
   },
   {
+    "name": "shadowmountplus",
+    "filename": "shadowmountplus.elf",
+    "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta2/shadowmountplus.elf",
+    "source": "https://github.com/drakmor/ShadowMountPlus/releases",
+    "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta2/shadowmountplus.elf",
+    "description": "This release focuses on installed PKG backports, safer suspend handling, faster storage operations, and runtime stability.",
+    "last_update": "2026-09-21",
+    "version": "1.7beta2",
+    "category": "Utilities & Tools"
+  },
+  {
     "name": "web-file-mgr",
     "filename": "web-file-mgr-v1.9.elf",
     "url": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.9/web-file-mgr-v1.9.elf",
