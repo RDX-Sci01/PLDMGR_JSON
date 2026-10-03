@@ -66,6 +66,17 @@
     "category": "System & Jailbreak"
   },
   {
+    "name": "shadowmountplus",
+    "filename": "shadowmountplus.elf",
+    "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta3/shadowmountplus.elf",
+    "source": "https://github.com/drakmor/ShadowMountPlus/releases",
+    "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta3/shadowmountplus.elf",
+    "description": "- Fixed an issue with mounting backports from /data/homebrew/backports when using a custom scanpath list.",
+    "last_update": "2026-10-01",
+    "version": "1.7beta3",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "elfldr",
     "filename": "elfldr-ps5.elf",
     "url": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.26/elfldr-ps5.elf",
@@ -481,17 +492,6 @@
     "description": "New in 2.1 UPDATE",
     "last_update": "2026-08-14",
     "version": "2.1",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "shadowmountplus",
-    "filename": "shadowmountplus.elf",
-    "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta2/shadowmountplus.elf",
-    "source": "https://github.com/drakmor/ShadowMountPlus/releases",
-    "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta2/shadowmountplus.elf",
-    "description": "This release focuses on installed PKG backports, safer suspend handling, faster storage operations, and runtime stability.",
-    "last_update": "2026-09-21",
-    "version": "1.7beta2",
     "category": "Utilities & Tools"
   },
   {
