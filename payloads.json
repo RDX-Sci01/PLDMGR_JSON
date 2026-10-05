@@ -1,5 +1,16 @@
 [
   {
+    "name": "etaHEN",
+    "filename": "etaHEN-2.5B.bin",
+    "url": "https://github.com/etaHEN/etaHEN/releases/download/2.5B/etaHEN-2.5B.bin",
+    "source": "https://github.com/etaHEN/etaHEN/releases",
+    "source_direct": "https://github.com/etaHEN/etaHEN/releases/download/2.5B/etaHEN-2.5B.bin",
+    "description": "etaHEN 2.5B Change log",
+    "last_update": "2025-12-25",
+    "version": "2.5B",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "kstuff",
     "filename": "kstuff.elf",
     "url": "https://github.com/EchoStretch/kstuff-lite/releases/download/v1.11/kstuff.elf",
