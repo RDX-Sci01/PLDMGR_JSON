@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-5.41.0.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v5.41.0/ps5upload-5.41.0.elf",
+    "filename": "ps5upload-6.0.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.0.0/ps5upload-6.0.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v5.41.0/ps5upload-5.41.0.elf",
-    "description": "Installs that the PS5 used to decline now go through. On FW 13.60 the",
-    "last_update": "2026-10-01",
-    "version": "v5.41.0",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.0.0/ps5upload-6.0.0.elf",
+    "description": "Release 6.0.0.",
+    "last_update": "2026-10-05",
+    "version": "v6.0.0",
     "category": "Networking & Servers"
   },
   {
@@ -496,24 +496,13 @@
   },
   {
     "name": "web-file-mgr",
-    "filename": "web-file-mgr-v1.9.elf",
-    "url": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.9/web-file-mgr-v1.9.elf",
+    "filename": "web-file-mgr-v1.10.elf",
+    "url": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.10/web-file-mgr-v1.10.elf",
     "source": "https://github.com/owendswang/ps5-web-file-manager/releases",
-    "source_direct": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.9/web-file-mgr-v1.9.elf",
-    "description": "Change log:",
-    "last_update": "2026-09-16",
-    "version": "v1.9",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "wfm",
-    "filename": "wfm-7zip-helper.elf",
-    "url": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.9/wfm-7zip-helper.elf",
-    "source": "https://github.com/owendswang/ps5-web-file-manager/releases",
-    "source_direct": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.9/wfm-7zip-helper.elf",
-    "description": "Change log:",
-    "last_update": "2026-09-16",
-    "version": "v1.9",
+    "source_direct": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.10/web-file-mgr-v1.10.elf",
+    "description": "Change logs:",
+    "last_update": "2026-10-05",
+    "version": "v1.10",
     "category": "Utilities & Tools"
   },
   {
