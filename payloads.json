@@ -77,28 +77,6 @@
     "category": "System & Jailbreak"
   },
   {
-    "name": "elfldr",
-    "filename": "elfldr-ps5.elf",
-    "url": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.26/elfldr-ps5.elf",
-    "source": "https://github.com/ps5-payload-dev/elfldr/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.26/elfldr-ps5.elf",
-    "description": "simplify makefile",
-    "last_update": "2026-08-29",
-    "version": "v0.26",
-    "category": "Loaders"
-  },
-  {
-    "name": "ps5-linux-loader",
-    "filename": "ps5-linux-loader.elf",
-    "url": "https://github.com/ps5-linux/ps5-linux-loader/releases/download/v2.5/ps5-linux-loader.elf",
-    "source": "https://github.com/ps5-linux/ps5-linux-loader/releases",
-    "source_direct": "https://github.com/ps5-linux/ps5-linux-loader/releases/download/v2.5/ps5-linux-loader.elf",
-    "description": "Added 7.0x support",
-    "last_update": "2026-09-05",
-    "version": "v2.5",
-    "category": "Loaders"
-  },
-  {
     "name": "webkit-autoloader",
     "filename": "webkit-autoloader-installer_v0.5.2.elf",
     "url": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.5.2/webkit-autoloader-installer_v0.5.2.elf",
@@ -129,17 +107,6 @@
     "description": "- Added LOWER and UPPER commands to recursively change the case of file, directory, and symlink names. The server checks for name collisions before renaming; STOP can cancel the...",
     "last_update": "2026-09-20",
     "version": "1.16-ng-stable",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "ftpsrv",
-    "filename": "ftpsrv-ps4.elf",
-    "url": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps4.elf",
-    "source": "https://github.com/ps5-payload-dev/ftpsrv/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps4.elf",
-    "description": "ftpsrv payload",
-    "last_update": "2026-08-20",
-    "version": "v0.21.1",
     "category": "Networking & Servers"
   },
   {
