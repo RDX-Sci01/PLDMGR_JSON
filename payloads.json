@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-6.1.1.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.1.1/ps5upload-6.1.1.elf",
+    "filename": "ps5upload-6.1.2.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.1.2/ps5upload-6.1.2.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.1.1/ps5upload-6.1.1.elf",
-    "description": "Smoother recovery after a stalled upload.",
-    "last_update": "2026-10-05",
-    "version": "v6.1.1",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.1.2/ps5upload-6.1.2.elf",
+    "description": "Game folders upload all the way through.",
+    "last_update": "2026-10-06",
+    "version": "v6.1.2",
     "category": "Networking & Servers"
   },
   {
