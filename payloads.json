@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-6.2.3.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.2.3/ps5upload-6.2.3.elf",
+    "filename": "ps5upload-6.3.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.3.0/ps5upload-6.3.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.2.3/ps5upload-6.2.3.elf",
-    "description": "The 6.2.2 fixes, with a more reliable CI test run. No app or helper behavior changed.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.3.0/ps5upload-6.3.0.elf",
+    "description": "Switching screens no longer loses what you were doing. Update the app; the helper is",
     "last_update": "2026-10-07",
-    "version": "v6.2.3",
+    "version": "v6.3.0",
     "category": "Networking & Servers"
   },
   {
