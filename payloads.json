@@ -66,6 +66,17 @@
     "category": "System & Jailbreak"
   },
   {
+    "name": "ps5upload",
+    "filename": "ps5upload-6.4.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.4.0/ps5upload-6.4.0.elf",
+    "source": "https://github.com/phantomptr/ps5upload/releases",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.4.0/ps5upload-6.4.0.elf",
+    "description": "Install is two tabs, links say what they ask of you, and Home tells you when something is",
+    "last_update": "2026-10-08",
+    "version": "v6.4.0",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "shadowmountplus",
     "filename": "shadowmountplus.elf",
     "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta3/shadowmountplus.elf",
@@ -206,17 +217,6 @@
     "description": "- IPv6 support",
     "last_update": "2026-08-04",
     "version": "0.4",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "ps5upload",
-    "filename": "ps5upload-6.3.1.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.3.1/ps5upload-6.3.1.elf",
-    "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.3.1/ps5upload-6.3.1.elf",
-    "description": "\"The PS5 declined the install\" (0x80B2116F) is fixed. Update the app; it sends its new",
-    "last_update": "2026-10-07",
-    "version": "v6.3.1",
     "category": "Networking & Servers"
   },
   {
