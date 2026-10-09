@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-6.6.1.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.6.1/ps5upload-6.6.1.elf",
+    "filename": "ps5upload-6.6.3.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.6.3/ps5upload-6.6.3.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.6.1/ps5upload-6.6.1.elf",
-    "description": "A new Bug report page that gathers everything we need, and two or more consoles no longer",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.6.3/ps5upload-6.6.3.elf",
+    "description": "Housekeeping. No changes to the app. The engine's own tests now clean up their temporary",
     "last_update": "2026-10-09",
-    "version": "v6.6.1",
+    "version": "v6.6.3",
     "category": "Networking & Servers"
   },
   {
