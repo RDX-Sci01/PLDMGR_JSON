@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-6.6.3.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.6.3/ps5upload-6.6.3.elf",
+    "filename": "ps5upload-6.7.0.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.7.0/ps5upload-6.7.0.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.6.3/ps5upload-6.6.3.elf",
-    "description": "Housekeeping. No changes to the app. The engine's own tests now clean up their temporary",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.7.0/ps5upload-6.7.0.elf",
+    "description": "One page per game: every console and every copy, wherever you open it from.",
     "last_update": "2026-10-09",
-    "version": "v6.6.3",
+    "version": "v6.7.0",
     "category": "Networking & Servers"
   },
   {
