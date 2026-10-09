@@ -398,12 +398,12 @@
   {
     "name": "pegasus_dl",
     "filename": "pegasus_dl.elf",
-    "url": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.10.1/pegasus_dl.elf",
+    "url": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.11.0/pegasus_dl.elf",
     "source": "https://github.com/pegasus-ps5/pegasus-dl/releases",
-    "source_direct": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.10.1/pegasus_dl.elf",
-    "description": "- Faster Store search and source filtering for large catalogs, with cached",
-    "last_update": "2026-09-30",
-    "version": "v1.10.1",
+    "source_direct": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.11.0/pegasus_dl.elf",
+    "description": "- Parallel downloads now use persistent connections and write ranges directly",
+    "last_update": "2026-10-09",
+    "version": "v1.11.0",
     "category": "Utilities & Tools"
   },
   {
