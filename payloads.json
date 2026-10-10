@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-6.7.3.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.7.3/ps5upload-6.7.3.elf",
+    "filename": "ps5upload-6.7.4.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.7.4/ps5upload-6.7.4.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.7.3/ps5upload-6.7.3.elf",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.7.4/ps5upload-6.7.4.elf",
     "description": "Fixed",
-    "last_update": "2026-10-09",
-    "version": "v6.7.3",
+    "last_update": "2026-10-10",
+    "version": "v6.7.4",
     "category": "Networking & Servers"
   },
   {
