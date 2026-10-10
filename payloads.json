@@ -68,12 +68,12 @@
   {
     "name": "shadowmountplus",
     "filename": "shadowmountplus.elf",
-    "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta3/shadowmountplus.elf",
+    "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta5/shadowmountplus.elf",
     "source": "https://github.com/drakmor/ShadowMountPlus/releases",
-    "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta3/shadowmountplus.elf",
-    "description": "- Fixed an issue with mounting backports from /data/homebrew/backports when using a custom scanpath list.",
-    "last_update": "2026-10-01",
-    "version": "1.7beta3",
+    "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta5/shadowmountplus.elf",
+    "description": "- Removed legacy kstuff auto-pause and delay autotuning. Use the latest version of kstuff and do not use EtaHEN.",
+    "last_update": "2026-10-10",
+    "version": "1.7beta5",
     "category": "System & Jailbreak"
   },
   {
@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-6.7.4.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.7.4/ps5upload-6.7.4.elf",
+    "filename": "ps5upload-6.8.1.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.8.1/ps5upload-6.8.1.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.7.4/ps5upload-6.7.4.elf",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.8.1/ps5upload-6.8.1.elf",
     "description": "Fixed",
     "last_update": "2026-10-10",
-    "version": "v6.7.4",
+    "version": "v6.8.1",
     "category": "Networking & Servers"
   },
   {
