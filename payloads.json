@@ -68,12 +68,12 @@
   {
     "name": "shadowmountplus",
     "filename": "shadowmountplus.elf",
-    "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta5/shadowmountplus.elf",
+    "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7-beta5fix1/shadowmountplus.elf",
     "source": "https://github.com/drakmor/ShadowMountPlus/releases",
-    "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta5/shadowmountplus.elf",
+    "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7-beta5fix1/shadowmountplus.elf",
     "description": "- Removed legacy kstuff auto-pause and delay autotuning. Use the latest version of kstuff and do not use EtaHEN.",
     "last_update": "2026-10-10",
-    "version": "1.7beta5",
+    "version": "1.7-beta5fix1",
     "category": "System & Jailbreak"
   },
   {
@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-6.8.1.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.8.1/ps5upload-6.8.1.elf",
+    "filename": "ps5upload-6.8.2.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v6.8.2/ps5upload-6.8.2.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.8.1/ps5upload-6.8.1.elf",
-    "description": "Fixed",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v6.8.2/ps5upload-6.8.2.elf",
+    "description": "A clean-up release: every screen was gone through for things that no longer make sense, and",
     "last_update": "2026-10-10",
-    "version": "v6.8.1",
+    "version": "v6.8.2",
     "category": "Networking & Servers"
   },
   {
@@ -354,12 +354,12 @@
   {
     "name": "CheatRunner",
     "filename": "CheatRunner.elf",
-    "url": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.17.2/CheatRunner.elf",
+    "url": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.18/CheatRunner.elf",
     "source": "https://github.com/notmaj0r/CheatRunner/releases",
-    "source_direct": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.17.2/CheatRunner.elf",
-    "description": "CheatRunner v0.17.2",
-    "last_update": "2026-10-01",
-    "version": "v0.17.2",
+    "source_direct": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.18/CheatRunner.elf",
+    "description": "CheatRunner v0.18",
+    "last_update": "2026-10-10",
+    "version": "v0.18",
     "category": "Utilities & Tools"
   },
   {
