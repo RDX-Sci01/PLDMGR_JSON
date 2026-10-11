@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-7.0.0.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.0/ps5upload-7.0.0.elf",
+    "filename": "ps5upload-7.0.1.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.1/ps5upload-7.0.1.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.0/ps5upload-7.0.0.elf",
-    "description": "A new look for the whole app, a better Android app, and a long list of fixes.",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.1/ps5upload-7.0.1.elf",
+    "description": "- Collection scans show their progress: what the scan is doing (finding games, reading",
     "last_update": "2026-10-11",
-    "version": "v7.0.0",
+    "version": "v7.0.1",
     "category": "Networking & Servers"
   },
   {
