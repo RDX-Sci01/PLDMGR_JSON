@@ -99,17 +99,6 @@
     "category": "Loaders"
   },
   {
-    "name": "ps5upload",
-    "filename": "ps5upload-7.0.8.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.8/ps5upload-7.0.8.elf",
-    "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.8/ps5upload-7.0.8.elf",
-    "description": "- Hide an icon from the PS5 home screen. For shortcuts and loaders you set up once and never",
-    "last_update": "2026-10-11",
-    "version": "v7.0.8",
-    "category": "Loaders"
-  },
-  {
     "name": "webkit-autoloader",
     "filename": "webkit-autoloader-installer_v0.6.1.elf",
     "url": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.6.1/webkit-autoloader-installer_v0.6.1.elf",
@@ -217,6 +206,17 @@
     "description": "- IPv6 support",
     "last_update": "2026-08-04",
     "version": "0.4",
+    "category": "Networking & Servers"
+  },
+  {
+    "name": "ps5upload",
+    "filename": "ps5upload-7.0.10.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.10/ps5upload-7.0.10.elf",
+    "source": "https://github.com/phantomptr/ps5upload/releases",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.10/ps5upload-7.0.10.elf",
+    "description": "7.0.9 was tagged but never published: its Android build failed on a desktop-only permission",
+    "last_update": "2026-10-11",
+    "version": "v7.0.10",
     "category": "Networking & Servers"
   },
   {
