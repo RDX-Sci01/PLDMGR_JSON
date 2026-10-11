@@ -66,17 +66,6 @@
     "category": "System & Jailbreak"
   },
   {
-    "name": "ps5upload",
-    "filename": "ps5upload-7.0.6.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.6/ps5upload-7.0.6.elf",
-    "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.6/ps5upload-7.0.6.elf",
-    "description": "- Your PS5 got a new address? The app finds it. When the router gives the console a new IP,",
-    "last_update": "2026-10-11",
-    "version": "v7.0.6",
-    "category": "System & Jailbreak"
-  },
-  {
     "name": "shadowmountplus",
     "filename": "shadowmountplus.elf",
     "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7-beta5fix1/shadowmountplus.elf",
@@ -107,6 +96,17 @@
     "description": "Added 7.0x support",
     "last_update": "2026-09-05",
     "version": "v2.5",
+    "category": "Loaders"
+  },
+  {
+    "name": "ps5upload",
+    "filename": "ps5upload-7.0.8.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.8/ps5upload-7.0.8.elf",
+    "source": "https://github.com/phantomptr/ps5upload/releases",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.8/ps5upload-7.0.8.elf",
+    "description": "- Hide an icon from the PS5 home screen. For shortcuts and loaders you set up once and never",
+    "last_update": "2026-10-11",
+    "version": "v7.0.8",
     "category": "Loaders"
   },
   {
