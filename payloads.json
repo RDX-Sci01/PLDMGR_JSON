@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-7.0.17.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.17/ps5upload-7.0.17.elf",
+    "filename": "ps5upload-7.0.20.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.20/ps5upload-7.0.20.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.17/ps5upload-7.0.17.elf",
-    "description": "- Open a save and edit its files. Save data has an Open save button per save: the helper",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.20/ps5upload-7.0.20.elf",
+    "description": "- Convert remembers what it is making. Leaving the screen during an image build and",
     "last_update": "2026-10-12",
-    "version": "v7.0.17",
+    "version": "v7.0.20",
     "category": "Networking & Servers"
   },
   {
