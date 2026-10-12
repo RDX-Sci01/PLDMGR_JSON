@@ -385,17 +385,6 @@
     "category": "Utilities & Tools"
   },
   {
-    "name": "MemDBG",
-    "filename": "MemDBG-ps5.elf",
-    "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260930-g6e493c9/MemDBG-ps5.elf",
-    "source": "https://github.com/seregonwar/MemDBG/releases",
-    "source_direct": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260930-g6e493c9/MemDBG-ps5.elf",
-    "description": "Automated historical nightly built from the latest main branch.",
-    "last_update": "2026-09-30",
-    "version": "nightly-20260930-g6e493c9",
-    "category": "Utilities & Tools"
-  },
-  {
     "name": "pegasus_dl",
     "filename": "pegasus_dl.elf",
     "url": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.11.0/pegasus_dl.elf",
