@@ -1,5 +1,7 @@
 # PS5 Payload Manager - Payload Sources
 # --- GitHub repositories ---
+github:quer3q/ps5-dump-forge
+github:theghostonline/PS5-LZ4-Compression
 github:VenezuelanBiggie24/Machete-PS5-Backup-Manager
 github:juma-sayeh/PS5-Game-Compressor
 github:tsuramatsu1/apr-emu-updater
