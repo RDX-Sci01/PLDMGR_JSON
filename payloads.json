@@ -374,6 +374,17 @@
     "category": "Utilities & Tools"
   },
   {
+    "name": "lz4-compression",
+    "filename": "lz4-compression.elf",
+    "url": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.4.3/lz4-compression.elf",
+    "source": "https://github.com/theghostonline/PS5-LZ4-Compression/releases",
+    "source_direct": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.4.3/lz4-compression.elf",
+    "description": "LZ4 Compression 1.4.3",
+    "last_update": "2026-10-14",
+    "version": "v1.4.3",
+    "category": "Utilities & Tools"
+  },
+  {
     "name": "MemDBG",
     "filename": "MemDBG-ps4.elf",
     "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260930-g6e493c9/MemDBG-ps4.elf",
@@ -412,7 +423,7 @@
     "url": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.1/pldmgr_v0.6.1.elf",
     "source": "https://github.com/itsPLK/pldmgr/releases",
     "source_direct": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.1/pldmgr_v0.6.1.elf",
-    "description": "Full Changelog: https://github.com/itsPLK/ps5-payload-manager/compare/v0.6.0...v0.6.1",
+    "description": "Changelog",
     "last_update": "2026-10-14",
     "version": "v0.6.1",
     "category": "Utilities & Tools"
@@ -470,6 +481,17 @@
     "description": "Initial oink release 🐽",
     "last_update": "2026-04-30",
     "version": "0.1",
+    "category": "Utilities & Tools"
+  },
+  {
+    "name": "ps5-dump-forge",
+    "filename": "ps5-dump-forge-0.1.1-ps5.elf",
+    "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.1.1/ps5-dump-forge-0.1.1-ps5.elf",
+    "source": "https://github.com/quer3q/ps5-dump-forge/releases",
+    "source_direct": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.1.1/ps5-dump-forge-0.1.1-ps5.elf",
+    "description": "Runs on everything (including your PS5) and converts everything: game folders to exfat, ffpkg, ffpfs,",
+    "last_update": "2026-10-14",
+    "version": "v0.1.1",
     "category": "Utilities & Tools"
   },
   {
