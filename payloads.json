@@ -376,12 +376,12 @@
   {
     "name": "lz4-compression",
     "filename": "lz4-compression.elf",
-    "url": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.4.3/lz4-compression.elf",
+    "url": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.5.0/lz4-compression.elf",
     "source": "https://github.com/theghostonline/PS5-LZ4-Compression/releases",
-    "source_direct": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.4.3/lz4-compression.elf",
-    "description": "LZ4 Compression 1.4.3",
+    "source_direct": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.5.0/lz4-compression.elf",
+    "description": "LZ4 Compression 1.5.0",
     "last_update": "2026-10-14",
-    "version": "v1.4.3",
+    "version": "v1.5.0",
     "category": "Utilities & Tools"
   },
   {
