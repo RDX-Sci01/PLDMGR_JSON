@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-7.0.23.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.23/ps5upload-7.0.23.elf",
+    "filename": "ps5upload-7.0.25.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.25/ps5upload-7.0.25.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.23/ps5upload-7.0.23.elf",
-    "description": "- Payload Manager 0.6 works again (#458). 0.6 refuses changes without its request marker",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.25/ps5upload-7.0.25.elf",
+    "description": "- Profile no longer offers \"Create User\" (#460). The PS5 has no create-user call a payload",
     "last_update": "2026-10-15",
-    "version": "v7.0.23",
+    "version": "v7.0.25",
     "category": "Networking & Servers"
   },
   {
