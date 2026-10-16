@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-7.0.26.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.26/ps5upload-7.0.26.elf",
+    "filename": "ps5upload-7.0.27.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.27/ps5upload-7.0.27.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.26/ps5upload-7.0.26.elf",
-    "description": "- Uploaded game and homebrew folders show up with ShadowMount+ again. ShadowMount+",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.27/ps5upload-7.0.27.elf",
+    "description": "- A stream install no longer fails on the PS5 after ps5upload says it's done. The PS5",
     "last_update": "2026-10-16",
-    "version": "v7.0.26",
+    "version": "v7.0.27",
     "category": "Networking & Servers"
   },
   {
