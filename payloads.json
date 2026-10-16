@@ -485,13 +485,13 @@
   },
   {
     "name": "ps5-dump-forge",
-    "filename": "ps5-dump-forge-0.1.1-ps5.elf",
-    "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.1.1/ps5-dump-forge-0.1.1-ps5.elf",
+    "filename": "ps5-dump-forge-0.2.0-ps5.elf",
+    "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.2.0/ps5-dump-forge-0.2.0-ps5.elf",
     "source": "https://github.com/quer3q/ps5-dump-forge/releases",
-    "source_direct": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.1.1/ps5-dump-forge-0.1.1-ps5.elf",
+    "source_direct": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.2.0/ps5-dump-forge-0.2.0-ps5.elf",
     "description": "Runs on everything (including your PS5) and converts everything: game folders to exfat, ffpkg, ffpfs,",
-    "last_update": "2026-10-14",
-    "version": "v0.1.1",
+    "last_update": "2026-10-16",
+    "version": "v0.2.0",
     "category": "Utilities & Tools"
   },
   {
