@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-7.0.29.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.29/ps5upload-7.0.29.elf",
+    "filename": "ps5upload-7.0.30.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.30/ps5upload-7.0.30.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.29/ps5upload-7.0.29.elf",
-    "description": "- Turn a game image or package back into a folder (#469). Convert → What to make has a third",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.30/ps5upload-7.0.30.elf",
+    "description": "- Files fits on a phone (#470). On a narrow screen every file and folder row carried up to",
     "last_update": "2026-10-16",
-    "version": "v7.0.29",
+    "version": "v7.0.30",
     "category": "Networking & Servers"
   },
   {
