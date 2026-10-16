@@ -66,6 +66,17 @@
     "category": "System & Jailbreak"
   },
   {
+    "name": "ps5upload",
+    "filename": "ps5upload-7.0.28.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.28/ps5upload-7.0.28.elf",
+    "source": "https://github.com/phantomptr/ps5upload/releases",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.28/ps5upload-7.0.28.elf",
+    "description": "- Android: transfers keep going when you leave the app, and you get told when they finish",
+    "last_update": "2026-10-16",
+    "version": "v7.0.28",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "shadowmountplus",
     "filename": "shadowmountplus.elf",
     "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7-beta5fix1/shadowmountplus.elf",
@@ -206,17 +217,6 @@
     "description": "- IPv6 support",
     "last_update": "2026-08-04",
     "version": "0.4",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "ps5upload",
-    "filename": "ps5upload-7.0.27.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.27/ps5upload-7.0.27.elf",
-    "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.27/ps5upload-7.0.27.elf",
-    "description": "- A stream install no longer fails on the PS5 after ps5upload says it's done. The PS5",
-    "last_update": "2026-10-16",
-    "version": "v7.0.27",
     "category": "Networking & Servers"
   },
   {
