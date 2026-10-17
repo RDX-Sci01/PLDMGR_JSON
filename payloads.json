@@ -120,45 +120,6 @@
       "icon_key": "ad79ebaa2a4893da24720d0ed0ba5a1fbb3d4c1afab90c04193a37ee7eae06ec"
     },
     {
-      "name": "LZ4-Compression-PPSA99420.zip",
-      "filename": "LZ4-Compression-PPSA99420.zip",
-      "url": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.5.0/LZ4-Compression-PPSA99420.zip",
-      "source": "https://github.com/theghostonline/PS5-LZ4-Compression/releases",
-      "source_direct": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.5.0/LZ4-Compression-PPSA99420.zip",
-      "description": "LZ4 Compression v1.5.0",
-      "last_update": "2026-10-14",
-      "version": "v1.5.0",
-      "category": "Uncategorized",
-      "checksum": "86ea01c6c0c5c85ae74e725d61afc21348f58cb658f22f7087b471f04e4b22ea",
-      "icon_key": "f9c5d5fcb4357ab3c61ed0258783760fae7b582e008b48d98e4691ca1638621e"
-    },
-    {
-      "name": "lz4-compression.elf",
-      "filename": "lz4-compression.elf",
-      "url": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.5.0/lz4-compression.elf",
-      "source": "https://github.com/theghostonline/PS5-LZ4-Compression/releases",
-      "source_direct": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.5.0/lz4-compression.elf",
-      "description": "LZ4 Compression v1.5.0",
-      "last_update": "2026-10-14",
-      "version": "v1.5.0",
-      "category": "Uncategorized",
-      "checksum": "edb4f2c5922bea293cc5c5354bd301fb0bde48856c0d2a8d115801d3c778b3f1",
-      "icon_key": "f9c5d5fcb4357ab3c61ed0258783760fae7b582e008b48d98e4691ca1638621e"
-    },
-    {
-      "name": "SHA256SUMS",
-      "filename": "SHA256SUMS",
-      "url": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.5.0/SHA256SUMS",
-      "source": "https://github.com/theghostonline/PS5-LZ4-Compression/releases",
-      "source_direct": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.5.0/SHA256SUMS",
-      "description": "LZ4 Compression v1.5.0",
-      "last_update": "2026-10-14",
-      "version": "v1.5.0",
-      "category": "Uncategorized",
-      "checksum": "f518d1c6aee6a2bef2765564f15c6dae76c94aa232a77ad6720af5e64a5f18d5",
-      "icon_key": "f9c5d5fcb4357ab3c61ed0258783760fae7b582e008b48d98e4691ca1638621e"
-    },
-    {
       "name": "latest.json",
       "filename": "latest.json",
       "url": "https://github.com/VenezuelanBiggie24/Machete-PS5-Backup-Manager/releases/download/v2.4.0/latest.json",
