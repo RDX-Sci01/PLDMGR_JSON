@@ -13,7 +13,7 @@
       "version": "v1.1",
       "category": "Uncategorized",
       "checksum": "e7a6bb544adb2fb2a61aa9cc83b0ad15f70b32d7511a3de0f1fb88812f11983c",
-      "icon_key": "b460daeea358f30a8b54f50efae741fbddc66edd759f339c95feafb528062d7c"
+      "icon_key": "a2ca17ecb8f4c56428b98c6f799f4f3e48d2a0dde40aa0d047396956686b65c9"
     },
     {
       "name": "ps5-dump-forge",
@@ -51,7 +51,7 @@
       "version": "v2.0.6",
       "category": "Uncategorized",
       "checksum": "4f04464283a6a551883e40e36b59134ecad0e38ecbb7ea89cbec3f91a3bd9122",
-      "icon_key": "43bab10e205ee9e2a73a45407885c14ad74f44eff4054f27ce947a761aa9163c"
+      "icon_key": "a093917de9b3a893e2aedfc84736cf823bfca150cd60fa456089abbc954ce613"
     },
     {
       "name": "onionHEN",
@@ -64,7 +64,7 @@
       "version": "v0.9.0",
       "category": "Uncategorized",
       "checksum": "1f1f7c883d5d998be1d95d7d80b718f85180f8156f257661b0f445a7c6b7c212",
-      "icon_key": "dfc9b92f2aa215900fe1beb9e920ee656c9526fe8734c34f2279893e010482ee"
+      "icon_key": "e826da23aba8785f751289babd28c8636bc4220076ea2cb1618bd5f274fcb3ac"
     },
     {
       "name": "pegasus-dl",
@@ -77,7 +77,7 @@
       "version": "v1.11.0",
       "category": "Uncategorized",
       "checksum": "32b69c2089bb545abfabd04d5827444698f9c4f1bc4915d72247cb781e8c23d9",
-      "icon_key": "f247abf9a55b7f4a936bbaeddf9d17e1fbc4675d746201ee645db16387193b81"
+      "icon_key": "711695e44f080fc191e84ff476615a228477de5273d160a44073eceea4999494"
     },
     {
       "name": "PoorDS4-status.elf",
@@ -90,7 +90,7 @@
       "version": "v0.1.0-rc51",
       "category": "Uncategorized",
       "checksum": "d47bb84a6ae05117f095c05b75dfee15d9fbf07864a3e52d0e2e626eab613440",
-      "icon_key": "eaa169d3744ba60118a0adb1e97d2024a5dcf0d36463375fb14d3e2c543f962f"
+      "icon_key": "ac41fa8c169c6bc49ce4b8c25951661ebced64a7acd8adbc7a6dc157b81e0540"
     },
     {
       "name": "PoorDS4-stop.elf",
@@ -103,7 +103,7 @@
       "version": "v0.1.0-rc51",
       "category": "Uncategorized",
       "checksum": "ffdce4964f0d34a2b9be7cb65e6ad345d5beb582dcdf94d0214cde6bc79acd0d",
-      "icon_key": "eaa169d3744ba60118a0adb1e97d2024a5dcf0d36463375fb14d3e2c543f962f"
+      "icon_key": "4e1501017506891aac55ba0ac5f10915ecb96cf200ff67a7982bbbc7c52bf4bc"
     },
     {
       "name": "PoorDS4rc51.elf",
@@ -116,7 +116,7 @@
       "version": "v0.1.0-rc51",
       "category": "Uncategorized",
       "checksum": "e1b9f257f51678a977edaeafd4ca1f8a03e9df0afda7d5dd84435841fa20795d",
-      "icon_key": "eaa169d3744ba60118a0adb1e97d2024a5dcf0d36463375fb14d3e2c543f962f"
+      "icon_key": "b9a7f18bf4a06f3e85e87b1f7c2b91782d32af8b971faf287de6ca625a344444"
     },
     {
       "name": "PIZZA-HEN",
@@ -129,7 +129,7 @@
       "version": "v2.00",
       "category": "Uncategorized",
       "checksum": "8535d399612d61c50a528b2ae416f2fc3ccfb7480296df99c17302583fb3e345",
-      "icon_key": "aaa4fd74d3929c5583008763a7ba52f51833566bb47705684f97a69fb1cea3a3"
+      "icon_key": "5d5b153bb76728c242104249444dc0852d2e8a42ac6e065beefc0d9210493503"
     },
     {
       "name": "PS-Play",
@@ -142,7 +142,7 @@
       "version": "2.1",
       "category": "Uncategorized",
       "checksum": "e3392379d5bc6ca4e44cb0d2a1d8921083b2c3ea480725f68378831874542d8d",
-      "icon_key": "23bd7d4e0947f9e032428acc4cca6bb2e7e9e07c411720c81583289508b6334d"
+      "icon_key": "6283134d56a171df338fa515d391966a1c8b9dd1a92c21d29dfcf6bfa80bb2c3"
     },
     {
       "name": "MemDBG-ps4.elf",
@@ -155,7 +155,7 @@
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
       "checksum": "d4ce3398d639a3164f63c8e5acecccccebb18e2086fec21adef762e57a724b13",
-      "icon_key": "fdebeb9019ec353928e3af06dc340a9ed7becf3090fb0acab29cf751bf9b2870"
+      "icon_key": "da92810e4cca81deb3787926ac11e9b3ff4330b245ba1efbf081cc4f7c27b3e2"
     },
     {
       "name": "MemDBG-ps5.elf",
@@ -168,7 +168,7 @@
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
       "checksum": "2fbdc9f0b21043619b1c32b512df47b3ddf79a99f096243c0d48f5ffc14e1906",
-      "icon_key": "fdebeb9019ec353928e3af06dc340a9ed7becf3090fb0acab29cf751bf9b2870"
+      "icon_key": "05e919dc860f8d3c825c12f1933680c542a63617d2768f49dc3c850e909b873f"
     },
     {
       "name": "BackPork",
@@ -180,7 +180,7 @@
       "version": "0.1",
       "category": "Uncategorized",
       "checksum": "d74e4cd119b2bb1fd423f2f5b1c9a7f096b3e588c753af1ab48b983d56216a52",
-      "icon_key": "55fcf63ca146a75e6b762563cc7b154ffdf11c9893c126d4dc15e80517e99fad"
+      "icon_key": "ee75f323f19a1d4da7c7f85f58b05a62daba2f55d5e8dbafd2ae50b3488f7bda"
     },
     {
       "name": "ftpsrv-ps4.elf",
@@ -193,7 +193,7 @@
       "version": "1.16-ng-stable",
       "category": "Uncategorized",
       "checksum": "fba508465a8c892882e88e2834ac2b6c445583b81629257764725528f3f5fd6a",
-      "icon_key": "d766fbeb77ce065552959a9191e2c87148f286af467b13a310f5a46aeaddafd8"
+      "icon_key": "a4a8e5573943a16449091b02c38312a304f53178563b564725524c479e11ae74"
     },
     {
       "name": "ftpsrv-ps5.elf",
@@ -206,7 +206,7 @@
       "version": "1.16-ng-stable",
       "category": "Uncategorized",
       "checksum": "f19ae469b25453a7a4af4529527521d31f143100f18a2c6839666e7121c8bd32",
-      "icon_key": "d766fbeb77ce065552959a9191e2c87148f286af467b13a310f5a46aeaddafd8"
+      "icon_key": "0992e6b5fc1f0a72c70d830d8982507ad8c147b3937c344179eb6f8771cee26a"
     },
     {
       "name": "nanodns-ps4.elf",
@@ -219,7 +219,7 @@
       "version": "0.4",
       "category": "Uncategorized",
       "checksum": "aa7e9d94e32ef866e40844146330028329f8a8a529244e2ecc319ff9d8b0f5f9",
-      "icon_key": "d766fbeb77ce065552959a9191e2c87148f286af467b13a310f5a46aeaddafd8"
+      "icon_key": "2262c77d04917d0c4596c93fc7e62bc92e27e9f39a329b2e7001a82761f0499a"
     },
     {
       "name": "nanodns.elf",
@@ -232,7 +232,7 @@
       "version": "0.4",
       "category": "Uncategorized",
       "checksum": "fcfb7d47c3b295560ea1603dc015f7c4950353ef0faca16428bd425680ef1fc5",
-      "icon_key": "d766fbeb77ce065552959a9191e2c87148f286af467b13a310f5a46aeaddafd8"
+      "icon_key": "8b745ce99b731cb7322b333c08d186256e009a3a3876b90e967d1691ad3f967b"
     },
     {
       "name": "ShadowMountPlus",
@@ -245,7 +245,7 @@
       "version": "1.7-beta5fix1",
       "category": "Uncategorized",
       "checksum": "e85fd63b705498488f39c09c9aea6f9fa22e0df2e932865de49a8cedf25172d5",
-      "icon_key": "d766fbeb77ce065552959a9191e2c87148f286af467b13a310f5a46aeaddafd8"
+      "icon_key": "e117a0e0d4e010775088319dac20c69ef79d1371643313688bd79b7e59995e3d"
     },
     {
       "name": "kstuff-lite",
@@ -258,7 +258,7 @@
       "version": "v1.11",
       "category": "Uncategorized",
       "checksum": "ab9a6cb4d3b1daf139d4d646e402b1cf569071acd64599c936d7a3a6164dc779",
-      "icon_key": "f2ec005352d2a6d8f05e197551e222eebf3e420fa8d9b3939af821849a69a346"
+      "icon_key": "74eea6a5f18d275751f467f7f40401c0a344bf8c18fec98002e0396f83fe8111"
     },
     {
       "name": "ps5-app-dumper",
@@ -271,7 +271,7 @@
       "version": "v2.10",
       "category": "Uncategorized",
       "checksum": "c850f1df6f2787824d6ddeeed69ce4144e00569b32135973401c2985cfb0345b",
-      "icon_key": "f2ec005352d2a6d8f05e197551e222eebf3e420fa8d9b3939af821849a69a346"
+      "icon_key": "757d1627b0c509275420d4b667ae21e7531656215b11642fce715170ff18fa4c"
     },
     {
       "name": "etaHEN",
@@ -284,7 +284,7 @@
       "version": "2.5B",
       "category": "Uncategorized",
       "checksum": "4845cac45095361b8983b14d6690622183b0dcfbf6d7fda16e161aa91ff0531e",
-      "icon_key": "01980dfabfe1ad0159d8772aee128f512e916dcb7ae64ae2677f1675f49b49ab"
+      "icon_key": "26da8ca86365aa8d627edf86603e42617eb73cb1c9829b24d803c465914c0c3a"
     },
     {
       "name": "BFpilot",
@@ -310,7 +310,7 @@
       "version": "v0.6.1",
       "category": "Uncategorized",
       "checksum": "5165cbe4c13360828bd0f5d558cdbb9e2d55b0660b1dc7f7a58d3f4ee9e23285",
-      "icon_key": "7cceacbdcd2bd4777b38a3122f5c051e82c67b149f22d77404a119863ca0aae8"
+      "icon_key": "694c6b24bac2c86e7a8bf92c26a38f83a6a6b8157d1ae29177f47f3fa5b99448"
     },
     {
       "name": "PS5-Lapy-JB-Daemon",
@@ -323,7 +323,7 @@
       "version": "v1.2",
       "category": "Uncategorized",
       "checksum": "13559b858fc33cc7fa3dc89e10dccf139070d99ee5d378dd75c969293700799e",
-      "icon_key": "e802430190357ad25547fb2f90eca0c23b93f59e4be689c6982778714c1ac23e"
+      "icon_key": "4c85194e39bbf8f9d23d1edba5a361545214291b5da8c18feedbb0798ab350e5"
     },
     {
       "name": "ps5-webkit-autoloader",
@@ -336,7 +336,7 @@
       "version": "v0.6.1",
       "category": "Uncategorized",
       "checksum": "f662c75a502e4f1bc41b055dcb490625f8222c499ce437dc80f439a3a279e93f",
-      "icon_key": "e802430190357ad25547fb2f90eca0c23b93f59e4be689c6982778714c1ac23e"
+      "icon_key": "596ef6c95ef1f61dad085e870e240316e299be2ae71de6dda97b45b7b111a4e5"
     },
     {
       "name": "CheatRunner",
@@ -349,7 +349,7 @@
       "version": "v0.18",
       "category": "Uncategorized",
       "checksum": "4ae1ea4e37b2e67d5487355ddf671f166861ed6dceea348c048ad060770c0140",
-      "icon_key": "b460daeea358f30a8b54f50efae741fbddc66edd759f339c95feafb528062d7c"
+      "icon_key": "f5645fe7872b4e33a3e403b6a55e6288a12490d79a8bbe8f542c7ffc3a21c54c"
     },
     {
       "name": "ps5debug-NG",
@@ -362,7 +362,7 @@
       "version": "1.3.2",
       "category": "Uncategorized",
       "checksum": "949b0e6e0fe3f24f4a820319fd76d9ccb92f9770cbb1a64b09a8eca5c1fc9ff3",
-      "icon_key": "ebf8cbb8512adcf709bc012ef4bd255e547ba9c44352fe5492d244a4b1dcdd4d"
+      "icon_key": "6df592aa9c746a82809a84316447fad81edc6f2c07a7f81c242c35251b40c0d4"
     },
     {
       "name": "web-file-mgr-v1.11.elf",
@@ -375,7 +375,7 @@
       "version": "v1.11",
       "category": "Uncategorized",
       "checksum": "cbcdacf69c331025e1643fc99f5b5fc117125e7c39931b6dd914323412558911",
-      "icon_key": "2c4007e646e1bf75f557386cc4e20fed2c0c8cf20deb0ff3bf40d20c6605d81d"
+      "icon_key": "75e7ba76ce278402d20c1894ce37d1e90b2fd02597ecb622a2adff536bf39c69"
     },
     {
       "name": "wfm-7zip-helper.elf",
@@ -388,7 +388,7 @@
       "version": "v1.11",
       "category": "Uncategorized",
       "checksum": "dd8bbae4cd44ed20c4cbafc74fdc3271f52b9d7888a0d4f4038a8ae05feb92a4",
-      "icon_key": "2c4007e646e1bf75f557386cc4e20fed2c0c8cf20deb0ff3bf40d20c6605d81d"
+      "icon_key": "3b53222d64c1e2a7e2c3561b750d8221c41e75d58d1b654ec9ddb1a487821406"
     },
     {
       "name": "wfm-7zip-helper",
@@ -414,7 +414,7 @@
       "version": "v7.0.34",
       "category": "Uncategorized",
       "checksum": "f6a09ed9f92ea230490e2bc3ad912c4e882882839a25a184bb6daddabc0904a7",
-      "icon_key": "ca4e29c36300fc95fc30144b2a02ffeee56f2129b29dfc5614efae6f10669463"
+      "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
       "name": "ps5-linux-loader",
@@ -426,7 +426,7 @@
       "version": "v2.5",
       "category": "Uncategorized",
       "checksum": "9fc48733077145d1d204a4c9cdb879baaab1e711a604dd73af0dd4a807d6bc49",
-      "icon_key": "453d3eb970bb1cf74ac6fa5ebd84ec4324b7384d9961b1640b16691da41a45e8"
+      "icon_key": "3d494572a7730fd9325dcf0dd22a2c72ffbb5b99c698b42c43402c73d449c901"
     },
     {
       "name": "elfldr",
@@ -543,7 +543,7 @@
       "version": "v1.6.0",
       "category": "Uncategorized",
       "checksum": "633d8a2cd5a060641236e211777bd8b1fbe5816e74eb1c3c3dd92f892492115d",
-      "icon_key": "4387d580e52e0f27824520985b462becf4562b84b9db16b0c7c957824e0bcfbe"
+      "icon_key": "800e55be65a02091ad307e44dcc616edba355e4f9ff9ea96042ffa13c8e15263"
     },
     {
       "name": "zftpd-ps4-v1.6.0.elf",
@@ -556,7 +556,7 @@
       "version": "v1.6.0",
       "category": "Uncategorized",
       "checksum": "9e27630987522cca0fa6bfda8d69dfccdc5fc0f89fc2ef9ed30bb79a36966947",
-      "icon_key": "4387d580e52e0f27824520985b462becf4562b84b9db16b0c7c957824e0bcfbe"
+      "icon_key": "905cb530f16331938314881d3052d03baa318141a1e6f03e85439f0c33ec3ac6"
     },
     {
       "name": "zftpd-ps4-zhttp-v1.6.0.bin",
@@ -569,7 +569,7 @@
       "version": "v1.6.0",
       "category": "Uncategorized",
       "checksum": "3a1845d4b4e6d24af176cb3015da1ef58f4f3ff9346934add8d7fce74efde8b4",
-      "icon_key": "4387d580e52e0f27824520985b462becf4562b84b9db16b0c7c957824e0bcfbe"
+      "icon_key": "800e55be65a02091ad307e44dcc616edba355e4f9ff9ea96042ffa13c8e15263"
     },
     {
       "name": "zftpd-ps4-zhttp-v1.6.0.elf",
@@ -582,7 +582,7 @@
       "version": "v1.6.0",
       "category": "Uncategorized",
       "checksum": "f772a101c0aafd3a6c5a86a4df183fab3220a6c801c316d81dae86e5f3a3ce14",
-      "icon_key": "4387d580e52e0f27824520985b462becf4562b84b9db16b0c7c957824e0bcfbe"
+      "icon_key": "905cb530f16331938314881d3052d03baa318141a1e6f03e85439f0c33ec3ac6"
     },
     {
       "name": "zftpd-ps5-v1.6.0.bin",
@@ -595,7 +595,7 @@
       "version": "v1.6.0",
       "category": "Uncategorized",
       "checksum": "8696fb9fc05106ba4e18e3b64c2c294952cc92487ca94614f1d6b053134545bf",
-      "icon_key": "4387d580e52e0f27824520985b462becf4562b84b9db16b0c7c957824e0bcfbe"
+      "icon_key": "acbc3f07172cf64078ebb548cc9032478521894f16514734aaa0539ebdc5c203"
     },
     {
       "name": "zftpd-ps5-v1.6.0.elf",
@@ -608,7 +608,7 @@
       "version": "v1.6.0",
       "category": "Uncategorized",
       "checksum": "39ed57bef579282418f822da2e58ea5d56acfa5aa4cd38816744b1f610bfa14d",
-      "icon_key": "4387d580e52e0f27824520985b462becf4562b84b9db16b0c7c957824e0bcfbe"
+      "icon_key": "905cb530f16331938314881d3052d03baa318141a1e6f03e85439f0c33ec3ac6"
     },
     {
       "name": "zftpd-ps5-zhttp-v1.6.0.bin",
@@ -621,7 +621,7 @@
       "version": "v1.6.0",
       "category": "Uncategorized",
       "checksum": "a74b0caa26c182534d7faa3279b1e58326ac5225c31dff0bbeb776d7d70ca16c",
-      "icon_key": "4387d580e52e0f27824520985b462becf4562b84b9db16b0c7c957824e0bcfbe"
+      "icon_key": "7850f1cc17de8d0fdab35d1f9b4a6a60f8c7af9146450fb267eb4002aad2209d"
     },
     {
       "name": "zftpd-ps5-zhttp-v1.6.0.elf",
@@ -634,7 +634,7 @@
       "version": "v1.6.0",
       "category": "Uncategorized",
       "checksum": "fc59b60aab2dce9a8bae385c106bfa174048d765c826101355f1f010a789b497",
-      "icon_key": "4387d580e52e0f27824520985b462becf4562b84b9db16b0c7c957824e0bcfbe"
+      "icon_key": "7850f1cc17de8d0fdab35d1f9b4a6a60f8c7af9146450fb267eb4002aad2209d"
     }
   ]
 }
