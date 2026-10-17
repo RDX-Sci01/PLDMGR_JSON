@@ -66,6 +66,17 @@
     "category": "System & Jailbreak"
   },
   {
+    "name": "ps5upload",
+    "filename": "ps5upload-7.0.33.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.33/ps5upload-7.0.33.elf",
+    "source": "https://github.com/phantomptr/ps5upload/releases",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.33/ps5upload-7.0.33.elf",
+    "description": "- A PS5 update package installs even when its base game isn't there. The app refused any",
+    "last_update": "2026-10-17",
+    "version": "v7.0.33",
+    "category": "System & Jailbreak"
+  },
+  {
     "name": "shadowmountplus",
     "filename": "shadowmountplus.elf",
     "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7-beta5fix1/shadowmountplus.elf",
@@ -206,17 +217,6 @@
     "description": "- IPv6 support",
     "last_update": "2026-08-04",
     "version": "0.4",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "ps5upload",
-    "filename": "ps5upload-7.0.32.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.32/ps5upload-7.0.32.elf",
-    "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.32/ps5upload-7.0.32.elf",
-    "description": "- Rest mode is found on a computer with Wi-Fi and a cable at once. A Mac on both, sending",
-    "last_update": "2026-10-17",
-    "version": "v7.0.32",
     "category": "Networking & Servers"
   },
   {
