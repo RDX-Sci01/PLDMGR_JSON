@@ -210,13 +210,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-7.0.31.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.31/ps5upload-7.0.31.elf",
+    "filename": "ps5upload-7.0.32.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.32/ps5upload-7.0.32.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.31/ps5upload-7.0.31.elf",
-    "description": "- Rest mode is shown as rest mode, not as a problem. A PS5 in rest mode used to look the",
-    "last_update": "2026-10-16",
-    "version": "v7.0.31",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.32/ps5upload-7.0.32.elf",
+    "description": "- Rest mode is found on a computer with Wi-Fi and a cable at once. A Mac on both, sending",
+    "last_update": "2026-10-17",
+    "version": "v7.0.32",
     "category": "Networking & Servers"
   },
   {
