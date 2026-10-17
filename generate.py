@@ -48,6 +48,13 @@ One entry per line. Blank lines and lines starting with '#' are ignored.
    no separate upstream to point to), and `last_update` is omitted
    since no release metadata is available for a bare URL.
 
+Only .elf and .bin files are included in payloads.json. For
+`github:owner/repo` entries, non-.elf/.bin release assets are filtered
+out before anything else (including asset_pattern matching); if a
+release has none, that repo is skipped with a warning. For direct URL
+entries, a URL whose filename doesn't end in .elf or .bin is skipped
+with a warning rather than included.
+
 Icons: mirrors the real algorithm found in itsPLK/ps5-payloads-mirror's
 set_icon.py (get_suggested_icon). For each payload with a GitHub
 `source`, we check a handful of common asset paths on that repo's main
@@ -100,6 +107,8 @@ OVERRIDE_KEYS = (
     "extract_file",
     "icon",
 )
+
+PAYLOAD_EXTENSIONS = (".elf", ".bin")
 
 ICON_ASSET_PATHS = (
     "assets/icon0.png",
@@ -286,11 +295,16 @@ def build_entries_from_github(fields: dict) -> list:
         print(f"warning: {owner_repo} latest release has no downloadable assets, skipping", file=sys.stderr)
         return []
 
+    assets = [a for a in assets if a["name"].lower().endswith(PAYLOAD_EXTENSIONS)]
+    if not assets:
+        print(f"warning: {owner_repo} latest release has no .elf/.bin assets, skipping", file=sys.stderr)
+        return []
+
     pattern = fields.get("asset_pattern", "").lower()
     if pattern:
         assets = [a for a in assets if pattern in a["name"].lower()]
         if not assets:
-            print(f"warning: no assets of {owner_repo} match asset_pattern={pattern!r}, skipping", file=sys.stderr)
+            print(f"warning: no .elf/.bin assets of {owner_repo} match asset_pattern={pattern!r}, skipping", file=sys.stderr)
             return []
 
     repo_name = owner_repo.split("/", 1)[1]
@@ -330,10 +344,14 @@ def build_entries_from_github(fields: dict) -> list:
     return entries
 
 
-def build_entry_from_url(fields: dict) -> dict:
+def build_entry_from_url(fields: dict):
     url = fields["source_entry"]
     name = fields.get("name") or filename_from_url(url).rsplit(".", 1)[0]
     filename = fields.get("filename") or filename_from_url(url)
+
+    if not filename.lower().endswith(PAYLOAD_EXTENSIONS):
+        print(f"warning: {url} is not a .elf/.bin file (filename: {filename!r}), skipping", file=sys.stderr)
+        return None
 
     entry = {
         "name": name,
@@ -379,8 +397,9 @@ def main() -> int:
         else:
             print(f"processing {source}")
             entry = build_entry_from_url(fields)
-            payloads.append(entry)
-            entry_fields.append(fields)
+            if entry is not None:
+                payloads.append(entry)
+                entry_fields.append(fields)
 
     if not payloads:
         print("error: no payload entries could be resolved", file=sys.stderr)
