@@ -67,13 +67,13 @@
   },
   {
     "name": "ps5upload",
-    "filename": "ps5upload-7.0.33.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.33/ps5upload-7.0.33.elf",
+    "filename": "ps5upload-7.0.34.elf",
+    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.34/ps5upload-7.0.34.elf",
     "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.33/ps5upload-7.0.33.elf",
-    "description": "- A PS5 update package installs even when its base game isn't there. The app refused any",
+    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.34/ps5upload-7.0.34.elf",
+    "description": "- Unity games no longer crash when they run as a folder. Some game dumps name a file",
     "last_update": "2026-10-17",
-    "version": "v7.0.33",
+    "version": "v7.0.34",
     "category": "System & Jailbreak"
   },
   {
