@@ -1,552 +1,245 @@
-[
-  {
-    "name": "etaHEN",
-    "filename": "etaHEN-2.5B.bin",
-    "url": "https://github.com/etaHEN/etaHEN/releases/download/2.5B/etaHEN-2.5B.bin",
-    "source": "https://github.com/etaHEN/etaHEN/releases",
-    "source_direct": "https://github.com/etaHEN/etaHEN/releases/download/2.5B/etaHEN-2.5B.bin",
-    "description": "etaHEN 2.5B Change log",
-    "last_update": "2025-12-25",
-    "version": "2.5B",
-    "category": "System & Jailbreak"
-  },
-  {
-    "name": "kstuff",
-    "filename": "kstuff.elf",
-    "url": "https://github.com/EchoStretch/kstuff-lite/releases/download/v1.11/kstuff.elf",
-    "source": "https://github.com/EchoStretch/kstuff-lite/releases",
-    "source_direct": "https://github.com/EchoStretch/kstuff-lite/releases/download/v1.11/kstuff.elf",
-    "description": "Kstuff Lite 1.11 Beta Supports Firmware 1.00-13.60",
-    "last_update": "2026-09-20",
-    "version": "v1.11",
-    "category": "System & Jailbreak"
-  },
-  {
-    "name": "kstuff",
-    "filename": "kstuff.elf",
-    "url": "https://github.com/EchoStretch/kstuff/releases/download/v1.6.7/kstuff.elf",
-    "source": "https://github.com/EchoStretch/kstuff/releases",
-    "source_direct": "https://github.com/EchoStretch/kstuff/releases/download/v1.6.7/kstuff.elf",
-    "description": "Kstuff 3.00-10.01",
-    "last_update": "2026-01-04",
-    "version": "v1.6.7",
-    "category": "System & Jailbreak"
-  },
-  {
-    "name": "lapy_jb_daemon",
-    "filename": "lapy_jb_daemon-v1.2.elf",
-    "url": "https://github.com/itsPLK/PS5-Lapy-JB-Daemon/releases/download/v1.2/lapy_jb_daemon-v1.2.elf",
-    "source": "https://github.com/itsPLK/PS5-Lapy-JB-Daemon/releases",
-    "source_direct": "https://github.com/itsPLK/PS5-Lapy-JB-Daemon/releases/download/v1.2/lapy_jb_daemon-v1.2.elf",
-    "description": "lapyjbdaemon payload",
-    "last_update": "2026-06-01",
-    "version": "v1.2",
-    "category": "System & Jailbreak"
-  },
-  {
-    "name": "OnionHEN",
-    "filename": "OnionHEN.elf",
-    "url": "https://github.com/aydencharles/onionHEN/releases/download/v0.9.0/OnionHEN.elf",
-    "source": "https://github.com/aydencharles/onionHEN/releases",
-    "source_direct": "https://github.com/aydencharles/onionHEN/releases/download/v0.9.0/OnionHEN.elf",
-    "description": "OnionHEN v0.9.0",
-    "last_update": "2026-10-15",
-    "version": "v0.9.0",
-    "category": "System & Jailbreak"
-  },
-  {
-    "name": "PIZZA-HEN",
-    "filename": "PIZZA-HEN-v2.00.elf",
-    "url": "https://github.com/Michele-M-Media/PIZZA-HEN/releases/download/v2.00/PIZZA-HEN-v2.00.elf",
-    "source": "https://github.com/Michele-M-Media/PIZZA-HEN/releases",
-    "source_direct": "https://github.com/Michele-M-Media/PIZZA-HEN/releases/download/v2.00/PIZZA-HEN-v2.00.elf",
-    "description": "PIZZA HEN v2.00 — Release Notes",
-    "last_update": "2026-08-24",
-    "version": "v2.00",
-    "category": "System & Jailbreak"
-  },
-  {
-    "name": "ps5upload",
-    "filename": "ps5upload-7.0.34.elf",
-    "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.34/ps5upload-7.0.34.elf",
-    "source": "https://github.com/phantomptr/ps5upload/releases",
-    "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.0.34/ps5upload-7.0.34.elf",
-    "description": "- Unity games no longer crash when they run as a folder. Some game dumps name a file",
-    "last_update": "2026-10-17",
-    "version": "v7.0.34",
-    "category": "System & Jailbreak"
-  },
-  {
-    "name": "shadowmountplus",
-    "filename": "shadowmountplus.elf",
-    "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7-beta5fix1/shadowmountplus.elf",
-    "source": "https://github.com/drakmor/ShadowMountPlus/releases",
-    "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7-beta5fix1/shadowmountplus.elf",
-    "description": "- Removed legacy kstuff auto-pause and delay autotuning. Use the latest version of kstuff and do not use EtaHEN.",
-    "last_update": "2026-10-10",
-    "version": "1.7-beta5fix1",
-    "category": "System & Jailbreak"
-  },
-  {
-    "name": "elfldr",
-    "filename": "elfldr-ps5.elf",
-    "url": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.26/elfldr-ps5.elf",
-    "source": "https://github.com/ps5-payload-dev/elfldr/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/elfldr/releases/download/v0.26/elfldr-ps5.elf",
-    "description": "simplify makefile",
-    "last_update": "2026-08-29",
-    "version": "v0.26",
-    "category": "Loaders"
-  },
-  {
-    "name": "ps5-linux-loader",
-    "filename": "ps5-linux-loader.elf",
-    "url": "https://github.com/ps5-linux/ps5-linux-loader/releases/download/v2.5/ps5-linux-loader.elf",
-    "source": "https://github.com/ps5-linux/ps5-linux-loader/releases",
-    "source_direct": "https://github.com/ps5-linux/ps5-linux-loader/releases/download/v2.5/ps5-linux-loader.elf",
-    "description": "Added 7.0x support",
-    "last_update": "2026-09-05",
-    "version": "v2.5",
-    "category": "Loaders"
-  },
-  {
-    "name": "webkit-autoloader",
-    "filename": "webkit-autoloader-installer_v0.6.1.elf",
-    "url": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.6.1/webkit-autoloader-installer_v0.6.1.elf",
-    "source": "https://github.com/itsPLK/ps5-webkit-autoloader/releases",
-    "source_direct": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.6.1/webkit-autoloader-installer_v0.6.1.elf",
-    "description": "Changelog",
-    "last_update": "2026-10-08",
-    "version": "v0.6.1",
-    "category": "Loaders"
-  },
-  {
-    "name": "ftpsrv",
-    "filename": "ftpsrv-ps4.elf",
-    "url": "https://github.com/drakmor/ftpsrv/releases/download/1.16-ng-stable/ftpsrv-ps4.elf",
-    "source": "https://github.com/drakmor/ftpsrv/releases",
-    "source_direct": "https://github.com/drakmor/ftpsrv/releases/download/1.16-ng-stable/ftpsrv-ps4.elf",
-    "description": "- Added LOWER and UPPER commands to recursively change the case of file, directory, and symlink names. The server checks for name collisions before renaming; STOP can cancel the...",
-    "last_update": "2026-09-20",
-    "version": "1.16-ng-stable",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "ftpsrv",
-    "filename": "ftpsrv-ps5.elf",
-    "url": "https://github.com/drakmor/ftpsrv/releases/download/1.16-ng-stable/ftpsrv-ps5.elf",
-    "source": "https://github.com/drakmor/ftpsrv/releases",
-    "source_direct": "https://github.com/drakmor/ftpsrv/releases/download/1.16-ng-stable/ftpsrv-ps5.elf",
-    "description": "- Added LOWER and UPPER commands to recursively change the case of file, directory, and symlink names. The server checks for name collisions before renaming; STOP can cancel the...",
-    "last_update": "2026-09-20",
-    "version": "1.16-ng-stable",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "ftpsrv",
-    "filename": "ftpsrv-ps4.elf",
-    "url": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps4.elf",
-    "source": "https://github.com/ps5-payload-dev/ftpsrv/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps4.elf",
-    "description": "ftpsrv payload",
-    "last_update": "2026-08-20",
-    "version": "v0.21.1",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "ftpsrv",
-    "filename": "ftpsrv-ps5.elf",
-    "url": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps5.elf",
-    "source": "https://github.com/ps5-payload-dev/ftpsrv/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps5.elf",
-    "description": "ftpsrv payload",
-    "last_update": "2026-08-20",
-    "version": "v0.21.1",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "ftpsrv-ps5-install",
-    "filename": "ftpsrv-ps5-install.elf",
-    "url": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps5-install.elf",
-    "source": "https://github.com/ps5-payload-dev/ftpsrv/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/ftpsrv/releases/download/v0.21.1/ftpsrv-ps5-install.elf",
-    "description": "ftpsrv-ps5-install payload",
-    "last_update": "2026-08-20",
-    "version": "v0.21.1",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "klogsrv",
-    "filename": "klogsrv-ps4.elf",
-    "url": "https://github.com/ps5-payload-dev/klogsrv/releases/download/v0.9/klogsrv-ps4.elf",
-    "source": "https://github.com/ps5-payload-dev/klogsrv/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/klogsrv/releases/download/v0.9/klogsrv-ps4.elf",
-    "description": "rebuild with latest sdk",
-    "last_update": "2026-08-02",
-    "version": "v0.9",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "klogsrv",
-    "filename": "klogsrv-ps5.elf",
-    "url": "https://github.com/ps5-payload-dev/klogsrv/releases/download/v0.9/klogsrv-ps5.elf",
-    "source": "https://github.com/ps5-payload-dev/klogsrv/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/klogsrv/releases/download/v0.9/klogsrv-ps5.elf",
-    "description": "rebuild with latest sdk",
-    "last_update": "2026-08-02",
-    "version": "v0.9",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "nanodns",
-    "filename": "nanodns-ps4.elf",
-    "url": "https://github.com/drakmor/nanoDNS/releases/download/0.4/nanodns-ps4.elf",
-    "source": "https://github.com/drakmor/nanoDNS/releases",
-    "source_direct": "https://github.com/drakmor/nanoDNS/releases/download/0.4/nanodns-ps4.elf",
-    "description": "- IPv6 support",
-    "last_update": "2026-08-04",
-    "version": "0.4",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "nanodns",
-    "filename": "nanodns.elf",
-    "url": "https://github.com/drakmor/nanoDNS/releases/download/0.4/nanodns.elf",
-    "source": "https://github.com/drakmor/nanoDNS/releases",
-    "source_direct": "https://github.com/drakmor/nanoDNS/releases/download/0.4/nanodns.elf",
-    "description": "- IPv6 support",
-    "last_update": "2026-08-04",
-    "version": "0.4",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "shsrv",
-    "filename": "shsrv-ps5.elf",
-    "url": "https://github.com/ps5-payload-dev/shsrv/releases/download/v0.20/shsrv-ps5.elf",
-    "source": "https://github.com/ps5-payload-dev/shsrv/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/shsrv/releases/download/v0.20/shsrv-ps5.elf",
-    "description": "rebuild with latest sdk",
-    "last_update": "2026-08-02",
-    "version": "v0.20",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "websrv",
-    "filename": "websrv-ps5.elf",
-    "url": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/websrv-ps5.elf",
-    "source": "https://github.com/ps5-payload-dev/websrv/releases",
-    "source_direct": "https://github.com/ps5-payload-dev/websrv/releases/download/v0.34/websrv-ps5.elf",
-    "description": "- rebuild with latest sdk",
-    "last_update": "2026-08-02",
-    "version": "v0.34",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "zftpd",
-    "filename": "zftpd-ps4-v1.6.0.bin",
-    "url": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps4-v1.6.0.bin",
-    "source": "https://github.com/seregonwar/zftpd/releases",
-    "source_direct": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps4-v1.6.0.bin",
-    "description": "zFTPd 1.6.0 is a major update to the project, introducing a new transfer architecture, expanded PS4/PS5 platform support, a redesigned ZHTTP interface, game management...",
-    "last_update": "2026-09-30",
-    "version": "v1.6.0",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "zftpd",
-    "filename": "zftpd-ps4-v1.6.0.elf",
-    "url": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps4-v1.6.0.elf",
-    "source": "https://github.com/seregonwar/zftpd/releases",
-    "source_direct": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps4-v1.6.0.elf",
-    "description": "zFTPd 1.6.0 is a major update to the project, introducing a new transfer architecture, expanded PS4/PS5 platform support, a redesigned ZHTTP interface, game management...",
-    "last_update": "2026-09-30",
-    "version": "v1.6.0",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "zftpd",
-    "filename": "zftpd-ps5-v1.6.0.bin",
-    "url": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps5-v1.6.0.bin",
-    "source": "https://github.com/seregonwar/zftpd/releases",
-    "source_direct": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps5-v1.6.0.bin",
-    "description": "zFTPd 1.6.0 is a major update to the project, introducing a new transfer architecture, expanded PS4/PS5 platform support, a redesigned ZHTTP interface, game management...",
-    "last_update": "2026-09-30",
-    "version": "v1.6.0",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "zftpd",
-    "filename": "zftpd-ps5-v1.6.0.elf",
-    "url": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps5-v1.6.0.elf",
-    "source": "https://github.com/seregonwar/zftpd/releases",
-    "source_direct": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps5-v1.6.0.elf",
-    "description": "zFTPd 1.6.0 is a major update to the project, introducing a new transfer architecture, expanded PS4/PS5 platform support, a redesigned ZHTTP interface, game management...",
-    "last_update": "2026-09-30",
-    "version": "v1.6.0",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "zftpd-ps4-zhttp",
-    "filename": "zftpd-ps4-zhttp-v1.6.0.bin",
-    "url": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps4-zhttp-v1.6.0.bin",
-    "source": "https://github.com/seregonwar/zftpd/releases",
-    "source_direct": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps4-zhttp-v1.6.0.bin",
-    "description": "zFTPd 1.6.0 is a major update to the project, introducing a new transfer architecture, expanded PS4/PS5 platform support, a redesigned ZHTTP interface, game management...",
-    "last_update": "2026-09-30",
-    "version": "v1.6.0",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "zftpd-ps4-zhttp",
-    "filename": "zftpd-ps4-zhttp-v1.6.0.elf",
-    "url": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps4-zhttp-v1.6.0.elf",
-    "source": "https://github.com/seregonwar/zftpd/releases",
-    "source_direct": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps4-zhttp-v1.6.0.elf",
-    "description": "zFTPd 1.6.0 is a major update to the project, introducing a new transfer architecture, expanded PS4/PS5 platform support, a redesigned ZHTTP interface, game management...",
-    "last_update": "2026-09-30",
-    "version": "v1.6.0",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "zftpd-ps5-zhttp",
-    "filename": "zftpd-ps5-zhttp-v1.6.0.bin",
-    "url": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps5-zhttp-v1.6.0.bin",
-    "source": "https://github.com/seregonwar/zftpd/releases",
-    "source_direct": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps5-zhttp-v1.6.0.bin",
-    "description": "zFTPd 1.6.0 is a major update to the project, introducing a new transfer architecture, expanded PS4/PS5 platform support, a redesigned ZHTTP interface, game management...",
-    "last_update": "2026-09-30",
-    "version": "v1.6.0",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "zftpd-ps5-zhttp",
-    "filename": "zftpd-ps5-zhttp-v1.6.0.elf",
-    "url": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps5-zhttp-v1.6.0.elf",
-    "source": "https://github.com/seregonwar/zftpd/releases",
-    "source_direct": "https://github.com/seregonwar/zftpd/releases/download/v1.6.0/zftpd-ps5-zhttp-v1.6.0.elf",
-    "description": "zFTPd 1.6.0 is a major update to the project, introducing a new transfer architecture, expanded PS4/PS5 platform support, a redesigned ZHTTP interface, game management...",
-    "last_update": "2026-09-30",
-    "version": "v1.6.0",
-    "category": "Networking & Servers"
-  },
-  {
-    "name": "apr_emu_updater",
-    "filename": "apr_emu_updater_v2.0.6.elf",
-    "url": "https://github.com/tsuramatsu1/apr-emu-updater/releases/download/v2.0.6/apr_emu_updater_v2.0.6.elf",
-    "source": "https://github.com/tsuramatsu1/apr-emu-updater/releases",
-    "source_direct": "https://github.com/tsuramatsu1/apr-emu-updater/releases/download/v2.0.6/apr_emu_updater_v2.0.6.elf",
-    "description": "Fixes",
-    "last_update": "2026-08-29",
-    "version": "v2.0.6",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "bfpilot",
-    "filename": "bfpilot.elf",
-    "url": "https://github.com/ItsBlurf/BFpilot/releases/download/v0.4.4/bfpilot.elf",
-    "source": "https://github.com/ItsBlurf/BFpilot/releases",
-    "source_direct": "https://github.com/ItsBlurf/BFpilot/releases/download/v0.4.4/bfpilot.elf",
-    "description": "v0.4.4 brings the installer, Media tile, archive support and file manager together in one bfpilot.elf.",
-    "last_update": "2026-08-11",
-    "version": "v0.4.4",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "CheatRunner",
-    "filename": "CheatRunner.elf",
-    "url": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.18/CheatRunner.elf",
-    "source": "https://github.com/notmaj0r/CheatRunner/releases",
-    "source_direct": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.18/CheatRunner.elf",
-    "description": "CheatRunner v0.18",
-    "last_update": "2026-10-10",
-    "version": "v0.18",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "game-compressor",
-    "filename": "game-compressor.elf",
-    "url": "https://github.com/juma-sayeh/PS5-Game-Compressor/releases/download/v1.0.4/game-compressor.elf",
-    "source": "https://github.com/juma-sayeh/PS5-Game-Compressor/releases",
-    "source_direct": "https://github.com/juma-sayeh/PS5-Game-Compressor/releases/download/v1.0.4/game-compressor.elf",
-    "description": "Game Compressor 1.0.4",
-    "last_update": "2026-08-21",
-    "version": "v1.0.4",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "lz4-compression",
-    "filename": "lz4-compression.elf",
-    "url": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.5.0/lz4-compression.elf",
-    "source": "https://github.com/theghostonline/PS5-LZ4-Compression/releases",
-    "source_direct": "https://github.com/theghostonline/PS5-LZ4-Compression/releases/download/v1.5.0/lz4-compression.elf",
-    "description": "LZ4 Compression 1.5.0",
-    "last_update": "2026-10-14",
-    "version": "v1.5.0",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "MemDBG",
-    "filename": "MemDBG-ps4.elf",
-    "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260930-g6e493c9/MemDBG-ps4.elf",
-    "source": "https://github.com/seregonwar/MemDBG/releases",
-    "source_direct": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260930-g6e493c9/MemDBG-ps4.elf",
-    "description": "Automated historical nightly built from the latest main branch.",
-    "last_update": "2026-09-30",
-    "version": "nightly-20260930-g6e493c9",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "MemDBG",
-    "filename": "MemDBG-ps5.elf",
-    "url": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260930-g6e493c9/MemDBG-ps5.elf",
-    "source": "https://github.com/seregonwar/MemDBG/releases",
-    "source_direct": "https://github.com/seregonwar/MemDBG/releases/download/nightly-20260930-g6e493c9/MemDBG-ps5.elf",
-    "description": "Automated historical nightly built from the latest main branch.",
-    "last_update": "2026-09-30",
-    "version": "nightly-20260930-g6e493c9",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "pegasus_dl",
-    "filename": "pegasus_dl.elf",
-    "url": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.11.0/pegasus_dl.elf",
-    "source": "https://github.com/pegasus-ps5/pegasus-dl/releases",
-    "source_direct": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.11.0/pegasus_dl.elf",
-    "description": "- Parallel downloads now use persistent connections and write ranges directly",
-    "last_update": "2026-10-09",
-    "version": "v1.11.0",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "pldmgr",
-    "filename": "pldmgr_v0.6.1.elf",
-    "url": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.1/pldmgr_v0.6.1.elf",
-    "source": "https://github.com/itsPLK/pldmgr/releases",
-    "source_direct": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.1/pldmgr_v0.6.1.elf",
-    "description": "Changelog",
-    "last_update": "2026-10-14",
-    "version": "v0.6.1",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "PoorDS4-status",
-    "filename": "PoorDS4-status.elf",
-    "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.1.0-rc51/PoorDS4-status.elf",
-    "source": "https://github.com/ItsBlurf/PoorDS4/releases",
-    "source_direct": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.1.0-rc51/PoorDS4-status.elf",
-    "description": "PoorDS4 RC51 brings concurrent multi-controller streaming (up to 4 controllers), full support for modular PRX input engines (Control, Forza Horizon 5), UE5 crash and ghost...",
-    "last_update": "2026-09-30",
-    "version": "v0.1.0-rc51",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "PoorDS4-stop",
-    "filename": "PoorDS4-stop.elf",
-    "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.1.0-rc51/PoorDS4-stop.elf",
-    "source": "https://github.com/ItsBlurf/PoorDS4/releases",
-    "source_direct": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.1.0-rc51/PoorDS4-stop.elf",
-    "description": "PoorDS4 RC51 brings concurrent multi-controller streaming (up to 4 controllers), full support for modular PRX input engines (Control, Forza Horizon 5), UE5 crash and ghost...",
-    "last_update": "2026-09-30",
-    "version": "v0.1.0-rc51",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "PoorDS4rc51",
-    "filename": "PoorDS4rc51.elf",
-    "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.1.0-rc51/PoorDS4rc51.elf",
-    "source": "https://github.com/ItsBlurf/PoorDS4/releases",
-    "source_direct": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.1.0-rc51/PoorDS4rc51.elf",
-    "description": "PoorDS4 RC51 brings concurrent multi-controller streaming (up to 4 controllers), full support for modular PRX input engines (Control, Forza Horizon 5), UE5 crash and ghost...",
-    "last_update": "2026-09-30",
-    "version": "v0.1.0-rc51",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "ps5-app-dumper",
-    "filename": "ps5-app-dumper_v2.10.elf",
-    "url": "https://github.com/EchoStretch/ps5-app-dumper/releases/download/v2.10/ps5-app-dumper_v2.10.elf",
-    "source": "https://github.com/EchoStretch/ps5-app-dumper/releases",
-    "source_direct": "https://github.com/EchoStretch/ps5-app-dumper/releases/download/v2.10/ps5-app-dumper_v2.10.elf",
-    "description": "Highlights",
-    "last_update": "2026-10-03",
-    "version": "v2.10",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "ps5-backpork",
-    "filename": "ps5-backpork.elf",
-    "url": "https://github.com/BestPig/BackPork/releases/download/0.1/ps5-backpork.elf",
-    "source": "https://github.com/BestPig/BackPork/releases",
-    "source_direct": "https://github.com/BestPig/BackPork/releases/download/0.1/ps5-backpork.elf",
-    "description": "Initial oink release 🐽",
-    "last_update": "2026-04-30",
-    "version": "0.1",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "ps5-dump-forge",
-    "filename": "ps5-dump-forge-0.2.0-ps5.elf",
-    "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.2.0/ps5-dump-forge-0.2.0-ps5.elf",
-    "source": "https://github.com/quer3q/ps5-dump-forge/releases",
-    "source_direct": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.2.0/ps5-dump-forge-0.2.0-ps5.elf",
-    "description": "Runs on everything (including your PS5) and converts everything: game folders to exfat, ffpkg, ffpfs,",
-    "last_update": "2026-10-16",
-    "version": "v0.2.0",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "ps5debug-NG",
-    "filename": "ps5debug-NG_v1.3.2.elf",
-    "url": "https://github.com/Pharaoh2k/ps5debug-NG/releases/download/1.3.2/ps5debug-NG_v1.3.2.elf",
-    "source": "https://github.com/OpenSourcereR-dev/ps5debug-NG/releases",
-    "source_direct": "https://github.com/Pharaoh2k/ps5debug-NG/releases/download/1.3.2/ps5debug-NG_v1.3.2.elf",
-    "description": "ps5debug-NG v1.3.2",
-    "last_update": "2026-09-23",
-    "version": "1.3.2",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "PSPlay",
-    "filename": "PSPlay-2.1.elf",
-    "url": "https://github.com/MounirHero/PS-Play/releases/download/2.1/PSPlay-2.1.elf",
-    "source": "https://github.com/MounirHero/PS-Play/releases",
-    "source_direct": "https://github.com/MounirHero/PS-Play/releases/download/2.1/PSPlay-2.1.elf",
-    "description": "New in 2.1 UPDATE",
-    "last_update": "2026-08-14",
-    "version": "2.1",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "web-file-mgr",
-    "filename": "web-file-mgr-v1.10.elf",
-    "url": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.10/web-file-mgr-v1.10.elf",
-    "source": "https://github.com/owendswang/ps5-web-file-manager/releases",
-    "source_direct": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.10/web-file-mgr-v1.10.elf",
-    "description": "Change logs:",
-    "last_update": "2026-10-05",
-    "version": "v1.10",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "wfm",
-    "filename": "wfm-7zip-helper.elf",
-    "url": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.10/wfm-7zip-helper.elf",
-    "source": "https://github.com/owendswang/ps5-web-file-manager/releases",
-    "source_direct": "https://github.com/owendswang/ps5-web-file-manager/releases/download/v1.10/wfm-7zip-helper.elf",
-    "description": "Change logs:",
-    "last_update": "2026-10-05",
-    "version": "v1.10",
-    "category": "Utilities & Tools"
-  },
-  {
-    "name": "wfm-7zip-helper",
-    "filename": "wfm-7zip-helper-v26.03-2.elf",
-    "url": "https://github.com/owendswang/wfm-7zip-helper/releases/download/v26.03-2/wfm-7zip-helper-v26.03-2.elf",
-    "source": "https://github.com/owendswang/wfm-7zip-helper/releases",
-    "source_direct": "https://github.com/owendswang/wfm-7zip-helper/releases/download/v26.03-2/wfm-7zip-helper-v26.03-2.elf",
-    "description": "Improved the write speed to disk drive while extracting.",
-    "last_update": "2026-10-05",
-    "version": "v26.03-2",
-    "category": "Utilities & Tools"
-  }
-]
+{
+  "name": "Custom Payload Repository",
+  "payloads": [
+    {
+      "name": "ps5-dump-forge",
+      "filename": "ps5-dump-forge",
+      "url": "github:quer3q/ps5-dump-forge",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "PS5-LZ4-Compression",
+      "filename": "PS5-LZ4-Compression",
+      "url": "github:theghostonline/PS5-LZ4-Compression",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "Machete-PS5-Backup-Manager",
+      "filename": "Machete-PS5-Backup-Manager",
+      "url": "github:VenezuelanBiggie24/Machete-PS5-Backup-Manager",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "PS5-Game-Compressor",
+      "filename": "PS5-Game-Compressor",
+      "url": "github:juma-sayeh/PS5-Game-Compressor",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "apr-emu-updater",
+      "filename": "apr-emu-updater",
+      "url": "github:tsuramatsu1/apr-emu-updater",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "jtplay",
+      "filename": "jtplay",
+      "url": "github:ps5-payload-dev/jtplay",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "Playstation-5-Save-Mounter",
+      "filename": "Playstation-5-Save-Mounter",
+      "url": "github:n0llptr/Playstation-5-Save-Mounter",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "onionHEN",
+      "filename": "onionHEN",
+      "url": "github:aydencharles/onionHEN",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "pegasus-dl",
+      "filename": "pegasus-dl",
+      "url": "github:pegasus-ps5/pegasus-dl",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "PoorDS4",
+      "filename": "PoorDS4",
+      "url": "github:ItsBlurf/PoorDS4",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "Ghostcontrol-PS5-USB-Controller-Patcher",
+      "filename": "Ghostcontrol-PS5-USB-Controller-Patcher",
+      "url": "github:StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "PIZZA-HEN",
+      "filename": "PIZZA-HEN",
+      "url": "github:Michele-M-Media/PIZZA-HEN",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "PS-Play",
+      "filename": "PS-Play",
+      "url": "github:MounirHero/PS-Play",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "EVO-PLAYER-PS5",
+      "filename": "EVO-PLAYER-PS5",
+      "url": "github:sainsaji/EVO-PLAYER-PS5",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "MemDBG",
+      "filename": "MemDBG",
+      "url": "github:seregonwar/MemDBG",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "BackPork",
+      "filename": "BackPork",
+      "url": "github:BestPig/BackPork",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "ftpsrv",
+      "filename": "ftpsrv",
+      "url": "github:drakmor/ftpsrv",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "nanoDNS",
+      "filename": "nanoDNS",
+      "url": "github:drakmor/nanoDNS",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "ShadowMountPlus",
+      "filename": "ShadowMountPlus",
+      "url": "github:drakmor/ShadowMountPlus",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "kstuff",
+      "filename": "kstuff",
+      "url": "github:EchoStretch/kstuff",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "kstuff-lite",
+      "filename": "kstuff-lite",
+      "url": "github:EchoStretch/kstuff-lite",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "kstuff-toggle",
+      "filename": "kstuff-toggle",
+      "url": "github:EchoStretch/kstuff-toggle",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "ps5-app-dumper",
+      "filename": "ps5-app-dumper",
+      "url": "github:EchoStretch/ps5-app-dumper",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "etaHEN",
+      "filename": "etaHEN",
+      "url": "github:etaHEN/etaHEN",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "BFpilot",
+      "filename": "BFpilot",
+      "url": "github:ItsBlurf/BFpilot",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "pldmgr",
+      "filename": "pldmgr",
+      "url": "github:itsPLK/pldmgr",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "PS5-Lapy-JB-Daemon",
+      "filename": "PS5-Lapy-JB-Daemon",
+      "url": "github:itsPLK/PS5-Lapy-JB-Daemon",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "ps5-webkit-autoloader",
+      "filename": "ps5-webkit-autoloader",
+      "url": "github:itsPLK/ps5-webkit-autoloader",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "CheatRunner",
+      "filename": "CheatRunner",
+      "url": "github:notmaj0r/CheatRunner",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "ps5debug-NG",
+      "filename": "ps5debug-NG",
+      "url": "github:OpenSourcereR-dev/ps5debug-NG",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "ps5-web-file-manager",
+      "filename": "ps5-web-file-manager",
+      "url": "github:owendswang/ps5-web-file-manager",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "wfm-7zip-helper",
+      "filename": "wfm-7zip-helper",
+      "url": "github:owendswang/wfm-7zip-helper",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "ps5upload",
+      "filename": "ps5upload",
+      "url": "github:phantomptr/ps5upload",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "ps5-linux-loader",
+      "filename": "ps5-linux-loader",
+      "url": "github:ps5-linux/ps5-linux-loader",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "elfldr",
+      "filename": "elfldr",
+      "url": "github:ps5-payload-dev/elfldr",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "ftpsrv",
+      "filename": "ftpsrv",
+      "url": "github:ps5-payload-dev/ftpsrv",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "klogsrv",
+      "filename": "klogsrv",
+      "url": "github:ps5-payload-dev/klogsrv",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "shsrv",
+      "filename": "shsrv",
+      "url": "github:ps5-payload-dev/shsrv",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "websrv",
+      "filename": "websrv",
+      "url": "github:ps5-payload-dev/websrv",
+      "category": "Uncategorized"
+    },
+    {
+      "name": "zftpd",
+      "filename": "zftpd",
+      "url": "github:seregonwar/zftpd",
+      "category": "Uncategorized"
+    }
+  ]
+}
