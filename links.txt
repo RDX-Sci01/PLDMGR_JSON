@@ -1,9 +1,5 @@
 # PS5 Payload Manager - Payload Sources
 # --- GitHub repositories ---
-github:BrinooTk/PS5X360
-github:premohq/PS5CEMU-HAR
-github:ZiZc3/XPSemu
-github:cobanov/PS5LM
 github:blackbearreloaded/ProsperoStore
 github:notmaj0r/ProsperoMgr
 github:quer3q/ps5-dump-forge
