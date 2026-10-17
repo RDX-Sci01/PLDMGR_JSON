@@ -1,5 +1,6 @@
 {
   "name": "Custom Payload Repository",
+  "icons_url": "icons.json",
   "payloads": [
     {
       "name": "ps5-dump-forge-0.2.0-linux-arm64.tar.gz",
@@ -11,7 +12,8 @@
       "last_update": "2026-10-16",
       "version": "v0.2.0",
       "category": "Uncategorized",
-      "checksum": "a6489aab10d8582d6084b7e66270ece012cbe669ac12ddddfb0e024ea4d65b23"
+      "checksum": "a6489aab10d8582d6084b7e66270ece012cbe669ac12ddddfb0e024ea4d65b23",
+      "icon_key": "2c9992aba114383fe49601262322750ef0683303dbf3d45b21e8e5b5e77fda97"
     },
     {
       "name": "ps5-dump-forge-0.2.0-linux-x86-64.tar.gz",
@@ -23,7 +25,8 @@
       "last_update": "2026-10-16",
       "version": "v0.2.0",
       "category": "Uncategorized",
-      "checksum": "1a39abeb2202cf966bdfd6e7a0b22f7d5243019830953c8d00dace61369c9cf7"
+      "checksum": "1a39abeb2202cf966bdfd6e7a0b22f7d5243019830953c8d00dace61369c9cf7",
+      "icon_key": "ecfde2c6732d4b93b9604fb0ba0cac278ec7a41780693b7089c70c512d0ac239"
     },
     {
       "name": "ps5-dump-forge-0.2.0-macos-universal.zip",
@@ -35,7 +38,8 @@
       "last_update": "2026-10-16",
       "version": "v0.2.0",
       "category": "Uncategorized",
-      "checksum": "5c3a7a217e980ad0a124c01e22e2d261405ba4835528913b1d9225fa3f8a0e87"
+      "checksum": "5c3a7a217e980ad0a124c01e22e2d261405ba4835528913b1d9225fa3f8a0e87",
+      "icon_key": "ca2962873aa5fd7e4c8118bb6aba1771dfa3c7e6fd21395f028710d421a7fe80"
     },
     {
       "name": "ps5-dump-forge-0.2.0-ps5.elf",
@@ -47,7 +51,8 @@
       "last_update": "2026-10-16",
       "version": "v0.2.0",
       "category": "Uncategorized",
-      "checksum": "2a4294745f1fc81f8e18c4e5258ed32ae61e5362c944cc63bda6413b3fd3b90e"
+      "checksum": "2a4294745f1fc81f8e18c4e5258ed32ae61e5362c944cc63bda6413b3fd3b90e",
+      "icon_key": "ca2962873aa5fd7e4c8118bb6aba1771dfa3c7e6fd21395f028710d421a7fe80"
     },
     {
       "name": "ps5-dump-forge-0.2.0-windows-arm64.zip",
@@ -59,7 +64,8 @@
       "last_update": "2026-10-16",
       "version": "v0.2.0",
       "category": "Uncategorized",
-      "checksum": "0ba0df67decc076c160fd49427e12d916308e7fc97197acc158053c59a3e3617"
+      "checksum": "0ba0df67decc076c160fd49427e12d916308e7fc97197acc158053c59a3e3617",
+      "icon_key": "2c9992aba114383fe49601262322750ef0683303dbf3d45b21e8e5b5e77fda97"
     },
     {
       "name": "ps5-dump-forge-0.2.0-windows-x86-64-webview2.zip",
@@ -71,7 +77,8 @@
       "last_update": "2026-10-16",
       "version": "v0.2.0",
       "category": "Uncategorized",
-      "checksum": "fa1fd678250e20a289b7fbb1aa059b95bdfad8806f36f9195f46c28b1a88230f"
+      "checksum": "fa1fd678250e20a289b7fbb1aa059b95bdfad8806f36f9195f46c28b1a88230f",
+      "icon_key": "ca2962873aa5fd7e4c8118bb6aba1771dfa3c7e6fd21395f028710d421a7fe80"
     },
     {
       "name": "ps5-dump-forge-0.2.0-windows-x86-64.zip",
@@ -83,7 +90,8 @@
       "last_update": "2026-10-16",
       "version": "v0.2.0",
       "category": "Uncategorized",
-      "checksum": "7694d45b1a1f73cac0a40519a342819860e48df3e18b93e8f7bf1beb9b30b414"
+      "checksum": "7694d45b1a1f73cac0a40519a342819860e48df3e18b93e8f7bf1beb9b30b414",
+      "icon_key": "5d2cc0185f603521b0fce75d33ced1a97db40f65d4f94833942cbeae4e3feecd"
     },
     {
       "name": "SHA256SUMS",
@@ -95,7 +103,8 @@
       "last_update": "2026-10-16",
       "version": "v0.2.0",
       "category": "Uncategorized",
-      "checksum": "61e2b6513d8e560c804a34d2a49e2d361db11d5162e86293adf05a249e26b852"
+      "checksum": "61e2b6513d8e560c804a34d2a49e2d361db11d5162e86293adf05a249e26b852",
+      "icon_key": "af0fd00bae545890ffaad94d1a4631d99f764c5894771c040341c3a57c8ac40c"
     },
     {
       "name": "LZ4-Compression-PPSA99420.zip",
@@ -107,7 +116,8 @@
       "last_update": "2026-10-14",
       "version": "v1.5.0",
       "category": "Uncategorized",
-      "checksum": "86ea01c6c0c5c85ae74e725d61afc21348f58cb658f22f7087b471f04e4b22ea"
+      "checksum": "86ea01c6c0c5c85ae74e725d61afc21348f58cb658f22f7087b471f04e4b22ea",
+      "icon_key": "a6b9e168456266c775b0a91614529c886a78b648e86463749328aa8a92ccca77"
     },
     {
       "name": "lz4-compression.elf",
@@ -119,7 +129,8 @@
       "last_update": "2026-10-14",
       "version": "v1.5.0",
       "category": "Uncategorized",
-      "checksum": "edb4f2c5922bea293cc5c5354bd301fb0bde48856c0d2a8d115801d3c778b3f1"
+      "checksum": "edb4f2c5922bea293cc5c5354bd301fb0bde48856c0d2a8d115801d3c778b3f1",
+      "icon_key": "427d1f98f6c15215cacc013f84ced3bbb69bf3ecee0e3250911fe796aca1ef6d"
     },
     {
       "name": "SHA256SUMS",
@@ -131,7 +142,8 @@
       "last_update": "2026-10-14",
       "version": "v1.5.0",
       "category": "Uncategorized",
-      "checksum": "f518d1c6aee6a2bef2765564f15c6dae76c94aa232a77ad6720af5e64a5f18d5"
+      "checksum": "f518d1c6aee6a2bef2765564f15c6dae76c94aa232a77ad6720af5e64a5f18d5",
+      "icon_key": "af0fd00bae545890ffaad94d1a4631d99f764c5894771c040341c3a57c8ac40c"
     },
     {
       "name": "latest.json",
@@ -143,7 +155,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "dd0e009f400fbecc6cbfa393991f7538d0b3de9b3d418a60e2bc4f644aca83c9"
+      "checksum": "dd0e009f400fbecc6cbfa393991f7538d0b3de9b3d418a60e2bc4f644aca83c9",
+      "icon_key": "b1c1c72762a8cc45734982066c2e67cd86e0f20c3bdf7ad4aece1ce66a6a5d0a"
     },
     {
       "name": "Machete.PS5.Backup.Manager-2.4.0-1.x86_64.rpm",
@@ -155,7 +168,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "ce64bfd22f91e93c046e3d0687a055f5e22723c5f055c669d2bbc532926d0372"
+      "checksum": "ce64bfd22f91e93c046e3d0687a055f5e22723c5f055c669d2bbc532926d0372",
+      "icon_key": "eb2330e29ce20fb6e0b42d2a4c01a01b8ebc197bdf296d5d3a869388a32e1dcc"
     },
     {
       "name": "Machete.PS5.Backup.Manager-2.4.0-1.x86_64.rpm.sig",
@@ -167,7 +181,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "a8cd1c3b83cfd0477d60761d0c0d834e956de26514c85fdbc020b0d7b586cab5"
+      "checksum": "a8cd1c3b83cfd0477d60761d0c0d834e956de26514c85fdbc020b0d7b586cab5",
+      "icon_key": "c759224bd0254393a804d6d595621a272fa384d15dcbe7d7160047d26b614827"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_amd64.AppImage",
@@ -179,7 +194,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "d77d686cab3f3a17ea396d169fa41db285115d1ebfc4639b81e896e00aadefd8"
+      "checksum": "d77d686cab3f3a17ea396d169fa41db285115d1ebfc4639b81e896e00aadefd8",
+      "icon_key": "eb2330e29ce20fb6e0b42d2a4c01a01b8ebc197bdf296d5d3a869388a32e1dcc"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_amd64.AppImage.sig",
@@ -191,7 +207,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "0aff40e00ae82f0449c9722e43190a51c5cd70af9098257904c8d6e46c9d6f5a"
+      "checksum": "0aff40e00ae82f0449c9722e43190a51c5cd70af9098257904c8d6e46c9d6f5a",
+      "icon_key": "a78fc5b12f5cd9a486af18e9d23b8fbaefad63171787f476bd237f5807f35483"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_amd64.AppImage.tar.gz",
@@ -203,7 +220,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "06f922fcf5badea8384197d278acf9b767c66ba4dcc6dba0c223ba34abb3e31f"
+      "checksum": "06f922fcf5badea8384197d278acf9b767c66ba4dcc6dba0c223ba34abb3e31f",
+      "icon_key": "20f297604a9bdacf554628b66e575765412b0be66e10ac5527dae4373dd35277"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_amd64.AppImage.tar.gz.sig",
@@ -215,7 +233,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "16b5e0965ce275ad320905e2a84c955f9569155a0b11b29de01da9dbd6154fe8"
+      "checksum": "16b5e0965ce275ad320905e2a84c955f9569155a0b11b29de01da9dbd6154fe8",
+      "icon_key": "546785678e651ed8af77939ad2bf77b9f45247028c45260a359b9fd8eb88ca30"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_amd64.deb",
@@ -227,7 +246,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "bdd5a3815dd2aae51fb25f48ed419a1ba101aa9e1aecdcc39f6afaf6d000991a"
+      "checksum": "bdd5a3815dd2aae51fb25f48ed419a1ba101aa9e1aecdcc39f6afaf6d000991a",
+      "icon_key": "a78fc5b12f5cd9a486af18e9d23b8fbaefad63171787f476bd237f5807f35483"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_amd64.deb.sig",
@@ -239,7 +259,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "c753bfd3fb920c4b25839ed043d8cfae5154a40204550eff6a8ed88b5666f34e"
+      "checksum": "c753bfd3fb920c4b25839ed043d8cfae5154a40204550eff6a8ed88b5666f34e",
+      "icon_key": "546785678e651ed8af77939ad2bf77b9f45247028c45260a359b9fd8eb88ca30"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_universal.dmg",
@@ -251,7 +272,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "42d5d624b5acf25533570ce9785548da57333afa9e5694a1f256aef5d532b30d"
+      "checksum": "42d5d624b5acf25533570ce9785548da57333afa9e5694a1f256aef5d532b30d",
+      "icon_key": "eb2330e29ce20fb6e0b42d2a4c01a01b8ebc197bdf296d5d3a869388a32e1dcc"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_x64-setup.exe",
@@ -263,7 +285,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "1c0c062cf301249ba89c86b964934e13ae8382605a2bde2099e4a6edfb18c98b"
+      "checksum": "1c0c062cf301249ba89c86b964934e13ae8382605a2bde2099e4a6edfb18c98b",
+      "icon_key": "c759224bd0254393a804d6d595621a272fa384d15dcbe7d7160047d26b614827"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_x64-setup.exe.sig",
@@ -275,7 +298,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "d858486512c8ce479d43bff12702e0e3162e630d3082830571498d1ee8ecbac2"
+      "checksum": "d858486512c8ce479d43bff12702e0e3162e630d3082830571498d1ee8ecbac2",
+      "icon_key": "a78fc5b12f5cd9a486af18e9d23b8fbaefad63171787f476bd237f5807f35483"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_x64-setup.nsis.zip",
@@ -287,7 +311,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "0218c985d5c71966e828aef867a71eb9c356b5fac856717d09e7c420c3593cdd"
+      "checksum": "0218c985d5c71966e828aef867a71eb9c356b5fac856717d09e7c420c3593cdd",
+      "icon_key": "a78fc5b12f5cd9a486af18e9d23b8fbaefad63171787f476bd237f5807f35483"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_x64-setup.nsis.zip.sig",
@@ -299,7 +324,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "9acdf66d5ea2fda59b3039f724d4747036b46c6c72e8ee270862b3fc1eb03e03"
+      "checksum": "9acdf66d5ea2fda59b3039f724d4747036b46c6c72e8ee270862b3fc1eb03e03",
+      "icon_key": "546785678e651ed8af77939ad2bf77b9f45247028c45260a359b9fd8eb88ca30"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_x64_en-US.msi",
@@ -311,7 +337,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "07628a4d416ffc174af68bf40345e33f47331f1d24b9645b12e43d1d08b81dbe"
+      "checksum": "07628a4d416ffc174af68bf40345e33f47331f1d24b9645b12e43d1d08b81dbe",
+      "icon_key": "20f297604a9bdacf554628b66e575765412b0be66e10ac5527dae4373dd35277"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_x64_en-US.msi.sig",
@@ -323,7 +350,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "b4e2475d131608f1c027958dc7b10c2da764117d52628fa3ee0a8a580bc6cdb0"
+      "checksum": "b4e2475d131608f1c027958dc7b10c2da764117d52628fa3ee0a8a580bc6cdb0",
+      "icon_key": "20f297604a9bdacf554628b66e575765412b0be66e10ac5527dae4373dd35277"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_x64_en-US.msi.zip",
@@ -335,7 +363,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "ac533618027db63e1bafe3a402e47a731f60a8d494f15f628bc77707e44f7b80"
+      "checksum": "ac533618027db63e1bafe3a402e47a731f60a8d494f15f628bc77707e44f7b80",
+      "icon_key": "eb2330e29ce20fb6e0b42d2a4c01a01b8ebc197bdf296d5d3a869388a32e1dcc"
     },
     {
       "name": "Machete.PS5.Backup.Manager_2.4.0_x64_en-US.msi.zip.sig",
@@ -347,7 +376,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "adbf9d474e7ff94255bb0f86bee679f874359c8081eb9fd30b48398c3936ae6d"
+      "checksum": "adbf9d474e7ff94255bb0f86bee679f874359c8081eb9fd30b48398c3936ae6d",
+      "icon_key": "20f297604a9bdacf554628b66e575765412b0be66e10ac5527dae4373dd35277"
     },
     {
       "name": "Machete.PS5.Backup.Manager_universal.app.tar.gz",
@@ -359,7 +389,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "815d0e5510ed25abdeff346c795cb2f364613bf831cc606faa58597231f85940"
+      "checksum": "815d0e5510ed25abdeff346c795cb2f364613bf831cc606faa58597231f85940",
+      "icon_key": "2bb3fe8468d540c2f93e86e1aa7bfb7b9125ada082a50e0576031bf865e1c542"
     },
     {
       "name": "Machete.PS5.Backup.Manager_universal.app.tar.gz.sig",
@@ -371,7 +402,8 @@
       "last_update": "2026-09-03",
       "version": "v2.4.0",
       "category": "Uncategorized",
-      "checksum": "ab1a5a6e59c5263389a3a96cf4f2861a47b755ef3a7575e7f441c55000f66816"
+      "checksum": "ab1a5a6e59c5263389a3a96cf4f2861a47b755ef3a7575e7f441c55000f66816",
+      "icon_key": "bdd4da82a79cc8ab109d9cddb10286d7413450ff839b4fe2fb877687509e09ee"
     },
     {
       "name": "PS5-Game-Compressor",
@@ -383,7 +415,8 @@
       "last_update": "2026-08-21",
       "version": "v1.0.4",
       "category": "Uncategorized",
-      "checksum": "e55e90aaade13b6e0d4316c1597ef90a21b67a06475c3e25de054224bc1e941b"
+      "checksum": "e55e90aaade13b6e0d4316c1597ef90a21b67a06475c3e25de054224bc1e941b",
+      "icon_key": "1ffebdcda25d12425873047d07e76118c95a7755f94911c418effe13b60f322a"
     },
     {
       "name": "apr-emu-updater",
@@ -394,7 +427,8 @@
       "last_update": "2026-08-29",
       "version": "v2.0.6",
       "category": "Uncategorized",
-      "checksum": "4f04464283a6a551883e40e36b59134ecad0e38ecbb7ea89cbec3f91a3bd9122"
+      "checksum": "4f04464283a6a551883e40e36b59134ecad0e38ecbb7ea89cbec3f91a3bd9122",
+      "icon_key": "a093917de9b3a893e2aedfc84736cf823bfca150cd60fa456089abbc954ce613"
     },
     {
       "name": "jtplay",
@@ -406,7 +440,8 @@
       "last_update": "2026-08-02",
       "version": "v0.2",
       "category": "Uncategorized",
-      "checksum": "722faeeb8fc44713990be70b92258b6b37cd8b6b977e08a6b7780ce9dba6d525"
+      "checksum": "722faeeb8fc44713990be70b92258b6b37cd8b6b977e08a6b7780ce9dba6d525",
+      "icon_key": "8c6d606b9c25ec8f9bc67c8c9e70df17ccfd17d016fcbb7070391bc0b7cb3775"
     },
     {
       "name": "Playstation-5-Save-Mounter",
@@ -418,7 +453,8 @@
       "last_update": "2026-09-12",
       "version": "v2.0.1",
       "category": "Uncategorized",
-      "checksum": "bdc87ded0daf669a6e1748a02ec7fd47b8c13bca1206b3d19a731a04601078d1"
+      "checksum": "bdc87ded0daf669a6e1748a02ec7fd47b8c13bca1206b3d19a731a04601078d1",
+      "icon_key": "a85141b89448aeb412b0d66755d3d907a2514f90e0759462abe1ea9bf10811be"
     },
     {
       "name": "onionHEN",
@@ -430,7 +466,8 @@
       "last_update": "2026-10-15",
       "version": "v0.9.0",
       "category": "Uncategorized",
-      "checksum": "1f1f7c883d5d998be1d95d7d80b718f85180f8156f257661b0f445a7c6b7c212"
+      "checksum": "1f1f7c883d5d998be1d95d7d80b718f85180f8156f257661b0f445a7c6b7c212",
+      "icon_key": "e826da23aba8785f751289babd28c8636bc4220076ea2cb1618bd5f274fcb3ac"
     },
     {
       "name": "pegasus-dl",
@@ -442,7 +479,8 @@
       "last_update": "2026-10-09",
       "version": "v1.11.0",
       "category": "Uncategorized",
-      "checksum": "32b69c2089bb545abfabd04d5827444698f9c4f1bc4915d72247cb781e8c23d9"
+      "checksum": "32b69c2089bb545abfabd04d5827444698f9c4f1bc4915d72247cb781e8c23d9",
+      "icon_key": "711695e44f080fc191e84ff476615a228477de5273d160a44073eceea4999494"
     },
     {
       "name": "PoorDS4-status.elf",
@@ -454,7 +492,8 @@
       "last_update": "2026-09-30",
       "version": "v0.1.0-rc51",
       "category": "Uncategorized",
-      "checksum": "d47bb84a6ae05117f095c05b75dfee15d9fbf07864a3e52d0e2e626eab613440"
+      "checksum": "d47bb84a6ae05117f095c05b75dfee15d9fbf07864a3e52d0e2e626eab613440",
+      "icon_key": "ac41fa8c169c6bc49ce4b8c25951661ebced64a7acd8adbc7a6dc157b81e0540"
     },
     {
       "name": "PoorDS4-stop.elf",
@@ -466,7 +505,8 @@
       "last_update": "2026-09-30",
       "version": "v0.1.0-rc51",
       "category": "Uncategorized",
-      "checksum": "ffdce4964f0d34a2b9be7cb65e6ad345d5beb582dcdf94d0214cde6bc79acd0d"
+      "checksum": "ffdce4964f0d34a2b9be7cb65e6ad345d5beb582dcdf94d0214cde6bc79acd0d",
+      "icon_key": "4e1501017506891aac55ba0ac5f10915ecb96cf200ff67a7982bbbc7c52bf4bc"
     },
     {
       "name": "PoorDS4rc51.elf",
@@ -478,7 +518,8 @@
       "last_update": "2026-09-30",
       "version": "v0.1.0-rc51",
       "category": "Uncategorized",
-      "checksum": "e1b9f257f51678a977edaeafd4ca1f8a03e9df0afda7d5dd84435841fa20795d"
+      "checksum": "e1b9f257f51678a977edaeafd4ca1f8a03e9df0afda7d5dd84435841fa20795d",
+      "icon_key": "b9a7f18bf4a06f3e85e87b1f7c2b91782d32af8b971faf287de6ca625a344444"
     },
     {
       "name": "SHA256SUMS.txt",
@@ -490,7 +531,8 @@
       "last_update": "2026-09-30",
       "version": "v0.1.0-rc51",
       "category": "Uncategorized",
-      "checksum": "7637ac82a7a4668919d9b6b5c09c76e1b6731b442c7d06ea7eacb17a43c05aad"
+      "checksum": "7637ac82a7a4668919d9b6b5c09c76e1b6731b442c7d06ea7eacb17a43c05aad",
+      "icon_key": "af0fd00bae545890ffaad94d1a4631d99f764c5894771c040341c3a57c8ac40c"
     },
     {
       "name": "PIZZA-HEN",
@@ -502,7 +544,8 @@
       "last_update": "2026-08-24",
       "version": "v2.00",
       "category": "Uncategorized",
-      "checksum": "8535d399612d61c50a528b2ae416f2fc3ccfb7480296df99c17302583fb3e345"
+      "checksum": "8535d399612d61c50a528b2ae416f2fc3ccfb7480296df99c17302583fb3e345",
+      "icon_key": "5d5b153bb76728c242104249444dc0852d2e8a42ac6e065beefc0d9210493503"
     },
     {
       "name": "PS-Play",
@@ -514,7 +557,8 @@
       "last_update": "2026-08-14",
       "version": "2.1",
       "category": "Uncategorized",
-      "checksum": "e3392379d5bc6ca4e44cb0d2a1d8921083b2c3ea480725f68378831874542d8d"
+      "checksum": "e3392379d5bc6ca4e44cb0d2a1d8921083b2c3ea480725f68378831874542d8d",
+      "icon_key": "6283134d56a171df338fa515d391966a1c8b9dd1a92c21d29dfcf6bfa80bb2c3"
     },
     {
       "name": "EVOPlayer-v0.12.0-PPSA99039.ffpfsc",
@@ -526,7 +570,8 @@
       "last_update": "2026-10-09",
       "version": "v0.12.0",
       "category": "Uncategorized",
-      "checksum": "7136deb47f08ff176b69fd2eb82e544040218d51adac9edc87075f3e1ed78709"
+      "checksum": "7136deb47f08ff176b69fd2eb82e544040218d51adac9edc87075f3e1ed78709",
+      "icon_key": "5dbeaecf7384750ba0dc39f2e4abb036332f349e40c692a532e8dc043a3f7583"
     },
     {
       "name": "EVOPlayer-v0.12.0-PPSA99039.zip",
@@ -538,7 +583,8 @@
       "last_update": "2026-10-09",
       "version": "v0.12.0",
       "category": "Uncategorized",
-      "checksum": "98788be10b3d2fe2909f6e353e2e09409ad29e46c2bc37112e2f35d9baa00d8a"
+      "checksum": "98788be10b3d2fe2909f6e353e2e09409ad29e46c2bc37112e2f35d9baa00d8a",
+      "icon_key": "99ae457bf3460f8b055ef7606429ac1a1a1f3f147f76081a7f2594ebdfa0ea9d"
     },
     {
       "name": "SHA256SUMS.txt",
@@ -550,7 +596,8 @@
       "last_update": "2026-10-09",
       "version": "v0.12.0",
       "category": "Uncategorized",
-      "checksum": "85fae678516e1678366b2a1d497d1e848efa56ff7102890b1976a08a6725404e"
+      "checksum": "85fae678516e1678366b2a1d497d1e848efa56ff7102890b1976a08a6725404e",
+      "icon_key": "af0fd00bae545890ffaad94d1a4631d99f764c5894771c040341c3a57c8ac40c"
     },
     {
       "name": "libmemdbg-ps4.a",
@@ -562,7 +609,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "8d273fd7c126c33e3a5d15a4a1d47e85fa17e30f6e3be98fb4f2c8e2f45f1598"
+      "checksum": "8d273fd7c126c33e3a5d15a4a1d47e85fa17e30f6e3be98fb4f2c8e2f45f1598",
+      "icon_key": "9085614575e22f610297e58adbec8e3ae600644653d854c95bbfbea720fcc7e2"
     },
     {
       "name": "libmemdbg-ps5.a",
@@ -574,7 +622,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "74183e830972a01c89c2e0549da7ca459d956d775d14a0183b78ac5c29a0c929"
+      "checksum": "74183e830972a01c89c2e0549da7ca459d956d775d14a0183b78ac5c29a0c929",
+      "icon_key": "033b50903eb4525cb10139cde48f913e54701ef267f9c052d79c5ebed9012d9c"
     },
     {
       "name": "MemDBG-frontend-linux.tar.gz",
@@ -586,7 +635,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "3c42a4a1c64a29d4a0e2ed2fea9c9fa78d1713db5ff55e414fae3d6e42226eae"
+      "checksum": "3c42a4a1c64a29d4a0e2ed2fea9c9fa78d1713db5ff55e414fae3d6e42226eae",
+      "icon_key": "99d478d6f77b935af43c8a6b714e3792ab55444318d9ec28c5e8cbd0f35e6235"
     },
     {
       "name": "MemDBG-frontend-macos.app.zip",
@@ -598,7 +648,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "780260beb02f39bd3e3e98869eea9b7441b3b9fdf34029ee5384c20702ba6537"
+      "checksum": "780260beb02f39bd3e3e98869eea9b7441b3b9fdf34029ee5384c20702ba6537",
+      "icon_key": "187c0fd1d9b4ef56289313939ee5ee0385ef6bf25bc1c61c1c10cf27a65547e0"
     },
     {
       "name": "MemDBG-frontend-macos.dmg",
@@ -610,7 +661,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "ccf822aaea28a599f9c4040a5d1a225bfcfab37fced60072ff9fb0b2e273e879"
+      "checksum": "ccf822aaea28a599f9c4040a5d1a225bfcfab37fced60072ff9fb0b2e273e879",
+      "icon_key": "99d478d6f77b935af43c8a6b714e3792ab55444318d9ec28c5e8cbd0f35e6235"
     },
     {
       "name": "MemDBG-frontend-macos.zip",
@@ -622,7 +674,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "1f4368dc44a2fad3338563602b758a616f7344eecdc6bfec2812a23c969a4d15"
+      "checksum": "1f4368dc44a2fad3338563602b758a616f7344eecdc6bfec2812a23c969a4d15",
+      "icon_key": "ac25084f886a5b3e32e1da490803c82e725fd3ff7eb9179520c1f187480a966b"
     },
     {
       "name": "MemDBG-frontend-windows.zip",
@@ -634,7 +687,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "99b8ca298e6d2c96fad6afc6871c7a02c5717b269a410c22c260e261135af839"
+      "checksum": "99b8ca298e6d2c96fad6afc6871c7a02c5717b269a410c22c260e261135af839",
+      "icon_key": "99d478d6f77b935af43c8a6b714e3792ab55444318d9ec28c5e8cbd0f35e6235"
     },
     {
       "name": "MemDBG-host-linux.tar.gz",
@@ -646,7 +700,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "23af8d7b48772086f3cc89b2871db8991d865a8d6d3116d3dad307f238e177d8"
+      "checksum": "23af8d7b48772086f3cc89b2871db8991d865a8d6d3116d3dad307f238e177d8",
+      "icon_key": "b696400c2785076065ce72e478728029d867bdfaedd45c99efb10c6873d3b8f9"
     },
     {
       "name": "MemDBG-host-macos.tar.gz",
@@ -658,7 +713,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "4d6654e02fbfed4e4180d08ce5a682294d9cf8a47e25bcb96c66f64c4bd289fa"
+      "checksum": "4d6654e02fbfed4e4180d08ce5a682294d9cf8a47e25bcb96c66f64c4bd289fa",
+      "icon_key": "31d043dcdfe50fb6d1f8de6ca59b73051a77b8f97d0e401c747ec166009c7c18"
     },
     {
       "name": "MemDBG-ida-gdb-bridge-linux.tar.gz",
@@ -670,7 +726,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "e6bac001468a54dd5551820b0f1ce15611e86aab2550ec694164ff61a5c63e19"
+      "checksum": "e6bac001468a54dd5551820b0f1ce15611e86aab2550ec694164ff61a5c63e19",
+      "icon_key": "4dbc1225cfce0fa0394c1bab468eedc4a6672a424f222b45878194c6e90f06c2"
     },
     {
       "name": "MemDBG-ida-gdb-bridge-macos.tar.gz",
@@ -682,7 +739,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "fa0a540f7e82f946339f8d1b44207849a4eae4d5a5ecbb052bd70476e6918cb8"
+      "checksum": "fa0a540f7e82f946339f8d1b44207849a4eae4d5a5ecbb052bd70476e6918cb8",
+      "icon_key": "1aa6baaa3f63eb77ab37d27bafea058b0ad480beae1db506b6ba4e47f9497094"
     },
     {
       "name": "MemDBG-ida-gdb-bridge-windows.zip",
@@ -694,7 +752,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "fd7f8fc6f8935c3263cd462fb8a483c7abb406fe30ae49ecb5ead52635667426"
+      "checksum": "fd7f8fc6f8935c3263cd462fb8a483c7abb406fe30ae49ecb5ead52635667426",
+      "icon_key": "e53fb7e37f38b907e2ccf00e23c27f4d77586038e3938f890d6857bbeb8958a2"
     },
     {
       "name": "MemDBG-mobile-android.apk",
@@ -706,7 +765,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "542a95e62b82a3ac4346eea092598726f17153a5ab3a55d4d39f08ae5d367a8d"
+      "checksum": "542a95e62b82a3ac4346eea092598726f17153a5ab3a55d4d39f08ae5d367a8d",
+      "icon_key": "76622fc9e18f763d03013e9d71c88ca5fb0d1f0c78821146625eb238c8f6e1ab"
     },
     {
       "name": "MemDBG-mobile-ios.ipa",
@@ -718,7 +778,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "bbb97432dea65fe07e0756450bde9150008241bf6fb9c4611e6e23dc6611a109"
+      "checksum": "bbb97432dea65fe07e0756450bde9150008241bf6fb9c4611e6e23dc6611a109",
+      "icon_key": "da1cffe128fe7f36a598a76655bf605b65da4e6425ca9e81f23cb24b5f3eb3c9"
     },
     {
       "name": "MemDBG-ps4.elf",
@@ -730,7 +791,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "d4ce3398d639a3164f63c8e5acecccccebb18e2086fec21adef762e57a724b13"
+      "checksum": "d4ce3398d639a3164f63c8e5acecccccebb18e2086fec21adef762e57a724b13",
+      "icon_key": "da92810e4cca81deb3787926ac11e9b3ff4330b245ba1efbf081cc4f7c27b3e2"
     },
     {
       "name": "MemDBG-ps5.elf",
@@ -742,7 +804,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "2fbdc9f0b21043619b1c32b512df47b3ddf79a99f096243c0d48f5ffc14e1906"
+      "checksum": "2fbdc9f0b21043619b1c32b512df47b3ddf79a99f096243c0d48f5ffc14e1906",
+      "icon_key": "05e919dc860f8d3c825c12f1933680c542a63617d2768f49dc3c850e909b873f"
     },
     {
       "name": "MemDBG-x64dbg-plugin.zip",
@@ -754,7 +817,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "26af30edae879ff8f4f27c6ea8b21975f6db833b828a2665f9d63fa2a486b735"
+      "checksum": "26af30edae879ff8f4f27c6ea8b21975f6db833b828a2665f9d63fa2a486b735",
+      "icon_key": "05f0880fcba448e532957afde4a7ee476c6521151ce693dacfcf26c1a5e3e55c"
     },
     {
       "name": "SHA256SUMS.txt",
@@ -766,7 +830,8 @@
       "last_update": "2026-09-30",
       "version": "nightly-20260930-g6e493c9",
       "category": "Uncategorized",
-      "checksum": "a002c2127728244187edfb6be748693ca3cb9f85c9cc0a1744e4df2b7b6d8b21"
+      "checksum": "a002c2127728244187edfb6be748693ca3cb9f85c9cc0a1744e4df2b7b6d8b21",
+      "icon_key": "af0fd00bae545890ffaad94d1a4631d99f764c5894771c040341c3a57c8ac40c"
     },
     {
       "name": "BackPork",
@@ -777,7 +842,8 @@
       "last_update": "2026-04-30",
       "version": "0.1",
       "category": "Uncategorized",
-      "checksum": "d74e4cd119b2bb1fd423f2f5b1c9a7f096b3e588c753af1ab48b983d56216a52"
+      "checksum": "d74e4cd119b2bb1fd423f2f5b1c9a7f096b3e588c753af1ab48b983d56216a52",
+      "icon_key": "ee75f323f19a1d4da7c7f85f58b05a62daba2f55d5e8dbafd2ae50b3488f7bda"
     },
     {
       "name": "ftpsrv-ps4.elf",
@@ -789,7 +855,8 @@
       "last_update": "2026-09-20",
       "version": "1.16-ng-stable",
       "category": "Uncategorized",
-      "checksum": "fba508465a8c892882e88e2834ac2b6c445583b81629257764725528f3f5fd6a"
+      "checksum": "fba508465a8c892882e88e2834ac2b6c445583b81629257764725528f3f5fd6a",
+      "icon_key": "a4a8e5573943a16449091b02c38312a304f53178563b564725524c479e11ae74"
     },
     {
       "name": "ftpsrv-ps5.elf",
@@ -801,7 +868,8 @@
       "last_update": "2026-09-20",
       "version": "1.16-ng-stable",
       "category": "Uncategorized",
-      "checksum": "f19ae469b25453a7a4af4529527521d31f143100f18a2c6839666e7121c8bd32"
+      "checksum": "f19ae469b25453a7a4af4529527521d31f143100f18a2c6839666e7121c8bd32",
+      "icon_key": "0992e6b5fc1f0a72c70d830d8982507ad8c147b3937c344179eb6f8771cee26a"
     },
     {
       "name": "nanodns-ps4.elf",
@@ -813,7 +881,8 @@
       "last_update": "2026-08-04",
       "version": "0.4",
       "category": "Uncategorized",
-      "checksum": "aa7e9d94e32ef866e40844146330028329f8a8a529244e2ecc319ff9d8b0f5f9"
+      "checksum": "aa7e9d94e32ef866e40844146330028329f8a8a529244e2ecc319ff9d8b0f5f9",
+      "icon_key": "2262c77d04917d0c4596c93fc7e62bc92e27e9f39a329b2e7001a82761f0499a"
     },
     {
       "name": "nanodns.elf",
@@ -825,7 +894,8 @@
       "last_update": "2026-08-04",
       "version": "0.4",
       "category": "Uncategorized",
-      "checksum": "fcfb7d47c3b295560ea1603dc015f7c4950353ef0faca16428bd425680ef1fc5"
+      "checksum": "fcfb7d47c3b295560ea1603dc015f7c4950353ef0faca16428bd425680ef1fc5",
+      "icon_key": "8b745ce99b731cb7322b333c08d186256e009a3a3876b90e967d1691ad3f967b"
     },
     {
       "name": "shadowmountplus.elf",
@@ -837,7 +907,8 @@
       "last_update": "2026-10-10",
       "version": "1.7-beta5fix1",
       "category": "Uncategorized",
-      "checksum": "e85fd63b705498488f39c09c9aea6f9fa22e0df2e932865de49a8cedf25172d5"
+      "checksum": "e85fd63b705498488f39c09c9aea6f9fa22e0df2e932865de49a8cedf25172d5",
+      "icon_key": "1df0df847ea8a3d7f91039059e9f78bb667e81c972f637a67ab6c1282ce61713"
     },
     {
       "name": "ShadowMountPlus_1.7-beta5fix1.zip",
@@ -849,7 +920,8 @@
       "last_update": "2026-10-10",
       "version": "1.7-beta5fix1",
       "category": "Uncategorized",
-      "checksum": "fb3b59c24d4d2cb556e5798fcd21cfbdf1fc56627e9fb843dc0fc0d6ef5bab8c"
+      "checksum": "fb3b59c24d4d2cb556e5798fcd21cfbdf1fc56627e9fb843dc0fc0d6ef5bab8c",
+      "icon_key": "5b8c701d6c1e6a021185a44d2a32fd819de8cd0320751b80bab1d560899e274d"
     },
     {
       "name": "kstuff",
@@ -861,7 +933,8 @@
       "last_update": "2026-01-04",
       "version": "v1.6.7",
       "category": "Uncategorized",
-      "checksum": "f1c1f4b2b6395644af04cbe9828aba58586acf7aacb9e01113cac92ce16e3569"
+      "checksum": "f1c1f4b2b6395644af04cbe9828aba58586acf7aacb9e01113cac92ce16e3569",
+      "icon_key": "de96e098d73dd0fb9d52ac14f47dbf68a13175705cfac2913520d4a7076ec4b6"
     },
     {
       "name": "kstuff-lite",
@@ -873,7 +946,8 @@
       "last_update": "2026-09-20",
       "version": "v1.11",
       "category": "Uncategorized",
-      "checksum": "ab9a6cb4d3b1daf139d4d646e402b1cf569071acd64599c936d7a3a6164dc779"
+      "checksum": "ab9a6cb4d3b1daf139d4d646e402b1cf569071acd64599c936d7a3a6164dc779",
+      "icon_key": "74eea6a5f18d275751f467f7f40401c0a344bf8c18fec98002e0396f83fe8111"
     },
     {
       "name": "kstuff-toggle",
@@ -885,7 +959,8 @@
       "last_update": "2026-05-07",
       "version": "0.6",
       "category": "Uncategorized",
-      "checksum": "ec6b227b233810e2e9cea2895820b74b5185732d2c2153f3508a03bc68a7f14d"
+      "checksum": "ec6b227b233810e2e9cea2895820b74b5185732d2c2153f3508a03bc68a7f14d",
+      "icon_key": "298e012c4f6c03557986ba2d7f6fb071031e91851d622517f231546f8955206b"
     },
     {
       "name": "ps5-app-dumper_v2.10.elf",
@@ -897,7 +972,8 @@
       "last_update": "2026-10-03",
       "version": "v2.10",
       "category": "Uncategorized",
-      "checksum": "c850f1df6f2787824d6ddeeed69ce4144e00569b32135973401c2985cfb0345b"
+      "checksum": "c850f1df6f2787824d6ddeeed69ce4144e00569b32135973401c2985cfb0345b",
+      "icon_key": "e6e2edc38d892ca5480e34e8462a1095f56620c8cd9a0849d34a2631bd80a448"
     },
     {
       "name": "webhb-0.4.1.tar.gz",
@@ -909,7 +985,8 @@
       "last_update": "2026-10-03",
       "version": "v2.10",
       "category": "Uncategorized",
-      "checksum": "9f61d4bda85acdba0670ba77659c356eea51241c5b3f53afef11d6349583e760"
+      "checksum": "9f61d4bda85acdba0670ba77659c356eea51241c5b3f53afef11d6349583e760",
+      "icon_key": "134ea717677a2b1fad19e30322bb770950295d4037363b47c7cfef1e58de952f"
     },
     {
       "name": "webhb-0.4.1.tar.gz.sha256",
@@ -921,7 +998,8 @@
       "last_update": "2026-10-03",
       "version": "v2.10",
       "category": "Uncategorized",
-      "checksum": "e07fcee181865c029b84e89a6d354414be6be434f4c28da779b1e0196d9e59dd"
+      "checksum": "e07fcee181865c029b84e89a6d354414be6be434f4c28da779b1e0196d9e59dd",
+      "icon_key": "854aa230e5c7bc56e58a10a2139a069d02932c31c9092e0364d2ccb94e7dee12"
     },
     {
       "name": "etaHEN",
@@ -933,7 +1011,8 @@
       "last_update": "2025-12-25",
       "version": "2.5B",
       "category": "Uncategorized",
-      "checksum": "4845cac45095361b8983b14d6690622183b0dcfbf6d7fda16e161aa91ff0531e"
+      "checksum": "4845cac45095361b8983b14d6690622183b0dcfbf6d7fda16e161aa91ff0531e",
+      "icon_key": "26da8ca86365aa8d627edf86603e42617eb73cb1c9829b24d803c465914c0c3a"
     },
     {
       "name": "BFpilot",
@@ -945,7 +1024,8 @@
       "last_update": "2026-08-11",
       "version": "v0.4.4",
       "category": "Uncategorized",
-      "checksum": "5a8237630260026ad054d71fbbe661e433ac9ffa2cb4eea2785769c1eb7ee1c1"
+      "checksum": "5a8237630260026ad054d71fbbe661e433ac9ffa2cb4eea2785769c1eb7ee1c1",
+      "icon_key": "081001cda514f868b2ffaac05a7694eeb526205e7e8df4856ba455b753a0e02f"
     },
     {
       "name": "pldmgr",
@@ -957,7 +1037,8 @@
       "last_update": "2026-10-14",
       "version": "v0.6.1",
       "category": "Uncategorized",
-      "checksum": "5165cbe4c13360828bd0f5d558cdbb9e2d55b0660b1dc7f7a58d3f4ee9e23285"
+      "checksum": "5165cbe4c13360828bd0f5d558cdbb9e2d55b0660b1dc7f7a58d3f4ee9e23285",
+      "icon_key": "694c6b24bac2c86e7a8bf92c26a38f83a6a6b8157d1ae29177f47f3fa5b99448"
     },
     {
       "name": "PS5-Lapy-JB-Daemon",
@@ -969,7 +1050,8 @@
       "last_update": "2026-06-01",
       "version": "v1.2",
       "category": "Uncategorized",
-      "checksum": "13559b858fc33cc7fa3dc89e10dccf139070d99ee5d378dd75c969293700799e"
+      "checksum": "13559b858fc33cc7fa3dc89e10dccf139070d99ee5d378dd75c969293700799e",
+      "icon_key": "4c85194e39bbf8f9d23d1edba5a361545214291b5da8c18feedbb0798ab350e5"
     },
     {
       "name": "webkit-autoloader-host_v0.6.1.exe",
@@ -981,7 +1063,8 @@
       "last_update": "2026-10-08",
       "version": "v0.6.1",
       "category": "Uncategorized",
-      "checksum": "2483d1d7aa552fc7a311c84ab56f01c16cc6256acf64f8aa051aa132daa1e251"
+      "checksum": "2483d1d7aa552fc7a311c84ab56f01c16cc6256acf64f8aa051aa132daa1e251",
+      "icon_key": "03e7b33ebaed8d28310958d9998877a55571447f7df86292b18fffb4d6ebc53a"
     },
     {
       "name": "webkit-autoloader-host_v0.6.1.py",
@@ -993,7 +1076,8 @@
       "last_update": "2026-10-08",
       "version": "v0.6.1",
       "category": "Uncategorized",
-      "checksum": "722798faaf82d733e00a7ad2658d21323ec22b70755c74018ed5e6ca164fd2c0"
+      "checksum": "722798faaf82d733e00a7ad2658d21323ec22b70755c74018ed5e6ca164fd2c0",
+      "icon_key": "03e7b33ebaed8d28310958d9998877a55571447f7df86292b18fffb4d6ebc53a"
     },
     {
       "name": "webkit-autoloader-installer_v0.6.1.elf",
@@ -1005,7 +1089,8 @@
       "last_update": "2026-10-08",
       "version": "v0.6.1",
       "category": "Uncategorized",
-      "checksum": "f662c75a502e4f1bc41b055dcb490625f8222c499ce437dc80f439a3a279e93f"
+      "checksum": "f662c75a502e4f1bc41b055dcb490625f8222c499ce437dc80f439a3a279e93f",
+      "icon_key": "aa61ca2f9f7b70033c33bda603b7cd90efc48efb94325cbaad4e3ff03141dfd9"
     },
     {
       "name": "CheatRunner",
@@ -1017,7 +1102,8 @@
       "last_update": "2026-10-10",
       "version": "v0.18",
       "category": "Uncategorized",
-      "checksum": "4ae1ea4e37b2e67d5487355ddf671f166861ed6dceea348c048ad060770c0140"
+      "checksum": "4ae1ea4e37b2e67d5487355ddf671f166861ed6dceea348c048ad060770c0140",
+      "icon_key": "f5645fe7872b4e33a3e403b6a55e6288a12490d79a8bbe8f542c7ffc3a21c54c"
     },
     {
       "name": "ps5debug-NG",
@@ -1029,7 +1115,8 @@
       "last_update": "2026-09-23",
       "version": "1.3.2",
       "category": "Uncategorized",
-      "checksum": "949b0e6e0fe3f24f4a820319fd76d9ccb92f9770cbb1a64b09a8eca5c1fc9ff3"
+      "checksum": "949b0e6e0fe3f24f4a820319fd76d9ccb92f9770cbb1a64b09a8eca5c1fc9ff3",
+      "icon_key": "6df592aa9c746a82809a84316447fad81edc6f2c07a7f81c242c35251b40c0d4"
     },
     {
       "name": "web-file-mgr-v1.10.elf",
@@ -1041,7 +1128,8 @@
       "last_update": "2026-10-05",
       "version": "v1.10",
       "category": "Uncategorized",
-      "checksum": "409145ec9a1c338ecb5f6f917c3b057c4ba48bfae2e86d621e19dda7ac129bd3"
+      "checksum": "409145ec9a1c338ecb5f6f917c3b057c4ba48bfae2e86d621e19dda7ac129bd3",
+      "icon_key": "f8449c25e527d055e10ec77d25a13344e7fac5e4527d2b30d00fd428487e240a"
     },
     {
       "name": "wfm-7zip-helper.elf",
@@ -1053,7 +1141,8 @@
       "last_update": "2026-10-05",
       "version": "v1.10",
       "category": "Uncategorized",
-      "checksum": "dd8bbae4cd44ed20c4cbafc74fdc3271f52b9d7888a0d4f4038a8ae05feb92a4"
+      "checksum": "dd8bbae4cd44ed20c4cbafc74fdc3271f52b9d7888a0d4f4038a8ae05feb92a4",
+      "icon_key": "3b53222d64c1e2a7e2c3561b750d8221c41e75d58d1b654ec9ddb1a487821406"
     },
     {
       "name": "wfm-7zip-helper",
@@ -1065,7 +1154,8 @@
       "last_update": "2026-10-05",
       "version": "v26.03-2",
       "category": "Uncategorized",
-      "checksum": "dd8bbae4cd44ed20c4cbafc74fdc3271f52b9d7888a0d4f4038a8ae05feb92a4"
+      "checksum": "dd8bbae4cd44ed20c4cbafc74fdc3271f52b9d7888a0d4f4038a8ae05feb92a4",
+      "icon_key": "3b53222d64c1e2a7e2c3561b750d8221c41e75d58d1b654ec9ddb1a487821406"
     },
     {
       "name": "latest.json",
@@ -1077,7 +1167,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "9adc5fbbd1286c77ed4395b608946b86d25f0df83e7a4cf7dea17dba7833b9f8"
+      "checksum": "9adc5fbbd1286c77ed4395b608946b86d25f0df83e7a4cf7dea17dba7833b9f8",
+      "icon_key": "b1c1c72762a8cc45734982066c2e67cd86e0f20c3bdf7ad4aece1ce66a6a5d0a"
     },
     {
       "name": "PS5Upload-7.0.34-android.apk",
@@ -1089,7 +1180,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "6d0e3b94798c5b7df49ee500dbbcf30143731ad0a1ec72da7f2d16f0572821b4"
+      "checksum": "6d0e3b94798c5b7df49ee500dbbcf30143731ad0a1ec72da7f2d16f0572821b4",
+      "icon_key": "3e2d69142df6c8f72db0303acdffb1fde7ed9569803e7ed74256500c7b2c4629"
     },
     {
       "name": "PS5Upload-7.0.34-linux-arm64.deb",
@@ -1101,7 +1193,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "0111f76cb4877714b005d59aa5159554591ed220c584c9555167a62fa2442444"
+      "checksum": "0111f76cb4877714b005d59aa5159554591ed220c584c9555167a62fa2442444",
+      "icon_key": "3e2d69142df6c8f72db0303acdffb1fde7ed9569803e7ed74256500c7b2c4629"
     },
     {
       "name": "PS5Upload-7.0.34-linux-arm64.rpm",
@@ -1113,7 +1206,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "abe46d56787c52a465cc99f5781e6fb3a093c2f5c6359c22381ed37c82437546"
+      "checksum": "abe46d56787c52a465cc99f5781e6fb3a093c2f5c6359c22381ed37c82437546",
+      "icon_key": "343ede73eb2d22a9c01b617b40a45b2d6500673036e952b4fdd07a349f97dc43"
     },
     {
       "name": "PS5Upload-7.0.34-linux-arm64.zip",
@@ -1125,7 +1219,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "f4681f03d0d0330d15be96153af71cd46a2f2ea992d81c9b5b171173df013876"
+      "checksum": "f4681f03d0d0330d15be96153af71cd46a2f2ea992d81c9b5b171173df013876",
+      "icon_key": "54968ed100719cf2d2864c4078f5f0f730ad5b03a8493acaf44d6370764d5c6e"
     },
     {
       "name": "PS5Upload-7.0.34-linux-x64.deb",
@@ -1137,7 +1232,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "d10a52bf8799a84abfdcc6de8a95f4dbfcfa406f014d47439dd6b7c976fb09dc"
+      "checksum": "d10a52bf8799a84abfdcc6de8a95f4dbfcfa406f014d47439dd6b7c976fb09dc",
+      "icon_key": "fee7ea54516f9b963c0c81fc8f944371134a4d85669483941221f154d4985e3b"
     },
     {
       "name": "PS5Upload-7.0.34-linux-x64.rpm",
@@ -1149,7 +1245,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "dd362db18665a8999d4dca2fa52ede76fc995e3a11a6f0d6053fd9dc8859ac29"
+      "checksum": "dd362db18665a8999d4dca2fa52ede76fc995e3a11a6f0d6053fd9dc8859ac29",
+      "icon_key": "fee7ea54516f9b963c0c81fc8f944371134a4d85669483941221f154d4985e3b"
     },
     {
       "name": "PS5Upload-7.0.34-linux-x64.zip",
@@ -1161,7 +1258,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "5d4d577d66df7b9f60b3cd128d8cfbfd946463fd5811c43c69d6137bef804ce1"
+      "checksum": "5d4d577d66df7b9f60b3cd128d8cfbfd946463fd5811c43c69d6137bef804ce1",
+      "icon_key": "54968ed100719cf2d2864c4078f5f0f730ad5b03a8493acaf44d6370764d5c6e"
     },
     {
       "name": "PS5Upload-7.0.34-mac-arm64.dmg",
@@ -1173,7 +1271,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "e5a35428d09653d520fade02d9e474726b3b3c2eacb5a0be03020379a834e055"
+      "checksum": "e5a35428d09653d520fade02d9e474726b3b3c2eacb5a0be03020379a834e055",
+      "icon_key": "3e2d69142df6c8f72db0303acdffb1fde7ed9569803e7ed74256500c7b2c4629"
     },
     {
       "name": "PS5Upload-7.0.34-mac-x64.dmg",
@@ -1185,7 +1284,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "2243e3b04fba24f7e177cec2eb3d11469a68402fe9e573deafc6445260880590"
+      "checksum": "2243e3b04fba24f7e177cec2eb3d11469a68402fe9e573deafc6445260880590",
+      "icon_key": "54968ed100719cf2d2864c4078f5f0f730ad5b03a8493acaf44d6370764d5c6e"
     },
     {
       "name": "PS5Upload-7.0.34-win-arm64-setup.exe",
@@ -1197,7 +1297,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "55a56704d3ec139329dede0536e92bad2cb6c8462664ee877f44fbc64bae7ce6"
+      "checksum": "55a56704d3ec139329dede0536e92bad2cb6c8462664ee877f44fbc64bae7ce6",
+      "icon_key": "343ede73eb2d22a9c01b617b40a45b2d6500673036e952b4fdd07a349f97dc43"
     },
     {
       "name": "PS5Upload-7.0.34-win-arm64.zip",
@@ -1209,7 +1310,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "97451769e38db09882da74e90ea9474c7b148c699fc7d15b4b9f918f497b1560"
+      "checksum": "97451769e38db09882da74e90ea9474c7b148c699fc7d15b4b9f918f497b1560",
+      "icon_key": "57848589ecf307f42659eb03b68b9bbeac9f463129f74d0ee5fbae5f4763c08b"
     },
     {
       "name": "PS5Upload-7.0.34-win-x64-setup.exe",
@@ -1221,7 +1323,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "eb28b27148048b3f74db109d40d981a5e4b0f1f7f179a08c3cce5bad58d8ecca"
+      "checksum": "eb28b27148048b3f74db109d40d981a5e4b0f1f7f179a08c3cce5bad58d8ecca",
+      "icon_key": "3e2d69142df6c8f72db0303acdffb1fde7ed9569803e7ed74256500c7b2c4629"
     },
     {
       "name": "PS5Upload-7.0.34-win-x64.zip",
@@ -1233,7 +1336,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "02742612761dec8301e30992ab8b8d821c34c2d1cc4fc81de1c77a6959463b7c"
+      "checksum": "02742612761dec8301e30992ab8b8d821c34c2d1cc4fc81de1c77a6959463b7c",
+      "icon_key": "57848589ecf307f42659eb03b68b9bbeac9f463129f74d0ee5fbae5f4763c08b"
     },
     {
       "name": "ps5upload-7.0.34.elf",
@@ -1245,7 +1349,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "f6a09ed9f92ea230490e2bc3ad912c4e882882839a25a184bb6daddabc0904a7"
+      "checksum": "f6a09ed9f92ea230490e2bc3ad912c4e882882839a25a184bb6daddabc0904a7",
+      "icon_key": "3e2d69142df6c8f72db0303acdffb1fde7ed9569803e7ed74256500c7b2c4629"
     },
     {
       "name": "ps5upload-engine-7.0.34-linux-arm64",
@@ -1257,7 +1362,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "9857d7c821e8ccc576b76f042917f3197d9cc757de560ccdee9540fd341c5e22"
+      "checksum": "9857d7c821e8ccc576b76f042917f3197d9cc757de560ccdee9540fd341c5e22",
+      "icon_key": "e4da5444bfd5d16b6425a31196be4d7219ebce0b7145d7cc881ede6cc8022098"
     },
     {
       "name": "ps5upload-engine-7.0.34-linux-x64",
@@ -1269,7 +1375,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "db6d8f3d99b817a3ffa472f36a7b80128f449f156a41f5fdd28ef152e16d7ba3"
+      "checksum": "db6d8f3d99b817a3ffa472f36a7b80128f449f156a41f5fdd28ef152e16d7ba3",
+      "icon_key": "885d6c580a3f3c2a03a478e4c7db3f109561912b27d36c9eb041196634854423"
     },
     {
       "name": "ps5upload-engine-7.0.34-macos-arm64",
@@ -1281,7 +1388,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "06f991751995894b08fec49151a1b7ff61667b91da41878f05a9110f9575b7aa"
+      "checksum": "06f991751995894b08fec49151a1b7ff61667b91da41878f05a9110f9575b7aa",
+      "icon_key": "e4da5444bfd5d16b6425a31196be4d7219ebce0b7145d7cc881ede6cc8022098"
     },
     {
       "name": "ps5upload-engine-7.0.34-macos-x64",
@@ -1293,7 +1401,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "d41bfcc32292643d25b64ef31026c2212d2d3d02f9bd89ac437496c5b13a0c03"
+      "checksum": "d41bfcc32292643d25b64ef31026c2212d2d3d02f9bd89ac437496c5b13a0c03",
+      "icon_key": "a9a060349f24718c50de2a9e607454fc40eb05e60aee268e86ac7d886781e37c"
     },
     {
       "name": "ps5upload-engine-7.0.34-windows-arm64.exe",
@@ -1305,7 +1414,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "14f3155279ff822166d50fc1a1d5f025b7cac0dce0c02adacda65576b7c1b7d8"
+      "checksum": "14f3155279ff822166d50fc1a1d5f025b7cac0dce0c02adacda65576b7c1b7d8",
+      "icon_key": "ebb5bd1ecfbf1385e5b2880750aba60a4868f3e07f486045bcd144ce04620f75"
     },
     {
       "name": "ps5upload-engine-7.0.34-windows-x64.exe",
@@ -1317,7 +1427,8 @@
       "last_update": "2026-10-17",
       "version": "v7.0.34",
       "category": "Uncategorized",
-      "checksum": "7f7db3db6cda6c61ade4c76604635328ebeee0b4cfeec222deaf0b408241e556"
+      "checksum": "7f7db3db6cda6c61ade4c76604635328ebeee0b4cfeec222deaf0b408241e556",
+      "icon_key": "a9a060349f24718c50de2a9e607454fc40eb05e60aee268e86ac7d886781e37c"
     },
     {
       "name": "ps5-linux-loader",
@@ -1328,7 +1439,8 @@
       "last_update": "2026-09-05",
       "version": "v2.5",
       "category": "Uncategorized",
-      "checksum": "9fc48733077145d1d204a4c9cdb879baaab1e711a604dd73af0dd4a807d6bc49"
+      "checksum": "9fc48733077145d1d204a4c9cdb879baaab1e711a604dd73af0dd4a807d6bc49",
+      "icon_key": "3d494572a7730fd9325dcf0dd22a2c72ffbb5b99c698b42c43402c73d449c901"
     },
     {
       "name": "elfldr",
@@ -1340,7 +1452,8 @@
       "last_update": "2026-08-29",
       "version": "v0.26",
       "category": "Uncategorized",
-      "checksum": "ed6d587a057c09d6a95b2176e336d9ffc605e547ac56462128b029e47b8ccea1"
+      "checksum": "ed6d587a057c09d6a95b2176e336d9ffc605e547ac56462128b029e47b8ccea1",
+      "icon_key": "2b5ec493f9113e20877ea4235e54fdbc4d6301f60496dbf8f198b5617280a906"
     },
     {
       "name": "ftpsrv-ps4.elf",
@@ -1352,7 +1465,8 @@
       "last_update": "2026-08-20",
       "version": "v0.21.1",
       "category": "Uncategorized",
-      "checksum": "5f00e2df7fa8ab7daa084343f38394e6672cd389e03fc8598a54d7d9e1d58d16"
+      "checksum": "5f00e2df7fa8ab7daa084343f38394e6672cd389e03fc8598a54d7d9e1d58d16",
+      "icon_key": "a4a8e5573943a16449091b02c38312a304f53178563b564725524c479e11ae74"
     },
     {
       "name": "ftpsrv-ps5-install.elf",
@@ -1364,7 +1478,8 @@
       "last_update": "2026-08-20",
       "version": "v0.21.1",
       "category": "Uncategorized",
-      "checksum": "0ccfe0097081be0514aabef34390a0f6776226e8b3eefbb047964584e0cfe3a9"
+      "checksum": "0ccfe0097081be0514aabef34390a0f6776226e8b3eefbb047964584e0cfe3a9",
+      "icon_key": "a4a8e5573943a16449091b02c38312a304f53178563b564725524c479e11ae74"
     },
     {
       "name": "ftpsrv-ps5.elf",
@@ -1376,7 +1491,8 @@
       "last_update": "2026-08-20",
       "version": "v0.21.1",
       "category": "Uncategorized",
-      "checksum": "7d4b31c83eae4e056580482a3a074e1db25922efc74ac1e439473b45d71a5938"
+      "checksum": "7d4b31c83eae4e056580482a3a074e1db25922efc74ac1e439473b45d71a5938",
+      "icon_key": "0992e6b5fc1f0a72c70d830d8982507ad8c147b3937c344179eb6f8771cee26a"
     },
     {
       "name": "klogsrv-ps4.elf",
@@ -1388,7 +1504,8 @@
       "last_update": "2026-08-02",
       "version": "v0.9",
       "category": "Uncategorized",
-      "checksum": "7e89c33eb90d44ea4644b80c56c29084d93faf415a9d64f1397a58ac7ca752d8"
+      "checksum": "7e89c33eb90d44ea4644b80c56c29084d93faf415a9d64f1397a58ac7ca752d8",
+      "icon_key": "a999f61a382e2f491c964127e6dad6aefacd07b09d7e49637f98bcd16429899b"
     },
     {
       "name": "klogsrv-ps5.elf",
@@ -1400,7 +1517,8 @@
       "last_update": "2026-08-02",
       "version": "v0.9",
       "category": "Uncategorized",
-      "checksum": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb"
+      "checksum": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb",
+      "icon_key": "a4a1f26434d01d96980a1ad73fa6d36a4b48d7d0e53a889f1a2a0400dd5e73da"
     },
     {
       "name": "shsrv",
@@ -1412,7 +1530,8 @@
       "last_update": "2026-08-02",
       "version": "v0.20",
       "category": "Uncategorized",
-      "checksum": "fa4ccb2587bb61be317df0d001f668b17ebf9b4aafad87acf691b1fb8da0bd2d"
+      "checksum": "fa4ccb2587bb61be317df0d001f668b17ebf9b4aafad87acf691b1fb8da0bd2d",
+      "icon_key": "b62d39df8cf81815819d065398232f8e0b205cc17e3b03283ff1b93dd8b49f72"
     },
     {
       "name": "CrispyDoom.zip",
@@ -1424,7 +1543,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "c0c37713703e109f43b1b598cf5790d969097a2baf961693a0fd0e03956a3c59"
+      "checksum": "c0c37713703e109f43b1b598cf5790d969097a2baf961693a0fd0e03956a3c59",
+      "icon_key": "c2926747edafd1b4ca5199d2d6eb91db03c471e483eb7429c90934b54f3a05b4"
     },
     {
       "name": "DevilutionX.zip",
@@ -1436,7 +1556,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "2980f34b7eb2aae58452a8925576f628a5d8bd36043ff84b698439df08071868"
+      "checksum": "2980f34b7eb2aae58452a8925576f628a5d8bd36043ff84b698439df08071868",
+      "icon_key": "6baa7dbb5b4e112c1c4130122265c9a0fa2945337c5e7452f8184cc2058c6edb"
     },
     {
       "name": "EDuke32.zip",
@@ -1448,7 +1569,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "7cf20188a037ff2b357a1102a2cd0d4c768de0ba6034d1e984ef8aeec055ae71"
+      "checksum": "7cf20188a037ff2b357a1102a2cd0d4c768de0ba6034d1e984ef8aeec055ae71",
+      "icon_key": "fc57e9d66664791bbc1c77a5fc3128abc300c986521ba8ee2bdbb0720e66f079"
     },
     {
       "name": "FBNeo.zip",
@@ -1460,7 +1582,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "d299f1b28bb575c9bc082f3f0f389776c39c05dcfa3bf9c70e6acfe87e490869"
+      "checksum": "d299f1b28bb575c9bc082f3f0f389776c39c05dcfa3bf9c70e6acfe87e490869",
+      "icon_key": "6ae39ff218eace256d2b1ee7cec027287f5c9b62ee3e67edcc109516eb166c13"
     },
     {
       "name": "FFplay.zip",
@@ -1472,7 +1595,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "0aba52625552e499ab77632ad7c0bfbecf836a62376d7649acaeaa894130e97b"
+      "checksum": "0aba52625552e499ab77632ad7c0bfbecf836a62376d7649acaeaa894130e97b",
+      "icon_key": "a1fb20f5c11d89c822dcd6cbc48578f6f89ee9875956715028988d4bf253690f"
     },
     {
       "name": "LakeSnes.zip",
@@ -1484,7 +1608,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "60ce0b1942ef1fe687596016868e28679bf5e953e832299aa5d108f1df299b6b"
+      "checksum": "60ce0b1942ef1fe687596016868e28679bf5e953e832299aa5d108f1df299b6b",
+      "icon_key": "fe5df360b2d0679abb3bdddf269a20d6310b7d78e79332a6ea2397d44a73d2ab"
     },
     {
       "name": "LinkDev.zip",
@@ -1496,7 +1621,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "0c8f3f62c33fb80edf7ebbca933100cd0ec0924f76a6a57ba177a9b505a2347c"
+      "checksum": "0c8f3f62c33fb80edf7ebbca933100cd0ec0924f76a6a57ba177a9b505a2347c",
+      "icon_key": "25262830dc7833032e028db24af5f9dc421aeccb7868dcfd51795afae6b17531"
     },
     {
       "name": "Mari0.zip",
@@ -1508,7 +1634,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "e0331ed5a22e7fe72843d268cd2c8b297d761a75b7c83d828f5cc58a82a72ce3"
+      "checksum": "e0331ed5a22e7fe72843d268cd2c8b297d761a75b7c83d828f5cc58a82a72ce3",
+      "icon_key": "6e823143435dea0c360d030f7ab8e4e6cac289008fe87afe75c0a2e96b276e82"
     },
     {
       "name": "Mednafen.zip",
@@ -1520,7 +1647,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "ecead10219d4ef83c2dcb1b5d6b4b53682c5de88610ed7de8b772120a2882763"
+      "checksum": "ecead10219d4ef83c2dcb1b5d6b4b53682c5de88610ed7de8b772120a2882763",
+      "icon_key": "6e823143435dea0c360d030f7ab8e4e6cac289008fe87afe75c0a2e96b276e82"
     },
     {
       "name": "OffAct.zip",
@@ -1532,7 +1660,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "132d81006b5350a1036e0d2a851f5ffbd2ed5d766cc381a8bc2ae25f1bde64b6"
+      "checksum": "132d81006b5350a1036e0d2a851f5ffbd2ed5d766cc381a8bc2ae25f1bde64b6",
+      "icon_key": "c9e316821500ebe869cf8398124b67774592cf51d97a68e37f4757408cebb933"
     },
     {
       "name": "Omnispeak.zip",
@@ -1544,7 +1673,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "7a4d82bf58ef7406a4c9050ec298195c548d387febc28fd814c3bf9026bb231b"
+      "checksum": "7a4d82bf58ef7406a4c9050ec298195c548d387febc28fd814c3bf9026bb231b",
+      "icon_key": "6a59883e88f9e3b4c49c761e83a7971d36a8d4846160cac20450bfc388da9a62"
     },
     {
       "name": "OpenJazz.zip",
@@ -1556,7 +1686,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "1e191e2a533be235a87d78069cb4ccc0c65ef754f38fb1a79bf98683a8f60823"
+      "checksum": "1e191e2a533be235a87d78069cb4ccc0c65ef754f38fb1a79bf98683a8f60823",
+      "icon_key": "8535fa874274e164defe174cf25537b388bbad1dd1d91f97649e35c02695ddca"
     },
     {
       "name": "pfbneo-7.1_ps5.zip",
@@ -1568,7 +1699,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "2970e54903c2a9e0668e73889a54ad41ed6d18baf0a94f86cf944e7b91b9c023"
+      "checksum": "2970e54903c2a9e0668e73889a54ad41ed6d18baf0a94f86cf944e7b91b9c023",
+      "icon_key": "343ede73eb2d22a9c01b617b40a45b2d6500673036e952b4fdd07a349f97dc43"
     },
     {
       "name": "pgba-7.1_ps5.zip",
@@ -1580,7 +1712,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "4aa7434e0d9dc89aadf05cb3e932301a6c7f415bcc092446cd47ca0d00f78dcd"
+      "checksum": "4aa7434e0d9dc89aadf05cb3e932301a6c7f415bcc092446cd47ca0d00f78dcd",
+      "icon_key": "343ede73eb2d22a9c01b617b40a45b2d6500673036e952b4fdd07a349f97dc43"
     },
     {
       "name": "pgen-7.1_ps5.zip",
@@ -1592,7 +1725,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "27cc3670e115d79b459a2c116dc3974491f37caef1183a9efaba1f0d63a19ace"
+      "checksum": "27cc3670e115d79b459a2c116dc3974491f37caef1183a9efaba1f0d63a19ace",
+      "icon_key": "3e2d69142df6c8f72db0303acdffb1fde7ed9569803e7ed74256500c7b2c4629"
     },
     {
       "name": "PKGInstall.zip",
@@ -1604,7 +1738,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "b8c8a03ea1379957b3038c8d3d09acd1395ae8e1161837f369597993552d528a"
+      "checksum": "b8c8a03ea1379957b3038c8d3d09acd1395ae8e1161837f369597993552d528a",
+      "icon_key": "8cce4dd3949585ea3f581f11d5a4c1aa7eb4c0dd26ee1bf79f9084bbb773d9f7"
     },
     {
       "name": "pnes-7.1_ps5.zip",
@@ -1616,7 +1751,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "89a612dcdbfa72560c8924ec49213715db616239b31b93a1e9ccacf1d40abcf5"
+      "checksum": "89a612dcdbfa72560c8924ec49213715db616239b31b93a1e9ccacf1d40abcf5",
+      "icon_key": "54968ed100719cf2d2864c4078f5f0f730ad5b03a8493acaf44d6370764d5c6e"
     },
     {
       "name": "psnes-7.1_ps5.zip",
@@ -1628,7 +1764,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "1a23d40ace8537c419ca773ba3a30210bfacc53236c631b92c4d5e01cd48a721"
+      "checksum": "1a23d40ace8537c419ca773ba3a30210bfacc53236c631b92c4d5e01cd48a721",
+      "icon_key": "3e2d69142df6c8f72db0303acdffb1fde7ed9569803e7ed74256500c7b2c4629"
     },
     {
       "name": "RetroArch.zip",
@@ -1640,7 +1777,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "600115a6cf8aa48c2c34e680141cbb45431df1dee1b1230b6ff66cb99addfc49"
+      "checksum": "600115a6cf8aa48c2c34e680141cbb45431df1dee1b1230b6ff66cb99addfc49",
+      "icon_key": "a49d2fd7409c6a3188ee91b08657135a7f332eea95ec2c0358135b422d1e5682"
     },
     {
       "name": "ScummVM.zip",
@@ -1652,7 +1790,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "2dc97b69204154903f8fe36da7d431038c074ac46bd4b567fe6b170dae784ce5"
+      "checksum": "2dc97b69204154903f8fe36da7d431038c074ac46bd4b567fe6b170dae784ce5",
+      "icon_key": "88fe73557466ff8335863766b7776da8bf145ec93880c593422f121083daec29"
     },
     {
       "name": "SverigesRadio.zip",
@@ -1664,7 +1803,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "430f58b9805f27a0ef777637b80a9b739fd55eb5cff4d405c8df162f0e089287"
+      "checksum": "430f58b9805f27a0ef777637b80a9b739fd55eb5cff4d405c8df162f0e089287",
+      "icon_key": "0f94f4985a67c185781ff980a55733434cb63a91983183a2d3efa43406ed9f72"
     },
     {
       "name": "SVTplay.zip",
@@ -1676,7 +1816,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "dd63ee1138b0164be747fb4e36c2718e63200d1a89c5d97557287df13bd1b0be"
+      "checksum": "dd63ee1138b0164be747fb4e36c2718e63200d1a89c5d97557287df13bd1b0be",
+      "icon_key": "6922534833c033e426516d89912036c63941c0adc22af975f0c18430b9ea02df"
     },
     {
       "name": "TVHeadend.zip",
@@ -1688,7 +1829,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "03601fe32c2b14f97ca23393090da126adab4abb06a3d43861dc75e6b995f6c5"
+      "checksum": "03601fe32c2b14f97ca23393090da126adab4abb06a3d43861dc75e6b995f6c5",
+      "icon_key": "9122bd0f8c6081b6950a7cbe6f86b92bf8b8ee5e43a74c8ef55540f338190ae9"
     },
     {
       "name": "VVVVVV.zip",
@@ -1700,7 +1842,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "f04265d943ad4128de430fa7bce6ec737b447904075afeebb11b709365846d3c"
+      "checksum": "f04265d943ad4128de430fa7bce6ec737b447904075afeebb11b709365846d3c",
+      "icon_key": "d810c83275c0b954a4497c08b67b88707630ad370903257615412931dbbb2abf"
     },
     {
       "name": "websrv-ps5.elf",
@@ -1712,7 +1855,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "54730c867c6e1148536fdcb370e63a7762d989ea87b62488ad4caff64d43f263"
+      "checksum": "54730c867c6e1148536fdcb370e63a7762d989ea87b62488ad4caff64d43f263",
+      "icon_key": "8665695d65b7f520218013be6e91eadfab165ecea91bd1c348225c3e439268c5"
     },
     {
       "name": "Wolf4SDL.zip",
@@ -1724,7 +1868,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "eefbaff066d6b8b230fb61085a28deb3ee6e6fdee46aba198a5572e5be699b68"
+      "checksum": "eefbaff066d6b8b230fb61085a28deb3ee6e6fdee46aba198a5572e5be699b68",
+      "icon_key": "75004a1f467e8e661cd9dbab471fcdea7a4739b419bc2652e3eb62adb5609c92"
     },
     {
       "name": "YQuake2.zip",
@@ -1736,7 +1881,8 @@
       "last_update": "2026-08-02",
       "version": "v0.34",
       "category": "Uncategorized",
-      "checksum": "b628f6e489aae2e6cd788fd641826521fb0c9aa9649f88cbb43818707990bb14"
+      "checksum": "b628f6e489aae2e6cd788fd641826521fb0c9aa9649f88cbb43818707990bb14",
+      "icon_key": "96d2e9c814f205857336ab3f6cfcf2758d549ca4bfd829ac455a9d65b035d076"
     },
     {
       "name": "SHA256SUMS.txt",
@@ -1748,7 +1894,8 @@
       "last_update": "2026-09-30",
       "version": "v1.6.0",
       "category": "Uncategorized",
-      "checksum": "ec3153cb00518c78f6858f75f397cea96cb3c5d35501a204e8af45bceb48a228"
+      "checksum": "ec3153cb00518c78f6858f75f397cea96cb3c5d35501a204e8af45bceb48a228",
+      "icon_key": "af0fd00bae545890ffaad94d1a4631d99f764c5894771c040341c3a57c8ac40c"
     },
     {
       "name": "zftpd-linux-ftp.tar.gz",
@@ -1760,7 +1907,8 @@
       "last_update": "2026-09-30",
       "version": "v1.6.0",
       "category": "Uncategorized",
-      "checksum": "46fb02e024b73420e4f8ba9eb7e7458931812faf655c4183814f10b11011aa35"
+      "checksum": "46fb02e024b73420e4f8ba9eb7e7458931812faf655c4183814f10b11011aa35",
+      "icon_key": "f888143d225108bc021aefd8171450c8ee06c327abb6f7dba4aacfcdb25908a8"
     },
     {
       "name": "zftpd-macos-arm64-v1.6.0.app.tar.gz",
@@ -1772,7 +1920,8 @@
       "last_update": "2026-09-30",
       "version": "v1.6.0",
       "category": "Uncategorized",
-      "checksum": "8a655e9114d153845dee6a00b6237bd009aa30874549fba2a5632ce07ac569cd"
+      "checksum": "8a655e9114d153845dee6a00b6237bd009aa30874549fba2a5632ce07ac569cd",
+      "icon_key": "d32c7af4886b03abed0c5b5c0688f435c23aa288c4c12ebbc0688eecf8c537dc"
     },
     {
       "name": "zftpd-macos-arm64-zhttp-v1.6.0.app.tar.gz",
@@ -1784,7 +1933,8 @@
       "last_update": "2026-09-30",
       "version": "v1.6.0",
       "category": "Uncategorized",
-      "checksum": "135273a4084c1f1f1661a45f7ddd2c5ab937ae874f29834a095c2f5b31fe1659"
+      "checksum": "135273a4084c1f1f1661a45f7ddd2c5ab937ae874f29834a095c2f5b31fe1659",
+      "icon_key": "e5e887688b4cc263f6baa7c988b44c23a70ecdbd84aa80b860490554e834eeed"
     },
     {
       "name": "zftpd-ps4-v1.6.0.bin",
@@ -1796,7 +1946,8 @@
       "last_update": "2026-09-30",
       "version": "v1.6.0",
       "category": "Uncategorized",
-      "checksum": "633d8a2cd5a060641236e211777bd8b1fbe5816e74eb1c3c3dd92f892492115d"
+      "checksum": "633d8a2cd5a060641236e211777bd8b1fbe5816e74eb1c3c3dd92f892492115d",
+      "icon_key": "800e55be65a02091ad307e44dcc616edba355e4f9ff9ea96042ffa13c8e15263"
     },
     {
       "name": "zftpd-ps4-v1.6.0.elf",
@@ -1808,7 +1959,8 @@
       "last_update": "2026-09-30",
       "version": "v1.6.0",
       "category": "Uncategorized",
-      "checksum": "9e27630987522cca0fa6bfda8d69dfccdc5fc0f89fc2ef9ed30bb79a36966947"
+      "checksum": "9e27630987522cca0fa6bfda8d69dfccdc5fc0f89fc2ef9ed30bb79a36966947",
+      "icon_key": "905cb530f16331938314881d3052d03baa318141a1e6f03e85439f0c33ec3ac6"
     },
     {
       "name": "zftpd-ps4-zhttp-v1.6.0.bin",
@@ -1820,7 +1972,8 @@
       "last_update": "2026-09-30",
       "version": "v1.6.0",
       "category": "Uncategorized",
-      "checksum": "3a1845d4b4e6d24af176cb3015da1ef58f4f3ff9346934add8d7fce74efde8b4"
+      "checksum": "3a1845d4b4e6d24af176cb3015da1ef58f4f3ff9346934add8d7fce74efde8b4",
+      "icon_key": "800e55be65a02091ad307e44dcc616edba355e4f9ff9ea96042ffa13c8e15263"
     },
     {
       "name": "zftpd-ps4-zhttp-v1.6.0.elf",
@@ -1832,7 +1985,8 @@
       "last_update": "2026-09-30",
       "version": "v1.6.0",
       "category": "Uncategorized",
-      "checksum": "f772a101c0aafd3a6c5a86a4df183fab3220a6c801c316d81dae86e5f3a3ce14"
+      "checksum": "f772a101c0aafd3a6c5a86a4df183fab3220a6c801c316d81dae86e5f3a3ce14",
+      "icon_key": "905cb530f16331938314881d3052d03baa318141a1e6f03e85439f0c33ec3ac6"
     },
     {
       "name": "zftpd-ps5-v1.6.0.bin",
@@ -1844,7 +1998,8 @@
       "last_update": "2026-09-30",
       "version": "v1.6.0",
       "category": "Uncategorized",
-      "checksum": "8696fb9fc05106ba4e18e3b64c2c294952cc92487ca94614f1d6b053134545bf"
+      "checksum": "8696fb9fc05106ba4e18e3b64c2c294952cc92487ca94614f1d6b053134545bf",
+      "icon_key": "acbc3f07172cf64078ebb548cc9032478521894f16514734aaa0539ebdc5c203"
     },
     {
       "name": "zftpd-ps5-v1.6.0.elf",
@@ -1856,7 +2011,8 @@
       "last_update": "2026-09-30",
       "version": "v1.6.0",
       "category": "Uncategorized",
-      "checksum": "39ed57bef579282418f822da2e58ea5d56acfa5aa4cd38816744b1f610bfa14d"
+      "checksum": "39ed57bef579282418f822da2e58ea5d56acfa5aa4cd38816744b1f610bfa14d",
+      "icon_key": "905cb530f16331938314881d3052d03baa318141a1e6f03e85439f0c33ec3ac6"
     },
     {
       "name": "zftpd-ps5-zhttp-v1.6.0.bin",
@@ -1868,7 +2024,8 @@
       "last_update": "2026-09-30",
       "version": "v1.6.0",
       "category": "Uncategorized",
-      "checksum": "a74b0caa26c182534d7faa3279b1e58326ac5225c31dff0bbeb776d7d70ca16c"
+      "checksum": "a74b0caa26c182534d7faa3279b1e58326ac5225c31dff0bbeb776d7d70ca16c",
+      "icon_key": "7850f1cc17de8d0fdab35d1f9b4a6a60f8c7af9146450fb267eb4002aad2209d"
     },
     {
       "name": "zftpd-ps5-zhttp-v1.6.0.elf",
@@ -1880,7 +2037,8 @@
       "last_update": "2026-09-30",
       "version": "v1.6.0",
       "category": "Uncategorized",
-      "checksum": "fc59b60aab2dce9a8bae385c106bfa174048d765c826101355f1f010a789b497"
+      "checksum": "fc59b60aab2dce9a8bae385c106bfa174048d765c826101355f1f010a789b497",
+      "icon_key": "7850f1cc17de8d0fdab35d1f9b4a6a60f8c7af9146450fb267eb4002aad2209d"
     }
   ]
 }
