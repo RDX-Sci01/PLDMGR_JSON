@@ -48,13 +48,28 @@ One entry per line. Blank lines and lines starting with '#' are ignored.
    no separate upstream to point to), and `last_update` is omitted
    since no release metadata is available for a bare URL.
 
+Icons: every payload gets an auto-generated placeholder icon (a 128x128
+rounded gradient square with 1-2 letter initials, same visual style as
+itsPLK's icons — see test_icons.json), written to icons.json as
+{"icons": {<icon_key>: "data:image/svg+xml;base64,..."}}. `icon_key` is
+the SHA-256 of the generated SVG's bytes, so it's stable across runs as
+long as the name/initials/color don't change. payloads.json gets a
+top-level "icons_url": "icons.json" and each entry gets "icon_key".
+This is our own icon_key scheme — it only has to resolve correctly
+inside our own icons.json, it doesn't need to match itsPLK's internal
+hashing. A `name=...` override in links.txt changes the initials; there
+is currently no way to supply a real custom icon image instead of the
+generated placeholder (see note at the bottom of this file).
+
 REPO_NAME overrides the top-level catalog name via env var.
 GITHUB_TOKEN, if set, authenticates GitHub API calls.
 """
 
+import base64
 import hashlib
 import json
 import os
+import re
 import sys
 import urllib.error
 import urllib.parse
@@ -63,10 +78,11 @@ from datetime import datetime, timezone
 
 LINKS_FILE = "links.txt"
 OUTPUT_FILE = "payloads.json"
+ICONS_FILE = "icons.json"
 REPO_NAME = os.environ.get("REPO_NAME", "Custom Payload Repository")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 DEFAULT_CATEGORY = "Uncategorized"
-USER_AGENT = "payload-catalog-generator/3.0"
+USER_AGENT = "payload-catalog-generator/4.0"
 CHUNK_SIZE = 1024 * 1024  # 1 MiB
 GITHUB_API = "https://api.github.com"
 
@@ -79,6 +95,54 @@ OVERRIDE_KEYS = (
     "asset_pattern",
     "extract_file",
 )
+
+# Same gradient palette style as itsPLK's placeholder icons.
+ICON_PALETTE = [
+    ("#3b82f6", "#1d4ed8"),  # blue
+    ("#10b981", "#047857"),  # green
+    ("#8b5cf6", "#6d28d9"),  # purple
+    ("#ef4444", "#b91c1c"),  # red
+    ("#f59e0b", "#b45309"),  # amber
+    ("#ec4899", "#be185d"),  # pink
+]
+
+ICON_SVG_TEMPLATE = (
+    "<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128'>"
+    "<defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>"
+    "<stop offset='0' stop-color='{c1}'/><stop offset='1' stop-color='{c2}'/>"
+    "</linearGradient></defs>"
+    "<rect width='128' height='128' rx='24' fill='url(#g)'/>"
+    "<text x='64' y='82' font-family='Arial,sans-serif' font-size='44' "
+    "font-weight='bold' fill='#fff' text-anchor='middle'>{initials}</text>"
+    "</svg>"
+)
+
+
+def initials_for(name: str) -> str:
+    """Pick 1-2 letter initials from a payload name, e.g. 'ftpsrv' -> 'F',
+    'ps5-web-file-manager' -> 'PW', 'onionHEN' -> 'OH'."""
+    words = [w for w in re.split(r"[-_\s]+", name) if w]
+    if len(words) >= 2:
+        return (words[0][0] + words[1][0]).upper()
+
+    word = words[0] if words else name
+    camel_parts = re.findall(r"[A-Z]?[a-z0-9]+|[A-Z]+(?![a-z])", word)
+    if len(camel_parts) >= 2:
+        return (camel_parts[0][0] + camel_parts[1][0]).upper()
+    if len(word) >= 2:
+        return word[:2].upper()
+    return (word[:1] or "?").upper()
+
+
+def generate_icon(name: str) -> tuple:
+    """Return (icon_key, data_uri) for an auto-generated placeholder icon."""
+    initials = initials_for(name)
+    idx = int(hashlib.sha256(name.encode("utf-8")).hexdigest(), 16) % len(ICON_PALETTE)
+    c1, c2 = ICON_PALETTE[idx]
+    svg = ICON_SVG_TEMPLATE.format(c1=c1, c2=c2, initials=initials)
+    icon_key = hashlib.sha256(svg.encode("utf-8")).hexdigest()
+    data_uri = "data:image/svg+xml;base64," + base64.b64encode(svg.encode("utf-8")).decode("ascii")
+    return icon_key, data_uri
 
 
 def gh_request(path: str) -> dict:
@@ -273,8 +337,15 @@ def main() -> int:
         print("error: no payload entries could be resolved", file=sys.stderr)
         return 1
 
+    icons = {}
+    for entry in payloads:
+        icon_key, data_uri = generate_icon(entry["name"])
+        entry["icon_key"] = icon_key
+        icons[icon_key] = data_uri
+
     catalog = {
         "name": REPO_NAME,
+        "icons_url": ICONS_FILE,
         "payloads": payloads,
     }
 
@@ -282,7 +353,12 @@ def main() -> int:
         json.dump(catalog, f, indent=2, ensure_ascii=False)
         f.write("\n")
 
+    with open(ICONS_FILE, "w", encoding="utf-8") as f:
+        json.dump({"icons": icons}, f, indent=2, ensure_ascii=False)
+        f.write("\n")
+
     print(f"wrote {len(payloads)} payload(s) to {OUTPUT_FILE}")
+    print(f"wrote {len(icons)} icon(s) to {ICONS_FILE}")
     return 0
 
 
