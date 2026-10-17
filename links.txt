@@ -1,5 +1,6 @@
 # PS5 Payload Manager - Payload Sources
 # --- GitHub repositories ---
+github:notmaj0r/ProsperoMgr
 github:quer3q/ps5-dump-forge
 github:theghostonline/PS5-LZ4-Compression
 github:VenezuelanBiggie24/Machete-PS5-Backup-Manager
@@ -19,9 +20,7 @@ github:BestPig/BackPork
 github:drakmor/ftpsrv
 github:drakmor/nanoDNS
 github:drakmor/ShadowMountPlus
-github:EchoStretch/kstuff
 github:EchoStretch/kstuff-lite
-github:EchoStretch/kstuff-toggle
 github:EchoStretch/ps5-app-dumper
 github:etaHEN/etaHEN
 github:ItsBlurf/BFpilot
