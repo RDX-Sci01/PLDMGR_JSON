@@ -3,6 +3,19 @@
   "icons_url": "icons.json",
   "payloads": [
     {
+      "name": "ProsperoMgr",
+      "filename": "ProsperoMgr.elf",
+      "url": "https://github.com/notmaj0r/ProsperoMgr/releases/download/v1.1/ProsperoMgr.elf",
+      "source": "https://github.com/notmaj0r/ProsperoMgr/releases",
+      "source_direct": "https://github.com/notmaj0r/ProsperoMgr/releases/download/v1.1/ProsperoMgr.elf",
+      "description": "v1.1",
+      "last_update": "2026-09-28",
+      "version": "v1.1",
+      "category": "Uncategorized",
+      "checksum": "e7a6bb544adb2fb2a61aa9cc83b0ad15f70b32d7511a3de0f1fb88812f11983c",
+      "icon_key": "b460daeea358f30a8b54f50efae741fbddc66edd759f339c95feafb528062d7c"
+    },
+    {
       "name": "ps5-dump-forge-0.2.0-linux-arm64.tar.gz",
       "filename": "ps5-dump-forge-0.2.0-linux-arm64.tar.gz",
       "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.2.0/ps5-dump-forge-0.2.0-linux-arm64.tar.gz",
@@ -924,19 +937,6 @@
       "icon_key": "d766fbeb77ce065552959a9191e2c87148f286af467b13a310f5a46aeaddafd8"
     },
     {
-      "name": "kstuff",
-      "filename": "kstuff.elf",
-      "url": "https://github.com/EchoStretch/kstuff/releases/download/v1.6.7/kstuff.elf",
-      "source": "https://github.com/EchoStretch/kstuff/releases",
-      "source_direct": "https://github.com/EchoStretch/kstuff/releases/download/v1.6.7/kstuff.elf",
-      "description": "Kstuff 1.6.7",
-      "last_update": "2026-01-04",
-      "version": "v1.6.7",
-      "category": "Uncategorized",
-      "checksum": "f1c1f4b2b6395644af04cbe9828aba58586acf7aacb9e01113cac92ce16e3569",
-      "icon_key": "f2ec005352d2a6d8f05e197551e222eebf3e420fa8d9b3939af821849a69a346"
-    },
-    {
       "name": "kstuff-lite",
       "filename": "kstuff.elf",
       "url": "https://github.com/EchoStretch/kstuff-lite/releases/download/v1.11/kstuff.elf",
@@ -947,19 +947,6 @@
       "version": "v1.11",
       "category": "Uncategorized",
       "checksum": "ab9a6cb4d3b1daf139d4d646e402b1cf569071acd64599c936d7a3a6164dc779",
-      "icon_key": "f2ec005352d2a6d8f05e197551e222eebf3e420fa8d9b3939af821849a69a346"
-    },
-    {
-      "name": "kstuff-toggle",
-      "filename": "kstuff-toggle.zip",
-      "url": "https://github.com/EchoStretch/kstuff-toggle/releases/download/0.6/kstuff-toggle.zip",
-      "source": "https://github.com/EchoStretch/kstuff-toggle/releases",
-      "source_direct": "https://github.com/EchoStretch/kstuff-toggle/releases/download/0.6/kstuff-toggle.zip",
-      "description": "Kstuff Toggle 0.6 Beta",
-      "last_update": "2026-05-07",
-      "version": "0.6",
-      "category": "Uncategorized",
-      "checksum": "ec6b227b233810e2e9cea2895820b74b5185732d2c2153f3508a03bc68a7f14d",
       "icon_key": "f2ec005352d2a6d8f05e197551e222eebf3e420fa8d9b3939af821849a69a346"
     },
     {
