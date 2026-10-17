@@ -1,5 +1,7 @@
 # PS5 Payload Manager - Payload Sources
 # --- GitHub repositories ---
+github:stupiditytries/librespot-ps5
+github:Herbrax/Chiral-FTP-PS5
 github:blackbearreloaded/ProsperoStore
 github:notmaj0r/ProsperoMgr
 github:quer3q/ps5-dump-forge
