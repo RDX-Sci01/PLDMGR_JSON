@@ -128,7 +128,31 @@ MIME_SIGNATURES = (
     (b"<svg", "image/svg+xml"),
 )
 
-_icon_cache = {}  # source URL -> (icon_key, data_uri), avoids refetching shared avatars
+# PS5 WebKit hard limit on data URI length in icons.json
+ICON_MAX_CHARS = 12288
+
+# Gradient palette for fallback SVG icons
+ICON_PALETTE = [
+    ("#3b82f6", "#1d4ed8"),  # blue
+    ("#10b981", "#047857"),  # green
+    ("#8b5cf6", "#6d28d9"),  # purple
+    ("#ef4444", "#b91c1c"),  # red
+    ("#f59e0b", "#b45309"),  # amber
+    ("#ec4899", "#be185d"),  # pink
+]
+
+ICON_SVG_TEMPLATE = (
+    "<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128'>"
+    "<defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>"
+    "<stop offset='0' stop-color='{c1}'/><stop offset='1' stop-color='{c2}'/>"
+    "</linearGradient></defs>"
+    "<rect width='128' height='128' rx='24' fill='url(#g)'/>"
+    "<text x='64' y='82' font-family='Arial,sans-serif' font-size='44' "
+    "font-weight='bold' fill='#fff' text-anchor='middle'>{initials}</text>"
+    "</svg>"
+)
+
+_icon_cache = {}  # source URL -> (icon_key, data_uri)
 
 
 def sniff_mime(data: bytes) -> str:
@@ -136,6 +160,28 @@ def sniff_mime(data: bytes) -> str:
         if data.startswith(sig):
             return mime
     return "application/octet-stream"
+
+
+def initials_for(name: str) -> str:
+    words = [w for w in re.split(r"[-_\s]+", name) if w]
+    if len(words) >= 2:
+        return (words[0][0] + words[1][0]).upper()
+    word = words[0] if words else name
+    camel = re.findall(r"[A-Z]?[a-z0-9]+|[A-Z]+(?![a-z])", word)
+    if len(camel) >= 2:
+        return (camel[0][0] + camel[1][0]).upper()
+    return (word[:2] if len(word) >= 2 else word[:1] or "?").upper()
+
+
+def make_svg_icon(name: str) -> tuple:
+    """Generate a small gradient+initials SVG. Always under ICON_MAX_CHARS."""
+    idx = int(hashlib.sha256(name.encode()).hexdigest(), 16) % len(ICON_PALETTE)
+    c1, c2 = ICON_PALETTE[idx]
+    svg = ICON_SVG_TEMPLATE.format(c1=c1, c2=c2, initials=initials_for(name))
+    svg_bytes = svg.encode("utf-8")
+    icon_key = hashlib.sha256(svg_bytes).hexdigest()
+    data_uri = "data:image/svg+xml;base64," + base64.b64encode(svg_bytes).decode("ascii")
+    return icon_key, data_uri
 
 
 def url_exists(url: str) -> bool:
@@ -159,7 +205,8 @@ def find_repo_icon_url(owner: str, repo: str) -> str:
 
 def fetch_icon(icon_url: str):
     """Download icon_url and return (icon_key, data_uri), or None on failure.
-    Cached by icon_url since many repos share one owner avatar."""
+    Returns None if the resulting data URI would exceed ICON_MAX_CHARS —
+    caller should fall back to make_svg_icon(). Cached by URL."""
     if icon_url in _icon_cache:
         return _icon_cache[icon_url]
 
@@ -172,27 +219,42 @@ def fetch_icon(icon_url: str):
         return None
 
     mime = sniff_mime(data)
-    icon_key = hashlib.sha256(data).hexdigest()
     data_uri = f"data:{mime};base64," + base64.b64encode(data).decode("ascii")
+
+    if len(data_uri) > ICON_MAX_CHARS:
+        # Too large for PS5 WebKit — caller will use SVG fallback instead
+        _icon_cache[icon_url] = None
+        return None
+
+    icon_key = hashlib.sha256(data).hexdigest()
     result = (icon_key, data_uri)
     _icon_cache[icon_url] = result
     return result
 
 
 def icon_for_entry(entry: dict, fields: dict, icons: dict) -> None:
-    """Attach icon_key to entry and record it in icons, if an icon can be found."""
+    """Attach icon_key to entry and populate icons dict.
+    1. Try a real fetched icon (repo asset path or GitHub avatar).
+    2. If fetch fails or result exceeds 12,288 chars, fall back to a
+       small generated SVG — always fits, no external dependencies."""
+    name = entry["name"]
     icon_url = fields.get("icon")
+
     if not icon_url:
         source = entry.get("source", "")
         match = re.search(r"https?://github\.com/([^/]+)/([^/]+)", source)
-        if not match:
-            return
-        owner, repo = match.group(1), match.group(2).rstrip("/")
-        icon_url = find_repo_icon_url(owner, repo)
+        if match:
+            owner, repo = match.group(1), match.group(2).rstrip("/")
+            icon_url = find_repo_icon_url(owner, repo)
 
-    result = fetch_icon(icon_url)
-    if not result:
-        return
+    result = fetch_icon(icon_url) if icon_url else None
+
+    if result is None:
+        # Fall back to generated SVG placeholder
+        result = make_svg_icon(name)
+        if icon_url:
+            print(f"  icon too large or unavailable, using SVG placeholder for {name!r}")
+
     icon_key, data_uri = result
     entry["icon_key"] = icon_key
     icons[icon_key] = data_uri
