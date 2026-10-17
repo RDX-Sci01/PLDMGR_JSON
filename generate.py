@@ -48,18 +48,22 @@ One entry per line. Blank lines and lines starting with '#' are ignored.
    no separate upstream to point to), and `last_update` is omitted
    since no release metadata is available for a bare URL.
 
-Icons: every payload gets an auto-generated placeholder icon (a 128x128
-rounded gradient square with 1-2 letter initials, same visual style as
-itsPLK's icons — see test_icons.json), written to icons.json as
-{"icons": {<icon_key>: "data:image/svg+xml;base64,..."}}. `icon_key` is
-the SHA-256 of the generated SVG's bytes, so it's stable across runs as
-long as the name/initials/color don't change. payloads.json gets a
-top-level "icons_url": "icons.json" and each entry gets "icon_key".
-This is our own icon_key scheme — it only has to resolve correctly
-inside our own icons.json, it doesn't need to match itsPLK's internal
-hashing. A `name=...` override in links.txt changes the initials; there
-is currently no way to supply a real custom icon image instead of the
-generated placeholder (see note at the bottom of this file).
+Icons: mirrors the real algorithm found in itsPLK/ps5-payloads-mirror's
+set_icon.py (get_suggested_icon). For each payload with a GitHub
+`source`, we check a handful of common asset paths on that repo's main
+branch (assets/icon0.png, icon0.png, assets/icon.png, icon.png,
+assets/logo.png, logo.png) via raw.githubusercontent.com; the first one
+that exists is used. If none exist, we fall back to the repo owner's
+GitHub avatar (https://github.com/<owner>.png) — this matches
+itsPLK's data, where unrelated repos under the same GitHub org end up
+sharing one icon_key because they share one avatar image. `icon_key` is
+the SHA-256 of the downloaded image's raw bytes, so identical images
+naturally dedupe to the same key, same as the upstream data shows.
+Entries from a bare direct URL (no GitHub `source` to search) get no
+icon unless manually overridden with `icon=<url>` in links.txt.
+icons.json ends up as {"icons": {<icon_key>: "data:image/<type>;base64,..."}},
+referenced from payloads.json via top-level "icons_url" and per-entry
+"icon_key".
 
 REPO_NAME overrides the top-level catalog name via env var.
 GITHUB_TOKEN, if set, authenticates GitHub API calls.
@@ -82,7 +86,7 @@ ICONS_FILE = "icons.json"
 REPO_NAME = os.environ.get("REPO_NAME", "Custom Payload Repository")
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 DEFAULT_CATEGORY = "Uncategorized"
-USER_AGENT = "payload-catalog-generator/4.0"
+USER_AGENT = "payload-catalog-generator/5.0"
 CHUNK_SIZE = 1024 * 1024  # 1 MiB
 GITHUB_API = "https://api.github.com"
 
@@ -94,55 +98,95 @@ OVERRIDE_KEYS = (
     "version",
     "asset_pattern",
     "extract_file",
+    "icon",
 )
 
-# Same gradient palette style as itsPLK's placeholder icons.
-ICON_PALETTE = [
-    ("#3b82f6", "#1d4ed8"),  # blue
-    ("#10b981", "#047857"),  # green
-    ("#8b5cf6", "#6d28d9"),  # purple
-    ("#ef4444", "#b91c1c"),  # red
-    ("#f59e0b", "#b45309"),  # amber
-    ("#ec4899", "#be185d"),  # pink
-]
-
-ICON_SVG_TEMPLATE = (
-    "<svg xmlns='http://www.w3.org/2000/svg' width='128' height='128'>"
-    "<defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>"
-    "<stop offset='0' stop-color='{c1}'/><stop offset='1' stop-color='{c2}'/>"
-    "</linearGradient></defs>"
-    "<rect width='128' height='128' rx='24' fill='url(#g)'/>"
-    "<text x='64' y='82' font-family='Arial,sans-serif' font-size='44' "
-    "font-weight='bold' fill='#fff' text-anchor='middle'>{initials}</text>"
-    "</svg>"
+ICON_ASSET_PATHS = (
+    "assets/icon0.png",
+    "icon0.png",
+    "assets/icon.png",
+    "icon.png",
+    "assets/logo.png",
+    "logo.png",
 )
 
+MIME_SIGNATURES = (
+    (b"\x89PNG\r\n\x1a\n", "image/png"),
+    (b"\xff\xd8\xff", "image/jpeg"),
+    (b"GIF87a", "image/gif"),
+    (b"GIF89a", "image/gif"),
+    (b"<?xml", "image/svg+xml"),
+    (b"<svg", "image/svg+xml"),
+)
 
-def initials_for(name: str) -> str:
-    """Pick 1-2 letter initials from a payload name, e.g. 'ftpsrv' -> 'F',
-    'ps5-web-file-manager' -> 'PW', 'onionHEN' -> 'OH'."""
-    words = [w for w in re.split(r"[-_\s]+", name) if w]
-    if len(words) >= 2:
-        return (words[0][0] + words[1][0]).upper()
-
-    word = words[0] if words else name
-    camel_parts = re.findall(r"[A-Z]?[a-z0-9]+|[A-Z]+(?![a-z])", word)
-    if len(camel_parts) >= 2:
-        return (camel_parts[0][0] + camel_parts[1][0]).upper()
-    if len(word) >= 2:
-        return word[:2].upper()
-    return (word[:1] or "?").upper()
+_icon_cache = {}  # source URL -> (icon_key, data_uri), avoids refetching shared avatars
 
 
-def generate_icon(name: str) -> tuple:
-    """Return (icon_key, data_uri) for an auto-generated placeholder icon."""
-    initials = initials_for(name)
-    idx = int(hashlib.sha256(name.encode("utf-8")).hexdigest(), 16) % len(ICON_PALETTE)
-    c1, c2 = ICON_PALETTE[idx]
-    svg = ICON_SVG_TEMPLATE.format(c1=c1, c2=c2, initials=initials)
-    icon_key = hashlib.sha256(svg.encode("utf-8")).hexdigest()
-    data_uri = "data:image/svg+xml;base64," + base64.b64encode(svg.encode("utf-8")).decode("ascii")
-    return icon_key, data_uri
+def sniff_mime(data: bytes) -> str:
+    for sig, mime in MIME_SIGNATURES:
+        if data.startswith(sig):
+            return mime
+    return "application/octet-stream"
+
+
+def url_exists(url: str) -> bool:
+    req = urllib.request.Request(url, method="HEAD", headers={"User-Agent": USER_AGENT})
+    try:
+        with urllib.request.urlopen(req, timeout=5) as resp:
+            return resp.status == 200
+    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError):
+        return False
+
+
+def find_repo_icon_url(owner: str, repo: str) -> str:
+    """Check common asset paths on the repo's main branch; fall back to
+    the owner's GitHub avatar. Mirrors set_icon.py's get_suggested_icon()."""
+    for path in ICON_ASSET_PATHS:
+        candidate = f"https://raw.githubusercontent.com/{owner}/{repo}/main/{path}"
+        if url_exists(candidate):
+            return candidate
+    return f"https://github.com/{owner}.png"
+
+
+def fetch_icon(icon_url: str):
+    """Download icon_url and return (icon_key, data_uri), or None on failure.
+    Cached by icon_url since many repos share one owner avatar."""
+    if icon_url in _icon_cache:
+        return _icon_cache[icon_url]
+
+    req = urllib.request.Request(icon_url, headers={"User-Agent": USER_AGENT})
+    try:
+        with urllib.request.urlopen(req, timeout=5) as resp:
+            data = resp.read()
+    except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as exc:
+        print(f"warning: could not fetch icon {icon_url}: {exc}", file=sys.stderr)
+        return None
+
+    mime = sniff_mime(data)
+    icon_key = hashlib.sha256(data).hexdigest()
+    data_uri = f"data:{mime};base64," + base64.b64encode(data).decode("ascii")
+    result = (icon_key, data_uri)
+    _icon_cache[icon_url] = result
+    return result
+
+
+def icon_for_entry(entry: dict, fields: dict, icons: dict) -> None:
+    """Attach icon_key to entry and record it in icons, if an icon can be found."""
+    icon_url = fields.get("icon")
+    if not icon_url:
+        source = entry.get("source", "")
+        match = re.search(r"https?://github\.com/([^/]+)/([^/]+)", source)
+        if not match:
+            return
+        owner, repo = match.group(1), match.group(2).rstrip("/")
+        icon_url = find_repo_icon_url(owner, repo)
+
+    result = fetch_icon(icon_url)
+    if not result:
+        return
+    icon_key, data_uri = result
+    entry["icon_key"] = icon_key
+    icons[icon_key] = data_uri
 
 
 def gh_request(path: str) -> dict:
@@ -325,23 +369,26 @@ def main() -> int:
         return 1
 
     payloads = []
+    entry_fields = []  # parallel list: originating links.txt fields for each entry
     for fields in raw_entries:
         source = fields["source_entry"]
         if source.startswith("github:"):
-            payloads.extend(build_entries_from_github(fields))
+            new_entries = build_entries_from_github(fields)
+            payloads.extend(new_entries)
+            entry_fields.extend([fields] * len(new_entries))
         else:
             print(f"processing {source}")
-            payloads.append(build_entry_from_url(fields))
+            entry = build_entry_from_url(fields)
+            payloads.append(entry)
+            entry_fields.append(fields)
 
     if not payloads:
         print("error: no payload entries could be resolved", file=sys.stderr)
         return 1
 
     icons = {}
-    for entry in payloads:
-        icon_key, data_uri = generate_icon(entry["name"])
-        entry["icon_key"] = icon_key
-        icons[icon_key] = data_uri
+    for entry, fields in zip(payloads, entry_fields):
+        icon_for_entry(entry, fields, icons)
 
     catalog = {
         "name": REPO_NAME,
