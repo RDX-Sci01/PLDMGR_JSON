@@ -13,9 +13,14 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: generate-payload-catalog
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     steps:
       - name: Checkout repository
@@ -31,15 +36,12 @@ jobs:
       - name: Generate payload catalog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          python3 generate.py
+          REPO_NAME: "Custom Payload Repository"
+        run: python3 generate.py
 
       - name: Commit payload catalog
         run: |
-          set -euo pipefail
-
-          if git diff --quiet -- payloads.json; then
+          if [ -z "$(git status --porcelain -- payloads.json)" ]; then
             echo "payloads.json unchanged"
             exit 0
           fi
@@ -49,4 +51,5 @@ jobs:
 
           git add payloads.json
           git commit -m "Update payload catalog"
+          git pull --rebase
           git push
