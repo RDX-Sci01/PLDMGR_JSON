@@ -69,15 +69,15 @@
     },
     {
       "name": "ps5-dump-forge",
-      "filename": "ps5-dump-forge-0.2.0-ps5.elf",
-      "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.2.0/ps5-dump-forge-0.2.0-ps5.elf",
+      "filename": "ps5-dump-forge-0.3.0-ps5.elf",
+      "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.3.0/ps5-dump-forge-0.3.0-ps5.elf",
       "source": "https://github.com/quer3q/ps5-dump-forge/releases",
-      "source_direct": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.2.0/ps5-dump-forge-0.2.0-ps5.elf",
-      "description": "PS5 Dump Forge v0.2.0",
-      "last_update": "2026-10-16",
-      "version": "v0.2.0",
+      "source_direct": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.3.0/ps5-dump-forge-0.3.0-ps5.elf",
+      "description": "PS5 Dump Forge v0.3.0",
+      "last_update": "2026-10-18",
+      "version": "v0.3.0",
       "category": "Uncategorized",
-      "checksum": "2a4294745f1fc81f8e18c4e5258ed32ae61e5362c944cc63bda6413b3fd3b90e",
+      "checksum": "b79cee9e11b31887b346cfd3caf5cc78b388a36a1ae32acc3eb16de9e79a4426",
       "icon_key": "ad79ebaa2a4893da24720d0ed0ba5a1fbb3d4c1afab90c04193a37ee7eae06ec"
     },
     {
