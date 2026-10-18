@@ -1,5 +1,9 @@
 # PS5 Payload Manager - Payload Sources
 # --- GitHub repositories ---
+github:MegaCadeDev/YetAnotherControllerEnabler
+github:diegobarbosaa/OmniPad-PS5
+github:stupiditytries/kabuki-ps5
+github:ZiZc3/LiveShell
 github:stupiditytries/librespot-ps5
 github:Herbrax/Chiral-FTP-PS5
 github:blackbearreloaded/ProsperoStore
