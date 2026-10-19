@@ -3,19 +3,6 @@
   "icons_url": "icons.json",
   "payloads": [
     {
-      "name": "ps5-patchdl",
-      "filename": "patchdl_0.3.1.elf",
-      "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.1/patchdl_0.3.1.elf",
-      "source": "https://github.com/knutwurst/ps5-patchdl/releases",
-      "source_direct": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.1/patchdl_0.3.1.elf",
-      "description": "PatchDL 0.3.1",
-      "last_update": "2026-10-19",
-      "version": "v0.3.1",
-      "category": "Uncategorized",
-      "checksum": "57a2476448253a59f969ab5a665e569c865117b8f404854e559d941217774d8a",
-      "icon_key": "f7106cef58de2cfa2acc8d9ded7f1f47c7ac659d31e32835fb8cd28865327739"
-    },
-    {
       "name": "WelcomeHubActivator",
       "filename": "WelcomeHubActivator-v1.0.0.elf",
       "url": "https://github.com/ghost1372/WelcomeHubActivator/releases/download/v1.0.0/WelcomeHubActivator-v1.0.0.elf",
