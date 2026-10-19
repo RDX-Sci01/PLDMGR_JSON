@@ -353,15 +353,15 @@
     },
     {
       "name": "pldmgr",
-      "filename": "pldmgr_v0.6.1.elf",
-      "url": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.1/pldmgr_v0.6.1.elf",
+      "filename": "pldmgr_v0.6.2.elf",
+      "url": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.2/pldmgr_v0.6.2.elf",
       "source": "https://github.com/itsPLK/pldmgr/releases",
-      "source_direct": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.1/pldmgr_v0.6.1.elf",
-      "description": "v0.6.1",
-      "last_update": "2026-10-14",
-      "version": "v0.6.1",
+      "source_direct": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.2/pldmgr_v0.6.2.elf",
+      "description": "v0.6.2",
+      "last_update": "2026-10-19",
+      "version": "v0.6.2",
       "category": "Uncategorized",
-      "checksum": "5165cbe4c13360828bd0f5d558cdbb9e2d55b0660b1dc7f7a58d3f4ee9e23285",
+      "checksum": "0cd5e0cc89ca4db6586dc1ff6f335caa4e33b50951c0ef86f5d1ea971f34e9c5",
       "icon_key": "694c6b24bac2c86e7a8bf92c26a38f83a6a6b8157d1ae29177f47f3fa5b99448"
     },
     {
