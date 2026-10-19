@@ -3,6 +3,32 @@
   "icons_url": "icons.json",
   "payloads": [
     {
+      "name": "ps5-patchdl",
+      "filename": "patchdl_0.3.1.elf",
+      "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.1/patchdl_0.3.1.elf",
+      "source": "https://github.com/knutwurst/ps5-patchdl/releases",
+      "source_direct": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.1/patchdl_0.3.1.elf",
+      "description": "PatchDL 0.3.1",
+      "last_update": "2026-10-19",
+      "version": "v0.3.1",
+      "category": "Uncategorized",
+      "checksum": "57a2476448253a59f969ab5a665e569c865117b8f404854e559d941217774d8a",
+      "icon_key": "f7106cef58de2cfa2acc8d9ded7f1f47c7ac659d31e32835fb8cd28865327739"
+    },
+    {
+      "name": "WelcomeHubActivator",
+      "filename": "WelcomeHubActivator-v1.0.0.elf",
+      "url": "https://github.com/ghost1372/WelcomeHubActivator/releases/download/v1.0.0/WelcomeHubActivator-v1.0.0.elf",
+      "source": "https://github.com/ghost1372/WelcomeHubActivator/releases",
+      "source_direct": "https://github.com/ghost1372/WelcomeHubActivator/releases/download/v1.0.0/WelcomeHubActivator-v1.0.0.elf",
+      "description": "v1.0.0",
+      "last_update": "2026-10-18",
+      "version": "v1.0.0",
+      "category": "Uncategorized",
+      "checksum": "3a95fae68a011ad99b660bb6782383a17d6bc4f3d7f50332dcfebc0e7f69aecb",
+      "icon_key": "4ad96fdb0a3f15bc6f3edda217d82f721ba885f5510503059dc67ff625ba2a51"
+    },
+    {
       "name": "YetAnotherControllerEnabler",
       "filename": "YetAnotherControllerEnabler.elf",
       "url": "https://github.com/MegaCadeDev/YetAnotherControllerEnabler/releases/download/v0.0.1/YetAnotherControllerEnabler.elf",
@@ -353,15 +379,15 @@
     },
     {
       "name": "pldmgr",
-      "filename": "pldmgr_v0.6.2.elf",
-      "url": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.2/pldmgr_v0.6.2.elf",
+      "filename": "pldmgr_v0.6.3.elf",
+      "url": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.3/pldmgr_v0.6.3.elf",
       "source": "https://github.com/itsPLK/pldmgr/releases",
-      "source_direct": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.2/pldmgr_v0.6.2.elf",
-      "description": "v0.6.2",
+      "source_direct": "https://github.com/itsPLK/ps5-payload-manager/releases/download/v0.6.3/pldmgr_v0.6.3.elf",
+      "description": "v0.6.3",
       "last_update": "2026-10-19",
-      "version": "v0.6.2",
+      "version": "v0.6.3",
       "category": "Uncategorized",
-      "checksum": "0cd5e0cc89ca4db6586dc1ff6f335caa4e33b50951c0ef86f5d1ea971f34e9c5",
+      "checksum": "2a42054fd9725e1d9595ff4add95abc30e5b49446fcdcb96c06775a376a841c4",
       "icon_key": "694c6b24bac2c86e7a8bf92c26a38f83a6a6b8157d1ae29177f47f3fa5b99448"
     },
     {
