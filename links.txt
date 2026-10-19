@@ -1,5 +1,7 @@
 # PS5 Payload Manager - Payload Sources
 # --- GitHub repositories ---
+github:knutwurst/ps5-patchdl
+github:ghost1372/WelcomeHubActivator
 github:MegaCadeDev/YetAnotherControllerEnabler
 github:diegobarbosaa/OmniPad-PS5
 github:stupiditytries/kabuki-ps5
