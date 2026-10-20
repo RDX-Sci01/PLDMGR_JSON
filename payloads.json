@@ -4,15 +4,15 @@
   "payloads": [
     {
       "name": "ps5-patchdl",
-      "filename": "patchdl_0.3.2.elf",
-      "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.2/patchdl_0.3.2.elf",
+      "filename": "patchdl_0.3.3.elf",
+      "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.3/patchdl_0.3.3.elf",
       "source": "https://github.com/knutwurst/ps5-patchdl/releases",
-      "source_direct": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.2/patchdl_0.3.2.elf",
-      "description": "PatchDL 0.3.2",
-      "last_update": "2026-10-19",
-      "version": "v0.3.2",
+      "source_direct": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.3/patchdl_0.3.3.elf",
+      "description": "PatchDL 0.3.3",
+      "last_update": "2026-10-20",
+      "version": "v0.3.3",
       "category": "Uncategorized",
-      "checksum": "e3530af4c9ca0c610be0b5ab9a476c1f4b2ea923bf6df7e060ba746bb169c63b",
+      "checksum": "6aac67ee3e457633fe1f4f2ae17ce3f650a36b6b95c7c15cbeeaaf8de75d11ef",
       "icon_key": "f7106cef58de2cfa2acc8d9ded7f1f47c7ac659d31e32835fb8cd28865327739"
     },
     {
