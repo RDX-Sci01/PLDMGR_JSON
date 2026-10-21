@@ -70,14 +70,14 @@
     {
       "name": "LiveShell",
       "filename": "liveshell.elf",
-      "url": "https://github.com/ZiZc3/LiveShell/releases/download/v1.4.1/liveshell.elf",
+      "url": "https://github.com/ZiZc3/LiveShell/releases/download/v1.5.0/liveshell.elf",
       "source": "https://github.com/ZiZc3/LiveShell/releases",
-      "source_direct": "https://github.com/ZiZc3/LiveShell/releases/download/v1.4.1/liveshell.elf",
-      "description": "LiveShell Engine v1.4.1",
-      "last_update": "2026-10-19",
-      "version": "v1.4.1",
+      "source_direct": "https://github.com/ZiZc3/LiveShell/releases/download/v1.5.0/liveshell.elf",
+      "description": "LiveShell Engine v1.5.0",
+      "last_update": "2026-10-21",
+      "version": "v1.5.0",
       "category": "Uncategorized",
-      "checksum": "712dc1338b4287f8b9462f81dc56f6e15165621d450f03e3cbba99976a2d25c5",
+      "checksum": "944de46641f16969e216381ab385bd9b4827355094219b2fef713ad6a330fb7d",
       "icon_key": "fe5df360b2d0679abb3bdddf269a20d6310b7d78e79332a6ea2397d44a73d2ab"
     },
     {
