@@ -1,5 +1,6 @@
 # PS5 Payload Manager - Payload Sources
 # --- GitHub repositories ---
+github:gasb07/NeoEnabler
 github:knutwurst/ps5-patchdl
 github:ghost1372/WelcomeHubActivator
 github:MegaCadeDev/YetAnotherControllerEnabler
