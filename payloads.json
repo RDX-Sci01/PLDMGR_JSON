@@ -3,6 +3,19 @@
   "icons_url": "icons.json",
   "payloads": [
     {
+      "name": "NeoEnabler",
+      "filename": "neo-manager.elf",
+      "url": "https://github.com/gasb07/NeoEnabler/releases/download/v0.4.1/neo-manager.elf",
+      "source": "https://github.com/gasb07/NeoEnabler/releases",
+      "source_direct": "https://github.com/gasb07/NeoEnabler/releases/download/v0.4.1/neo-manager.elf",
+      "description": "NeoEnabler 0.4.1",
+      "last_update": "2026-10-22",
+      "version": "v0.4.1",
+      "category": "Uncategorized",
+      "checksum": "07402cf701cafba6a50e5922cbb90d860107adb09a37193f4bb81b3e10cd801d",
+      "icon_key": "090a3060c9b0ac2419c5de653ed03a81f10ed773b4d829cb0c10c8798a56f9a6"
+    },
+    {
       "name": "ps5-patchdl",
       "filename": "patchdl_0.3.4.elf",
       "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.4/patchdl_0.3.4.elf",
@@ -104,7 +117,7 @@
       "version": "v0.3.1",
       "category": "Uncategorized",
       "checksum": "cf26b10322ded6dd79a3f09d12fb0eeab5cab21d805773716a4bdb544fc15089",
-      "icon_key": "2ae73e12cb1e9989929920c4e9da0b02b6f6f8f0bd1944ac9ebfbf6b4dca746b"
+      "icon_key": "ad79ebaa2a4893da24720d0ed0ba5a1fbb3d4c1afab90c04193a37ee7eae06ec"
     },
     {
       "name": "PS5-Game-Compressor",
@@ -271,7 +284,7 @@
       "version": "1.16-ng-stable",
       "category": "Uncategorized",
       "checksum": "fba508465a8c892882e88e2834ac2b6c445583b81629257764725528f3f5fd6a",
-      "icon_key": "a4a8e5573943a16449091b02c38312a304f53178563b564725524c479e11ae74"
+      "icon_key": "2ae73e12cb1e9989929920c4e9da0b02b6f6f8f0bd1944ac9ebfbf6b4dca746b"
     },
     {
       "name": "ftpsrv-ps5.elf",
@@ -284,7 +297,7 @@
       "version": "1.16-ng-stable",
       "category": "Uncategorized",
       "checksum": "f19ae469b25453a7a4af4529527521d31f143100f18a2c6839666e7121c8bd32",
-      "icon_key": "0992e6b5fc1f0a72c70d830d8982507ad8c147b3937c344179eb6f8771cee26a"
+      "icon_key": "2ae73e12cb1e9989929920c4e9da0b02b6f6f8f0bd1944ac9ebfbf6b4dca746b"
     },
     {
       "name": "nanodns-ps4.elf",
@@ -297,7 +310,7 @@
       "version": "0.4",
       "category": "Uncategorized",
       "checksum": "aa7e9d94e32ef866e40844146330028329f8a8a529244e2ecc319ff9d8b0f5f9",
-      "icon_key": "2262c77d04917d0c4596c93fc7e62bc92e27e9f39a329b2e7001a82761f0499a"
+      "icon_key": "2ae73e12cb1e9989929920c4e9da0b02b6f6f8f0bd1944ac9ebfbf6b4dca746b"
     },
     {
       "name": "nanodns.elf",
@@ -310,7 +323,7 @@
       "version": "0.4",
       "category": "Uncategorized",
       "checksum": "fcfb7d47c3b295560ea1603dc015f7c4950353ef0faca16428bd425680ef1fc5",
-      "icon_key": "8b745ce99b731cb7322b333c08d186256e009a3a3876b90e967d1691ad3f967b"
+      "icon_key": "2ae73e12cb1e9989929920c4e9da0b02b6f6f8f0bd1944ac9ebfbf6b4dca746b"
     },
     {
       "name": "ShadowMountPlus",
@@ -323,7 +336,7 @@
       "version": "1.7beta7",
       "category": "Uncategorized",
       "checksum": "a8f9d7f76e8749912508ade0cd5c78076b5bbf1271813c78c80c3d3d9d4777ee",
-      "icon_key": "e117a0e0d4e010775088319dac20c69ef79d1371643313688bd79b7e59995e3d"
+      "icon_key": "2ae73e12cb1e9989929920c4e9da0b02b6f6f8f0bd1944ac9ebfbf6b4dca746b"
     },
     {
       "name": "kstuff-lite",
