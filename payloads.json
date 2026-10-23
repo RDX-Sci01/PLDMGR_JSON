@@ -30,15 +30,15 @@
     },
     {
       "name": "WelcomeHubActivator",
-      "filename": "WelcomeHubActivator-v1.1.0.elf",
-      "url": "https://github.com/ghost1372/WelcomeHubActivator/releases/download/v1.1.0/WelcomeHubActivator-v1.1.0.elf",
+      "filename": "WelcomeHubActivator-v1.2.0.elf",
+      "url": "https://github.com/ghost1372/WelcomeHubActivator/releases/download/v1.2.0/WelcomeHubActivator-v1.2.0.elf",
       "source": "https://github.com/ghost1372/WelcomeHubActivator/releases",
-      "source_direct": "https://github.com/ghost1372/WelcomeHubActivator/releases/download/v1.1.0/WelcomeHubActivator-v1.1.0.elf",
-      "description": "v1.1.0",
+      "source_direct": "https://github.com/ghost1372/WelcomeHubActivator/releases/download/v1.2.0/WelcomeHubActivator-v1.2.0.elf",
+      "description": "v1.2.0",
       "last_update": "2026-10-23",
-      "version": "v1.1.0",
+      "version": "v1.2.0",
       "category": "Uncategorized",
-      "checksum": "a04c5a1f52442609484097d67ed3ed9fa3907dccb187a1cfbe14a62a2455c7dc",
+      "checksum": "f989cc412ef782a01f394fe80cf8fc237970884ba90ce4fe4baac165c0b5a2a6",
       "icon_key": "4ad96fdb0a3f15bc6f3edda217d82f721ba885f5510503059dc67ff625ba2a51"
     },
     {
