@@ -5,14 +5,14 @@
     {
       "name": "NeoEnabler",
       "filename": "neo-manager.elf",
-      "url": "https://github.com/gasb07/NeoEnabler/releases/download/v0.4.1/neo-manager.elf",
+      "url": "https://github.com/gasb07/NeoEnabler/releases/download/v0.5.0/neo-manager.elf",
       "source": "https://github.com/gasb07/NeoEnabler/releases",
-      "source_direct": "https://github.com/gasb07/NeoEnabler/releases/download/v0.4.1/neo-manager.elf",
-      "description": "NeoEnabler 0.4.1",
-      "last_update": "2026-10-22",
-      "version": "v0.4.1",
+      "source_direct": "https://github.com/gasb07/NeoEnabler/releases/download/v0.5.0/neo-manager.elf",
+      "description": "NeoEnabler 0.5.0",
+      "last_update": "2026-10-23",
+      "version": "v0.5.0",
       "category": "Uncategorized",
-      "checksum": "07402cf701cafba6a50e5922cbb90d860107adb09a37193f4bb81b3e10cd801d",
+      "checksum": "d3464c5deb8dac7c2b55f51baed244d0084a2c76d53b191ac3d42b6c4baf13d3",
       "icon_key": "090a3060c9b0ac2419c5de653ed03a81f10ed773b4d829cb0c10c8798a56f9a6"
     },
     {
