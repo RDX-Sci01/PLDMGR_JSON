@@ -158,19 +158,6 @@
       "icon_key": "e826da23aba8785f751289babd28c8636bc4220076ea2cb1618bd5f274fcb3ac"
     },
     {
-      "name": "pegasus-dl",
-      "filename": "pegasus_dl.elf",
-      "url": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.11.0/pegasus_dl.elf",
-      "source": "https://github.com/pegasus-ps5/pegasus-dl/releases",
-      "source_direct": "https://github.com/pegasus-ps5/pegasus-dl/releases/download/v1.11.0/pegasus_dl.elf",
-      "description": "Pegasus DL 1.11.0",
-      "last_update": "2026-10-09",
-      "version": "v1.11.0",
-      "category": "Uncategorized",
-      "checksum": "32b69c2089bb545abfabd04d5827444698f9c4f1bc4915d72247cb781e8c23d9",
-      "icon_key": "711695e44f080fc191e84ff476615a228477de5273d160a44073eceea4999494"
-    },
-    {
       "name": "PoorDS4-status.elf",
       "filename": "PoorDS4-status.elf",
       "url": "https://github.com/ItsBlurf/PoorDS4/releases/download/v0.2.0/PoorDS4-status.elf",
@@ -496,15 +483,15 @@
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-7.5.0.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.5.0/ps5upload-7.5.0.elf",
+      "filename": "ps5upload-7.5.1.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.5.1/ps5upload-7.5.1.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.5.0/ps5upload-7.5.0.elf",
-      "description": "v7.5.0",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.5.1/ps5upload-7.5.1.elf",
+      "description": "v7.5.1",
       "last_update": "2026-10-24",
-      "version": "v7.5.0",
+      "version": "v7.5.1",
       "category": "Uncategorized",
-      "checksum": "57f4bfea3233d4e0094a298b89b165048ceef875937d8fbe9fb0f0572d163d8c",
+      "checksum": "021c03c15d1b077558f8966ca46f38636f1934c084b930545098167e11abbc7b",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
@@ -530,7 +517,7 @@
       "version": "v0.27",
       "category": "Uncategorized",
       "checksum": "82f6227610172c98bad6efe68219fc93a10027035991f47eb4b75532d023407d",
-      "icon_key": "beb1df9122ceed770c86b76620c7f5fe8d72f3a0a35aff92817dcf631ab8d041"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "ftpsrv-ps4.elf",
@@ -543,7 +530,7 @@
       "version": "v0.21.1",
       "category": "Uncategorized",
       "checksum": "5f00e2df7fa8ab7daa084343f38394e6672cd389e03fc8598a54d7d9e1d58d16",
-      "icon_key": "beb1df9122ceed770c86b76620c7f5fe8d72f3a0a35aff92817dcf631ab8d041"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "ftpsrv-ps5-install.elf",
@@ -556,7 +543,7 @@
       "version": "v0.21.1",
       "category": "Uncategorized",
       "checksum": "0ccfe0097081be0514aabef34390a0f6776226e8b3eefbb047964584e0cfe3a9",
-      "icon_key": "beb1df9122ceed770c86b76620c7f5fe8d72f3a0a35aff92817dcf631ab8d041"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "ftpsrv-ps5.elf",
@@ -569,7 +556,7 @@
       "version": "v0.21.1",
       "category": "Uncategorized",
       "checksum": "7d4b31c83eae4e056580482a3a074e1db25922efc74ac1e439473b45d71a5938",
-      "icon_key": "beb1df9122ceed770c86b76620c7f5fe8d72f3a0a35aff92817dcf631ab8d041"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "klogsrv-ps4.elf",
@@ -582,7 +569,7 @@
       "version": "v0.9",
       "category": "Uncategorized",
       "checksum": "7e89c33eb90d44ea4644b80c56c29084d93faf415a9d64f1397a58ac7ca752d8",
-      "icon_key": "beb1df9122ceed770c86b76620c7f5fe8d72f3a0a35aff92817dcf631ab8d041"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "klogsrv-ps5.elf",
@@ -595,7 +582,7 @@
       "version": "v0.9",
       "category": "Uncategorized",
       "checksum": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb",
-      "icon_key": "beb1df9122ceed770c86b76620c7f5fe8d72f3a0a35aff92817dcf631ab8d041"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "shsrv",
@@ -608,7 +595,7 @@
       "version": "v0.20",
       "category": "Uncategorized",
       "checksum": "fa4ccb2587bb61be317df0d001f668b17ebf9b4aafad87acf691b1fb8da0bd2d",
-      "icon_key": "beb1df9122ceed770c86b76620c7f5fe8d72f3a0a35aff92817dcf631ab8d041"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "websrv",
@@ -621,7 +608,7 @@
       "version": "v0.34",
       "category": "Uncategorized",
       "checksum": "54730c867c6e1148536fdcb370e63a7762d989ea87b62488ad4caff64d43f263",
-      "icon_key": "beb1df9122ceed770c86b76620c7f5fe8d72f3a0a35aff92817dcf631ab8d041"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "zftpd-ps4-v1.6.0.bin",
