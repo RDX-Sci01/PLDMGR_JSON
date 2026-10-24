@@ -108,16 +108,16 @@
     },
     {
       "name": "ps5-dump-forge",
-      "filename": "ps5-dump-forge-0.3.1-ps5.elf",
-      "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.3.1/ps5-dump-forge-0.3.1-ps5.elf",
+      "filename": "ps5-dump-forge-0.4.0-ps5.elf",
+      "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.4.0/ps5-dump-forge-0.4.0-ps5.elf",
       "source": "https://github.com/quer3q/ps5-dump-forge/releases",
-      "source_direct": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.3.1/ps5-dump-forge-0.3.1-ps5.elf",
-      "description": "PS5 Dump Forge v0.3.1",
-      "last_update": "2026-10-20",
-      "version": "v0.3.1",
+      "source_direct": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.4.0/ps5-dump-forge-0.4.0-ps5.elf",
+      "description": "v0.4.0",
+      "last_update": "2026-10-24",
+      "version": "v0.4.0",
       "category": "Uncategorized",
-      "checksum": "cf26b10322ded6dd79a3f09d12fb0eeab5cab21d805773716a4bdb544fc15089",
-      "icon_key": "5eac949bcf60902313172bbcefb56f32429b483e6722bbf5390070116a2dac51"
+      "checksum": "e296cac3bd9d32452b0f0e122d09183d0a86c032685a219aadb9d4c51fe74905",
+      "icon_key": "ad79ebaa2a4893da24720d0ed0ba5a1fbb3d4c1afab90c04193a37ee7eae06ec"
     },
     {
       "name": "PS5-Game-Compressor",
@@ -496,15 +496,15 @@
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-7.1.19.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.1.19/ps5upload-7.1.19.elf",
+      "filename": "ps5upload-7.2.0.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v7.2.0/ps5upload-7.2.0.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.1.19/ps5upload-7.1.19.elf",
-      "description": "v7.1.19",
-      "last_update": "2026-10-23",
-      "version": "v7.1.19",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v7.2.0/ps5upload-7.2.0.elf",
+      "description": "v7.2.0",
+      "last_update": "2026-10-24",
+      "version": "v7.2.0",
       "category": "Uncategorized",
-      "checksum": "c5e68afd6c3101a50b6a425350a7d3fec9ab5049cf8bed9ced53f4548598da07",
+      "checksum": "a8a20057b43fae225df7adfdda046911d81886a72fc3223e831c2999db948331",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
