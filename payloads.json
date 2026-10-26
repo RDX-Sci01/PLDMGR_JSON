@@ -13,7 +13,7 @@
       "version": "v1.3.0",
       "category": "Uncategorized",
       "checksum": "5d2d9c46c2390df05c5a85781b033aa9471584629e8bd69b91608cb3e60f45b4",
-      "icon_key": "fa62aba9618fd6e17ba639ab5c2ca4cc031ccafe0dbaff7bc2e968decba773cb"
+      "icon_key": "23bdb7ce1917bf7c724ca8262d2eed7fd290583f8adc16a2d12a4c6881b12e8a"
     },
     {
       "name": "NeoEnabler",
@@ -30,15 +30,15 @@
     },
     {
       "name": "ps5-patchdl",
-      "filename": "patchdl_0.3.4.elf",
-      "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.4/patchdl_0.3.4.elf",
+      "filename": "patchdl_0.3.5.elf",
+      "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.5/patchdl_0.3.5.elf",
       "source": "https://github.com/knutwurst/ps5-patchdl/releases",
-      "source_direct": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.4/patchdl_0.3.4.elf",
-      "description": "PatchDL 0.3.4",
-      "last_update": "2026-10-21",
-      "version": "v0.3.4",
+      "source_direct": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.5/patchdl_0.3.5.elf",
+      "description": "PatchDL 0.3.5",
+      "last_update": "2026-10-26",
+      "version": "v0.3.5",
       "category": "Uncategorized",
-      "checksum": "752a344716e855de5265d1fa4352490ea21203b427d76ac33745174b1719b773",
+      "checksum": "4b560d3cf0937ef4e754e0f353bf9334bf3703109dc16c3a5c86985125c79908",
       "icon_key": "f7106cef58de2cfa2acc8d9ded7f1f47c7ac659d31e32835fb8cd28865327739"
     },
     {
@@ -130,7 +130,7 @@
       "version": "v0.4.1",
       "category": "Uncategorized",
       "checksum": "ea5c47d1500efc8573523d19cebaa8addac9ec51fc62a9c90048daca755f5c96",
-      "icon_key": "5eac949bcf60902313172bbcefb56f32429b483e6722bbf5390070116a2dac51"
+      "icon_key": "ad79ebaa2a4893da24720d0ed0ba5a1fbb3d4c1afab90c04193a37ee7eae06ec"
     },
     {
       "name": "PS5-Game-Compressor",
@@ -143,7 +143,7 @@
       "version": "v1.0.4",
       "category": "Uncategorized",
       "checksum": "e55e90aaade13b6e0d4316c1597ef90a21b67a06475c3e25de054224bc1e941b",
-      "icon_key": "4a49eee689295de6af725dd98c06936da901e16473f461dbdcec730dcc88cdec"
+      "icon_key": "723aed59d1daabf28c33cac99842187bf42e69c3a4dc743df4513a2670bef273"
     },
     {
       "name": "apr-emu-updater",
