@@ -326,19 +326,6 @@
       "icon_key": "8b745ce99b731cb7322b333c08d186256e009a3a3876b90e967d1691ad3f967b"
     },
     {
-      "name": "ShadowMountPlus",
-      "filename": "shadowmountplus.elf",
-      "url": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta7/shadowmountplus.elf",
-      "source": "https://github.com/drakmor/ShadowMountPlus/releases",
-      "source_direct": "https://github.com/drakmor/ShadowMountPlus/releases/download/1.7beta7/shadowmountplus.elf",
-      "description": "ShadowMountPlus 1.7beta7",
-      "last_update": "2026-10-21",
-      "version": "1.7beta7",
-      "category": "Uncategorized",
-      "checksum": "a8f9d7f76e8749912508ade0cd5c78076b5bbf1271813c78c80c3d3d9d4777ee",
-      "icon_key": "e117a0e0d4e010775088319dac20c69ef79d1371643313688bd79b7e59995e3d"
-    },
-    {
       "name": "kstuff-lite",
       "filename": "kstuff.elf",
       "url": "https://github.com/EchoStretch/kstuff-lite/releases/download/v1.11/kstuff.elf",
