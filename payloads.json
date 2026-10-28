@@ -30,15 +30,15 @@
     },
     {
       "name": "ps5-patchdl",
-      "filename": "patchdl_0.3.9.elf",
-      "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.9/patchdl_0.3.9.elf",
+      "filename": "patchdl_0.3.10.elf",
+      "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.10/patchdl_0.3.10.elf",
       "source": "https://github.com/knutwurst/ps5-patchdl/releases",
-      "source_direct": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.9/patchdl_0.3.9.elf",
-      "description": "PatchDL 0.3.9",
-      "last_update": "2026-10-27",
-      "version": "v0.3.9",
+      "source_direct": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.10/patchdl_0.3.10.elf",
+      "description": "PatchDL 0.3.10",
+      "last_update": "2026-10-28",
+      "version": "v0.3.10",
       "category": "Uncategorized",
-      "checksum": "6e5f208899bc3db0351c3372c6441b7f29945dba4ca3400d6386b01151dc6d1c",
+      "checksum": "4903a63406a7cad5ba47380ff43fb957133d71da6ff883ffa29c9fd55fda08b2",
       "icon_key": "f7106cef58de2cfa2acc8d9ded7f1f47c7ac659d31e32835fb8cd28865327739"
     },
     {
@@ -65,7 +65,7 @@
       "version": "v0.0.1",
       "category": "Uncategorized",
       "checksum": "77cdae56b7d965f7e26d15ffc5841c064e0785067d98dc9e3be20e1ab5cb1b5e",
-      "icon_key": "1592886b449d3eac24dfd128134780bbd5743336f489899bbe804e721b98d4eb"
+      "icon_key": "8a559cc35d13e8b4aaa1081460cc569aa6a9ff69677f1e9cd7f90c782377cf28"
     },
     {
       "name": "OmniPad-PS5",
@@ -130,7 +130,7 @@
       "version": "v0.4.2",
       "category": "Uncategorized",
       "checksum": "00ddbaa578f0c044cf445283adc00023c57812e17e9cda324b25557c8ba40453",
-      "icon_key": "5eac949bcf60902313172bbcefb56f32429b483e6722bbf5390070116a2dac51"
+      "icon_key": "ad79ebaa2a4893da24720d0ed0ba5a1fbb3d4c1afab90c04193a37ee7eae06ec"
     },
     {
       "name": "PS5-Game-Compressor",
@@ -143,7 +143,7 @@
       "version": "v1.0.4",
       "category": "Uncategorized",
       "checksum": "e55e90aaade13b6e0d4316c1597ef90a21b67a06475c3e25de054224bc1e941b",
-      "icon_key": "723aed59d1daabf28c33cac99842187bf42e69c3a4dc743df4513a2670bef273"
+      "icon_key": "4a49eee689295de6af725dd98c06936da901e16473f461dbdcec730dcc88cdec"
     },
     {
       "name": "apr-emu-updater",
@@ -492,19 +492,19 @@
       "version": "v26.04-0",
       "category": "Uncategorized",
       "checksum": "6acc2972d358dfc92b5ac66cf8cb9ca8613c096bde56ce790077a6831fb17825",
-      "icon_key": "418554c041c5266e9086249dd6b90be34de94cb4bcbb6e4f369b8e3cbc5c2a66"
+      "icon_key": "fcd951a75083f6312687140e82308c0a5886058712aa8148ddd62c3fbf833fb8"
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-8.5.1.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v8.5.1/ps5upload-8.5.1.elf",
+      "filename": "ps5upload-8.6.1.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v8.6.1/ps5upload-8.6.1.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v8.5.1/ps5upload-8.5.1.elf",
-      "description": "v8.5.1",
-      "last_update": "2026-10-27",
-      "version": "v8.5.1",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v8.6.1/ps5upload-8.6.1.elf",
+      "description": "v8.6.1",
+      "last_update": "2026-10-28",
+      "version": "v8.6.1",
       "category": "Uncategorized",
-      "checksum": "2039eb340f6c09f7fce6bd726ad526adb68e9e924351b21dba74720025267481",
+      "checksum": "3e7d67537a2eac9f92ae9330a90682499610b06a5058dd47cb99c2b567c62671",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
