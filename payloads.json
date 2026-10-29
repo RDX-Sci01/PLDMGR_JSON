@@ -130,7 +130,7 @@
       "version": "v0.5.0",
       "category": "Uncategorized",
       "checksum": "f0cc32e772318f1ae53f1eccae207cb9aa1efb96d1a2a6249205bb3e0e478986",
-      "icon_key": "ad79ebaa2a4893da24720d0ed0ba5a1fbb3d4c1afab90c04193a37ee7eae06ec"
+      "icon_key": "5eac949bcf60902313172bbcefb56f32429b483e6722bbf5390070116a2dac51"
     },
     {
       "name": "PS5-Game-Compressor",
@@ -143,7 +143,7 @@
       "version": "v1.0.4",
       "category": "Uncategorized",
       "checksum": "e55e90aaade13b6e0d4316c1597ef90a21b67a06475c3e25de054224bc1e941b",
-      "icon_key": "4a49eee689295de6af725dd98c06936da901e16473f461dbdcec730dcc88cdec"
+      "icon_key": "723aed59d1daabf28c33cac99842187bf42e69c3a4dc743df4513a2670bef273"
     },
     {
       "name": "apr-emu-updater",
@@ -492,19 +492,19 @@
       "version": "v26.04-0",
       "category": "Uncategorized",
       "checksum": "6acc2972d358dfc92b5ac66cf8cb9ca8613c096bde56ce790077a6831fb17825",
-      "icon_key": "fcd951a75083f6312687140e82308c0a5886058712aa8148ddd62c3fbf833fb8"
+      "icon_key": "418554c041c5266e9086249dd6b90be34de94cb4bcbb6e4f369b8e3cbc5c2a66"
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-9.2.1.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v9.2.1/ps5upload-9.2.1.elf",
+      "filename": "ps5upload-9.2.2.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v9.2.2/ps5upload-9.2.2.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v9.2.1/ps5upload-9.2.1.elf",
-      "description": "v9.2.1",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v9.2.2/ps5upload-9.2.2.elf",
+      "description": "v9.2.2",
       "last_update": "2026-10-29",
-      "version": "v9.2.1",
+      "version": "v9.2.2",
       "category": "Uncategorized",
-      "checksum": "293535f8a55ed74beb729b4eee36e98076b6deee0e78295008b6370bd2d6b8af",
+      "checksum": "9b7ea36573c7fb7c78ea89d598a01b6cf6e49a52951279abfc8d09aeb6ae3cc5",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
