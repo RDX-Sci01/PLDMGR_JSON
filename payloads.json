@@ -13,7 +13,7 @@
       "version": "v1.3.0",
       "category": "Uncategorized",
       "checksum": "5d2d9c46c2390df05c5a85781b033aa9471584629e8bd69b91608cb3e60f45b4",
-      "icon_key": "fa62aba9618fd6e17ba639ab5c2ca4cc031ccafe0dbaff7bc2e968decba773cb"
+      "icon_key": "23bdb7ce1917bf7c724ca8262d2eed7fd290583f8adc16a2d12a4c6881b12e8a"
     },
     {
       "name": "NeoEnabler",
@@ -496,15 +496,15 @@
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-9.2.0.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v9.2.0/ps5upload-9.2.0.elf",
+      "filename": "ps5upload-9.2.1.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v9.2.1/ps5upload-9.2.1.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v9.2.0/ps5upload-9.2.0.elf",
-      "description": "v9.2.0",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v9.2.1/ps5upload-9.2.1.elf",
+      "description": "v9.2.1",
       "last_update": "2026-10-29",
-      "version": "v9.2.0",
+      "version": "v9.2.1",
       "category": "Uncategorized",
-      "checksum": "1b80852184fa8fa7df0783d1b151902dca514dc1e40a4b20623c23004a2a4367",
+      "checksum": "293535f8a55ed74beb729b4eee36e98076b6deee0e78295008b6370bd2d6b8af",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
