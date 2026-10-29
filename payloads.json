@@ -18,14 +18,14 @@
     {
       "name": "NeoEnabler",
       "filename": "neo-manager.elf",
-      "url": "https://github.com/gasb07/NeoEnabler/releases/download/v0.5.3/neo-manager.elf",
+      "url": "https://github.com/gasb07/NeoEnabler/releases/download/v0.6.0/neo-manager.elf",
       "source": "https://github.com/gasb07/NeoEnabler/releases",
-      "source_direct": "https://github.com/gasb07/NeoEnabler/releases/download/v0.5.3/neo-manager.elf",
-      "description": "NeoEnabler 0.5.3",
-      "last_update": "2026-10-28",
-      "version": "v0.5.3",
+      "source_direct": "https://github.com/gasb07/NeoEnabler/releases/download/v0.6.0/neo-manager.elf",
+      "description": "NeoEnabler 0.6.0",
+      "last_update": "2026-10-29",
+      "version": "v0.6.0",
       "category": "Uncategorized",
-      "checksum": "9b37fa14568168a0cb22dad41a912562691286bb39a19211f692cdb332b81a6e",
+      "checksum": "e1db4f5220a3b99453e422162ec50da6bb44c6b52a6fa125d782d2ab0dffa75b",
       "icon_key": "090a3060c9b0ac2419c5de653ed03a81f10ed773b4d829cb0c10c8798a56f9a6"
     },
     {
@@ -121,15 +121,15 @@
     },
     {
       "name": "ps5-dump-forge",
-      "filename": "ps5-dump-forge-0.4.2-ps5.elf",
-      "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.4.2/ps5-dump-forge-0.4.2-ps5.elf",
+      "filename": "ps5-dump-forge-0.5.0-ps5.elf",
+      "url": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.5.0/ps5-dump-forge-0.5.0-ps5.elf",
       "source": "https://github.com/quer3q/ps5-dump-forge/releases",
-      "source_direct": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.4.2/ps5-dump-forge-0.4.2-ps5.elf",
-      "description": "v0.4.2",
-      "last_update": "2026-10-27",
-      "version": "v0.4.2",
+      "source_direct": "https://github.com/quer3q/ps5-dump-forge/releases/download/v0.5.0/ps5-dump-forge-0.5.0-ps5.elf",
+      "description": "v0.5.0",
+      "last_update": "2026-10-29",
+      "version": "v0.5.0",
       "category": "Uncategorized",
-      "checksum": "00ddbaa578f0c044cf445283adc00023c57812e17e9cda324b25557c8ba40453",
+      "checksum": "f0cc32e772318f1ae53f1eccae207cb9aa1efb96d1a2a6249205bb3e0e478986",
       "icon_key": "5eac949bcf60902313172bbcefb56f32429b483e6722bbf5390070116a2dac51"
     },
     {
