@@ -505,19 +505,19 @@
       "version": "v26.04-0",
       "category": "Uncategorized",
       "checksum": "6acc2972d358dfc92b5ac66cf8cb9ca8613c096bde56ce790077a6831fb17825",
-      "icon_key": "418554c041c5266e9086249dd6b90be34de94cb4bcbb6e4f369b8e3cbc5c2a66"
+      "icon_key": "fcd951a75083f6312687140e82308c0a5886058712aa8148ddd62c3fbf833fb8"
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-9.3.0.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v9.3.0/ps5upload-9.3.0.elf",
+      "filename": "ps5upload-9.4.0.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v9.4.0/ps5upload-9.4.0.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v9.3.0/ps5upload-9.3.0.elf",
-      "description": "v9.3.0",
-      "last_update": "2026-10-29",
-      "version": "v9.3.0",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v9.4.0/ps5upload-9.4.0.elf",
+      "description": "v9.4.0",
+      "last_update": "2026-10-30",
+      "version": "v9.4.0",
       "category": "Uncategorized",
-      "checksum": "e23000248c639c5c4f1343f84f0ff3a9ef7bde1988e0a7bd6330cbba050ab863",
+      "checksum": "620a771e34c83c2b84e537307d25e47cead2270c1024db44cf2c340c9c7bb083",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
