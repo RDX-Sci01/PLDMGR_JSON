@@ -13,7 +13,7 @@
       "version": "v1.3.0",
       "category": "Uncategorized",
       "checksum": "5d2d9c46c2390df05c5a85781b033aa9471584629e8bd69b91608cb3e60f45b4",
-      "icon_key": "fa62aba9618fd6e17ba639ab5c2ca4cc031ccafe0dbaff7bc2e968decba773cb"
+      "icon_key": "23bdb7ce1917bf7c724ca8262d2eed7fd290583f8adc16a2d12a4c6881b12e8a"
     },
     {
       "name": "NeoEnabler",
@@ -65,7 +65,7 @@
       "version": "v0.0.1",
       "category": "Uncategorized",
       "checksum": "77cdae56b7d965f7e26d15ffc5841c064e0785067d98dc9e3be20e1ab5cb1b5e",
-      "icon_key": "8a559cc35d13e8b4aaa1081460cc569aa6a9ff69677f1e9cd7f90c782377cf28"
+      "icon_key": "1592886b449d3eac24dfd128134780bbd5743336f489899bbe804e721b98d4eb"
     },
     {
       "name": "OmniPad-PS5",
@@ -94,7 +94,20 @@
       "icon_key": "678ae6357dc0097006d721186e548914c77cbec8cf3f16a6c89a52b5a01c8ae1"
     },
     {
-      "name": "LiveShell",
+      "name": "liveshell-fast.elf",
+      "filename": "liveshell-fast.elf",
+      "url": "https://github.com/ZiZc3/LiveShell/releases/download/v1.6.0/liveshell-fast.elf",
+      "source": "https://github.com/ZiZc3/LiveShell/releases",
+      "source_direct": "https://github.com/ZiZc3/LiveShell/releases/download/v1.6.0/liveshell-fast.elf",
+      "description": "LiveShell Engine v1.6.0",
+      "last_update": "2026-10-26",
+      "version": "v1.6.0",
+      "category": "Uncategorized",
+      "checksum": "877a72d2f97f756e7b9e7c88654f910409db9a64b159753f6bd82c34a9e61f5b",
+      "icon_key": "9b26403b2b03a1e15d7fe7941df419afe4ce08085ba51510c04cd8057e569560"
+    },
+    {
+      "name": "liveshell.elf",
       "filename": "liveshell.elf",
       "url": "https://github.com/ZiZc3/LiveShell/releases/download/v1.6.0/liveshell.elf",
       "source": "https://github.com/ZiZc3/LiveShell/releases",
@@ -104,7 +117,7 @@
       "version": "v1.6.0",
       "category": "Uncategorized",
       "checksum": "99335e75312d6ffcce91f6a5b659f0191ec057c744b2b3d5b899db5a88b80ac3",
-      "icon_key": "fe5df360b2d0679abb3bdddf269a20d6310b7d78e79332a6ea2397d44a73d2ab"
+      "icon_key": "e4ebdec89f40381361f7d7bd600e3968be9d519f429146128398326ac13664df"
     },
     {
       "name": "ProsperoMgr",
@@ -130,7 +143,7 @@
       "version": "v0.5.0",
       "category": "Uncategorized",
       "checksum": "f0cc32e772318f1ae53f1eccae207cb9aa1efb96d1a2a6249205bb3e0e478986",
-      "icon_key": "5eac949bcf60902313172bbcefb56f32429b483e6722bbf5390070116a2dac51"
+      "icon_key": "ad79ebaa2a4893da24720d0ed0ba5a1fbb3d4c1afab90c04193a37ee7eae06ec"
     },
     {
       "name": "PS5-Game-Compressor",
@@ -143,7 +156,7 @@
       "version": "v1.0.4",
       "category": "Uncategorized",
       "checksum": "e55e90aaade13b6e0d4316c1597ef90a21b67a06475c3e25de054224bc1e941b",
-      "icon_key": "723aed59d1daabf28c33cac99842187bf42e69c3a4dc743df4513a2670bef273"
+      "icon_key": "4a49eee689295de6af725dd98c06936da901e16473f461dbdcec730dcc88cdec"
     },
     {
       "name": "apr-emu-updater",
@@ -496,15 +509,15 @@
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-9.2.2.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v9.2.2/ps5upload-9.2.2.elf",
+      "filename": "ps5upload-9.3.0.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v9.3.0/ps5upload-9.3.0.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v9.2.2/ps5upload-9.2.2.elf",
-      "description": "v9.2.2",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v9.3.0/ps5upload-9.3.0.elf",
+      "description": "v9.3.0",
       "last_update": "2026-10-29",
-      "version": "v9.2.2",
+      "version": "v9.3.0",
       "category": "Uncategorized",
-      "checksum": "9b7ea36573c7fb7c78ea89d598a01b6cf6e49a52951279abfc8d09aeb6ae3cc5",
+      "checksum": "e23000248c639c5c4f1343f84f0ff3a9ef7bde1988e0a7bd6330cbba050ab863",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
