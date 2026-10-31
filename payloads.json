@@ -156,7 +156,7 @@
       "version": "v1.0.4",
       "category": "Uncategorized",
       "checksum": "e55e90aaade13b6e0d4316c1597ef90a21b67a06475c3e25de054224bc1e941b",
-      "icon_key": "723aed59d1daabf28c33cac99842187bf42e69c3a4dc743df4513a2670bef273"
+      "icon_key": "4a49eee689295de6af725dd98c06936da901e16473f461dbdcec730dcc88cdec"
     },
     {
       "name": "apr-emu-updater",
@@ -509,15 +509,15 @@
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-10.0.3.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v10.0.3/ps5upload-10.0.3.elf",
+      "filename": "ps5upload-10.1.0.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v10.1.0/ps5upload-10.1.0.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v10.0.3/ps5upload-10.0.3.elf",
-      "description": "v10.0.3",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v10.1.0/ps5upload-10.1.0.elf",
+      "description": "v10.1.0",
       "last_update": "2026-10-31",
-      "version": "v10.0.3",
+      "version": "v10.1.0",
       "category": "Uncategorized",
-      "checksum": "5dd0997ae31abe1e095a83ce0166eb92ccefa0ae13189aa29e51365498e872a2",
+      "checksum": "2608d338b47438f7702a7be04a7821c637ace1e64fb046e179eb29c5385dfda0",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
