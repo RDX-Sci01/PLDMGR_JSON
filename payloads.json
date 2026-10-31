@@ -65,7 +65,7 @@
       "version": "v0.0.1",
       "category": "Uncategorized",
       "checksum": "77cdae56b7d965f7e26d15ffc5841c064e0785067d98dc9e3be20e1ab5cb1b5e",
-      "icon_key": "1592886b449d3eac24dfd128134780bbd5743336f489899bbe804e721b98d4eb"
+      "icon_key": "8a559cc35d13e8b4aaa1081460cc569aa6a9ff69677f1e9cd7f90c782377cf28"
     },
     {
       "name": "OmniPad-PS5",
@@ -156,7 +156,7 @@
       "version": "v1.0.4",
       "category": "Uncategorized",
       "checksum": "e55e90aaade13b6e0d4316c1597ef90a21b67a06475c3e25de054224bc1e941b",
-      "icon_key": "723aed59d1daabf28c33cac99842187bf42e69c3a4dc743df4513a2670bef273"
+      "icon_key": "4a49eee689295de6af725dd98c06936da901e16473f461dbdcec730dcc88cdec"
     },
     {
       "name": "apr-emu-updater",
@@ -509,15 +509,15 @@
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-10.0.0.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v10.0.0/ps5upload-10.0.0.elf",
+      "filename": "ps5upload-10.0.1.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v10.0.1/ps5upload-10.0.1.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v10.0.0/ps5upload-10.0.0.elf",
-      "description": "v10.0.0",
-      "last_update": "2026-10-30",
-      "version": "v10.0.0",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v10.0.1/ps5upload-10.0.1.elf",
+      "description": "v10.0.1",
+      "last_update": "2026-10-31",
+      "version": "v10.0.1",
       "category": "Uncategorized",
-      "checksum": "493d155cbcce86784cee589824f2f3e112e6a8d702afaf5adbc35c73b33ecb4a",
+      "checksum": "c5da95b6438a6d68e8c453df8ea84fb0341744f5fc9dae0781371b350450c3cc",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
