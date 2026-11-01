@@ -13,7 +13,7 @@
       "version": "v1.3.0",
       "category": "Uncategorized",
       "checksum": "5d2d9c46c2390df05c5a85781b033aa9471584629e8bd69b91608cb3e60f45b4",
-      "icon_key": "fa62aba9618fd6e17ba639ab5c2ca4cc031ccafe0dbaff7bc2e968decba773cb"
+      "icon_key": "23bdb7ce1917bf7c724ca8262d2eed7fd290583f8adc16a2d12a4c6881b12e8a"
     },
     {
       "name": "NeoEnabler",
@@ -509,15 +509,15 @@
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-10.4.0.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v10.4.0/ps5upload-10.4.0.elf",
+      "filename": "ps5upload-10.4.1.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v10.4.1/ps5upload-10.4.1.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v10.4.0/ps5upload-10.4.0.elf",
-      "description": "v10.4.0",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v10.4.1/ps5upload-10.4.1.elf",
+      "description": "v10.4.1",
       "last_update": "2026-11-01",
-      "version": "v10.4.0",
+      "version": "v10.4.1",
       "category": "Uncategorized",
-      "checksum": "67b26d52fcb3cda8847cf7bf4893076b23f0d8b3f41765e3be64549c11336aae",
+      "checksum": "7e52589212fb2a5da387d1cdfb5e245909316bab9fe6ae6c5a0e1d15ba34254d",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
