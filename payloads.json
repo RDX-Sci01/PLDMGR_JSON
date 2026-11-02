@@ -30,15 +30,15 @@
     },
     {
       "name": "ps5-patchdl",
-      "filename": "patchdl_0.3.11.elf",
-      "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.11/patchdl_0.3.11.elf",
+      "filename": "patchdl_0.3.12.elf",
+      "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.12/patchdl_0.3.12.elf",
       "source": "https://github.com/knutwurst/ps5-patchdl/releases",
-      "source_direct": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.11/patchdl_0.3.11.elf",
-      "description": "PatchDL 0.3.11",
-      "last_update": "2026-10-28",
-      "version": "v0.3.11",
+      "source_direct": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.12/patchdl_0.3.12.elf",
+      "description": "PatchDL 0.3.12",
+      "last_update": "2026-11-02",
+      "version": "v0.3.12",
       "category": "Uncategorized",
-      "checksum": "c008acd9fd7560a91c895e83a1042a1f5f9a689f910dcd7e57c3739dc378da92",
+      "checksum": "a8aeb6039825188561b7346bb6f0c9244f72d7be1412dc7dd6c2bea0dd3f396a",
       "icon_key": "f7106cef58de2cfa2acc8d9ded7f1f47c7ac659d31e32835fb8cd28865327739"
     },
     {
@@ -65,7 +65,7 @@
       "version": "v0.0.1",
       "category": "Uncategorized",
       "checksum": "77cdae56b7d965f7e26d15ffc5841c064e0785067d98dc9e3be20e1ab5cb1b5e",
-      "icon_key": "8a559cc35d13e8b4aaa1081460cc569aa6a9ff69677f1e9cd7f90c782377cf28"
+      "icon_key": "1592886b449d3eac24dfd128134780bbd5743336f489899bbe804e721b98d4eb"
     },
     {
       "name": "OmniPad-PS5",
@@ -143,7 +143,7 @@
       "version": "v0.5.1",
       "category": "Uncategorized",
       "checksum": "864cf7c0739e9f411c596873c3c2fb482a2ebb2be207bf7bd1ac558e4699156f",
-      "icon_key": "ad79ebaa2a4893da24720d0ed0ba5a1fbb3d4c1afab90c04193a37ee7eae06ec"
+      "icon_key": "5eac949bcf60902313172bbcefb56f32429b483e6722bbf5390070116a2dac51"
     },
     {
       "name": "PS5-Game-Compressor",
@@ -156,7 +156,7 @@
       "version": "v1.0.4",
       "category": "Uncategorized",
       "checksum": "e55e90aaade13b6e0d4316c1597ef90a21b67a06475c3e25de054224bc1e941b",
-      "icon_key": "723aed59d1daabf28c33cac99842187bf42e69c3a4dc743df4513a2670bef273"
+      "icon_key": "4a49eee689295de6af725dd98c06936da901e16473f461dbdcec730dcc88cdec"
     },
     {
       "name": "apr-emu-updater",
