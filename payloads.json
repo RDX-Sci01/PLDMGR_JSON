@@ -445,14 +445,14 @@
     {
       "name": "CheatRunner",
       "filename": "CheatRunner.elf",
-      "url": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.18/CheatRunner.elf",
+      "url": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.18.1/CheatRunner.elf",
       "source": "https://github.com/notmaj0r/CheatRunner/releases",
-      "source_direct": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.18/CheatRunner.elf",
-      "description": "v0.18",
-      "last_update": "2026-10-10",
-      "version": "v0.18",
+      "source_direct": "https://github.com/notmaj0r/CheatRunner/releases/download/v0.18.1/CheatRunner.elf",
+      "description": "v0.18.1",
+      "last_update": "2026-11-03",
+      "version": "v0.18.1",
       "category": "Uncategorized",
-      "checksum": "4ae1ea4e37b2e67d5487355ddf671f166861ed6dceea348c048ad060770c0140",
+      "checksum": "80535260027983f09fc9d131e11e13591de61ef5eeea458825598263862d2ce8",
       "icon_key": "f5645fe7872b4e33a3e403b6a55e6288a12490d79a8bbe8f542c7ffc3a21c54c"
     },
     {
