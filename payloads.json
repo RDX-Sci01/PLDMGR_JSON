@@ -26,7 +26,7 @@
       "version": "v1.3.0",
       "category": "Uncategorized",
       "checksum": "5d2d9c46c2390df05c5a85781b033aa9471584629e8bd69b91608cb3e60f45b4",
-      "icon_key": "23bdb7ce1917bf7c724ca8262d2eed7fd290583f8adc16a2d12a4c6881b12e8a"
+      "icon_key": "fa62aba9618fd6e17ba639ab5c2ca4cc031ccafe0dbaff7bc2e968decba773cb"
     },
     {
       "name": "NeoEnabler",
@@ -78,7 +78,7 @@
       "version": "v0.0.1",
       "category": "Uncategorized",
       "checksum": "77cdae56b7d965f7e26d15ffc5841c064e0785067d98dc9e3be20e1ab5cb1b5e",
-      "icon_key": "1592886b449d3eac24dfd128134780bbd5743336f489899bbe804e721b98d4eb"
+      "icon_key": "8a559cc35d13e8b4aaa1081460cc569aa6a9ff69677f1e9cd7f90c782377cf28"
     },
     {
       "name": "OmniPad-PS5",
@@ -522,15 +522,15 @@
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-11.0.8.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v11.0.8/ps5upload-11.0.8.elf",
+      "filename": "ps5upload-11.1.0.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v11.1.0/ps5upload-11.1.0.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v11.0.8/ps5upload-11.0.8.elf",
-      "description": "v11.0.8",
-      "last_update": "2026-11-04",
-      "version": "v11.0.8",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v11.1.0/ps5upload-11.1.0.elf",
+      "description": "v11.1.0",
+      "last_update": "2026-11-05",
+      "version": "v11.1.0",
       "category": "Uncategorized",
-      "checksum": "f315f5645d7be6cc0736ec3183cfa67ec9d7ec689321295fb222f5b699b2542e",
+      "checksum": "1aaf50efa91aac8d26d53ce27ec223a3646a880892834977615c2770ff17197b",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
