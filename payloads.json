@@ -3,6 +3,19 @@
   "icons_url": "icons.json",
   "payloads": [
     {
+      "name": "y2jb-update-blocker",
+      "filename": "YT-Blocker_v1.0.2.elf",
+      "url": "https://github.com/Epinorr/y2jb-update-blocker/releases/download/v1.0.2/YT-Blocker_v1.0.2.elf",
+      "source": "https://github.com/Epinorr/y2jb-update-blocker/releases",
+      "source_direct": "https://github.com/Epinorr/y2jb-update-blocker/releases/download/v1.0.2/YT-Blocker_v1.0.2.elf",
+      "description": "v1.0.2",
+      "last_update": "2026-10-18",
+      "version": "v1.0.2",
+      "category": "Uncategorized",
+      "checksum": "6ab006d92685e1ef67f9984549a5d4e8df24f6f59b2452e77c2737be6ed7df5a",
+      "icon_key": "1ffe2e4a5764f2ce60af2920bf70926a9d42ee6d6b72b72205fd218babc025b4"
+    },
+    {
       "name": "PS5-TabShifter",
       "filename": "TabShifter.elf",
       "url": "https://github.com/xvvulcanvx/PS5-TabShifter/releases/download/v1.3.0/TabShifter.elf",
