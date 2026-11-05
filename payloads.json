@@ -236,19 +236,6 @@
       "icon_key": "5d2cc0185f603521b0fce75d33ced1a97db40f65d4f94833942cbeae4e3feecd"
     },
     {
-      "name": "Ghostcontrol-PS5-USB-Controller-Patcher",
-      "filename": "Ghostcontrol.elf",
-      "url": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases/download/1.0.5/Ghostcontrol.elf",
-      "source": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases",
-      "source_direct": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases/download/1.0.5/Ghostcontrol.elf",
-      "description": "v1.0.5",
-      "last_update": "2026-07-06",
-      "version": "1.0.5",
-      "category": "Uncategorized",
-      "checksum": "69271d91f27397c9ad42150129639ce452ecb405021108f42c6c87926123a6f1",
-      "icon_key": "a726adf1379af65c7ae994ddccfe2595a7c211bd538a76ca2f007e75d762d0eb"
-    },
-    {
       "name": "PIZZA-HEN",
       "filename": "PIZZA-HEN-v2.00.elf",
       "url": "https://github.com/Michele-M-Media/PIZZA-HEN/releases/download/v2.00/PIZZA-HEN-v2.00.elf",
