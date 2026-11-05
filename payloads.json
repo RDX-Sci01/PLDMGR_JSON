@@ -236,6 +236,19 @@
       "icon_key": "5d2cc0185f603521b0fce75d33ced1a97db40f65d4f94833942cbeae4e3feecd"
     },
     {
+      "name": "Ghostcontrol-PS5-USB-Controller-Patcher",
+      "filename": "Ghostcontrol.elf",
+      "url": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases/download/1.0.5/Ghostcontrol.elf",
+      "source": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases",
+      "source_direct": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases/download/1.0.5/Ghostcontrol.elf",
+      "description": "v1.0.5",
+      "last_update": "2026-07-06",
+      "version": "1.0.5",
+      "category": "Uncategorized",
+      "checksum": "69271d91f27397c9ad42150129639ce452ecb405021108f42c6c87926123a6f1",
+      "icon_key": "a726adf1379af65c7ae994ddccfe2595a7c211bd538a76ca2f007e75d762d0eb"
+    },
+    {
       "name": "PIZZA-HEN",
       "filename": "PIZZA-HEN-v2.00.elf",
       "url": "https://github.com/Michele-M-Media/PIZZA-HEN/releases/download/v2.00/PIZZA-HEN-v2.00.elf",
@@ -522,15 +535,15 @@
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-11.2.1.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v11.2.1/ps5upload-11.2.1.elf",
+      "filename": "ps5upload-11.2.2.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v11.2.2/ps5upload-11.2.2.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v11.2.1/ps5upload-11.2.1.elf",
-      "description": "v11.2.1",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v11.2.2/ps5upload-11.2.2.elf",
+      "description": "v11.2.2",
       "last_update": "2026-11-05",
-      "version": "v11.2.1",
+      "version": "v11.2.2",
       "category": "Uncategorized",
-      "checksum": "98daecdc73a47e83ee9a9845536771e6c3125b0d1c238eb5d427faeecb16063b",
+      "checksum": "39d313fab53cfcafd4a0e049ea3a13cb4092d5c3ab8be7709ef783f3978632e4",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
