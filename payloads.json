@@ -78,7 +78,7 @@
       "version": "v0.0.1",
       "category": "Uncategorized",
       "checksum": "77cdae56b7d965f7e26d15ffc5841c064e0785067d98dc9e3be20e1ab5cb1b5e",
-      "icon_key": "8a559cc35d13e8b4aaa1081460cc569aa6a9ff69677f1e9cd7f90c782377cf28"
+      "icon_key": "1592886b449d3eac24dfd128134780bbd5743336f489899bbe804e721b98d4eb"
     },
     {
       "name": "OmniPad-PS5",
@@ -444,15 +444,15 @@
     },
     {
       "name": "ps5-webkit-autoloader",
-      "filename": "webkit-autoloader-installer_v0.6.2.elf",
-      "url": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.6.2/webkit-autoloader-installer_v0.6.2.elf",
+      "filename": "webkit-autoloader-installer_v0.7.0.elf",
+      "url": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.7.0/webkit-autoloader-installer_v0.7.0.elf",
       "source": "https://github.com/itsPLK/ps5-webkit-autoloader/releases",
-      "source_direct": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.6.2/webkit-autoloader-installer_v0.6.2.elf",
-      "description": "v0.6.2",
-      "last_update": "2026-10-28",
-      "version": "v0.6.2",
+      "source_direct": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.7.0/webkit-autoloader-installer_v0.7.0.elf",
+      "description": "v0.7.0",
+      "last_update": "2026-11-06",
+      "version": "v0.7.0",
       "category": "Uncategorized",
-      "checksum": "27fd335764270716972faea399a5cc7810b9e49a21abf4966d9759580756cb19",
+      "checksum": "10cb38baae078e41f252cffb0d356829c89ee63fd3234f1fd1e6b19f81eab1c7",
       "icon_key": "596ef6c95ef1f61dad085e870e240316e299be2ae71de6dda97b45b7b111a4e5"
     },
     {
