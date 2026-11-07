@@ -26,7 +26,7 @@
       "version": "v1.3.0",
       "category": "Uncategorized",
       "checksum": "5d2d9c46c2390df05c5a85781b033aa9471584629e8bd69b91608cb3e60f45b4",
-      "icon_key": "23bdb7ce1917bf7c724ca8262d2eed7fd290583f8adc16a2d12a4c6881b12e8a"
+      "icon_key": "fa62aba9618fd6e17ba639ab5c2ca4cc031ccafe0dbaff7bc2e968decba773cb"
     },
     {
       "name": "NeoEnabler",
@@ -78,7 +78,7 @@
       "version": "v0.0.1",
       "category": "Uncategorized",
       "checksum": "77cdae56b7d965f7e26d15ffc5841c064e0785067d98dc9e3be20e1ab5cb1b5e",
-      "icon_key": "1592886b449d3eac24dfd128134780bbd5743336f489899bbe804e721b98d4eb"
+      "icon_key": "8a559cc35d13e8b4aaa1081460cc569aa6a9ff69677f1e9cd7f90c782377cf28"
     },
     {
       "name": "OmniPad-PS5",
@@ -234,6 +234,19 @@
       "category": "Uncategorized",
       "checksum": "c5f257ca2bf2f95949d09f95dd6feb3353b2ad37e24c972d09fccc3beb11301c",
       "icon_key": "5d2cc0185f603521b0fce75d33ced1a97db40f65d4f94833942cbeae4e3feecd"
+    },
+    {
+      "name": "Ghostcontrol-PS5-USB-Controller-Patcher",
+      "filename": "GhosttoothAPI.elf",
+      "url": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases/download/v2.2.5-beta/GhosttoothAPI.elf",
+      "source": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases",
+      "source_direct": "https://github.com/StonedModder/Ghostcontrol-PS5-USB-Controller-Patcher/releases/download/v2.2.5-beta/GhosttoothAPI.elf",
+      "description": "Ghostcontrol Toolbox 2.2.5 (beta)",
+      "last_update": "2026-11-05",
+      "version": "v2.2.5-beta",
+      "category": "Uncategorized",
+      "checksum": "9252b95bdf019f83628e454d03c15709fd2a59abf1f218e3d02f141eae1e9a19",
+      "icon_key": "a726adf1379af65c7ae994ddccfe2595a7c211bd538a76ca2f007e75d762d0eb"
     },
     {
       "name": "PIZZA-HEN",
