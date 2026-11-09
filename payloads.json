@@ -78,7 +78,7 @@
       "version": "v0.0.1",
       "category": "Uncategorized",
       "checksum": "77cdae56b7d965f7e26d15ffc5841c064e0785067d98dc9e3be20e1ab5cb1b5e",
-      "icon_key": "1592886b449d3eac24dfd128134780bbd5743336f489899bbe804e721b98d4eb"
+      "icon_key": "8a559cc35d13e8b4aaa1081460cc569aa6a9ff69677f1e9cd7f90c782377cf28"
     },
     {
       "name": "OmniPad-PS5",
@@ -535,15 +535,15 @@
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-11.6.0.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v11.6.0/ps5upload-11.6.0.elf",
+      "filename": "ps5upload-12.2.0.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v12.2.0/ps5upload-12.2.0.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v11.6.0/ps5upload-11.6.0.elf",
-      "description": "v11.6.0",
-      "last_update": "2026-11-08",
-      "version": "v11.6.0",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v12.2.0/ps5upload-12.2.0.elf",
+      "description": "v12.2.0",
+      "last_update": "2026-11-09",
+      "version": "v12.2.0",
       "category": "Uncategorized",
-      "checksum": "13dca53b2216d920ad94b9564cba68fd085d4ea0f1f0193be5b5299c9872e67e",
+      "checksum": "436b8e832484464f4e1bcd11dbc607b4e19a8232b4646e49afff37675555a16f",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
