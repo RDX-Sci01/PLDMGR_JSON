@@ -135,14 +135,14 @@
     {
       "name": "ProsperoMgr",
       "filename": "ProsperoMgr.elf",
-      "url": "https://github.com/notmaj0r/ProsperoMgr/releases/download/v1.1/ProsperoMgr.elf",
+      "url": "https://github.com/notmaj0r/ProsperoMgr/releases/download/v1.2/ProsperoMgr.elf",
       "source": "https://github.com/notmaj0r/ProsperoMgr/releases",
-      "source_direct": "https://github.com/notmaj0r/ProsperoMgr/releases/download/v1.1/ProsperoMgr.elf",
-      "description": "v1.1",
-      "last_update": "2026-09-28",
-      "version": "v1.1",
+      "source_direct": "https://github.com/notmaj0r/ProsperoMgr/releases/download/v1.2/ProsperoMgr.elf",
+      "description": "v1.2",
+      "last_update": "2026-11-09",
+      "version": "v1.2",
       "category": "Uncategorized",
-      "checksum": "e7a6bb544adb2fb2a61aa9cc83b0ad15f70b32d7511a3de0f1fb88812f11983c",
+      "checksum": "127394cc4f1ac7347fea509e010e80bab7b5ee13d820665474cdc3928d173bce",
       "icon_key": "a2ca17ecb8f4c56428b98c6f799f4f3e48d2a0dde40aa0d047396956686b65c9"
     },
     {
