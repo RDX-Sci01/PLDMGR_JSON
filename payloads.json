@@ -26,7 +26,7 @@
       "version": "v1.3.0",
       "category": "Uncategorized",
       "checksum": "5d2d9c46c2390df05c5a85781b033aa9471584629e8bd69b91608cb3e60f45b4",
-      "icon_key": "fec78cac47be713ee40272adc184901f644186f26995697bd920aaaaf40d4678"
+      "icon_key": "fa62aba9618fd6e17ba639ab5c2ca4cc031ccafe0dbaff7bc2e968decba773cb"
     },
     {
       "name": "NeoEnabler",
@@ -78,7 +78,7 @@
       "version": "v0.0.1",
       "category": "Uncategorized",
       "checksum": "77cdae56b7d965f7e26d15ffc5841c064e0785067d98dc9e3be20e1ab5cb1b5e",
-      "icon_key": "ed7eeb69f282ce2fa3aff9668d40bdc9dbd0804672d9e7155a4a7b91d2c899cf"
+      "icon_key": "8a559cc35d13e8b4aaa1081460cc569aa6a9ff69677f1e9cd7f90c782377cf28"
     },
     {
       "name": "OmniPad-PS5",
@@ -156,7 +156,7 @@
       "version": "v0.5.4",
       "category": "Uncategorized",
       "checksum": "ad8c36040c39f538376fbbc6434bdbe7f3d001e4f84cbb9afaa16a6d29617fc9",
-      "icon_key": "b9a7f18bf4a06f3e85e87b1f7c2b91782d32af8b971faf287de6ca625a344444"
+      "icon_key": "5eac949bcf60902313172bbcefb56f32429b483e6722bbf5390070116a2dac51"
     },
     {
       "name": "PS5-Game-Compressor",
@@ -169,7 +169,7 @@
       "version": "v1.0.4",
       "category": "Uncategorized",
       "checksum": "e55e90aaade13b6e0d4316c1597ef90a21b67a06475c3e25de054224bc1e941b",
-      "icon_key": "1ffebdcda25d12425873047d07e76118c95a7755f94911c418effe13b60f322a"
+      "icon_key": "4a49eee689295de6af725dd98c06936da901e16473f461dbdcec730dcc88cdec"
     },
     {
       "name": "apr-emu-updater",
@@ -531,7 +531,7 @@
       "version": "v26.04-0",
       "category": "Uncategorized",
       "checksum": "6acc2972d358dfc92b5ac66cf8cb9ca8613c096bde56ce790077a6831fb17825",
-      "icon_key": "3b53222d64c1e2a7e2c3561b750d8221c41e75d58d1b654ec9ddb1a487821406"
+      "icon_key": "418554c041c5266e9086249dd6b90be34de94cb4bcbb6e4f369b8e3cbc5c2a66"
     },
     {
       "name": "ps5upload",
@@ -569,7 +569,7 @@
       "version": "v0.27",
       "category": "Uncategorized",
       "checksum": "82f6227610172c98bad6efe68219fc93a10027035991f47eb4b75532d023407d",
-      "icon_key": "2b5ec493f9113e20877ea4235e54fdbc4d6301f60496dbf8f198b5617280a906"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "ftpsrv-ps4.elf",
@@ -582,7 +582,7 @@
       "version": "v0.22",
       "category": "Uncategorized",
       "checksum": "50a5d2bb188a825eedce13b4d3ca92f5c6c71852f591f1506860fd30d6f45363",
-      "icon_key": "a4a8e5573943a16449091b02c38312a304f53178563b564725524c479e11ae74"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "ftpsrv-ps5-install.elf",
@@ -595,7 +595,7 @@
       "version": "v0.22",
       "category": "Uncategorized",
       "checksum": "5e845b93dac8906f15f72dbe5b3ee07d3a4c47474a3afd4126d8ba4a280b106d",
-      "icon_key": "a4a8e5573943a16449091b02c38312a304f53178563b564725524c479e11ae74"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "ftpsrv-ps5.elf",
@@ -608,7 +608,7 @@
       "version": "v0.22",
       "category": "Uncategorized",
       "checksum": "41148c2c1cad1ea9e7cfde03e389fa918e3338e896d06167346de09adbdc8757",
-      "icon_key": "0992e6b5fc1f0a72c70d830d8982507ad8c147b3937c344179eb6f8771cee26a"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "klogsrv-ps4.elf",
@@ -621,7 +621,7 @@
       "version": "v0.9",
       "category": "Uncategorized",
       "checksum": "7e89c33eb90d44ea4644b80c56c29084d93faf415a9d64f1397a58ac7ca752d8",
-      "icon_key": "a999f61a382e2f491c964127e6dad6aefacd07b09d7e49637f98bcd16429899b"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "klogsrv-ps5.elf",
@@ -634,7 +634,7 @@
       "version": "v0.9",
       "category": "Uncategorized",
       "checksum": "e828ec144231f81547cb58bc7d2c396fa984be0c2295f31364b58017816dcceb",
-      "icon_key": "a4a1f26434d01d96980a1ad73fa6d36a4b48d7d0e53a889f1a2a0400dd5e73da"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "shsrv",
@@ -647,7 +647,7 @@
       "version": "v0.20",
       "category": "Uncategorized",
       "checksum": "fa4ccb2587bb61be317df0d001f668b17ebf9b4aafad87acf691b1fb8da0bd2d",
-      "icon_key": "b62d39df8cf81815819d065398232f8e0b205cc17e3b03283ff1b93dd8b49f72"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "websrv",
@@ -660,7 +660,7 @@
       "version": "v0.34",
       "category": "Uncategorized",
       "checksum": "54730c867c6e1148536fdcb370e63a7762d989ea87b62488ad4caff64d43f263",
-      "icon_key": "de67a22568f9c8158c4b07cae655a27e4294eaf7b80a6fa64601acc6bafd0cea"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "zftpd-ps4-v1.7.0.bin",
