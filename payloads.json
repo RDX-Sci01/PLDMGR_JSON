@@ -18,14 +18,14 @@
     {
       "name": "PS5-TabShifter",
       "filename": "TabShifter.elf",
-      "url": "https://github.com/xvvulcanvx/PS5-TabShifter/releases/download/v1.3.0/TabShifter.elf",
+      "url": "https://github.com/xvvulcanvx/PS5-TabShifter/releases/download/v1.4.0/TabShifter.elf",
       "source": "https://github.com/xvvulcanvx/PS5-TabShifter/releases",
-      "source_direct": "https://github.com/xvvulcanvx/PS5-TabShifter/releases/download/v1.3.0/TabShifter.elf",
-      "description": "PS5 TabShifter v1.3.0",
-      "last_update": "2026-10-24",
-      "version": "v1.3.0",
+      "source_direct": "https://github.com/xvvulcanvx/PS5-TabShifter/releases/download/v1.4.0/TabShifter.elf",
+      "description": "PS5 TabShifter v1.4.0",
+      "last_update": "2026-11-13",
+      "version": "v1.4.0",
       "category": "Uncategorized",
-      "checksum": "5d2d9c46c2390df05c5a85781b033aa9471584629e8bd69b91608cb3e60f45b4",
+      "checksum": "f687372160a2ae564b2c401c5378fa5ae0902e9815f2f13fc6a07b9c34c1630f",
       "icon_key": "fa62aba9618fd6e17ba639ab5c2ca4cc031ccafe0dbaff7bc2e968decba773cb"
     },
     {
