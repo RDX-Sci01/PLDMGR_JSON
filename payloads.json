@@ -43,15 +43,15 @@
     },
     {
       "name": "ps5-patchdl",
-      "filename": "patchdl_0.3.12.elf",
-      "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.12/patchdl_0.3.12.elf",
+      "filename": "patchdl_0.3.13.elf",
+      "url": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.13/patchdl_0.3.13.elf",
       "source": "https://github.com/knutwurst/ps5-patchdl/releases",
-      "source_direct": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.12/patchdl_0.3.12.elf",
-      "description": "PatchDL 0.3.12",
-      "last_update": "2026-11-02",
-      "version": "v0.3.12",
+      "source_direct": "https://github.com/knutwurst/ps5-patchdl/releases/download/v0.3.13/patchdl_0.3.13.elf",
+      "description": "PatchDL 0.3.13",
+      "last_update": "2026-11-14",
+      "version": "v0.3.13",
       "category": "Uncategorized",
-      "checksum": "a8aeb6039825188561b7346bb6f0c9244f72d7be1412dc7dd6c2bea0dd3f396a",
+      "checksum": "257cce632b9ad701094dad3f8c0206ff87ab6b417415a57ebfd558c5ee3b0c50",
       "icon_key": "f7106cef58de2cfa2acc8d9ded7f1f47c7ac659d31e32835fb8cd28865327739"
     },
     {
