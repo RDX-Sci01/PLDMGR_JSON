@@ -531,7 +531,7 @@
       "version": "v26.04-0",
       "category": "Uncategorized",
       "checksum": "6acc2972d358dfc92b5ac66cf8cb9ca8613c096bde56ce790077a6831fb17825",
-      "icon_key": "3b53222d64c1e2a7e2c3561b750d8221c41e75d58d1b654ec9ddb1a487821406"
+      "icon_key": "418554c041c5266e9086249dd6b90be34de94cb4bcbb6e4f369b8e3cbc5c2a66"
     },
     {
       "name": "ps5upload",
@@ -569,7 +569,7 @@
       "version": "v0.27",
       "category": "Uncategorized",
       "checksum": "82f6227610172c98bad6efe68219fc93a10027035991f47eb4b75532d023407d",
-      "icon_key": "2b5ec493f9113e20877ea4235e54fdbc4d6301f60496dbf8f198b5617280a906"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "ftpsrv-ps4.elf",
@@ -582,7 +582,7 @@
       "version": "v0.22",
       "category": "Uncategorized",
       "checksum": "50a5d2bb188a825eedce13b4d3ca92f5c6c71852f591f1506860fd30d6f45363",
-      "icon_key": "a4a8e5573943a16449091b02c38312a304f53178563b564725524c479e11ae74"
+      "icon_key": "c3350840e339a20eb8ab25e59a3aac358e51f380ed0f20dd77f396945f03a18e"
     },
     {
       "name": "ftpsrv-ps5-install.elf",
