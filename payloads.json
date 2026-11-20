@@ -457,15 +457,15 @@
     },
     {
       "name": "ps5-webkit-autoloader",
-      "filename": "webkit-autoloader-installer_v0.8.1.elf",
-      "url": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.8.1/webkit-autoloader-installer_v0.8.1.elf",
+      "filename": "webkit-autoloader-installer_v0.8.2.elf",
+      "url": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.8.2/webkit-autoloader-installer_v0.8.2.elf",
       "source": "https://github.com/itsPLK/ps5-webkit-autoloader/releases",
-      "source_direct": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.8.1/webkit-autoloader-installer_v0.8.1.elf",
-      "description": "v0.8.1",
+      "source_direct": "https://github.com/itsPLK/ps5-webkit-autoloader/releases/download/v0.8.2/webkit-autoloader-installer_v0.8.2.elf",
+      "description": "v0.8.2",
       "last_update": "2026-11-20",
-      "version": "v0.8.1",
+      "version": "v0.8.2",
       "category": "Uncategorized",
-      "checksum": "1144f939f62c9d80a73aafb576ba5e7091966f1e48491d19bd97ec825934145c",
+      "checksum": "1c415bc124944c85b86a4751006b98010b977f142142d67306d13804899bad54",
       "icon_key": "596ef6c95ef1f61dad085e870e240316e299be2ae71de6dda97b45b7b111a4e5"
     },
     {
