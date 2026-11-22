@@ -535,15 +535,15 @@
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-12.6.21.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v12.6.21/ps5upload-12.6.21.elf",
+      "filename": "ps5upload-12.6.22.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v12.6.22/ps5upload-12.6.22.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v12.6.21/ps5upload-12.6.21.elf",
-      "description": "v12.6.21",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v12.6.22/ps5upload-12.6.22.elf",
+      "description": "v12.6.22",
       "last_update": "2026-11-22",
-      "version": "v12.6.21",
+      "version": "v12.6.22",
       "category": "Uncategorized",
-      "checksum": "a6766a847adcf9b60011b95fa775ec35b58fd32a2fa5c0259019074366de1aae",
+      "checksum": "166e103c26c094122395f696604f27139aeed2a00c2056c964471344ab76fdab",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
