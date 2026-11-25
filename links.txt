@@ -1,5 +1,6 @@
 # PS5 Payload Manager - Payload Sources
 # --- GitHub repositories ----
+github:X1NONs/PrefBar
 github:Epinorr/y2jb-update-blocker
 github:xvvulcanvx/PS5-TabShifter
 github:gasb07/NeoEnabler
