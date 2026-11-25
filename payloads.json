@@ -3,6 +3,19 @@
   "icons_url": "icons.json",
   "payloads": [
     {
+      "name": "PrefBar",
+      "filename": "Prefbar_V0.3.1.elf",
+      "url": "https://github.com/X1NONs/PrefBar/releases/download/v0.3.1/Prefbar_V0.3.1.elf",
+      "source": "https://github.com/X1NONs/PrefBar/releases",
+      "source_direct": "https://github.com/X1NONs/PrefBar/releases/download/v0.3.1/Prefbar_V0.3.1.elf",
+      "description": "v0.3.1",
+      "last_update": "2026-11-24",
+      "version": "v0.3.1",
+      "category": "Uncategorized",
+      "checksum": "b876836d4597e28e519ae6bc80df0eeceefde2e8648491c66d4983a779dff134",
+      "icon_key": "aab1b0367efc9b22e214d7535700b284a03d9cdd8c3e2194cd61db5d73631be7"
+    },
+    {
       "name": "y2jb-update-blocker",
       "filename": "YT-Blocker_v1.0.2.elf",
       "url": "https://github.com/Epinorr/y2jb-update-blocker/releases/download/v1.0.2/YT-Blocker_v1.0.2.elf",
