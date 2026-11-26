@@ -1,5 +1,6 @@
 # PS5 Payload Manager - Payload Sources
 # --- GitHub repositories ----
+github:zerodayofficial/NoUpdate
 github:B4ckd0orl/davinci-core
 github:X1NONs/PrefBar
 github:Epinorr/y2jb-update-blocker
