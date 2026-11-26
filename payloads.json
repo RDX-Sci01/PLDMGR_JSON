@@ -3,6 +3,58 @@
   "icons_url": "icons.json",
   "payloads": [
     {
+      "name": "BrowserPS5-check.elf",
+      "filename": "BrowserPS5-check.elf",
+      "url": "https://github.com/ramalhoboss/BrowserPS5/releases/download/v1.0.0-rc17/BrowserPS5-check.elf",
+      "source": "https://github.com/ramalhoboss/BrowserPS5/releases",
+      "source_direct": "https://github.com/ramalhoboss/BrowserPS5/releases/download/v1.0.0-rc17/BrowserPS5-check.elf",
+      "description": "BrowserPS5 RN 1.0.0-rc17",
+      "last_update": "2026-11-18",
+      "version": "v1.0.0-rc17",
+      "category": "Uncategorized",
+      "checksum": "247c7f09c138bb257fdae7f92b228d965cb1d60161d86375adc6df1e528e5535",
+      "icon_key": "32b6b296f4dff02cc778415e711d47d81f482651d0eb9bba88848e1ca02a0c00"
+    },
+    {
+      "name": "BrowserPS5-uninstall-all.elf",
+      "filename": "BrowserPS5-uninstall-all.elf",
+      "url": "https://github.com/ramalhoboss/BrowserPS5/releases/download/v1.0.0-rc17/BrowserPS5-uninstall-all.elf",
+      "source": "https://github.com/ramalhoboss/BrowserPS5/releases",
+      "source_direct": "https://github.com/ramalhoboss/BrowserPS5/releases/download/v1.0.0-rc17/BrowserPS5-uninstall-all.elf",
+      "description": "BrowserPS5 RN 1.0.0-rc17",
+      "last_update": "2026-11-18",
+      "version": "v1.0.0-rc17",
+      "category": "Uncategorized",
+      "checksum": "128c4d5222593ad81f342c99169db5405310837da01e77539c45e608f04c9fae",
+      "icon_key": "43469dba42dc24b8e0edef328e75080e909f5c46ea528d5068f454cc3498ae3c"
+    },
+    {
+      "name": "BrowserPS5-uninstall.elf",
+      "filename": "BrowserPS5-uninstall.elf",
+      "url": "https://github.com/ramalhoboss/BrowserPS5/releases/download/v1.0.0-rc17/BrowserPS5-uninstall.elf",
+      "source": "https://github.com/ramalhoboss/BrowserPS5/releases",
+      "source_direct": "https://github.com/ramalhoboss/BrowserPS5/releases/download/v1.0.0-rc17/BrowserPS5-uninstall.elf",
+      "description": "BrowserPS5 RN 1.0.0-rc17",
+      "last_update": "2026-11-18",
+      "version": "v1.0.0-rc17",
+      "category": "Uncategorized",
+      "checksum": "ee83f6c6d60752499d3b8a505da4856fc996c460758279bf84f92582aaa37030",
+      "icon_key": "6aa447a6ae9e31fbe1e2349ab2133a3e1253e0f8d020f92d1cda47dfaf564bc5"
+    },
+    {
+      "name": "BrowserPS5.elf",
+      "filename": "BrowserPS5.elf",
+      "url": "https://github.com/ramalhoboss/BrowserPS5/releases/download/v1.0.0-rc17/BrowserPS5.elf",
+      "source": "https://github.com/ramalhoboss/BrowserPS5/releases",
+      "source_direct": "https://github.com/ramalhoboss/BrowserPS5/releases/download/v1.0.0-rc17/BrowserPS5.elf",
+      "description": "BrowserPS5 RN 1.0.0-rc17",
+      "last_update": "2026-11-18",
+      "version": "v1.0.0-rc17",
+      "category": "Uncategorized",
+      "checksum": "61a5cb6848dcb3c145c22e24a1433b66801d7770b8331f00b25a2fea3f80a575",
+      "icon_key": "0710969a0b33058ed9e148063be8203c7d93b622c0640b90314d8ecabae0a54f"
+    },
+    {
       "name": "NoUpdate",
       "filename": "NoUpdate.elf",
       "url": "https://github.com/zerodayofficial/NoUpdate/releases/download/v1.0.0/NoUpdate.elf",
