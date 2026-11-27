@@ -4,15 +4,15 @@
   "payloads": [
     {
       "name": "ps5-disk-space-analyzer",
-      "filename": "disk-space-analyzer-v1.0.0-beta4.elf",
-      "url": "https://github.com/igorwojda/ps5-disk-space-analyzer/releases/download/v1.0.0-beta4/disk-space-analyzer-v1.0.0-beta4.elf",
+      "filename": "disk-space-analyzer-v1.0.0-beta7.elf",
+      "url": "https://github.com/igorwojda/ps5-disk-space-analyzer/releases/download/v1.0.0-beta7/disk-space-analyzer-v1.0.0-beta7.elf",
       "source": "https://github.com/igorwojda/ps5-disk-space-analyzer/releases",
-      "source_direct": "https://github.com/igorwojda/ps5-disk-space-analyzer/releases/download/v1.0.0-beta4/disk-space-analyzer-v1.0.0-beta4.elf",
-      "description": "v1.0.0-beta4",
+      "source_direct": "https://github.com/igorwojda/ps5-disk-space-analyzer/releases/download/v1.0.0-beta7/disk-space-analyzer-v1.0.0-beta7.elf",
+      "description": "v1.0.0-beta7",
       "last_update": "2026-11-27",
-      "version": "v1.0.0-beta4",
+      "version": "v1.0.0-beta7",
       "category": "Uncategorized",
-      "checksum": "1b017bfee8d1e70d49a61910f421d918cd8694a2ed12ff4b466a46659a1dcaa1",
+      "checksum": "521885ec48dd331f93af62570b087974e1dafe44a01b1de9459daf3e736971b9",
       "icon_key": "b9a7f18bf4a06f3e85e87b1f7c2b91782d32af8b971faf287de6ca625a344444"
     },
     {
