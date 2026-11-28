@@ -4,15 +4,15 @@
   "payloads": [
     {
       "name": "ps5-disk-space-analyzer",
-      "filename": "disk-space-analyzer-v1.0.0-beta9.elf",
-      "url": "https://github.com/igorwojda/ps5-disk-space-analyzer/releases/download/v1.0.0-beta9/disk-space-analyzer-v1.0.0-beta9.elf",
+      "filename": "disk-space-analyzer-v1.0.0.elf",
+      "url": "https://github.com/igorwojda/ps5-disk-space-analyzer/releases/download/v1.0.0/disk-space-analyzer-v1.0.0.elf",
       "source": "https://github.com/igorwojda/ps5-disk-space-analyzer/releases",
-      "source_direct": "https://github.com/igorwojda/ps5-disk-space-analyzer/releases/download/v1.0.0-beta9/disk-space-analyzer-v1.0.0-beta9.elf",
-      "description": "v1.0.0-beta9",
+      "source_direct": "https://github.com/igorwojda/ps5-disk-space-analyzer/releases/download/v1.0.0/disk-space-analyzer-v1.0.0.elf",
+      "description": "v1.0.0",
       "last_update": "2026-11-28",
-      "version": "v1.0.0-beta9",
+      "version": "v1.0.0",
       "category": "Uncategorized",
-      "checksum": "bafd35b01d845d1da62b14b3c3087c129aad8b846b68e3962aced1461e625fcd",
+      "checksum": "235a59bc4599ca6410c02c5d82f33b762bca9697d1ab16d8eb3bae8937f9e10f",
       "icon_key": "b9a7f18bf4a06f3e85e87b1f7c2b91782d32af8b971faf287de6ca625a344444"
     },
     {
@@ -639,15 +639,15 @@
     },
     {
       "name": "ps5upload",
-      "filename": "ps5upload-12.6.46.elf",
-      "url": "https://github.com/phantomptr/ps5upload/releases/download/v12.6.46/ps5upload-12.6.46.elf",
+      "filename": "ps5upload-13.0.0.elf",
+      "url": "https://github.com/phantomptr/ps5upload/releases/download/v13.0.0/ps5upload-13.0.0.elf",
       "source": "https://github.com/phantomptr/ps5upload/releases",
-      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v12.6.46/ps5upload-12.6.46.elf",
-      "description": "v12.6.46",
+      "source_direct": "https://github.com/phantomptr/ps5upload/releases/download/v13.0.0/ps5upload-13.0.0.elf",
+      "description": "v13.0.0",
       "last_update": "2026-11-28",
-      "version": "v12.6.46",
+      "version": "v13.0.0",
       "category": "Uncategorized",
-      "checksum": "d762e1e3c65f36ed2d1cacce129a612c4777755684560b600a1e216dd445813a",
+      "checksum": "6e703e0fb0e58ccfa91c277d4ec5469b459ef5df2904433c54295ce1ba13e1cc",
       "icon_key": "485919645829456ac6e178bbe59b8d1e7956cdcf9a9c016bf5f48a99936ccf8d"
     },
     {
